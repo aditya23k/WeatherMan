@@ -1,0 +1,13 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="Índice" av2Title="Agregar índice de búsqueda" description="Cree índices para los archivos PDF para acelerar la búsqueda en colecciones de documentos." av2Description="Crear un índice para agilizar la búsqueda dentro de los archivos y entre ellos" id="IndexRdrApp" showLabels="true" majorVersion="1" minorVersion="0">
+	<Commands>
+			<Command name="ADBE:CatalogRdr"/>
+			<Command name="ADBE:EmbedIndexRdr"/>
+	</Commands>
+	<Layouts>
+		<Layout name="Default">
+			<ContentView>
+				<Component name="IndexAppRhpView" fontSize="12"/>
+			</ContentView>
+		</Layout>
+	</Layouts>
+</Application>

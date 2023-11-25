@@ -1,0 +1,16 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="動作精靈" av2Title="使用引導動作" description="使用引導動作來將例行 PDF 任務標準化" av2Description="使用動作來將例行 PDF 任務標準化" id="ActionsRdrApp" showLabels="true" majorVersion="1" minorVersion="0">
+	<Commands>
+			<Command name="CreateWorkflowRdr"/>
+			<Command name="ManageWorkflowsRdr"/>
+			<Command name="FindMoreWorkflowsRdr"/>
+			<Command name="CreateNewCustomToolRdr"/>
+			<Command name="ManageCustomToolsRdr"/>
+	</Commands>
+	<Layouts>
+		<Layout name="Default">
+			<ContentView>
+				<Component name="ActionAppRhpView" fontSize="12"/>
+			</ContentView>
+		</Layout>
+	</Layouts>
+</Application>

@@ -1,0 +1,12 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="Vertaile tiedostoja" av2Title="Vertaa tiedostoja" description="Vertaa kahden tiedoston välisiä eroja ja korosta ne" av2Description="Vertaile kahta tiedostoa ja korosta erot" id="CompareRdrApp" showLabels="true" majorVersion="2" minorVersion="0" manualLayout="true">
+	<Commands>
+		<Command name="DIGSIG:CompareDocumentsRdr"/>
+	</Commands>
+	<Layouts>
+		<Layout name="Default">
+			<ContentView>
+				<Component name="CompareAppRhpView" fontSize="12"/>
+			</ContentView>
+		</Layout>
+	</Layouts>
+</Application>

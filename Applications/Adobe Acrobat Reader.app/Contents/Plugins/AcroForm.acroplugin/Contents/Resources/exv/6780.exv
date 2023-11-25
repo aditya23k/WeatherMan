@@ -1,0 +1,86 @@
+gTitle = '$$$IDS_SENDING_FILE';
+gCluster = '$$$IDS_SENDING_FILE_HOW';
+
+gStep1 = '$$$IDS_DCWF_STEP1_STEP1';
+gStep2 = '$$$IDS_DCWF_STEP1_STEP2';
+gStep3 = '$$$IDS_DCWF_STEP1_STEP3';
+gStepMaxWidth = max(	zstring_width(zstring: '$$$IDS_DCWF_STEP1_STEP1'),
+						zstring_width(zstring: '$$$IDS_DCWF_STEP1_STEP2'),
+						zstring_width(zstring: '$$$IDS_DCWF_STEP1_STEP3'));
+
+gTo = '$$$IDS_SENDING_FILE_TO';
+gSubject = '$$$IDS_SENDING_FILE_SUBJECT';
+gMessage = '$$$IDS_SENDING_FILE_MESSAGE';
+gPartsMaxWidth = max(	zstring_width(zstring: '$$$IDS_SENDING_FILE_TO'),
+						zstring_width(zstring: '$$$IDS_SENDING_FILE_SUBJECT'),
+						zstring_width(zstring: '$$$IDS_SENDING_FILE_MESSAGE'));
+
+gSaveButton = '$$$IDS_SAVE_FILE';
+gSaveButtonWidth = zstring_width(zstring: '$$$IDS_SAVE_FILE');
+                        
+gNote = '$$$IDS_PLEASE_NOTE';
+gNoteWidth = zstring_width(zstring: '$$$IDS_PLEASE_NOTE');
+gNoteText = '$$$IDS_SENDING_DATA_FILE_NOTE';
+gNoteTextWidth = max( zstring_width(zstring: '$$$IDS_SENDING_DATA_FILE_NOTE'),
+                      zstring_width(zstring: '$$$IDS_SENDING_PDF_FILE_NOTE'));
+                      
+gSendLine = gStepMaxWidth + gSaveButtonWidth + gNoteWidth + gNoteTextWidth;
+
+gStepTextWidth = gSendLine - gStepMaxWidth;
+gEditTextWidth = gStepTextWidth - gPartsMaxWidth;
+
+dialog(name: gTitle)
+{
+	view(alignment: align_fill, align_children: align_left)
+	{
+		cluster(name: gCluster, item_id:'howb', align_children: align_left, alignment: align_fill)
+		{
+			view (align_children: align_top) 
+			{
+				static_text(name: gStep1, font_id: 5, width: gStepMaxWidth);
+				view (align_children: align_left, alignment: align_fill) 
+				{
+					static_text(item_id: 'xpl1', width: gStepTextWidth, height: gStaticTextHeight * 3);
+					view (align_children: align_row, alignment: align_fill)
+					{
+						button(item_id: 'sbtn', width: gSaveButtonWidth, name: gSaveButton);
+						static_text(item_id:'note', name: gNote, font_id: 5);
+						static_text(item_id:'ntxt', name: gNoteText);
+					}
+				}
+			}
+			view (align_children: align_top) 
+			{
+				static_text(name: gStep2, font_id: 5, width: gStepMaxWidth);
+				view (align_children: align_left, alignment: align_fill) 
+				{
+					static_text(item_id: 'xpl2', width: gStepTextWidth);
+					view (align_children: align_row, alignment: align_fill)
+					{
+						static_text(name: gTo, alignment: align_right, width: gPartsMaxWidth);
+						edit_text(item_id: 'tetx', width: gEditTextWidth, readonly: true);
+					}
+					view (align_children: align_row, alignment: align_fill)
+					{
+						static_text(name: gSubject, alignment: align_right, width: gPartsMaxWidth);
+						edit_text(item_id: 'setx', width: gEditTextWidth, readonly: true);
+					}
+					view (align_children: align_top, alignment: align_fill)
+					{
+						static_text(name: gMessage, alignment: align_right, width: gPartsMaxWidth);
+						edit_text(item_id: 'metx', width: gEditTextWidth, readonly: true, height: gStaticTextHeight * 3, multiline:true);
+					}
+				}
+			}
+			view (align_children: align_top) 
+			{
+				static_text(name: gStep3, font_id: 5, width: gStepMaxWidth);
+				view (align_children: align_left, alignment: align_fill) 
+				{
+					static_text(item_id: 'xpl3', width: gStepTextWidth, height: gStaticTextHeight * 1);
+				}
+			}
+		}
+		ok_help();
+	}
+}

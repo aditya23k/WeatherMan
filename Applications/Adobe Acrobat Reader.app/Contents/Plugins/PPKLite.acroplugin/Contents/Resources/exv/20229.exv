@@ -1,0 +1,17 @@
+gPanelWidth = max( 325, zstring_width(zstring: '$$$/Dialogs/SSUserSettings/GlobalMaxString') + 25 );
+
+dialog(target_id: 'name')
+{
+	cluster(item_id: 'Panl', name: '$$$/Dialogs/ConfigSigAP/ClusterTitle',
+				align_children: align_top, dwidth: gPanelWidth, dheight: 300 )
+	{
+		list_box(item_id: 'clst', alignment: align_fill, dheight: 280);
+		view( align_children: align_fill )
+		{
+			button(item_id: 'newb', name: '$$$/Dialogs/ConfigSigAP/NewButton');
+			button(item_id: 'edit', name: '$$$/Dialogs/ConfigSigAP/EditButton');
+			button(item_id: 'copb', name: '$$$/Dialogs/ConfigSigAP/CopyButton');
+			button(item_id: 'delb', name: '$$$/Dialogs/ConfigSigAP/DeleteButton');
+		}
+	}
+}

@@ -1,0 +1,32 @@
+gComboWidth = 270;
+gListWidth = 300;
+gListHeight = 250;
+dialog( name: '$$$/Dialogs/SendMail/AddressBook' )
+{
+	view()
+	{
+		view( align_children: align_left )
+		{
+			static_text( item_id: 'st01', name: '$$$/Dialogs/SendMail/AddressBook/ChooseBook', next_tab: 'book' );
+			popup( item_id: 'book', next_tab: 'st02', width: gComboWidth );
+		}
+
+		view( align_children: align_row )
+		{
+			view( align_children: align_top, alignment: align_fill )
+			{
+				list_box( item_id: 'name', width: gListWidth, height: gListHeight, next_tab: 'adto' );
+				button( item_id: 'adto', name: '$$$/Dialogs/SendMail/AddressBook/Add', alignment: align_center, next_tab: 'rcip' );
+				view( align_children: align_center, alignment: align_row )
+				{
+					list_box( item_id: 'rcip', width: gListWidth, height: gListHeight, alignment: align_left, next_tab: 'remo' );
+					button( item_id: 'remo', name: '$$$/Dialogs/SendMail/AddressBook/Remove', next_tab: 'ok  ' );
+				}
+			}
+		}
+
+		gap();
+
+		ok_cancel();
+	}
+}

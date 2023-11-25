@@ -1,0 +1,61 @@
+gSetLangMaxButtonWidth = zstring_width(zstring:  '$$$/Dialogs/Settings/OCRSetLang');
+
+dialog( first_tab: 'shc1' )
+{
+   group(align_children: align_fill)
+   {
+		  group( align_children: align_fill )
+		  {
+			 cluster( name: '$$$/Dialogs/Settings/FileAndNavigationGroup', align_children: align_fill )
+			  {
+				view( align_children: align_fill )
+				{
+					radio(item_id: 'shc1', group_id: 'grp1', name: '$$$/Dialogs/Settings/SingleHtmlCreate', next_tab: 'cnph' );
+					view( align_children: align_row )
+					{
+						gap( dwidth: 20);
+						check_box(item_id: 'cnph',name: '$$$/Dialogs/Settings/NavPaneIncludeHeadings', next_tab: 'cnpb' );
+					}
+					
+					view( align_children: align_row )
+					{
+						gap( dwidth: 20);
+						check_box(item_id: 'cnpb', name: '$$$/Dialogs/Settings/NavPaneIncludeBookmarks', next_tab: 'mhc1');
+					}
+					
+					radio(item_id: 'mhc1', group_id: 'grp1', name: '$$$/Dialogs/Settings/MultipleHtmlCreate', next_tab: 'mhsh' );
+					view( align_children: align_row )
+					{
+						gap( dwidth: 20);
+						radio(item_id: 'mhsh', group_id: 'grp2', name: '$$$/Dialogs/Settings/MultipleHtmlSplitByHeadings', next_tab: 'mhsb' );
+					}
+					view( align_children: align_row )
+					{
+						gap( dwidth: 20);
+						radio(item_id: 'mhsb', group_id: 'grp2', name: '$$$/Dialogs/Settings/MultipleHtmlSplitByBookmarks', next_tab: 'exim');
+					}
+				}
+			  }
+			  
+			 cluster( name: '$$$/Dialogs/Settings/ContentGroup', align_children: align_fill )
+			 {
+				   check_box( item_id: 'exim', name: '$$$/Dialogs/Settings/IncludeImages', next_tab: 'drhf' );
+				   check_box(item_id: 'drhf', name: '$$$/Dialogs/Settings/DetectAndRemoveHeaderFooter', next_tab: 'rocr');
+			 }
+			 
+			 cluster( name: '$$$/Dialogs/Settings/OCRGroup', align_children: align_fill )
+			 {
+				view( align_children: align_row )
+				{
+					check_box( item_id: 'rocr', name: '$$$/Dialogs/Settings/RunOCR', next_tab: 'ocrl' );
+					button(item_id: 'ocrl', name: '$$$/Dialogs/Settings/OCRSetLang', width: gSetLangMaxButtonWidth);
+				}
+			 }
+		  }
+		  
+		  ok_cancel_other( other_name: '$$$/Dialogs/Settings/Defaults',
+         				    ok_name: '$$$/ControlsStrings/OK',
+                            cancel_name: '$$$/ControlsStrings/Cancel'
+                           );
+    }
+}

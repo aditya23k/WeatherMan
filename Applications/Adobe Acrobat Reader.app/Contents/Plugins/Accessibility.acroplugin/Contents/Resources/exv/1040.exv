@@ -1,0 +1,28 @@
+gDialogTitle = '$$$/Dialogs/CloudConsentDialog/DialogTitle';
+gCancel = '$$$/Dialogs/CloudConsentDialog/Cancel';
+gStart = '$$$/Dialogs/CloudConsentDialog/Start';
+gMaxWidth  = 450;
+gPrefCloudSetting =  '$$$/Dialogs/ReadingDocument/EnableCloudSetting';
+gPrefDoNotShowSetting = '$$$/Dialogs/ReadingDocument/DoNotShowDialogSetting'; 
+
+                      
+
+dialog ( name: gDialogTitle )
+{
+	view ( align_children: align_left )
+	{
+		view ( align_children: align_left )
+		{
+			static_text ( item_id: 'dstx', width: gMaxWidth );
+		}
+		link_text ( item_id: 'lrmr', name: '$$$/Dialogs/CloudConsentDialog/LearnMorePath');
+		
+		
+		gap();
+		static_text( name: '$$$/Dialogs/CloudConsentDialog/PrefenceText', wrap_name: true, width: gMaxWidth, alignment: align_left );
+			
+		ok_cancel ( ok_name: gStart, cancel_name: gCancel );	
+		
+	}		
+	
+}

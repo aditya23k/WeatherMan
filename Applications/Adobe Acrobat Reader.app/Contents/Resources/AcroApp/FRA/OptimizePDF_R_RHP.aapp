@@ -1,0 +1,18 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="Compresser un PDF" av2Title="Compresser un PDF" description="Réduire la taille du fichier PDF, activer l’affichage web rapide et contrôler les options d’image et de police" richTooltip="Réduisez la taille d’un fichier PDF. Contrôlez également les paramètres d’image et de police." av2Description="Réduire la taille de votre fichier PDF et contrôler les paramètres d'image et de police" id="OptimizePDFRdrApp" majorVersion="1" minorVersion="0" inAppUpsellEnabled="true">
+	<OverrideTitles>
+		<OverrideTitle locale="JPN" appName="ファイルサイズを縮小"/>
+	</OverrideTitles>
+	<Commands>
+			<Command name="ReduceFileSizeRdr"/>
+			<Command name="PDFOptimizerRdr"/>
+			<Command name="OptimizeScannedPdfRdr"/>
+			<Command name="PreflightRdr"/>
+	</Commands>
+	<Layouts>
+		<Layout name="Default">
+			<ContentView>
+				<Component name="OptimizePDFAppRHPView" fontSize="12"/>
+			</ContentView>
+		</Layout>
+	</Layouts>	
+</Application>

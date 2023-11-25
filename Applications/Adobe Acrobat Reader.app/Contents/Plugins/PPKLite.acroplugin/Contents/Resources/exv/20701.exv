@@ -1,0 +1,20 @@
+gListWidth = zstring_width(zstring: '$$$/Dialogs/CFinishedSignReport/Message');
+gListHeight = gEditTextHeight * 8;
+
+dialog(name: '$$$/Dialogs/Sign')
+{
+	view (align_children: align_left)
+	{
+		view(align_children: align_top)
+		{
+			picture(item_id: 'icon', width: 32, height: 32);
+			static_text(name: '$$$/Dialogs/CFinishedSignReport/Message', dwidth: 384);
+		}
+
+		cluster(item_id: 'clst', name: '$$$/Dialogs/CFinishedSignReport/ErrorMessages', alignment: align_fill)
+		{
+			tab_group(item_id: 'errs', alignment: align_fill, height: gListHeight, width: gListWidth);
+		}
+		ok();
+	}
+}

@@ -1,0 +1,152 @@
+gColumnOneWidth = max(
+	zstring_width(zstring: '$$$/Dialogs/TextProps/Font'),
+	zstring_width(zstring: '$$$/Dialogs/TextProps/Size'),
+	zstring_width(zstring: '$$$/Dialogs/TextProps/Style'),
+	zstring_width(zstring: '$$$/Dialogs/TextProps/Underline'),
+	zstring_width(zstring: '$$$/Dialogs/TextProps/Color'),
+	zstring_width(zstring: '$$$/Dialogs/TextProps/TextDirection'),
+	zstring_width(zstring: '$$$/Dialogs/TextProps/Digits'));
+
+gColumnOneWidth1 = zstring_width(zstring: '$$$/Dialogs/TextProps/Baseline');
+
+gColumnTwoWidth = gColumnOneWidth + 15;
+
+gDigitsWidth = zstring_width(zstring: '$$$/Dialogs/TextProps/NativeDigits');
+
+gDirectionWidth = max (
+	zstring_width(zstring: '$$$/Dialogs/TextProps/TextDirAuto'),
+	zstring_width(zstring: '$$$/Dialogs/TextProps/TextDirRTL'),
+	zstring_width(zstring: '$$$/Dialogs/TextProps/TextDirLTR'));
+
+gText = '$$$/Dialogs/TextProps/Text';
+gFontCluster = '$$$/Dialogs/TextProps/Font';
+gFont1 = '$$$/Dialogs/TextProps/Font1';
+gSize = '$$$/Dialogs/TextProps/Size';
+gStyle = '$$$/Dialogs/TextProps/Style';
+gBaseline = '$$$/Dialogs/TextProps/Baseline';
+gColor = '$$$/Dialogs/TextProps/Color';
+gUnder = '$$$/Dialogs/TextProps/Underline';
+gPoints = '$$$/Dialogs/TextProps/Points';
+gTextDirection = '$$$/Dialogs/TextProps/TextDirection';
+gTextDirAuto = '$$$/Dialogs/TextProps/TextDirAuto';
+gTextDirRTL = '$$$/Dialogs/TextProps/TextDirRTL';
+gTextDirLTR = '$$$/Dialogs/TextProps/TextDirLTR';
+gTextDigits = '$$$/Dialogs/TextProps/Digits';
+
+dialog(name: '$$$/Dialogs/TextProps/Text', target_id: 'font')
+{
+	view(align_children: align_top, alignment: align_fill)
+	{
+		view(align_children: align_left)
+		{
+			cluster(item_id: 'fofa', name: gText, align_children: align_row)
+			{
+				view(align_children: align_left)
+				{
+					view(align_children: align_row)
+					{
+						view(align_children: align_right, width: gColumnOneWidth)
+						{
+							static_text(name: gFont1);
+						}
+						view(align_children: align_row)
+						{
+							popup(item_id: 'fnpu', width: 4*gColumnOneWidth);			
+						}
+					}
+					view(align_children: align_row)
+					{
+						view(align_children: align_right, width: gColumnOneWidth)
+						{
+							static_text(name: gSize);
+						}
+						view(alignment: align_row, align_children: align_offscreen) 
+						{
+							view(align_children: align_row)
+							{
+								edit_text(item_id: 'size', width: gColumnOneWidth-15, PopupEdit: true);
+							}
+						}
+						view(align_children: align_right, width: gColumnOneWidth1)
+						{
+							static_text(name: gBaseline);
+						}
+						view(align_children: align_row)
+						{
+							edit_text(item_id: 'shft', width: gColumnOneWidth-30);			
+						}
+						view(align_children: align_left, width: gColumnOneWidth)
+						{
+							static_text(name: gPoints);
+						}
+					}
+					view(align_children: align_row)
+					{
+						view(align_children: align_right, width: gColumnOneWidth)
+						{
+							static_text(name: gUnder);
+						}
+						view(align_children: align_row)
+						{
+							popup(item_id: 'undr', width: 4*gColumnOneWidth);			
+						}
+					}
+					view(align_children: align_row)
+					{
+						view(align_children: align_right, width: gColumnOneWidth)
+						{
+							static_text(name: gStyle);
+						}
+						view(align_children: align_row)
+						{
+							check_box(item_id: 'bold', name: '$$$/Dialogs/TextProps/Bold');
+							check_box(item_id: 'ital', name: '$$$/Dialogs/TextProps/Italic');
+							check_box(item_id: 'strk', name: '$$$/Dialogs/TextProps/Stryke');
+						}
+					}
+					view(align_children: align_row)
+					{
+						view(align_children: align_right, width: gColumnOneWidth)
+						{
+							static_text(name: gColor);
+						}
+						view(align_children: align_row)
+						{
+							button(item_id: 'colr', picture: true, height: 28, width: 30);
+						}
+					}
+				}
+			}
+			cluster(item_id: 'opcl', name: '$$$/Dialogs/TextProps/Options', align_children: align_row)
+			{	
+				view(align_children: align_left)
+				{
+					view(align_children: align_row)
+					{
+						view(align_children: align_right, width: gColumnOneWidth)
+						{
+							static_text(item_id: 'tdir', name: gTextDirection);
+						}
+						view(align_children: align_row)
+						{
+							radio(group_id: 'rbdp', item_id: 'taut', name: gTextDirAuto, width: gDirectionWidth);
+							radio(group_id: 'rbdp', item_id: 'tltr', name: gTextDirLTR, width: gDirectionWidth);
+							radio(group_id: 'rbdp', item_id: 'trtl', name: gTextDirRTL, width: gDirectionWidth);
+						}
+					}
+					view(align_children: align_row)
+					{
+						view(align_children: align_right, width: gColumnOneWidth)
+						{
+							static_text(item_id: 'digl', name: gTextDigits);
+						}
+						view(alignment:align_row)
+						{
+							popup(item_id: 'digi', width: gDigitsWidth);
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,40 @@
+W_TEXT = 150;
+H_LIST = 100;
+
+dialog(name: '$$$/Dialogs/RedactionCodes')
+{
+	view(alignment: align_fill, align_children: align_left)
+	{
+		cluster(alignment: align_fill, name: '$$$/Dialogs/RedactionCodes/Sets') {
+			view (align_children: align_row) {
+				list_box(item_id: 'slst', width: W_TEXT, height: H_LIST);
+				view (align_children: align_center) {
+					button(item_id: 'adsb', name: '$$$/Dialogs/RedactionCodes/AddSet');
+					button(item_id: 'rmsb', name: '$$$/Dialogs/RedactionCodes/RemoveSet');
+				}
+			}
+			view (align_children: align_row) {
+				edit_text(item_id: 'rnst', width: W_TEXT);
+				button(item_id: 'rnsb', name: '$$$/Dialogs/RedactionCodes/RenameSet');
+			}
+			view (align_children: align_row) {
+				button(item_id: 'impb', name: '$$$/Dialogs/RedactionCodes/ImportSet');
+				button(item_id: 'expb', name: '$$$/Dialogs/RedactionCodes/ExportSet');
+			}
+		}
+		cluster(alignment: align_fill, name: '$$$/Dialogs/RedactionCodes/Codes') {
+			view (align_children: align_row) {
+				list_box(item_id: 'clst', width: W_TEXT, height: H_LIST);
+				view (align_children: align_center) {
+					button(item_id: 'adcb', name: '$$$/Dialogs/RedactionCodes/AddCode');
+					button(item_id: 'rmcb', name: '$$$/Dialogs/RedactionCodes/RemoveCode');
+				}
+			}
+			view (align_children: align_row) {
+				edit_text(item_id: 'rnct', width: W_TEXT);
+				button(item_id: 'rncb', name: '$$$/Dialogs/RedactionCodes/RenameCode');
+			}
+		}
+		ok_cancel();
+	}
+}

@@ -1,0 +1,27 @@
+if (app.viewerType == "Reader")
+{
+    if (app.viewerVersion < ADBE.Reader_Need_Version && ADBE.Reader_Value_Asked != true)
+    {
+        if (app.viewerVersion < 7) {
+            app.response({cQuestion: ADBE.Reader_string_Need_New_Version_Msg_Old, cDefault:ADBE.Reader_Value_New_Version_URL + ADBE.SYSINFO, cTitle: ADBE.Viewer_string_Title});
+        }
+        else if (app.alert(ADBE.Reader_string_Need_New_Version_Msg, 1, 1) == 1) {
+            app.launchURL(ADBE.Reader_Value_New_Version_URL + ADBE.SYSINFO, true);
+        }
+        ADBE.Reader_Value_Asked = true;
+    }
+}
+else
+{
+    if (ADBE.Viewer_Value_Asked != true)
+    {
+        if (app.viewerVersion < 7) {
+            app.response({cQuestion: ADBE.Viewer_string_Need_New_Version_Msg_Old, cDefault: ADBE.Viewer_Value_New_Version_URL + ADBE.SYSINFO, cTitle: ADBE.Viewer_string_Title});
+        }
+        else if (app.viewerVersion < ADBE.Viewer_Need_Version) {
+            if (app.alert(ADBE.Viewer_string_Need_New_Version_Msg, 1, 1) == 1)
+                app.launchURL(ADBE.Reader_Value_New_Version_URL + ADBE.SYSINFO, true);
+        }
+    }
+    ADBE.Viewer_Value_Asked = true;
+}

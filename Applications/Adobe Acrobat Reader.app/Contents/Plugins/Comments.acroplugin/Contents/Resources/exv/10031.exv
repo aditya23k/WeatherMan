@@ -1,0 +1,120 @@
+H_BUTTON = 20;
+W_BUTTON = 22;
+
+W_COLUMN = 180;
+W_TEXT = 200;
+W_LIST = 170;
+H_LIST = 100;
+
+GAP_WIDTH = 20;
+
+W_LABELS_LEFT=max(
+	zstring_width(zstring: '$$$/Dialogs/Generic/Color'),
+	zstring_width(zstring: '$$$/Dialogs/Generic/Opacity'));
+	
+gMaxOverlayLabelWidth = max(
+				zstring_width(zstring: '$$$/Dialogs/Redaction/OverlayCustom'),
+				zstring_width(zstring: '$$$/Dialogs/Redaction/OverlayCode'))
+				+ gCheckBoxWidth + gRadioCheckBoxWidthPad + gGap;
+
+dialog()
+{
+	view(align_children: align_left)
+	{
+		view(align_children: align_left, width: 2 * W_COLUMN)
+		{
+			view(align_children: align_row)
+			{
+				view (align_children: align_right, width: W_LABELS_LEFT)
+				{
+					static_text(name: '$$$/Dialogs/Redaction/RedactColor');
+				}
+				view (align_children: align_left)
+				{
+					button(item_id: 'fclr', picture: true, height: H_BUTTON, width: W_BUTTON);
+				}
+				gap(width: GAP_WIDTH);
+				check_box(name: '$$$/Dialogs/Redaction/UseOverlayText', item_id: 'otcb');
+			}
+			cluster(name: '$$$/Dialogs/Redaction/OverlayGroup', alignment: align_fill)
+			{
+				view(alignment: align_fill, align_children: align_row)
+				{
+					static_text(name: '$$$/Prefs/Annotations/Font', item_id: 'stft');
+					popup(item_id: 'font', alignment: align_fill);
+					static_text(name: '$$$/Prefs/Annotations/FontSize', item_id: 'stfs');
+					edit_text(item_id: 'fnts', width: 30);
+				}
+				view(align_children: align_row)
+				{
+					view (align_children: align_left)
+					{
+						check_box(name: '$$$/Dialogs/Redaction/AutoSize', item_id: 'atcb');
+						view (align_children: align_row)
+						{
+							static_text(name: '$$$/Dialogs/Redaction/Justification', item_id: 'stjf');
+							button(group_id: 'jgrp', item_id: 'ljsb', picture: true, radio: true, height: H_BUTTON, width: W_BUTTON);
+							button(group_id: 'jgrp', item_id: 'cjsb', picture: true, radio: true, height: H_BUTTON, width: W_BUTTON);
+							button(group_id: 'jgrp', item_id: 'rjsb', picture: true, radio: true, height: H_BUTTON, width: W_BUTTON);
+						}
+					}
+					view (align_children: align_left)
+					{
+						check_box(name: '$$$/Dialogs/Redaction/RepeatOverlay', item_id: 'rpto');
+						view (align_children: align_row)
+						{
+							static_text(name: '$$$/Dialogs/Redaction/FontColor', item_id: 'stfc');
+							button(item_id: 'tclr', picture: true, height: H_BUTTON, width: W_BUTTON);
+						}
+					}					
+				}
+				view(align_children: align_row)
+				{
+					radio(group_id: 'rgrp', name: '$$$/Dialogs/Redaction/OverlayCustom', item_id: 'rad2', width: gMaxOverlayLabelWidth);
+					edit_text(item_id: 'cust', width: W_TEXT);
+				}
+				view(align_children: align_row)
+				{
+					radio(group_id: 'rgrp', name: '$$$/Dialogs/Redaction/OverlayCode', item_id: 'rad3', width: gMaxOverlayLabelWidth);
+					edit_text(item_id: 'ntry', readonly:true, width: W_TEXT);
+				}
+				view(align_children: align_row)
+				{
+					view (align_children: align_left)
+					{
+						static_text(name: '$$$/Dialogs/Redaction/CodeSet', item_id: 'stcs');
+						list_box(item_id: 'glst', width: W_LIST, height: H_LIST);
+					}
+					view (align_children: align_left)
+					{
+						static_text(name: '$$$/Dialogs/Redaction/CodeEntry', item_id: 'stce');
+						list_box(item_id: 'clst', width: W_LIST, height: H_LIST);
+					}
+				}
+				view (align_children: align_row)
+				{
+					button(name: '$$$/Dialogs/Redaction/AddRemoveCodeEntry', item_id: 'arcb', alignment: align_left);
+					button(name: '$$$/Dialogs/Redaction/EditCodes', item_id: 'codb', alignment: align_right);
+				}
+			}
+			cluster(name: '$$$/Dialogs/RedactionMark/Appearance', alignment: align_fill)
+			{
+				view (align_children: align_row)
+				{
+					static_text(name: '$$$/Dialogs/RedactionMark/OutlineColor');
+					button(item_id: 'oclr', picture: true, height: H_BUTTON, width: W_BUTTON);
+					gap(width: GAP_WIDTH);
+					static_text(name: '$$$/Dialogs/RedactionMark/FillColor');
+					button(item_id: 'aclr', picture: true, height: H_BUTTON, width: W_BUTTON);
+				}
+				view(align_children: align_row)
+				{
+					static_text(name: '$$$/Dialogs/RedactionMark/FillOpacity');
+					slider(item_id: 'opas', width : 101, height: 9);
+					gap(width: GAP_WIDTH);
+					edit_text(item_id: 'opac', width: 4 * max_char_width(), height: gEditTextHeight);					
+				}
+			}
+		}
+	}
+}

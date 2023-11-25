@@ -1,0 +1,16 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="Hävitä" av2Title="Hävitä PDF-tiedosto" description="Poista pysyvästi luottamuksellisia tekstejä, kuvia tai piilotettuja tietoja" av2Description="Poista arkaluonteinen sisältö ja piilotetut tiedot lopullisesti" richTooltip="Poista sisällöt ja piilotetut tiedot lopullisesti arkaluonteisten tietojen suojaamiseksi." id="RedactPDFRdrApp" majorVersion="1" minorVersion="0" inAppUpsellEnabled="true" >
+	<Commands>
+	       <Command name="MarkForRedactionDropDownRdr"/>
+			<Command name="AnnotsApplyRedactionsRdr"/>
+			<Command name="AnnotsRedactToolPropsRdr"/>
+			<Command name="RemoveHiddenInfoRdr"/>
+			<Command name="SanitizeDocumentRdr"/>
+	</Commands>
+	<Layouts>
+		<Layout name="Default">
+			<ContentView>
+				<Component name="RedactAppRHPView" fontSize="12"/>
+			</ContentView>
+		</Layout>
+	</Layouts>
+</Application>

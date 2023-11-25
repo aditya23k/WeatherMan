@@ -1,0 +1,72 @@
+W_COLUMN = 160;
+
+W_LABELS=max(
+	zstring_width(zstring: '$$$/Dialogs/Generic/Author'),
+	zstring_width(zstring: '$$$/Dialogs/Generic/Date1'),
+	zstring_width(zstring: '$$$/Panels/Generic/Subject'),
+	zstring_width(zstring: '$$$/Panels/Generic/Description'));
+
+dialog()
+{
+	view(align_children: align_left)
+	{
+		view(align_children: align_left, width: 2 * W_COLUMN)
+		{
+			view(align_children: align_row, alignment: align_fill)
+			{
+				view(align_children: align_right, width: W_LABELS)
+				{
+					static_text(item_id: 'txt1', name: '$$$/Dialogs/Generic/Author');
+				}
+				view(align_children: align_left, alignment: align_fill)
+				{
+					edit_text(item_id: 'auth', alignment: align_fill, width: 8 * max_char_width(), height: gEditTextHeight, alignment: align_fill);
+				}
+			}
+			view(align_children: align_row, alignment: align_fill)
+			{
+				view(align_children: align_right, width: W_LABELS)
+				{
+					static_text(item_id: 'txt3', name: '$$$/Panels/Generic/Subject');
+				}
+				view(align_children: align_left, alignment: align_fill)
+				{
+					edit_text(item_id: 'subj', alignment: align_fill, width: 12 * max_char_width(), height: gEditTextHeight, alignment: align_fill);
+				}
+			}
+			view(align_children: align_row, alignment: align_fill)
+			{
+				view(align_children: align_right, width: W_LABELS)
+				{
+					static_text(item_id: 'dscl', name: '$$$/Panels/Generic/Description');
+				}
+				view(align_children: align_left, alignment: align_fill)
+				{
+					edit_text(item_id: 'dscr', width: 12 * max_char_width(), height: gEditTextHeight, alignment: align_fill);
+				}
+			}
+			view(align_children: align_row, alignment: align_fill)
+			{
+				view(align_children: align_right, width : W_LABELS)
+				{
+					static_text(item_id: 'dtlb', name: '$$$/Dialogs/Generic/Date1', height: gEditTextHeight);
+				}
+				view(align_children: align_left, alignment: align_fill)
+				{
+					static_text(item_id: 'date', width: 20 * max_char_width(), height: gEditTextHeight);
+				}
+			}
+			view(align_children: align_top, alignment: align_fill)
+			{
+				view(align_children: align_right, width: W_LABELS)
+				{
+					static_text(item_id: 'naml', name: '$$$/Panels/Generic/Name', height: gEditTextHeight);
+				}
+				view(align_children: align_left, alignment: align_fill)
+				{
+					static_text(item_id: 'namr', width: 12 * max_char_width(), height: 2 * gEditTextHeight);
+				}
+			}
+		}
+	}
+}

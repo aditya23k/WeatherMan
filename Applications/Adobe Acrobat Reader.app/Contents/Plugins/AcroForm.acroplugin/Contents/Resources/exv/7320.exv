@@ -1,0 +1,25 @@
+gPoints = '$$$/Dialogs/TextProps/Points';
+gAdd = '$$$/Dialogs/TextProps/Add';
+
+dialog(name: gAdd )
+{
+		view(align_children: align_left)
+		{
+			
+			view(align_children: align_row)
+			{
+				gap(width:5);
+				popup(item_id: 'adal' ,width: 50 ); 
+				view(align_children: align_row)
+				{
+					edit_text(item_id: 'adpt', numeric: true ,width: 60 );
+					view(align_children : align_row)
+					{
+						static_text(item_id: 'albl', name: gPoints);
+					}
+				}
+			}
+			ok_cancel();
+
+		}
+}

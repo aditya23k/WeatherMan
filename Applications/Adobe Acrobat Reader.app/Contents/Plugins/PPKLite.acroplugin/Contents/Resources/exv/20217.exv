@@ -1,0 +1,37 @@
+gDialogWidth = max(
+	zstring_width(zstring: '$$$/Dialogs/FDFExportOptions/SaveNote'),
+	max_char_width() * 34 );
+dialog(name: '$$$/Dialogs/FDFExportOptions', target_id: 'name' )
+{
+    group()
+	{
+		static_text(item_id: 'note', name: '$$$/Dialogs/FDFExportOptions/Note', width: gDialogWidth );
+		view( align_children: align_top, alignment: align_fill )
+		{
+			gap(width: 5);
+			static_text(item_id: 'type', width: gDialogWidth, font_id: 5 );
+		}
+
+		view( align_children: align_top, alignment: align_fill )
+		{
+			gap(width: 5);
+			static_text(item_id: 'tNot', width: gDialogWidth );
+		}
+
+ 		cluster( name: '$$$/Dialogs/FDFExportOptions/Cluster', align_children: align_left, alignment: align_fill)
+		{
+			static_text( item_id: 'savT', name: '$$$/Dialogs/FDFExportOptions/SaveNote', alignment: align_fill);
+			view( align_children: align_top, alignment: align_fill )
+			{
+				gap(width: 5);
+				view(align_children: align_left)
+				{
+					radio(item_id: 'rad1', group_id: 'rgrp', name: '$$$/Dialogs/FDFExportOptions/SaveOption/EMail', alignment: align_fill);
+					radio(item_id: 'rad2', group_id: 'rgrp', name: '$$$/Dialogs/FDFExportOptions/SaveOption/SaveAs');
+				}
+			}
+		}
+
+		ok_cancel(ok_name: '$$$/Dialogs/NextButton');
+	}
+}

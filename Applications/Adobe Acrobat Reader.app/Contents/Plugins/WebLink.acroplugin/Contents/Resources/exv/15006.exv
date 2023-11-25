@@ -1,0 +1,29 @@
+gMaxQuesLen = max(
+	zstring_width(zstring: '$$$IDS_ADD_QUESTION'),
+	zstring_width(zstring: '$$$IDS_REMOVE_QUESTION'));
+
+gMaxNumPLen = zstring_width(zstring: '$$$IDS_OF') + max_char_width()*6;
+
+gVerticalGapHeight = gStaticTextHeight / 4;
+
+dialog( name: '$$$/Dialogs/Weblink/PageRange', target_id: 'all ', first_tab: 'ques')
+{
+	view( align_children: align_left )
+	{
+		static_text( item_id: 'ques', width: gMaxQuesLen, next_tab: 'all ');
+
+		radio( item_id: 'all ', name: '$$$/Dialogs/Weblink/PageRange/All', group_id: 'rgrp', next_tab: 'from');
+		view( align_children: align_row )
+		{
+			radio( item_id: 'from', name: '$$$/Dialogs/Weblink/PageRange/From', group_id: 'rgrp', next_tab: 'frPg');
+			edit_text( item_id: 'frPg', width: max_char_width( ) * 4, next_tab: 'tost');
+			static_text( item_id: 'tost', name: '$$$/Dialogs/Weblink/PageRange/To', next_tab: 'toPg');
+			edit_text( item_id: 'toPg', width: max_char_width( ) * 4, next_tab: 'NumP');
+			static_text(item_id: 'NumP', width: gMaxNumPLen);
+		}
+		
+		gap( height: gVerticalGapHeight );
+		
+		ok_cancel();
+	}
+}

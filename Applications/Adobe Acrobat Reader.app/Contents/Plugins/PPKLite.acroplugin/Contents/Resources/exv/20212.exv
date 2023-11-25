@@ -1,0 +1,53 @@
+gListWidth = max_char_width() * 20;
+gListHeight = gEditTextHeight * 7;
+gPromptWidth = max(
+	zstring_width(zstring: '$$$/Dialogs/EditContact/Name'),
+	zstring_width(zstring: '$$$/Dialogs/EditContact/Email'),
+	zstring_width(zstring: '$$$/Dialogs/EditContact/Info'),
+	zstring_width(zstring: '$$$/Dialogs/EditContact/Certificates') );
+
+dialog( name: '$$$/Dialogs/EditContact/Title' )
+{
+	view()
+	{
+		view( align_children: align_row, alignment: align_fill )
+		{
+			static_text( name: '$$$/Dialogs/EditContact/Name', dwidth: gPromptWidth, alignment: align_right );
+			edit_text( item_id: 'name', alignment: align_fill );
+		}
+
+		view( align_children: align_row, alignment: align_fill )
+		{
+			static_text( name: '$$$/Dialogs/EditContact/Email', dwidth: gPromptWidth, alignment: align_right );
+			edit_text( item_id: 'mail', alignment: align_fill );
+		}
+
+		view( align_children: align_row, alignment: align_fill )
+		{
+			static_text( name: '$$$/Dialogs/EditContact/Info', dwidth: gPromptWidth, alignment: align_right );
+			edit_text( item_id: 'info', alignment: align_fill );
+		}
+
+		view( align_children: align_row, alignment: align_fill )
+		{
+			view(item_id: 'clus', name: '$$$/Dialogs/EditContact/Certificates', align_children: align_top)
+			{
+				view( align_children: align_left )
+				{
+					mclv( item_id: 'list', dwidth: gListWidth, dheight: gListHeight );
+				}
+
+				view( align_children: align_fill )
+				{
+					button( item_id: 'add_', name: '$$$/Dialogs/EditContact/AddButton' );
+					button( item_id: 'rem_', name: '$$$/Dialogs/EditContact/RemoveButton' );
+					button( item_id: 'trst', name: '$$$/Dialogs/EditContact/ViewButton' );
+					button( item_id: 'view', name: '$$$/Dialogs/AddressBook/ShowCertButton' );
+					button( item_id: 'cryp', name: '$$$/Dialogs/EditContact/EncryptButton' );
+				}
+			}
+		}
+
+        ok_cancel();
+	}
+}

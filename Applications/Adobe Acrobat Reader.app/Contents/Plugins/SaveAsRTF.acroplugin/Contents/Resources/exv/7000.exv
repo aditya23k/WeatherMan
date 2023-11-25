@@ -1,0 +1,18 @@
+dialog( name: '$$$/QuickCheck/Title')
+{
+	view(align_children: align_left)
+	{
+		cluster( name: '$$$/QuickCheck/Results' )
+		{
+			static_text( name: '$$$/QuickCheck/Intro');
+			view ( align_children: align_row )
+			{
+				gap(width: 12);
+				static_text( item_id: 'resu', width: max_char_width()
+* 30, height: 6 * gStaticTextHeight);
+			}
+		}
+
+		ok();
+	}
+}

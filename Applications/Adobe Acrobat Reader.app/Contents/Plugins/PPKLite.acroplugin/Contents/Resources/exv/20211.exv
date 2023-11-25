@@ -1,0 +1,59 @@
+gPromptWidth = max(
+	zstring_width(zstring: '$$$/Dialogs/EditCertificate/Subject'),
+	zstring_width(zstring: '$$$/Dialogs/EditCertificate/Issuer'),
+	zstring_width(zstring: '$$$/Dialogs/EditCertificate/Usage'),
+	zstring_width(zstring: '$$$/Dialogs/EditCertificate/Contact') );
+
+gTextWidth = max_char_width() * 25;
+
+dialog( name: '$$$/Dialogs/EditCertificate/Title' )
+{
+	view()
+	{
+		view( align_children: align_row, alignment: align_fill )
+		{
+			static_text( name: '$$$/Dialogs/EditCertificate/Contact', dwidth: gPromptWidth, alignment: align_right );
+			edit_text( item_id: 'cont', alignment: align_fill, readonly: true, dwidth: gTextWidth );
+		}
+
+		view( align_children: align_row, alignment: align_fill )
+		{
+			static_text( name: '$$$/Dialogs/EditCertificate/Subject', dwidth: gPromptWidth, alignment: align_right );
+			edit_text( item_id: 'subj', alignment: align_fill, readonly: true, dwidth: gTextWidth );
+		}
+
+		view( align_children: align_row, alignment: align_fill )
+		{
+			static_text( name: '$$$/Dialogs/EditCertificate/Issuer', dwidth: gPromptWidth, alignment: align_right );
+			edit_text( item_id: 'issr', alignment: align_fill, readonly: true, dwidth: gTextWidth );
+		}
+
+		view( align_children: align_row, alignment: align_fill )
+		{
+			static_text( name: '$$$/Dialogs/EditCertificate/Usage', dwidth: gPromptWidth, alignment: align_right );
+			edit_text( item_id: 'uses', alignment: align_fill, readonly: true, dwidth: gTextWidth );
+		}
+
+		view( align_children: align_row, alignment: align_right )
+		{
+			button( item_id: 'newC', name: '$$$/Dialogs/EditCertificate/AddContact' );
+			button( item_id: 'more', name: '$$$/Dialogs/EditCertificate/MoreInfo' );
+		}
+
+		view(item_id: 'trst', name: '$$$/Dialogs/EditCertificate/TrustLabel', align_children: align_fill)
+		{
+			check_box( item_id: 'TRan', name: '$$$/Dialogs/EditTrust/TrustAnchor', alignment: align_fill );		
+			check_box( item_id: 'TRad', name: '$$$/Dialogs/EditTrust/AuthenticDocuments', alignment: align_fill );
+			check_box( item_id: 'TRdy', name: '$$$/Dialogs/EditTrust/DynamicContent', alignment: align_fill );
+            check_box( item_id: 'TRjs', name: '$$$/Dialogs/EditTrust/JavaScript', alignment: align_fill );
+		}
+		
+		view(alignment: align_fill, align_children: align_row)
+		{
+		    static_text(name: '$$$/Dialogs/EditTrust/Policies');
+    		edit_text( item_id: 'plcy', alignment: align_fill );
+    	}
+
+	    ok_cancel();
+	}
+}

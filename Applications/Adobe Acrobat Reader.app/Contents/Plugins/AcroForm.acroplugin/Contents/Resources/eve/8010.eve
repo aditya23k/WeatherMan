@@ -1,0 +1,31 @@
+dialog(name: '$$$/Dialogs/CreateFormPanel_LocateDoc')
+{
+	gap(height: 20);
+	column(horizontal: align_left)
+	{
+		static_text(name: '$$$/Dialogs/CreateFormPanel_LocateDoc/TitleText', 
+				font_id: @dialog_font_bold );
+
+        gap(height: 5);		
+		
+		radio_button(identifier: 'crnt', group_id: 'grp1', 
+				name: '$$$/Dialogs/CreateFormPanel_LocateDoc/optCurrent');
+        
+        gap(height: 5);		
+
+		radio_button(identifier: 'selt', group_id: 'grp1', 
+				name: '$$$/Dialogs/CreateFormPanel_LocateDoc/optSelectFile');
+		
+		row()
+		{
+			gap(dwidth: 7);
+			edit_text(identifier: 'docn', PopupEdit: false, width: 283);
+			button(identifier: 'brws', name: '$$$/Dialogs/Common/btnBrowse');
+		}
+
+		gap(height: 5);
+
+		radio_button(identifier: 'scan', group_id: 'grp1', 
+				name: '$$$/Dialogs/CreateFormPanel_LocateDoc/optScan=Scan a Paper Form');
+	}
+}

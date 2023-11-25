@@ -1,0 +1,15 @@
+gDialogWidth = max( zstring_width(zstring: '$$$IDS_DIGSIG_NEEDTODOWNLOADFILE'), 
+					zstring_width(zstring: '$$$IDS_DIGSIG_CERTIFIED_DOWNLOADDOC'));
+
+dialog(name: '$$$/Dialogs/DigSigDownloadFile')
+{
+	view(align_children:align_left)
+	{
+		static_text(item_id: 'expl', width: gDialogWidth);
+		view (align_children: align_row) {
+			static_text(name: '$$$/Dialogs/DigSigCompareDocuments/DownloadProgress');
+			progress_bar(item_id: 'pbar', height: gEditTextHeight, width:20*max_char_width());		
+		}
+		ok_cancel();
+	}
+}

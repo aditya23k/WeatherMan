@@ -1,0 +1,14 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="Експорт у PDF" av2Title="Експорт PDF" description="Перетворюйте PDF-файли на файли Microsoft Word, Excel, PowerPoint й інших форматів" id="EPDFAppFull" richTooltip="Перетворюйте PDF-файли у файли формату Microsoft Word, Excel або PowerPoint, а також у файли зображень." av2Description="Конвертуйте PDF-файли у файли Microsoft Office, зображення тощо" majorVersion="1" minorVersion="0">
+	<Commands>
+		<Command name="EXFT_MSWordRdr"/>
+		<Command name="EXFT_MSExcelRdr"/>
+		<Command name="EXFT_MSPowerPointRdr"/>
+	</Commands>
+	<Layouts>
+		<Layout name="Default" OpenInDocumentTab="true">
+			<ContentView>
+				<Component name="ExportPDFView" type="Custom"/>
+			</ContentView>
+		</Layout>
+	</Layouts>
+</Application>

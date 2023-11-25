@@ -1,0 +1,32 @@
+gIndentWidth = 1 * max_char_width();
+
+dialog(name: '$$$/Dialogs/ManageSignatureTrust', target_id: 'name', width: 450)
+{
+	view(align_children: align_left)
+	{
+		view(align_children: align_row, alignment: align_fill)
+		{
+			view(align_children: align_left, width: 425)
+			{
+				static_text(item_id: 'MSD1', name: '$$$/Dialogs/ManageSignatureTrust/MSTDescription1', width: 425, height: gStaticTextHeight, alignment: align_fill);	
+				view(align_children: align_row, alignment: align_fill)
+				{
+					gap( width: gIndentWidth );
+					view(alignment: align_left, align_children: align_row)
+					{
+						static_text(item_id: 'MSDS', width: 200, height: gStaticTextHeight * 2, alignment: align_left);
+						button(name: '$$$/Dialogs/ManageSignatureTrust/ShowSigProperties', item_id: 'SSPR', alignment: align_right);
+					}
+					gap( width: gIndentWidth );
+				}
+				static_text(item_id: 'MSD2', name: '$$$/Dialogs/ManageSignatureTrust/MSTDescription2', width: 425, wrap_name: true, height: gStaticTextHeight * 2, alignment: align_fill);
+				static_text(item_id: 'MSD3', name: '$$$/Dialogs/ManageSignatureTrust/MSTDescription3', width: 425, wrap_name: true, height: gStaticTextHeight * 4, alignment: align_fill);
+			}		
+		}
+
+		view(align_children: align_row, alignment: align_fill)
+		{
+			ok_cancel(ok_name: '$$$/Dialogs/ManageSignatureTrust/TrustSignature', cancel_name: '$$$/ControlsStrings/Close');
+		}
+	}
+}

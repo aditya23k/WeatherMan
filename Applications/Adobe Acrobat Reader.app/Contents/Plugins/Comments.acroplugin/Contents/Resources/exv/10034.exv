@@ -1,0 +1,125 @@
+COMMENT = '***** KEEP CADMCollSumm.exv UP TO DATE WHEN CHANGING THIS! THE ONLY DIFFERENCE IS THE OK BUTTON LABEL';
+
+gSummarizeCommentsSortByPopupWidth = max(
+	zstring_width(zstring: '$$$IDS_SORT_PAGE'),
+	zstring_width(zstring: '$$$IDS_SORT_AUTHOR'),
+	zstring_width(zstring: '$$$IDS_SORT_TYPE'),
+	zstring_width(zstring: '$$$IDS_SORT_DATE'));
+
+gSummarizeCommentsPaperSizePopupWidth = max(
+	zstring_width(zstring: '$$$IDS_PAPERSIZE_11x17'),
+	zstring_width(zstring: '$$$IDS_PAPERSIZE_A3'),
+	zstring_width(zstring: '$$$IDS_PAPERSIZE_A4'),
+	zstring_width(zstring: '$$$IDS_PAPERSIZE_A5'),
+	zstring_width(zstring: '$$$IDS_PAPERSIZE_B4JIS'),
+	zstring_width(zstring: '$$$IDS_PAPERSIZE_B5JIS'),
+	zstring_width(zstring: '$$$IDS_PAPERSIZE_EXECUTIVE'),
+	zstring_width(zstring: '$$$IDS_PAPERSIZE_LEGAL'),
+	zstring_width(zstring: '$$$IDS_PAPERSIZE_LETTER'),
+	zstring_width(zstring: '$$$IDS_PAPERSIZE_TABLOID'));
+
+gSummarizeDestTypeWidth = max(
+	zstring_width(zstring: '$$$IDS_SUMMARY_DEST_SAME'),
+	zstring_width(zstring: '$$$IDS_SUMMARY_DEST_FOLDER'));
+
+gBottomControlsWidth = max(
+	zstring_width(zstring: '$$$/Dialogs/SummarizeComments/PaperSize/Label'),
+	zstring_width(zstring: '$$$/Dialogs/SummarizeComments/SortBy/Label'),
+	zstring_width(zstring: '$$$/Dialogs/SummarizeComments/Include/Label'),
+	zstring_width(zstring: '$$$/Dialogs/SummarizeComments/FontSize/Label'),
+	zstring_width(zstring: '$$$/Dialogs/SummarizeComments/Assoc/Color/Label'),
+	zstring_width(zstring: '$$$/Dialogs/SummarizeComments/Assoc/Opacity/Label'));
+
+H_BUTTON = 20;
+W_BUTTON = 22;
+
+dialog(name: '$$$/Dialogs/SummarizeComments')
+{
+	view(align_children: align_left)
+	{
+		cluster(name: '$$$/Dialogs/SummarizeComments/Format/Label')
+		{
+			view(align_children: align_row)
+			{
+				picture(item_id:'icon', width:140 , height: 85);
+				view(align_children: align_left)
+				{
+					radio(item_id: 'llns', group_id: 'rgrp', name: '$$$/Dialogs/SummarizeComments/Format/Lines', next_tab: 'l2up');
+					radio(item_id: 'l2up', group_id: 'rgrp', name: '$$$/Dialogs/SummarizeComments/Format/TwoUp', next_tab: 'nodc');
+					radio(item_id: 'nodc', group_id: 'rgrp', name: '$$$/Dialogs/SummarizeComments/Format/NoDoc', next_tab: 'nums');
+					radio(item_id: 'nums', group_id: 'rgrp', name: '$$$/Dialogs/SummarizeComments/Format/Numbers', next_tab: 'llns');
+				}
+			}
+		}
+
+		view(align_children: align_row)
+		{
+			gap(width: gBottomControlsWidth - zstring_width(zstring: '$$$/Dialogs/SummarizeComments/PaperSize/Label'));
+			static_text(name: '$$$/Dialogs/SummarizeComments/PaperSize/Label');
+			popup(item_id: 'prsz', width: gSummarizeCommentsPaperSizePopupWidth);
+			gap(width: 50);
+			static_text(name: '$$$/Dialogs/SummarizeComments/SortBy/Label');
+			popup(item_id: 'sort', width: gSummarizeCommentsSortByPopupWidth);
+		}
+
+		view(align_children: align_row)
+		{
+			gap(width: gBottomControlsWidth - zstring_width(zstring: '$$$/Dialogs/SummarizeComments/FontSize/Label'));
+			static_text(name: '$$$/Dialogs/SummarizeComments/FontSize/Label');
+			radio(item_id: 'ssml', group_id: 'rgr2', name: '$$$/Dialogs/SummarizeComments/FontSize/Small', next_tab: 'smed');
+			radio(item_id: 'smed', group_id: 'rgr2', name: '$$$/Dialogs/SummarizeComments/FontSize/Medium', next_tab: 'slrg');
+			radio(item_id: 'slrg', group_id: 'rgr2', name: '$$$/Dialogs/SummarizeComments/FontSize/Large', next_tab: 'ssml');
+		}
+
+		view(align_children: align_row)
+		{
+			gap(width: gBottomControlsWidth - zstring_width(zstring: '$$$/Dialogs/SummarizeComments/Include/Label'));
+			static_text(name: '$$$/Dialogs/SummarizeComments/Include/Label');
+			radio(item_id: 'sall', group_id: 'rgr1', name: '$$$/Dialogs/SummarizeComments/Include/All', next_tab: 'sshw');
+			radio(item_id: 'sshw', group_id: 'rgr1', name: '$$$/Dialogs/SummarizeComments/Include/Showing', next_tab: 'sall');
+		}
+
+		view(align_children: align_row)
+		{
+			gap(width: gBottomControlsWidth - zstring_width(zstring: ''));
+			static_text(name: '');
+			check_box(item_id: 'emty', name: '$$$/Dialogs/SummarizeComments/Include/EmptyPages');
+		}
+
+		view(align_children: align_row)
+		{
+			gap(width: gBottomControlsWidth - zstring_width(zstring: ''));
+			static_text(name: '');
+			static_text(item_id: 'pstl', name: '$$$/Dialogs/SummarizeComments/Include/PageRangeLabel');
+			edit_text(item_id: 'pstt', width: max_char_width() * 3);
+			static_text(item_id: 'penl', name: '$$$/Dialogs/SummarizeComments/Include/PageRangeSep');
+			edit_text(item_id: 'pend', width: max_char_width() * 3);
+		}
+
+		view(align_children: align_row)
+		{
+			gap(width: gBottomControlsWidth - zstring_width(zstring: '$$$/Dialogs/SummarizeComments/Assoc/Label'));
+			static_text(item_id: 'asgl', name: '$$$/Dialogs/SummarizeComments/Assoc/Label');
+			static_text(item_id: 'ascl', name: '$$$/Dialogs/SummarizeComments/Assoc/Color/Label');
+			button(item_id: 'asco', picture: true, height: H_BUTTON, width: W_BUTTON);
+		}
+
+		view(align_children: align_row)
+		{
+			gap(width: gBottomControlsWidth - zstring_width(zstring: ''));
+			static_text(name: '');
+			static_text(item_id: 'asol', name: '$$$/Dialogs/SummarizeComments/Assoc/Opacity/Label');
+			edit_text(item_id: 'asot', width: 4 * max_char_width(), height: gEditTextHeight);
+			slider(item_id: 'asop', width: 101, height: 9);
+		}
+
+		view(align_children: align_row, alignment: align_fill)
+		{
+			static_text(item_id: 'svin', name: '$$$/Dialogs/SummarizeComments/SaveIn');
+			popup(item_id: 'dtyp', width: gSummarizeDestTypeWidth);
+			button(item_id: 'brow', name: '$$$/Dialogs/SummarizeComments/Browse');
+		}
+
+		ok_cancel_help(ok_name: '$$$/Dialogs/SummarizeComments/Print');
+	}
+}

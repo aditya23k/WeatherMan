@@ -1,0 +1,30 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="Combinar archivos" av2Title="Combinar archivos" id="CombineDelayedRdrApp" description="Combine varios archivos en un solo PDF." richTooltip="Combine varios archivos en un único PDF para guardarlos y compartirlos fácilmente." av2Description="Combinar varios archivos en un solo PDF" showLabels="true" requiresDoc="false" majorVersion="1" minorVersion="0">
+	<Layouts>
+		<Layout name="Default">
+		    <TopBar align="Center">
+				<Component name="MultiFileViewInsertPagesDP"/>
+				<Component name="DeleteCombineNodes"/>
+				<Component type="Separator"/>
+				<Component name="MultiFileThumbnailViewSelector"/>
+				<Component name="MultiFileListViewSelector"/>
+				<Component type="Separator"/>
+				<Component name="MultiFileViewOption"/>
+			</TopBar>
+			<ContentView>
+				<Component name="CombineLandingViewRdr" type="Custom" columns="1" hAlign="center" vAlign="center">
+					<Component type="Table" columns="1" hAlign="center" vAlign="center">
+						<Component type="Bitmap" name="CombineInitialGraphicBitmapIcon" width="130" height="130" />
+						<Component type="Label" label="Añada archivos haciendo clic en el botón que encontrará a continuación" fontSize="18" multiline="true" hAlign="center" width="580" />
+						<Component type="Label" label="Con el otro botón puede incluir archivos que estén actualmente abiertos." fontSize="18" multiline="true" hAlign="center" width="500" />
+						<Component type="Table" columns="1" hAlign="center" vAlign="center" topOffset="15">
+							<Component type="PushButton" buttonType="buttonCTA" name="CombineAddFilesExecuteDP" label="Añadir archivos" vAlign="center" fontSize="15" bold="true"/>
+						</Component>
+						<Component type="Table" columns="1" hAlign="center" vAlign="center" topOffset="10" rowSpacing="20">
+							<Component type="PushButton" buttonType="buttonPrimaryQuiet" name="CombineAddOpenFilesExecuteDP" label="Añadir archivos abiertos" vAlign="center" fontSize="15" bold="true"/>
+						</Component>
+					</Component>
+				</Component>
+			</ContentView>
+		</Layout>
+	</Layouts>
+</Application>

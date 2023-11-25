@@ -1,0 +1,8 @@
+"userNameLabelAuthDialog" = "Meno používateľa";
+"passwordLabelAuthDialog" = "Heslo";
+"okButtonAuthDialog" = "OK";
+"cancelButtonAuthDialog" = "Zrušiť";
+"titleAuthDialog" = "Vyžaduje sa overenie totožnosti";
+"messageForHostInfoAuthDialog" = "%@ vyžaduje sa vaše používateľské meno a heslo.";
+"messageForSecurityInfoAuthDialog" = "Vaše prihlasovacie informácie budú odoslané bezpečne.";
+"checkBoxTextAuthDialog" = "Pozor, toto heslo v mojej kľúčenke";

@@ -1,0 +1,20 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="Prepare Form" av2Title="Prepare a form" description="Quickly convert Microsoft Word and Excel or scanned forms into PDF forms" av2Description="Convert Microsoft Word, Excel or scanned forms into PDF forms" richTooltip = "Convert scanned forms, Microsoft Word files, or Excel documents into fillable PDF forms." id="FormsRdrApp" majorVersion="1" showLabels="true" minorVersion="0">
+  <Commands>
+    <Command name="AcroForm:Forms_CreateNewFormRdr"/>
+	<Command name="AcroForm:Forms_EditFormInAcrobatRdr"/>
+	<Command name="AcroForm:Forms_HighlightRdr"/>
+	<Command name="AcroForm:Forms_ClearFormRdr"/>
+    <Command name="AcroForm:Advanced_CreateSpreadsheetRdr"/>
+    <Command name="AcroForm:Forms_ImportDataRdr"/>
+    <Command name="AcroForm:FormData_ExportDataRdr"/>
+    <Command name="AcroForm:Forms_DistributeFormRdr"/>
+	<Command name="AcroForm:Forms_TrackReturnedFormsRdr"/>
+  </Commands>
+  <Layouts>
+    <Layout name="Default">
+      <ContentView>
+		<Component name="FormsAppRHPView" fontSize="12"/>
+      </ContentView>
+    </Layout>
+  </Layouts>
+</Application>

@@ -1,0 +1,13 @@
+dialog()
+{
+	column()
+	{
+		row()
+		{
+			picture(identifier: 'icon', width: 32, height: 32);
+			static_text(identifier: 'msg ', wrap:true, dwidth: 384);
+		}
+		gap();
+		ok();
+	}
+}

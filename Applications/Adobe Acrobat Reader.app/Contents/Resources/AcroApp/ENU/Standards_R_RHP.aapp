@@ -1,0 +1,15 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="PDF Standards" av2Title="Apply PDF standards" description="Create PDF/A, PDF/E, or PDF/X files to comply with ISO standards"  av2Description="Create PDF/A, PDF/E, or PDF/X files to comply with ISO standards" id="StandardsRdrApp" showLabels="true" majorVersion="1" minorVersion="0">
+	<Commands>
+			<Command name="SaveAsPDFARdr"/>
+			<Command name="SaveAsPDFXRdr"/>
+			<Command name="SaveAsPDFERdr"/>
+			<Command name="CALS:PreflightStRdr"/>
+	</Commands>
+	<Layouts>
+		<Layout name="Default">
+			<ContentView>
+				<Component name="StandardsAppRHPView" fontSize="12"/>
+			</ContentView>
+		</Layout>
+	</Layouts>
+</Application>

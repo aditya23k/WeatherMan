@@ -1,0 +1,15 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="Proteger" av2Title="Proteger un PDF" description="Evite que otros copien, impriman y editen la información de los archivos PDF." av2Description="Proteger un PDF con una contraseña o certificado y establecer permisos" id="ProtectPDFRdrApp" showLabels="true" majorVersion="1" minorVersion="0"  inAppUpsellEnabled="true">
+	<Commands>
+		<Command name="RestrictWithPasswordRdr"/>
+		<Command name="SecurityPolicyFavoritesRdr"/>
+		<Command name="MoreProtectionRdr"/>
+		<Command name="RemoveHiddenInfoRdr"/>
+	</Commands>
+	<Layouts>
+		<Layout name="Default">
+			<ContentView>
+				<Component name="ProtectAppRHPView" fontSize="12"/>
+			</ContentView>
+		</Layout>
+	</Layouts>
+</Application>

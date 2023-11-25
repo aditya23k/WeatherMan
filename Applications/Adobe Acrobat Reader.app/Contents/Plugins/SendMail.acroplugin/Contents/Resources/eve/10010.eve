@@ -1,0 +1,25 @@
+dialog()
+{
+	column(horizontal: align_fill)
+	{
+		row(horizontal: align_fill)
+		{
+			edit_text(name: '$$$/Dialogs/SendMail/WMAddressBook/Search', identifier: 'srch', width: 200);
+			button(identifier: 'sear', picture: true, resource_id: "AX_SearchComments_Sm_N.png", width:25);
+		}
+		mclv(identifier: 'plst', dwidth: 500, dheight: 300);
+		row(horizontal:align_fill)
+		{
+			button(name: '$$$/Dialogs/SendMail/WMAddressBook/To', identifier: 'btto');		
+			edit_text(identifier: 'tbto', width: 360, readonly:true);
+			button(name: '$$$/Dialogs/SendMail/WMAddressBook/Clear1', identifier: 'clto');
+		}
+		row(horizontal:align_fill)
+		{
+			button(name: '$$$/Dialogs/SendMail/WMAddressBook/Cc', identifier: 'btcc');		
+			edit_text(identifier: 'tbcc', width: 360, readonly:true);
+			button(name: '$$$/Dialogs/SendMail/WMAddressBook/Clear2', identifier: 'clcc');
+		}
+		ok_cancel();
+    }
+}

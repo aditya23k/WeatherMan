@@ -1,0 +1,35 @@
+dialog()
+{
+    view(width: gPanelWidth - 20, align_children: align_left)
+    {
+        static_text(item_id: 'hdr ', alignment: align_fill);
+        
+        radio( item_id: 'rad1', group_id: 'main', font_id: 5, alignment: align_fill );
+        view(alignment: align_fill, align_children: align_row)
+        {
+            gap(width: 15);
+            static_text( item_id: 'not1', alignment: align_fill );
+        }
+        
+        radio( item_id: 'rad2', group_id: 'main', font_id: 5, alignment: align_fill );
+        view(alignment: align_fill, align_children: align_row)
+        {
+            gap(width: 15);
+            static_text( item_id: 'not2', alignment: align_fill );
+        }
+
+        radio( item_id: 'rad3', group_id: 'main', font_id: 5, alignment: align_fill );
+        view(alignment: align_fill, align_children: align_row)
+        {
+            gap(width: 15);
+            static_text( item_id: 'not3', alignment: align_fill );
+        }
+        
+        radio( item_id: 'rad4', group_id: 'main', font_id: 5, alignment: align_fill );
+        view(alignment: align_fill, align_children: align_row)
+        {
+            gap(width: 15);
+            static_text( item_id: 'not4', alignment: align_fill );
+        }
+    }
+}

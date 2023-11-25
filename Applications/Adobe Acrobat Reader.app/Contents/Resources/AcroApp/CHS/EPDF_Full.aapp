@@ -1,0 +1,14 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="导出 PDF" av2Title="导出 PDF" description="将 PDF 转换为 Microsoft Word、Excel、PowerPoint 等格式" id="EPDFAppFull" richTooltip="将 PDF 转换为 Microsoft Word、Excel 或 PowerPoint，也可以转换为图像文件。" av2Description="将 PDF 转换为 Microsoft Office 文件、图像等" majorVersion="1" minorVersion="0">
+	<Commands>
+		<Command name="EXFT_MSWordRdr"/>
+		<Command name="EXFT_MSExcelRdr"/>
+		<Command name="EXFT_MSPowerPointRdr"/>
+	</Commands>
+	<Layouts>
+		<Layout name="Default" OpenInDocumentTab="true">
+			<ContentView>
+				<Component name="ExportPDFView" type="Custom"/>
+			</ContentView>
+		</Layout>
+	</Layouts>
+</Application>

@@ -1,0 +1,8 @@
+"userNameLabelAuthDialog" = "Nom d’utilisateur";
+"passwordLabelAuthDialog" = "Mot de passe";
+"okButtonAuthDialog" = "OK";
+"cancelButtonAuthDialog" = "Annuler";
+"titleAuthDialog" = "Authentification requise";
+"messageForHostInfoAuthDialog" = "%@ nécessite votre nom d’utilisateur et votre mot de passe.";
+"messageForSecurityInfoAuthDialog" = "Vos informations de connexion seront envoyées de manière sécurisée.";
+"checkBoxTextAuthDialog" = "Mémoriser ce mot de passe dans mon trousseau";

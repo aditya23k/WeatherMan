@@ -1,0 +1,21 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="Organize Pages" av2Title="Organize pages" id="PagesDelayedRdrApp" description="Delete, insert, extract, or rotate pages" av2Description="Delete, rotate, extract, insert, or reorder pages" showLabels="true" requiresDoc="true" majorVersion="1" minorVersion="0">
+	<Layouts>
+		<Layout name="Default">
+			<TopBar align="Center">
+				<Component name="PagesAppPageRange"/>
+				<Component name="RotatePagesCCWDP"/>
+        			<Component name="RotatePagesCWDP"/>
+				<Component name="DeleteSelectedPagesDP"/>
+        			<Component type="Separator"/>
+				<Component name="ExtractSelectedPagesDP" />
+				<Component name="InsertPagesCmdForPagesAppDP" />
+				<Component name="ReplacePagesDP" />
+				<Component name="SplitDocumentCmdForPagesAppDP" />
+				<Component name="MorePageManipulationOptionsDP" />
+			</TopBar>
+			<ContentView>
+				<Component name="ThumbnailViewForApp" type="custom"/>
+			</ContentView>
+		</Layout>
+	</Layouts>
+</Application>

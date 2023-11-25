@@ -1,0 +1,9 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="Viewer" id="Viewer" majorVersion="1" requiresDoc="true" minorVersion="0">
+	<Layouts>
+		<Layout name="Default" rhpModes="expanded,appSwitcherOnly" OpenInDocumentTab="true">
+			<RHP>
+				<Component name="AppShortcutListView" type="Custom"/>
+			</RHP>
+		</Layout>
+	</Layouts>
+</Application>

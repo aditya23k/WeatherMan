@@ -1,0 +1,16 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="度量" av2Title="測量物件" description="度量物件的距離、面積和周長" av2Description="測量物件的距離、面積和周長" id="MeasureApp" showLabels="true" requiresDoc="true" majorVersion="1" minorVersion="0">
+	<Commands>
+			<Command name="Measure"/>
+			<Command name="UserProperties"/>
+			<Command name="GeoLocation"/>
+	</Commands>
+	<Layouts>
+		<Layout name="Default" OpenInDocumentTab="true">
+			<TopBar align="Center">
+				<Component name="Measure"/>
+				<Component name="UserProperties"/>
+				<Component name="GeoLocation"/>
+			</TopBar>
+		</Layout>
+	</Layouts>
+</Application>

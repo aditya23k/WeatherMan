@@ -1,0 +1,14 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="创建 PDF" av2Title="创建 PDF" description="从任意格式创建 PDF" richTooltip="从图像、Microsoft 文件、扫描的文件、网页或空白页面创建 PDF。" av2Description="从图像、Microsoft Office 文件等创建 PDF" id="CPDFAppFull" majorVersion="1" minorVersion="0">
+	<Commands>
+	</Commands>
+	<Layouts>
+		<Layout name="Default">
+			<TopBarRight align="Right">
+				<Component type="PushButton" buttonType="secondary" name="ExitApp"/>
+			</TopBarRight>
+			<ContentView>
+				<Component name="CreatePDFView" type="Custom"/>
+			</ContentView>
+		</Layout>
+	</Layouts>
+</Application>

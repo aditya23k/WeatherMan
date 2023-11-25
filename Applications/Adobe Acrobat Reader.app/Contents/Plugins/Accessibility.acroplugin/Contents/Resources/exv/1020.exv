@@ -1,0 +1,14 @@
+gPanelWidth = 500;
+gPanelHeight = 400;
+
+dialog (name: '$$$/Dialogs/Wizard/Frame')
+{
+	view (align_children: align_left)
+	{
+		view (item_id: 'Fram', align_children: align_left, height: gPanelHeight, width: gPanelWidth);
+		ok_cancel_other(ok_name: '$$$/Dialogs/Wizard/Next',
+						cancel_name: '$$$/Dialogs/Wizard/Cancel',
+						other_name: '$$$/Dialogs/Wizard/Back');
+	}
+}
+

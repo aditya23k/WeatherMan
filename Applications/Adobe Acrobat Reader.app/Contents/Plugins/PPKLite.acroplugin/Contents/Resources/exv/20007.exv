@@ -1,0 +1,42 @@
+thePromptWidth = max(
+	zstring_width(zstring: '$$$/Dialogs/DataRequest/Message/To'),
+	zstring_width(zstring: '$$$/Dialogs/DataRequest/Message/Subject') );
+
+theEditWidth = max_char_width() * 20;
+	
+theBodyHeight = gStaticTextHeight * 11;
+
+dialog(margin_height: 0, margin_width: 0, target_id: 'eTo_')
+{
+    view(alignment: align_fill, align_children: align_left)
+    {
+		gap(height: gGap);
+		
+		static_text(item_id: 'note', font_id: 5, alignment: align_fill);
+ 		
+ 		cluster(item_id: 'clst', name: '$$$/Dialogs/DataRequest/Message', alignment: align_fill)
+		{
+			view(align_children: align_row, alignment: align_fill)
+			{
+				view(align_children: align_right, width: thePromptWidth)
+				{
+					static_text(name: '$$$/Dialogs/DataRequest/Message/To');
+				}
+				
+				edit_text(item_id: 'eTo_', width: theEditWidth);
+			}
+			
+			view(align_children: align_row, alignment: align_fill)
+			{
+				view(align_children: align_right, width: thePromptWidth)
+				{
+					static_text(name: '$$$/Dialogs/DataRequest/Message/Subject');
+				}
+				
+				edit_text(item_id: 'eSub', width: theEditWidth);
+			}
+			
+			edit_text(item_id: 'eBod', multiline: true, width: theEditWidth, height: theBodyHeight);
+		}
+    }
+}

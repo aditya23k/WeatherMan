@@ -1,0 +1,8 @@
+"userNameLabelAuthDialog" = "Käyttäjänimi";
+"passwordLabelAuthDialog" = "Salasana";
+"okButtonAuthDialog" = "OK";
+"cancelButtonAuthDialog" = "Peruuta";
+"titleAuthDialog" = "Todennusta vaaditaan";
+"messageForHostInfoAuthDialog" = "%@ edellyttää käyttäjänimeäsi ja salasanaasi.";
+"messageForSecurityInfoAuthDialog" = "Kirjautumistietosi lähetetään turvallisesti.";
+"checkBoxTextAuthDialog" = "Muista tämä salasana avainnipussani";

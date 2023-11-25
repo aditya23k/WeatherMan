@@ -1,0 +1,25 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="Сканувати й розпізнати текст" av2Title="Сканувати й розпізнати текст" id="ScanPDFRdrApp" description="Перетворюйте скановані копії або фотографії на PDF-файли з підтримкою пошуку та виділення тексту" av2Description="Перетворіть відскановані файли або зображення на PDF" majorVersion="1" minorVersion="0" inAppUpsellEnabled="true">
+	<Commands>
+		<Command name="P2PInsertMenuRdr"/>
+		<Command name="MagicCleanPerspectiveCorrectionRdr"/>
+		<Command name="OptimizeScannedPdfRdr"/>
+		<Command name="P2PShowOptimizeRdr"/>
+		<Command name="P2PShowOCRRdr"/>
+		<Command name="CapturePagesRdr"/>
+		<Command name="CaptureMultipleFilesRdr"/>
+		<Command name="ShowCaptureSuspectsRdr"/>
+		<Command name="BatesNumberingRdr"/>
+		<!-- Single Page Operations -->
+		<Command name="CropRdr"/>
+		<Command name="RotatePagesCCWRdr"/>
+		<Command name="RotatePagesCWRdr"/>
+		<Command name="DeleteSelectedPagesRdr"/>
+	</Commands>
+	<Layouts>
+		<Layout name="Default">
+			<ContentView>
+				<Component name="ScanPDFAppRHPView" fontSize="12"/>
+			</ContentView>
+		</Layout>
+	</Layouts>
+</Application>

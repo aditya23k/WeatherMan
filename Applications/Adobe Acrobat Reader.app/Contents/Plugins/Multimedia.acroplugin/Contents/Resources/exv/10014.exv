@@ -1,0 +1,7 @@
+gListWidth	= 590;
+gListHeight	= 6*gPopupHeight + 310;
+gPaneWidth	= 600;
+dialog( target_id: 'slst', width: gPaneWidth)
+{
+	mclv( item_id: 'slst', width: gListWidth, height: gListHeight );
+}

@@ -1,0 +1,62 @@
+gListPopupWidth=max(
+	zstring_width(zstring: '$$$IDS_WORDLIST_ADDED'),
+	zstring_width(zstring: '$$$IDS_WORDLIST_REMOVED'));
+
+gButtonWidth=max(
+	zstring_width(zstring: '$$$/Dialogs/EditDictionary/AddButton'),
+	zstring_width(zstring: '$$$/Dialogs/EditDictionary/DeleteButton'),
+	zstring_width(zstring: '$$$/Dialogs/EditDictionary/DoneButton'),
+	zstring_width(zstring: '$$$/Dialogs/EditDictionary/ChangeButton')) + max_char_width();
+
+gDictionaryPopupWidth = max_char_width() * 17;
+gEntryEditTextWidth = max_char_width() * 12;
+
+gListBoxHeight = gEditTextHeight * 12;
+
+gEntry		= '$$$/Dialogs/EditDictionary/Entry';
+gDictionary	= '$$$/Dialogs/EditDictionary/Dictionary';
+gAdd		= '$$$/Dialogs/EditDictionary/AddButton';
+gDelete		= '$$$/Dialogs/EditDictionary/DeleteButton';
+gChange		= '$$$/Dialogs/EditDictionary/ChangeButton';
+
+dialog(name: '$$$/Dialogs/EditDictionary', target_id: 'text')
+{
+	view(align_children: align_right)
+	{
+		view(align_children: align_row)
+		{
+			static_text(item_id: 'dict', name: gDictionary);
+			popup(item_id: 'dPop', width: gDictionaryPopupWidth);
+		}
+		popup(item_id: 'lPop', width: gListPopupWidth);
+		cluster(align_children: align_left)
+		{		
+			view(align_children: align_top)
+			{		
+				view(align_children: align_left)
+				{
+					view(align_children: align_row)
+					{
+						view(align_children: align_left)
+						{
+							static_text(item_id: 'entr', name: gEntry);
+						}
+						edit_text(item_id: 'text', width: gEntryEditTextWidth);
+					}
+					list_box(item_id: 'wlst', alignment: align_fill, height: gListBoxHeight);
+				}
+				view(align_children: align_fill)
+				{
+					button(view_id: 'ok  ', width: gButtonWidth, name: gAdd);
+					button(item_id: 'remv', width: gButtonWidth, name: gDelete);
+					button(item_id: 'chng', width: gButtonWidth, name: gChange);
+				}
+			}
+		}
+		view(alignment: align_right, align_children: align_row)
+		{
+			button(item_id: 'done');
+			button(item_id: 'cncl');
+		}
+	}
+}

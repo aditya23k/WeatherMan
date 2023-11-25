@@ -1,0 +1,21 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="Print Production" av2Title="Use print production" description="Preview, preflight, correct, and prepare PDF files for high-end print production" av2Description="Preview, preflight, and prepare PDFs for high-end print production" id="PrintProductionRdrApp" majorVersion="1" minorVersion="0">
+	<Commands>
+			<Command name="BigPreviewRdr"/>
+			<Command name="TouchUpObjectToolRdr"/>
+			<Command name="ColorConversionMenuItemRdr"/>
+			<Command name="FlattenerMenuItemRdr"/>
+			<Command name="SaveAsPDFXRdr"/>
+			<Command name="CropPagesPPRdr"/>
+			<Command name="AddMarksMenuItemRdr"/>
+			<Command name="HairlinesMenuItemRdr"/>
+			<Command name="InkManagerMenuItemRdr"/>
+			<Command name="TrapPresetsMenuItemRdr"/>
+	</Commands>
+	<Layouts>
+		<Layout name="Default">
+			<ContentView>
+				<Component name="PrintProductionAppRHPView" fontSize="12"/>
+			</ContentView>
+		</Layout>
+	</Layouts>
+</Application>

@@ -1,0 +1,81 @@
+gRendBtnsWidth			= zstring_width( zstring: '$$$/Dialogs/Multimedia/EditScreenAnnot/Create' ) + 
+						  zstring_width( zstring: '$$$/Dialogs/Multimedia/EditScreenAnnot/Edit' ) + 
+						  zstring_width( zstring: '$$$/Dialogs/Multimedia/EditScreenAnnot/Remove' ) + 3 * gButtonSpace;
+
+gColumnOneWidth			= max( zstring_width( zstring: '$$$/Dialogs/Multimedia/EditScreenAnnot/Name' ),
+							   zstring_width( zstring: '$$$/Dialogs/Multimedia/EditScreenAnnot/AltText' ) );
+
+gUpAndDownButtonWidth	= 22;
+gUpAndDownButtonHeight	= 32;
+
+gTriggerStringsWidth	= max( zstring_width( zstring: '$$$IDS_MOUSE_UP_TRIGGER' ),
+							   zstring_width( zstring: '$$$IDS_MOUSE_DOWN_TRIGGER' ),
+							   zstring_width( zstring: '$$$IDS_MOUSE_ENTER_TRIGGER' ),
+							   zstring_width( zstring: '$$$IDS_MOUSE_EXIT_TRIGGER' ),
+							   zstring_width( zstring: '$$$IDS_FOCUS_TRIGGER' ),
+							   zstring_width( zstring: '$$$IDS_BLUR_TRIGGER' ),
+							   zstring_width( zstring: '$$$IDS_PAGE_ENTER_TRIGGER' ),
+							   zstring_width( zstring: '$$$IDS_PAGE_EXIT_TRIGGER' ),
+							   zstring_width( zstring: '$$$IDS_PAGE_VISIBLE_TRIGGER' ),
+							   zstring_width( zstring: '$$$IDS_PAGE_INVISIBLE_TRIGGER' ) );
+
+gListBoxHeight			= gEditTextHeight * 7;
+gListBoxWidth			= gRendBtnsWidth - gUpAndDownButtonWidth;
+
+gInfoTextWidth			= gRendBtnsWidth;
+
+gTextEditFieldWidth		= gRendBtnsWidth + gMarginWidth + gMarginWidth - gColumnOneWidth;
+
+dialog( name: '$$$/Dialogs/Multimedia/EditScreenAnnot', first_tab: 'nmlb' )
+{
+	group( align_children: align_left, alignment: align_fill )
+	{
+		view( align_children: align_row, alignment: align_fill )
+		{
+			view( align_children: align_right, width: gColumnOneWidth, alignment: align_fill )
+			{
+				static_text( item_id: 'nmlb', name: '$$$/Dialogs/Multimedia/EditScreenAnnot/Name', next_tab: 'name' );
+				static_text( item_id: 'altl', name: '$$$/Dialogs/Multimedia/EditScreenAnnot/AltText', next_tab: 'altt' );
+			}
+
+			view( align_children: align_left, alignment: align_fill )
+			{
+				edit_text( item_id: 'name', width: gTextEditFieldWidth, alignment: align_fill, next_tab: 'altl' );
+				edit_text( item_id: 'altt', width: gTextEditFieldWidth, alignment: align_fill, next_tab: 'clst' );
+			}
+		}
+
+		cluster( item_id: 'clst', name: '$$$/Dialogs/Multimedia/EditScreenAnnot/Renditions', alignment: align_fill, next_tab: 'info' )
+		{
+			view( align_children: align_left, alignment: align_fill )
+			{
+				static_text( item_id: 'info', width: gInfoTextWidth, alignment: align_fill, next_tab: 'trgl' );
+
+				view( align_children: align_row, alignment: align_fill )
+				{
+					static_text( item_id: 'trgl', name: '$$$/Dialogs/Multimedia/EditScreenAnnot/ViewRends', next_tab: 'trgr' );
+					popup( item_id: 'trgr', alignment: align_fill, next_tab: 'rndl' );
+					gap( width: gUpAndDownButtonWidth );
+				}
+
+				view( alignment: align_fill, align_children: align_row )
+				{
+					hier_list_box( item_id: 'rndl', height: gListBoxHeight, alignment: align_fill, next_tab: 'rnup' );
+
+					view( align_children: align_left, width: gUpAndDownButtonWidth )
+					{
+						button( item_id: 'rnup', picture: true, height: gUpAndDownButtonHeight, width: gUpAndDownButtonWidth, next_tab: 'rndn' );
+						button( item_id: 'rndn', picture: true, height: gUpAndDownButtonHeight, width: gUpAndDownButtonWidth, next_tab: 'crte' );
+					}
+				}
+
+				view( alignment: align_fill, align_children: align_row )
+				{
+					button( item_id: 'crte', name: '$$$/Dialogs/Multimedia/EditScreenAnnot/Create', alignment: align_fill, next_tab: 'edit' );
+					button( item_id: 'edit', name: '$$$/Dialogs/Multimedia/EditScreenAnnot/Edit', alignment: align_fill, next_tab: 'rmve' );
+					button( item_id: 'rmve', name: '$$$/Dialogs/Multimedia/EditScreenAnnot/Remove', alignment: align_fill );
+				}
+			}
+		}
+	}
+}

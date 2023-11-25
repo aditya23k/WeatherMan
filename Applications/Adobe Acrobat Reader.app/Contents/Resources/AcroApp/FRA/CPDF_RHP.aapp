@@ -1,0 +1,11 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="Créer un fichier PDF" av2Title="Créer au format PDF" description="Créez un fichier PDF à partir de n’importe quel format." av2Description="Créer des fichiers PDF à partir d'images, de fichiers Microsoft Office, etc." richTooltip="Créez des PDF à partir d’images, de fichiers Microsoft, de fichiers numérisés, de pages web ou d’une page vierge." id="CPDFApp" majorVersion="1" minorVersion="0" inline="true">
+	<Commands>
+	</Commands>
+	<Layouts>
+		<Layout name="Default">
+			<ContentView>
+				<Component name="CreatePDFRHPView" fontSize="12"/>
+			</ContentView>
+		</Layout>
+	</Layouts>
+</Application>

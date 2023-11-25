@@ -1,0 +1,22 @@
+dialog(horizontal: align_fill)
+{
+	group(name: '$$$/Dialogs/SendMail/PrefDialog/Text', align_children: align_left)
+	{
+		mclv(identifier: 'lstP', width: 560, dheight: 200);
+		row(horizontal: align_fill) 
+		{
+			popup(name: '', identifier: 'powc', horizontal: align_fill);
+			picture(identifier: 'hlpi', resource_id: "AX_Info_Sm_N.png", vertical: align_center);
+			gap(dwidth: '30');
+			button(name: '$$$/Dialogs/SendMail/EditAccount', identifier: 'edit', horizontal: align_right);
+			button(name: '$$$/Dialogs/SendMail/MakeDefault', identifier: 'dflt', horizontal: align_right, margin_width:500);
+			button(name: '$$$/Dialogs/SendMail/DeleteAccount', identifier: 'delt', horizontal: align_right);
+		}
+	}
+
+	group(name: '$$$/Dialogs/SendMail/AttachEmailSettings', width: 590, align_children: align_left, identifier: 'algp')
+	{
+		checkbox(identifier: 'atLp', name:'$$$/Dialogs/SendMail/AttachLinkPref');
+		checkbox(identifier: 'sbev', name:'$$$/Dialogs/SendMail/SendForViewPref');
+	}
+}

@@ -1,0 +1,11 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="Modifier le PDF" av2Title="Modifier un PDF" id="EditPDFRdrMenuApp" description="Modifier le texte et les images dans un fichier PDF" richTooltip="Modifiez le texte et les images, modifiez les pages numérisées et organisez les pages." av2Description="Modifier ou ajouter du texte, des images, des pages, etc." majorVersion="1" minorVersion="0" inAppUpsellEnabled="true">
+	<Commands>
+	</Commands>
+	<Layouts>
+		<Layout name="Default">
+			<ContentView>
+				<Component name="EditPDFRdrMenuAppView" fontSize="12"/>
+			</ContentView>
+		</Layout>
+	</Layouts>
+</Application>

@@ -1,0 +1,37 @@
+gTitle = '$$$IDS_DCWF_STEP3_TITLE';
+
+gExplainMaxWidth = max(	zstring_width(zstring: '$$$IDS_DCWF_STEP1_EXPLAIN'),
+						zstring_width(zstring: '$$$IDS_DCWF_STEP1_STEP1_EXPLAIN'),
+						zstring_width(zstring: '$$$IDS_DCWF_STEP1_STEP2_EXPLAIN'),
+						zstring_width(zstring: '$$$IDS_DCWF_STEP1_STEP3_EXPLAIN'),
+						zstring_width(zstring: '$$$IDS_DCWF_STEP2_EXPLAIN'),
+						zstring_width(zstring: '$$$IDS_DCWF_STEP3_EXPLAIN'));
+gExplainMaxWidth = gExplainMaxWidth / 3;
+gExplainTextWidth = gExplainMaxWidth + max_char_width();
+gExplainTextHeight = gStaticTextHeight * 3;
+
+gBoldTextHeight = (gStaticTextHeight * 11) / 10;
+gStepMaxWidth = max(	zstring_width(zstring: '$$$IDS_DCWF_STEP1_STEP1'),
+						zstring_width(zstring: '$$$IDS_DCWF_STEP1_STEP2'),
+						zstring_width(zstring: '$$$IDS_DCWF_STEP1_STEP3'));
+gStepMaxWidth = gStepMaxWidth + max_char_width();
+
+gPanelWidth = gExplainTextWidth + gStepMaxWidth;
+
+gEditTextHeight = gStaticTextHeight * 9;
+
+gSubject = '$$$IDS_DCWF_STEP3_SUBJECT';
+gMessage = '$$$IDS_DCWF_STEP3_MESSAGE';
+
+dialog()
+{
+	view(align_children: align_left, alignment: align_fill)
+	{
+		static_text(item_id: 'titl', font_id: 5, height: gBoldTextHeight, width: gPanelWidth, name: gTitle);
+		static_text(item_id: 'expl', width: gPanelWidth, height: gExplainTextHeight);
+		static_text(name: gSubject, width: gPanelWidth);
+		edit_text(item_id: 'stxt', width: gPanelWidth, height: gStaticTextHeight*2);
+		static_text(name: gMessage, width: gPanelWidth);
+		edit_text(item_id: 'btxt', multiline: true, width: gPanelWidth, height: gEditTextHeight);
+	}
+}

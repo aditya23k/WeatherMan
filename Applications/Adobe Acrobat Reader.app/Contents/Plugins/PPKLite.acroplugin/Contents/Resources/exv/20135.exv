@@ -1,0 +1,66 @@
+gLeftTextWidth = max(
+	zstring_width(zstring: '$$$IDS_CertCreator_Name'),
+	zstring_width(zstring: '$$$IDS_CertCreator_Org'),
+	zstring_width(zstring: '$$$IDS_CertCreator_OrgUnit'),
+	zstring_width(zstring: '$$$IDS_CertCreator_Email'),
+	zstring_width(zstring: '$$$IDS_CertCreator_Country'),
+	zstring_width(zstring: '$$$IDS_CertCreator_KeyAlgorithm'),
+	zstring_width(zstring: '$$$IDS_CertCreator_KeyUsage') );
+    
+gEditTextWidth = max_char_width() * 20;
+
+gRightTextWidth = max( 
+	gEditTextWidth, 
+	zstring_width(zstring: '$$$IDS_CertCreator_ASCIIEquivalents') );
+
+gUnicodeWidth = zstring_width(zstring: '$$$IDS_CertCreator_UnicodeHeader');
+
+dialog()
+{
+    view(width: gPanelWidth - 20, align_children: align_left)
+	{
+		static_text( item_id: 'note', name: '$$$IDS_CertCreator_Notice', alignment: align_fill );
+
+		view( align_children: align_row, alignment: align_fill )
+		{
+			static_text( name: '$$$IDS_CertCreator_Name', width: gLeftTextWidth, alignment: align_right );
+			edit_text( item_id: 'Name', alignment: align_fill );
+		}
+		
+		view( align_children: align_row, alignment: align_fill )
+		{
+			static_text( name: '$$$IDS_CertCreator_OrgUnit', width: gLeftTextWidth, alignment: align_right);
+			edit_text( item_id: 'OrgU', alignment: align_fill);
+		}
+		
+		view( align_children: align_row, alignment: align_fill )
+		{
+			static_text( name: '$$$IDS_CertCreator_Org', width: gLeftTextWidth, alignment: align_right);
+			edit_text( item_id: 'Org ', alignment: align_fill);
+		}
+		
+		view( align_children: align_row, alignment: align_fill )
+		{
+			static_text( name: '$$$IDS_CertCreator_Email', width: gLeftTextWidth, alignment: align_right );
+			edit_text( item_id: 'Emal', alignment: align_fill);
+		}
+
+		view( align_children: align_row, alignment: align_fill )
+		{
+			static_text( name: '$$$IDS_CertCreator_Country', width: gLeftTextWidth, alignment: align_right );
+			popup( item_id: 'Ctry', alignment: align_fill );
+		}
+		
+		view( align_children: align_row, alignment: align_fill )
+		{
+			static_text( name: '$$$IDS_CertCreator_KeyAlgorithm', width: gLeftTextWidth, alignment: align_right );
+			popup( item_id: 'KeyA', alignment: align_fill );
+		}
+
+		view( align_children: align_row, alignment: align_fill )
+		{
+			static_text( name: '$$$IDS_CertCreator_KeyUsage', width: gLeftTextWidth, alignment: align_right );
+			popup( item_id: 'KeyU', alignment: align_fill );
+		}
+	}
+}

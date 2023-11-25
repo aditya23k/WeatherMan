@@ -1,0 +1,62 @@
+dialog(name: '$$$/Dialogs/CreateTable', target_id: 'rows')
+{
+	view(align_children: align_left){
+		cluster(name: '$$$/Dialogs/CreateTable/RowsAndColumns', align_children: align_left) {
+			view(align_children: align_row, alignment: align_fill) {
+				static_text(name: '$$$/Dialogs/CreateTable/Rows');
+				view(align_children: align_center, alignment: align_fill) {
+					gap(width: gGap);
+				}
+				edit_text(item_id: 'rows', SpinEdit: true, numeric: true, width: max_char_width() * 5);
+				static_text(name: '$$$/Dialogs/CreateTable/Times');
+			}
+			view(align_children: align_row, alignment: align_fill) {
+				static_text(name: '$$$/Dialogs/CreateTable/Columns');
+				view(align_children: align_center, alignment: align_fill) {
+					gap(width: gGap);
+				}
+				edit_text(item_id: 'cols', SpinEdit: true, numeric: true, width: max_char_width() * 5);
+				static_text(name: '$$$/Dialogs/CreateTable/Times');
+			}
+		}
+		cluster(name: '$$$/Dialogs/CreateTable/TableSize', align_children: align_left) {
+			view(align_children: align_row, alignment: align_fill) {
+				static_text(name: '$$$/Dialogs/CreateTable/Width');
+				view(align_children: align_center, alignment: align_fill) {
+					edit_text(item_id: 'widt', SpinEdit: true, numeric: true, width: max_char_width() * 5);
+				}
+			}
+			view(align_children: align_row, alignment: align_fill) {
+				static_text(name: '$$$/Dialogs/CreateTable/Height');
+				view(align_children: align_center, alignment: align_fill) {
+					edit_text(item_id: 'heig', SpinEdit: true, numeric: true, width: max_char_width() * 5);
+				}
+			}
+		}
+		cluster(name: '$$$/Dialogs/CreateTable/TableOffset', align_children: align_left) {
+			view(align_children: align_row, alignment: align_center) {
+				button(item_id: 'up  ', name: '$$$/Dialogs/CreateTable/Up');
+			}
+			view(align_children: align_row, alignment: align_fill) {
+				button(item_id: 'left', name: '$$$/Dialogs/CreateTable/Left');
+				view(align_children: align_center, alignment: align_fill) {
+					gap(width: gGap);
+				}
+				button(item_id: 'rite', name: '$$$/Dialogs/CreateTable/Right');
+			}
+			view(align_children: align_row, alignment: align_center) {
+				button(item_id: 'down', name: '$$$/Dialogs/CreateTable/Down');
+			}
+		}
+		view(align_children: align_row, alignment: align_fill) {	
+				view(align_children: align_left, alignment: align_fill) {		
+					check_box(item_id: 'prev', name: '$$$/Dialogs/CreateTable/Preview');
+				}
+				view(align_children: align_left, alignment: align_fill) {				
+					check_box(item_id: 'dgrp', name: '$$$/Dialogs/CreateTable/DiffGroup');
+				}
+			}
+		
+		ok_cancel();
+	}
+}

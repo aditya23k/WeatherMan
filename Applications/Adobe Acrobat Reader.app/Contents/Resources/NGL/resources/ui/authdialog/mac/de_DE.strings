@@ -1,0 +1,8 @@
+"userNameLabelAuthDialog" = "Benutzername";
+"passwordLabelAuthDialog" = "Kennwort";
+"okButtonAuthDialog" = "OK";
+"cancelButtonAuthDialog" = "Abbrechen";
+"titleAuthDialog" = "Authentifizierung erforderlich";
+"messageForHostInfoAuthDialog" = "%@ erfordert Benutzernamen und Kennwort.";
+"messageForSecurityInfoAuthDialog" = "Ihre Anmeldeinformationen werden sicher versendet.";
+"checkBoxTextAuthDialog" = "Kennwort in meinem Schlüsselbund speichern";

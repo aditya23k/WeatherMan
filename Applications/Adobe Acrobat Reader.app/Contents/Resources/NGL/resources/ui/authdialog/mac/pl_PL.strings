@@ -1,0 +1,8 @@
+"userNameLabelAuthDialog" = "Nazwa konta";
+"passwordLabelAuthDialog" = "Hasło";
+"okButtonAuthDialog" = "OK";
+"cancelButtonAuthDialog" = "Anuluj";
+"titleAuthDialog" = "Wymagane uwierzytelnienie";
+"messageForHostInfoAuthDialog" = "%@ wymaga nazwy konta i hasła.";
+"messageForSecurityInfoAuthDialog" = "Podczas wysyłania Twoje dane logowania będą zabezpieczone.";
+"checkBoxTextAuthDialog" = "Zapamiętaj to hasło w moim zestawie kluczy";

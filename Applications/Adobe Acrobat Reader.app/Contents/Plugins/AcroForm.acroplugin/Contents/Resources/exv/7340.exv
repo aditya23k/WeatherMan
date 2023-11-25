@@ -1,0 +1,62 @@
+gColumnWidthNum = 10;
+gColumnWidthLen = zstring_width(zstring: '$$$/Dialogs/TextProps/Length');
+gDefTabSpace = '$$$/Dialogs/TextProps/DefTabSpace';
+gAdvTabStopsCluster = '$$$/Dialogs/TextProps/AdvTabStops';
+gPoints = '$$$/Dialogs/TextProps/Points';
+gAdd = '$$$/Dialogs/TextProps/Add';
+gDel = '$$$/Dialogs/TextProps/Del';
+gEdit = '$$$/Dialogs/TextProps/Edit';
+
+dialog(name: '$$$/Dialogs/TextProps/Tabs', target_id: 'Tabs' , margin_height: 4, margin_width: 12)
+{
+	view(align_children: align_top, alignment: align_fill ,height:10)
+	{
+		view(align_children: align_left ,height:10)
+		{
+			view(align_children: align_left ,height:10)
+			{
+				view(align_children: align_row)
+				{
+					view(align_children: align_right)
+					{
+						gap(width: gColumnWidthNum);
+					}
+					view(align_children: align_right)
+					{
+						static_text(name: gDefTabSpace);
+					}
+					view(align_children: align_row)
+					{
+						edit_text(item_id: 'dtbs', numeric: true, width: gColumnWidthLen);
+						static_text(item_id: 'tlbl', name: gPoints);						
+					}
+
+				}
+						
+			}
+			cluster(item_id: 'tclu' , name: gAdvTabStopsCluster )
+            {
+			 	view(align_children: align_left)
+				{
+					view(align_children: align_left)
+                    {                                        
+						mclv(item_id: 'lsts', dwidth: 280 , dheight: 300);
+                    }
+					view( align_children: align_row) 
+                    {
+                           button(name:	gAdd, item_id: 'adts');
+							view( align_children: align_right) 
+							{
+								button(name:    gDel, item_id: 'dlts');
+						    }
+						   	view( align_children: align_right) 
+							{
+								button(name:    gEdit, item_id: 'edts');
+						    }
+                    }
+	
+				}
+			}
+		}	
+	}		
+}

@@ -1,0 +1,16 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="Action Wizard" av2Title="Use guided actions" description="Use guided actions to standardize routine PDF tasks" av2Description="Use actions to standardize routine PDF tasks" id="ActionsRdrApp" showLabels="true" majorVersion="1" minorVersion="0">
+	<Commands>
+			<Command name="CreateWorkflowRdr"/>
+			<Command name="ManageWorkflowsRdr"/>
+			<Command name="FindMoreWorkflowsRdr"/>
+			<Command name="CreateNewCustomToolRdr"/>
+			<Command name="ManageCustomToolsRdr"/>
+	</Commands>
+	<Layouts>
+		<Layout name="Default">
+			<ContentView>
+				<Component name="ActionAppRhpView" fontSize="12"/>
+			</ContentView>
+		</Layout>
+	</Layouts>
+</Application>

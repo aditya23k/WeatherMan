@@ -1,0 +1,14 @@
+theListHeight = gEditTextHeight * 6;
+theEditText = max_char_width() * 20;
+dialog(margin_height: 0, margin_width: 0) {
+	view(alignment: align_fill, align_children: align_left) {
+		gap(height: gGap);
+		static_text(item_id: 'note', font_id: 5, alignment: align_fill);
+		static_text(item_id: 'temp' ,name: '$$$/Dialogs/eEnvelope/SelEnv/Templates', alignment: align_fill);
+		mclv(item_id: 'list', height: theListHeight, alignment: align_fill);
+		view(alignment: align_fill, align_children: align_row) {
+			edit_text(item_id: 'env_', width: theEditText);
+			button(item_id: 'brws', name: '$$$/Dialogs/eEnvelope/SelEnv/Browse');
+		}
+	}
+}

@@ -1,0 +1,2 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="Lähetä kommentoitavaksi" av2Title="Lähetä kommentoitavaksi" description="Kutsu ihmisiä lisäämään kommentteja jaettuun tiedostoon ja seuraa vastauksia" richTooltip="Jaa tiedosto muiden kanssa kerätäksesi palautetta yhteen tiedostoon. Vastaa kommentteihin ja @mainitse muita." av2Description="Kutsu ihmisiä lisäämään kommentteja jaettuun tiedostoon ja seuraa vastauksia" id="ReviewPDFRdrApp" showLabels="true" majorVersion="1" minorVersion="0" inAppUpsellEnabled="true">
+</Application>

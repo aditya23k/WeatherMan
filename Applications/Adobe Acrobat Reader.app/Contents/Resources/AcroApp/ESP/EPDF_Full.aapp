@@ -1,0 +1,14 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="Exportar archivo PDF" av2Title="Exportar un PDF" description="Convierta un archivo PDF a Microsoft Word, Excel, PowerPoint y otros formatos." id="EPDFAppFull" richTooltip="Convierta archivos PDF a Microsoft Word, Excel o PowerPoint. Conviértalos también a archivos de imagen." av2Description="Convertir los PDF en archivos de Microsoft Office, imágenes y mucho más" majorVersion="1" minorVersion="0">
+	<Commands>
+		<Command name="EXFT_MSWordRdr"/>
+		<Command name="EXFT_MSExcelRdr"/>
+		<Command name="EXFT_MSPowerPointRdr"/>
+	</Commands>
+	<Layouts>
+		<Layout name="Default" OpenInDocumentTab="true">
+			<ContentView>
+				<Component name="ExportPDFView" type="Custom"/>
+			</ContentView>
+		</Layout>
+	</Layouts>
+</Application>

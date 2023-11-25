@@ -1,0 +1,169 @@
+<AcroTheme xmlns="http://ns.adobe.com/acrobat/theme/2016" id="DarkTheme" title="Dark Theme" iconSet="DarkIcons">
+	<Style id="RegularBackground">
+		<State id="normal"><ColorRGB value="0x4D4D4D"/></State>
+	</Style>
+	<Style id="ProminentBackground">
+		<State id="normal"><ColorRGB value="0x424242"/></State>
+		<State id="hover"><ColorRGB value="0x3A3A3A"/></State>
+	</Style>
+	<Style id="DocumentBackground">
+		<State id="normal"><ColorRGB value="0x282828"/></State>
+	</Style>
+	<Style id="Border">
+		<State id="normal"><ColorRGB value="0x3A3A3A"/></State>
+	</Style>
+	<Style id="Separator">
+		<State id="normal"><ColorRGB value="0xA3A3A3"/></State>
+	</Style>
+	<Style id="Icon">
+		<State id="normal"><ColorRGB value="0xC2C2C2"/></State>
+		<State id="hover"><ColorRGB value="0x51AAFE"/></State>
+		<State id="active"><ColorRGB value="0x2175C8"/></State>
+		<State id="checked"><ColorRGB value="0x51AAFE"/></State>
+	</Style>
+	<Style id="HeaderText">
+		<State id="normal"><ColorRGB value="0xBFBFBF"/></State>
+		<State id="hover"><ColorRGB value="0x51AAFE"/></State>
+		<State id="active"><ColorRGB value="0x2175C8"/></State>
+		<State id="checked"><ColorRGB value="0x51AAFE"/></State>
+	</Style>
+	<Style id="RegularText">
+		<State id="normal"><ColorRGB value="0xEAEAEA"/></State>
+		<State id="hover"><ColorRGB value="0x51AAFE"/></State>
+		<State id="active"><ColorRGB value="0x2175C8"/></State>
+		<State id="checked"><ColorRGB value="0x51AAFE"/></State>
+		<State id="disabled"><ColorRGB value="0x9B9B9B"/></State>
+	</Style>
+	<Style id="PromotionBackground">
+		<State id="normal"><ColorRGB value="0x424242"/></State>
+	</Style>
+	<Style id="PromotionText">
+		<State id="normal"><ColorRGB value="0xEAEAEA"/></State>
+	</Style>
+	<Style id="TextEditBackground">
+		<State id="normal"><ColorRGB value="0x474747"/></State>
+	</Style>
+	<Style id="TextEditBorder">
+		<State id="normal"><ColorRGB value="0x636363"/></State>
+		<State id="checked"><ColorRGB value="0x51AAFE"/></State>
+	</Style>
+	<Style id="TabBackground">
+		<State id="normal"><ColorRGB value="0x424242"/></State>
+		<State id="hover"><ColorRGB value="0x3A3A3A"/></State>
+		<State id="checked"><ColorRGB value="0x4D4D4D"/></State>
+	</Style>
+	<Style id="TabText">
+		<State id="normal"><ColorRGB value="0xEAEAEA"/></State>
+	</Style>
+	<Style id="PermanentTabText">
+		<State id="normal"><ColorRGB value="0xBFBFBF"/></State>
+		<State id="hover"><ColorRGB value="0xFFFFFF"/></State>
+		<State id="checked"><ColorRGB value="0xFFFFFF"/></State>
+	</Style>
+	<Style id="VerticalTabBackground">
+		<State id="normal"><ColorRGB value="0x4D4D4D"/></State>
+		<State id="hover"><ColorRGB value="0x4D5F70"/></State>
+		<State id="checked"><ColorRGB value="0x51AAFE"/></State>
+	</Style>
+	<Style id="VerticalTabText">
+		<State id="normal"><ColorRGB value="0xEAEAEA"/></State>
+		<State id="checked"><ColorRGB value="0xFFFFFF"/></State>
+	</Style>
+	<Style id="Hyperlink">
+		<State id="normal"><ColorRGB value="0x70D4FF"/></State>
+		<State id="hover"><ColorRGB value="0x1DBBFF"/></State>
+		<State id="active"><ColorRGB value="0x0094D4"/></State>
+		<State id="disabled"><ColorRGB value="0x9B9B9B"/></State>
+	</Style>
+	<Style id="ButtonBorder">
+		<State id="normal"><ColorRGB value="0x636363"/></State>
+	</Style>
+	<Style id="ButtonBackground">
+		<State id="normal"><ColorRGB value="0x474747"/></State>
+		<State id="hover"><ColorRGB value="0x636363"/></State>
+		<State id="active"><ColorRGB value="0x393939"/></State>
+	</Style>
+	<Style id="IconButtonBorder">
+		<State id="normal"><ColorRGB value="0x3A3A3A"/></State>
+	</Style>
+	<Style id="IconButtonBackground">
+		<State id="normal"><ColorRGB value="0x4D4D4D"/></State>
+		<State id="hover"><ColorRGB value="0x474747"/></State>
+		<State id="active"><ColorRGB value="0x424242"/></State>
+	</Style>
+	<Style id="PushButtonBackground">
+		<State id="normal"><ColorRGB value="0x51AAFE"/></State>
+		<State id="hover"><ColorRGB value="0x2175C8"/></State>
+		<State id="active"><ColorRGB value="0x1B65B3"/></State>
+	</Style>
+	<Style id="PushButtonText">
+		<State id="normal"><ColorRGB value="0xFFFFFF"/></State>
+	</Style>
+	<Style id="ListItemBackground">
+		<State id="normal"><ColorRGB value="0x4D4D4D"/></State>
+		<State id="hover"><ColorRGB value="0x474747"/></State>
+		<State id="checked"><ColorRGB value="0x424242"/></State>
+	</Style>
+	<Style id="ListItemText">
+		<State id="normal"><ColorRGB value="0xEAEAEA"/></State>
+	</Style>
+	<Style id="ListItemSubText">
+		<State id="normal"><ColorRGB value="0xBFBFBF"/></State>
+	</Style>
+	<Style id="CheckBoxRadioButtonOff">
+		<State id="normal"><ColorRGB value="0xD2D2D2"/></State>
+		<State id="hover"><ColorRGB value="0x51AAFE"/></State>
+	</Style>
+	<Style id="CheckBoxRadioButtonOn">
+		<State id="normal"><ColorRGB value="0x51AAFE"/></State>
+	</Style>
+	<Style id="ThumbnailBorder">
+		<State id="normal"><ColorRGB value="0xC2C2C2"/></State>
+		<State id="active"><ColorRGB value="0x51AAFE"/></State>
+		<State id="checked"><ColorRGB value="0x51AAFE"/></State>
+	</Style>
+	<Style id="ThumbnailText">
+		<State id="normal"><ColorRGB value="0xEAEAEA"/></State>
+		<State id="checked"><ColorRGB value="0x3A3A3A"/></State>
+	</Style>
+	<Style id="RHPSearchBoxText">
+		<State id="normal"><ColorRGB value="0xEAEAEA"/></State>
+	</Style>
+    <Style id="ToDoListItemText">
+        <State id="normal"><ColorRGB value="0xFFFFFF"/></State>
+        <State id="hover"><ColorRGB value="0xFFFFFF"/></State>
+        <State id="checked"><ColorRGB value="0xA4A4A4"/></State>
+        <State id="active"><ColorRGB value="0x51AAFE"/></State>
+    </Style>
+	<Style id="WalkthroughViewBackground">
+		<State id="normal"><ColorRGB value="0x51AAFE"/></State>
+	</Style>
+	<Style id="WalkthroughViewText">
+		<State id="normal"><ColorRGB value="0xFFFFFF"/></State>
+	</Style>
+	<Style id="TrialExpiredHeaderText">
+		<State id="normal"><ColorRGB value="0xFF6969"/></State>
+	</Style>
+	<Style id="TrialExpiredText">
+		<State id="normal"><ColorRGB value="0xFCFCFC"/></State>
+	</Style>
+	<Style id="TrialProgress">
+		<State id="normal"><ColorRGB value="0xFCFCFC"/></State>
+	</Style>
+	<Style id="TrialBuyButtonFrame">
+		<State id="normal"><ColorRGB value="0x636363"/></State>
+	</Style>
+	<Style id="TrialBuyButtonText">
+		<State id="normal"><ColorRGB value="0xFFFFFF"/></State>
+	</Style>
+	<Style id="TrialBuyButtonBackground">
+		<State id="normal"><ColorRGB value="0x474747"/></State>
+		<State id="hover"><ColorRGB value="0x636363"/></State>
+		<State id="active"><ColorRGB value="0x393939"/></State>
+	</Style>
+	<Style id="TrialExpiredBuyButtonBackground">
+		<State id="normal"><ColorRGB value="0x474747"/></State>
+		<State id="hover"><ColorRGB value="0x5C3939"/></State>
+		<State id="active"><ColorRGB value="0x481B1B"/></State>
+	</Style>
+</AcroTheme>

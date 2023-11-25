@@ -1,0 +1,9 @@
+dialog(name: '$$$/Dialogs/OpenURL')
+{
+	row(horizontal: align_fill)
+	{
+		static_text(name: '$$$/Dialogs/OpenURL/URL_LABEL');
+		edit_text(identifier: 'url1', width: 350);
+	}
+	ok_cancel();
+}

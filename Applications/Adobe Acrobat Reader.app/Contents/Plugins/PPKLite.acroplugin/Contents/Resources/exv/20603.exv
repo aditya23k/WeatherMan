@@ -1,0 +1,13 @@
+dialog(name: '$$$/Dialogs/EDCRevocation', target_id: 'name')
+{
+	view(align_children: align_left, alignment: align_fill)
+	{
+		static_text(item_id: 'Note', alignment: align_fill );
+		gap( height: 8 );
+		view( align_children: align_row, alignment: align_fill )
+		{
+			button( item_id: 'Web ', name: '$$$/Dialogs/EDCRevocation/WebButton');        
+			ok();
+		}
+	}
+}

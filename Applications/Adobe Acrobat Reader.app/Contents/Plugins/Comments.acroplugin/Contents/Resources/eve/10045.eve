@@ -1,0 +1,13 @@
+dialog(name: '$$$/Dialogs/MergeNotify')
+{
+	column(vertical: align_fill)
+	{
+		static_text( name: '$$$/Dialogs/MergeNotify/Alert', identifier: 'asdf', wrap: true, width:400 );
+		gap(height:20);
+		row(horizontal: align_fill)
+		{
+			checkbox(name: '$$$/Dialogs/MergeNotify/DoNotShow', identifier: 'dnsa');
+			ok_cancel(ok_name:'$$$/Dialogs/MergeNotify/Merge');
+		}
+	}
+}

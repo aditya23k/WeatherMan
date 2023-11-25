@@ -1,0 +1,20 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="Accessibility" av2Title="Prepare for accessibility" description="Create and verify PDF files to meet accessibility standards for people with disabilities" av2Description="Create and verify PDFs to meet accessibility standards" id="AccessibilityRdrApp" majorVersion="1" minorVersion="0">
+	<Commands>
+			<Command name="Adobe:MakeAccessibleRdr"/>
+			<Command name="Adobe:AddFormFieldsToTagsRdr"/>
+			<Command name="Accessibility:ReadingOptionsRdr"/>
+			<Command name="AccCheck:DoCheckRdr"/>
+			<Command name="AccCheck:OpenAccReportRdr"/>
+			<Command name="Adobe:FindsFormFieldsRdr"/>
+			<Command name="SetAlternateTextRdr"/>
+			<Command name="Accessibility:WizardRdr"/>
+			<Command name="TouchUpLayoutToolRdr"/>
+	</Commands>
+	<Layouts>
+		<Layout name="Default">
+			<ContentView>
+				<Component name="AccessibilityAppRhpView" fontSize="12"/>
+			</ContentView>
+		</Layout>
+	</Layouts>
+</Application>

@@ -1,0 +1,24 @@
+dialog(name: '$$$/Dialogs/Migrate')
+{
+	view(align_children: align_left)
+	{
+		cluster(align_children: align_right)
+		{
+			view(align_children: align_left)
+			{
+				view(align_children: align_row)
+				{
+					static_text(item_id: 'txt1', name: '$$$/Dialogs/Migrate/SourceDocument');
+					edit_text(item_id: 'doca', width: 16 * max_char_width(), PopupEdit: true);
+				}
+
+				view(align_children: align_row)
+				{
+					check_box(item_id: 'revw', name: '$$$/Dialogs/Migrate/ReviewOption');
+				}
+			}
+		}
+
+		ok_cancel();
+	}
+}

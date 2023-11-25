@@ -1,0 +1,11 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="轉換 PDF" av2Title="轉換為 PDF" description="將 PDF 轉換為 Word、Powerpoint、Excel，或是從上述原生格式建立 PDF" av2Description="將幾乎任何檔案轉換為 PDF" id="ConvertPDFApp" majorVersion="1" minorVersion="0" inline="true">
+	<Commands>
+	</Commands>
+	<Layouts>
+		<Layout name="Default">
+			<ContentView>
+				<Component name="ConvertPDFRHPView" fontSize="12"/>
+			</ContentView>
+		</Layout>
+	</Layouts>
+</Application>

@@ -1,0 +1,16 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="JavaScript" av2Title="Use JavaScript" description="Enhance PDF forms and connect to databases with JavaScript" av2Description="Enhance PDF forms and connect to databases with JavaScript" id="DeveloperRdrApp" showLabels="true" majorVersion="1" minorVersion="0">
+	<Commands>
+			<Command name="jsDebugFromStartRdr"/>
+			<Command name="jsDocJavaScriptsRdr"/>
+			<Command name="jsEditAllJavaScriptsRdr"/>
+			<Command name="jsDebuggerRdr"/>
+			<Command name="jsSetDocActionsRdr"/>
+	</Commands>
+	<Layouts>
+		<Layout name="Default">
+			<ContentView>
+				<Component name="DeveloperAppRhpView" fontSize="12"/>
+			</ContentView>
+		</Layout>
+	</Layouts>
+</Application>

@@ -1,0 +1,15 @@
+dialog()
+{
+	static_text(identifier: 'mprp', name: '$$$/Dialogs/SPMetadata/MissingPropAlert', dwidth:350, wrap:true);
+	static_text(identifier: 'msva', name: '$$$/Dialogs/SPMetadata/SaveAsMessage', dwidth:350, wrap:true);
+	
+	row()
+	{
+		icon(identifier: 'icon', resource_id: "C_Info_Md_N.png");
+		static_text(identifier: 'tipt', name: '$$$/Dialogs/SPMetadata/Tip');
+	}
+	
+	mclv(identifier: 'spmd', dwidth: 350, dheight: 400);
+
+	ok_cancel();
+}

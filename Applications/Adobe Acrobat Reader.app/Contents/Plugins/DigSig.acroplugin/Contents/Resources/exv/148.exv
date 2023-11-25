@@ -1,0 +1,15 @@
+gDialogWidth = max_char_width() * 35;
+
+dialog(name: '$$$/Dialogs/DigSigShowModAnalysis')
+{
+	view(align_children: align_left)
+	{
+		view(align_children: align_top)
+		{
+			picture(item_id: 'icon', width: 32, height: 32);
+			static_text( item_id:'dhdr', width: gDialogWidth);
+		}
+		edit_text(item_id: 'list', multiline: true, readonly: true, height: 150, alignment: align_fill);				
+		ok();
+	}
+}

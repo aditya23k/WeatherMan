@@ -1,0 +1,131 @@
+gMaxWidthRow=max(
+	zstring_width(zstring: '$$$/Dialogs/IconPlace/When'),
+	zstring_width(zstring: '$$$/Dialogs/IconPlace/How'));
+
+gMaxSliderTextWidth=max(
+	zstring_width(zstring: '$$$/Dialogs/IconPlace/Fifty'),
+	zstring_width(zstring: '$$$/Dialogs/IconPlace/Fifty'));
+
+gTextItemWidth	= max_char_width() * 15;
+gTextItemHeight	= gStaticTextHeight * 2;
+gSliderWidth	= max_char_width() * 12;
+gSliderHeight	= 16;
+gPopupWidth		= max_char_width() * 10;
+gTickerW		= 6;
+gTickerH		= 120;
+
+gWhen			= '$$$/Dialogs/IconPlace/When';
+gHow			= '$$$/Dialogs/IconPlace/How';
+gButton			= '$$$/Dialogs/IconPlace/Button';
+gButtonW		= zstring_width(zstring: '$$$/Dialogs/IconPlace/Button') + 5;
+gFifty			= '$$$/Dialogs/IconPlace/Fifty';
+gReset			= '$$$/Dialogs/IconPlace/Reset';
+gFitToBounds	= '$$$/Dialogs/IconPlace/FitToBounds';
+
+dialog(name: '$$$/Dialogs/IconPlace')
+{
+	view(align_children: align_center)
+	{
+		view(align_children: align_left)
+		{
+			view(align_children: align_row)
+			{
+				view(align_children: align_right, width: gMaxWidthRow)
+				{
+					static_text(item_id: 'when', name: gWhen);
+				}
+				view(align_children: align_left)
+				{
+					popup(item_id: 'wpop', width: gPopupWidth);
+				}
+			}
+			view(align_children: align_row)
+			{
+				view(align_children: align_right, width: gMaxWidthRow)
+				{
+					static_text(item_id: 'how1', name: gHow);
+				}
+				view(align_children: align_left)
+				{
+					popup(item_id: 'hpop', width: gPopupWidth);
+				}
+			}
+			view(align_children: align_row)
+			{
+				view(align_children: align_right, width: gMaxWidthRow)
+				{
+					static_text(item_id: 'fill');
+				}
+				view(align_children: align_left)
+				{
+					check_box(item_id: 'fitb', name: gFitToBounds);
+				}
+			}
+		}
+		gap(height: 5);
+		static_text(item_id: 'butn', name: gButton, width: gButtonW, alignment: align_center);
+		view(align_children: align_left)
+		{
+			view(align_children: align_row)
+			{
+				view(align_children: align_right, width: 50)
+				{
+				}
+				view(align_children: align_offscreen)
+				{
+					view(align_children: align_center)
+					{
+						picture(item_id: 'butt', width: gTickerH, height: 100 + gTickerW);
+					}
+					view(align_children: align_center)
+					{
+						picture(item_id: 'icon', width: 76, height: 75);
+					}
+				}
+				gap(width: 0);
+				view(align_children: align_right, margin_width: 0, margin_height: 0)
+				{	
+					picture(item_id: 'tckh', width: gTickerW, height: 101);
+				}
+				slider(item_id: 'heig', width: gSliderHeight, height: gTickerH);
+			}
+			view(align_children: align_row)
+			{
+				view(align_children: align_right, width: 54)
+				{
+				}
+				view(align_children: align_left, margin_width: 0, margin_height: 0)
+				{	
+					picture(item_id: 'tckw', width: 111, height: gTickerW);
+				}
+			}
+			view(align_children: align_row)
+			{
+				view(align_children: align_right, width: 45)
+				{
+				}
+				view(align_children: align_left, margin_width: 0, margin_height: 0)
+				{	
+					slider(item_id: 'widt', width: 132, height: gSliderHeight);
+				}
+				view(align_children: align_left, width: gMaxSliderTextWidth)
+				{
+					static_text(item_id: 'text', name: gFifty);
+				}
+			}
+		}
+		
+		gap(height: 10);
+		static_text(item_id: 'txt1', alignment: align_fill, height: gTextItemHeight);
+		view(align_children: align_right)
+		{
+			view(align_children: align_row)
+			{
+				button(item_id: 'rese', name: gReset);
+				gap(width: 4);
+				ok_cancel();
+			}
+		}
+	}
+}
+

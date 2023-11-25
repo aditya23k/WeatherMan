@@ -1,0 +1,20 @@
+gDialogTitle = '$$$/Dialogs/Progress/DialogTitle';
+gStatus = '$$$/Dialogs/Progress/Status';
+gCancel = '$$$/Dialogs/Progress/Cancel';
+gMaxWidth  = max_char_width() * 27;
+                      
+
+dialog ( name: gDialogTitle )
+{
+	view ( align_children: align_center )
+	{
+		view ( align_children: align_left )
+		{
+			progress_bar( item_id: 'prog', alignment: align_fill, width: gMaxWidth);
+		}	
+		
+		gap();
+		
+		button ( item_id: 'cbtn', alignment: align_right, name: gCancel );
+	}
+}

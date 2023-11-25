@@ -1,0 +1,184 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="Fill &amp; Sign" av2Title="Fill &amp; Sign" description="Fill and sign forms or get them signed from others" av2Description="Fill in forms, add your signature, or send to others for e-signing" richTooltip = "Fill out a form digitally. Then add your signature or send it to others for e-signing." id="FillSignApp" requiresDoc="true" majorVersion="1" minorVersion="0">
+	<Commands>
+		<Command name="FSS:Tool:Text"/>
+		<Command name="FSS:Tool:Crosscheck"/>
+		<Command name="FSS:Tool:Checkmark"/>
+		<Command name="FSS:Tool:Circle"/>
+		<Command name="FSS:Tool:Line"/>
+		<Command name="FSS:Tool:Dot"/>
+		<Command name="FSS:DigSig" layout="Native" />
+		<Command name="FSS:ColorPicker" showInAV2UI="false"/>
+		<Command name="FSS:Tool:InviteOthers"/>
+	</Commands>
+	<Layouts>
+		<Layout name="Default" OpenInDocumentTab="true">
+			<TopBar align="Center">
+			</TopBar>
+		</Layout>
+		<Layout name="ModernWithSFS">
+			<TopBar align="Center">
+				<Component name="FSS:Tool:Text"/>
+				<Component name="FSS:Tool:Crosscheck"/>
+				<Component name="FSS:Tool:Checkmark"/>
+				<Component name="FSS:Tool:Circle"/>
+				<Component name="FSS:Tool:Line"/>
+				<Component name="FSS:Tool:Dot"/>
+				<Component name="FSS:ColorPicker" lockdown="ADC4275034"/>
+				<Component type="Separator"/>
+				<Component name="FSS:Tool:SigNative" type="Custom"/>
+				<Component name="FSS:Tool:InviteOthers" showLabel="true" />
+			</TopBar>
+			<TouchBar name="FSS:TouchBarModern">
+                <Component type="TBSpaceFlexi" />
+               	<Component name="FSS:Tool:Text" type="TBButton"/>
+				<Component name="FSS:Tool:Crosscheck" type="TBButton"/>
+				<Component name="FSS:Tool:Checkmark" type="TBButton"/>
+				<Component name="FSS:Tool:Circle" type="TBButton"/>
+				<Component name="FSS:Tool:Line" type="TBButton"/>
+				<Component name="FSS:Tool:Dot" type="TBButton"/>
+				<Component name="FSS:ColorPicker" type = "TBColorPicker" lockdown="ADC4275034"/>
+				<Component name="FSS:Tool:SigNativeTouchBar" type="TBButton"/>
+				<Component name="FSS:Tool:InviteOthers" showLabel="true" type="TBButton" />
+               	<Component type="TBSpaceFlexi" />
+            </TouchBar>
+			<ContentView/>
+		</Layout>
+		<Layout name="NativeWithSFS">
+			<TopBar align="Center">
+				<Component name="FSS:ColorPicker" lockdown="ADC4275034"/>
+				<Component type="Separator"/>
+				<Component name="FSS:Tool:SigNative" type="Custom"/>
+				<Component name="FSS:Tool:InviteOthers"  showLabel="true"/>
+			</TopBar>
+			<TouchBar name="FSS:TouchBarNative">
+              	<Component type="TBSpaceFlexi" />
+				<Component name="FSS:ColorPicker" type = "TBColorPicker" lockdown="ADC4275034"/>
+				<Component name="FSS:Tool:SigNativeTouchBar" type="TBButton"/>
+				<Component name="FSS:Tool:InviteOthers" showLabel="true" type="TBButton" />
+				<Component type="TBSpaceFlexi" />
+            </TouchBar>
+			<ContentView/>
+		</Layout>
+		<Layout name="Modern">
+			<TopBar align="Center">
+				<Component name="FSS:Tool:Text"/>
+				<Component name="FSS:Tool:Crosscheck"/>
+				<Component name="FSS:Tool:Checkmark"/>
+				<Component name="FSS:Tool:Circle"/>
+				<Component name="FSS:Tool:Line"/>
+				<Component name="FSS:Tool:Dot"/>
+				<Component type="Separator" />
+				<Component name="FSS:Tool:SigNative" type="Custom"/>
+				<Component type="Separator" lockdown="ADC4275034"/>
+				<Component name="FSS:ColorPicker" lockdown="ADC4275034"/>
+			</TopBar>
+			<TouchBar name="FSS:TouchBarModern">
+                <Component type="TBSpaceFlexi" />
+               	<Component name="FSS:Tool:Text" type="TBButton"/>
+				<Component name="FSS:Tool:Crosscheck" type="TBButton"/>
+				<Component name="FSS:Tool:Checkmark" type="TBButton"/>
+				<Component name="FSS:Tool:Circle" type="TBButton"/>
+				<Component name="FSS:Tool:Line" type="TBButton"/>
+				<Component name="FSS:Tool:Dot" type="TBButton"/>
+				<Component name="FSS:Tool:SigNativeTouchBar" type="TBButton"/>
+				<Component name="FSS:ColorPicker" type = "TBColorPicker" lockdown="ADC4275034"/>
+               	<Component type="TBSpaceFlexi" />
+            </TouchBar>
+			<ContentView/>
+		</Layout>
+		<Layout name="Native">
+			<TopBar align="Center">
+				<Component name="FSS:Tool:SigNative" type="Custom"/>
+				<Component type="Separator" lockdown="ADC4275034"/>
+				<Component name="FSS:ColorPicker" lockdown="ADC4275034"/>
+				
+			</TopBar>
+			<TouchBar name="FSS:TouchBarNative">
+              	<Component type="TBSpaceFlexi" />
+				<Component name="FSS:Tool:SigNativeTouchBar" type="TBButton"/>
+				<Component name="FSS:ColorPicker" type = "TBColorPicker" lockdown="ADC4275034"/>
+				<Component type="TBSpaceFlexi" />
+            </TouchBar>
+			<ContentView/>
+		</Layout>
+		<Layout name="IntentDialogLayout2">
+			<ContentView>
+				<Component name="FSSIntentDialog" type="Custom">
+					<Component type="Table" columns="1" hAlign="center" rowSpacing="48">
+						<Component type="Label" label="What do you want to do?" fontSize="25" />
+						<Component type="Table" columns="2" hAlign="center" vAlign="near" columnSpacing="50">
+							<Component type="Table" columns="1" vAlign="near" bottomOffset="20" border="2" UIStyle="FillSignIntentScreenTextBackGround">
+								<Component type="Table" leftBorder="2" rightBorder="2" topBorder="2" UIStyle="FillSignIntentScreenCardBackGround"  hAlign="center" vAlign="near" topOffset = "20">
+									<Component type="Bitmap" name="FSSIntentSelfIcon" width="160" height="160" colorize="false"/>
+								</Component>
+								<Component type="Table" columns="1" leftOffset="20" rightOffset="20" rowSpacing="10">
+									<Component type="Label" multiline="true" label="Fill, sign and send" fontSize="14" bold="true" hAlign="center"/>
+									<Component type="Label" width="240" adjustHeightWithText="Add signers, mark where to fill and sign, send it out and track progress." multiline="true" label="Fill form fields, add text and draw or type your signature." fontSize="14" hAlign="center" />
+								</Component>
+								<Component type="Table" hAlign="center" leftOffset="20" rightOffset="20">
+									<Component type="PushButton" name="FSS:Intent:Fill" bold="true" label="Fill and sign" fontSize="14" />
+								</Component>
+							</Component>
+							<Component type="Table" columns="1" vAlign="near" bottomOffset="20" border="2" UIStyle="FillSignIntentScreenTextBackGround">
+								<Component type="Table" leftBorder="2" rightBorder="2" topBorder="2" UIStyle="FillSignIntentScreenCardBackGround" hAlign="center" vAlign="near" topOffset = "20">
+									<Component type="Bitmap" name="FSSIntentOthersIcon" width="160" height="160" colorize="false" />
+								</Component>
+								<Component type="Table" leftOffset="20" rightOffset="20" rowSpacing="10">
+									<Component type="Label" multiline="true" label="Get others to sign" fontSize="14" bold="true" hAlign="center" />
+									<Component type="Label" width="240" adjustHeightWithText="Fill form fields, add text and draw or type your signature." multiline="true" label="Add signers, mark where to fill and sign, send it out and track progress." fontSize="14" hAlign="center" />
+								</Component>
+								<Component type="Table" hAlign="center" leftOffset="20" rightOffset="20">
+									<Component type="PushButton" name="FSS:Intent:Sign" bold="true" label="Request E-signatures" fontSize="14" />
+								</Component>
+							</Component>
+						</Component>
+						<Component type="HyperLink" label="Help" name="HelpLink"/>
+						<Component type="Table" columns="1" hAlign="center" vAlign="center" topOffset="10">
+						</Component>
+					</Component>
+					
+				</Component>
+			</ContentView>
+		</Layout>		
+		<Layout name="IntentDialogLayout1">
+			<ContentView>
+				<Component name="FSSIntentDialog" type="Custom">
+					<Component type="Table" columns="1" hAlign="center" rowSpacing="48">
+						<Component type="Label" label="Who needs to fill and sign?" fontSize="25" />
+						<Component type="Table" columns="2" hAlign="center" vAlign="near" columnSpacing="50">
+							<Component type="Table" columns="1" vAlign="near" bottomOffset="20" border="2" UIStyle="FillSignIntentScreenTextBackGround">
+								<Component type="Table" leftBorder="2" rightBorder="2" topBorder="2" UIStyle="FillSignIntentScreenCardBackGround" hAlign="center" vAlign="near" topOffset = "20">
+									<Component type="Bitmap" name="FSSIntentSelfIcon" width="160" height="160" colorize="false"/>
+								</Component>
+								<Component type="Table" columns="1" leftOffset="20" rightOffset="20" rowSpacing="10">
+									<Component type="Label" multiline="true" label="You" fontSize="14" bold="true" hAlign="center"/>
+									<Component type="Label" width="240" adjustHeightWithText="Add signers, mark where to fill and sign, send it out and track progress." multiline="true" label="Fill form fields, add text and draw or type your signature." fontSize="14" hAlign="center" />
+								</Component>
+								<Component type="Table" hAlign="center" leftOffset="20" rightOffset="20">
+									<Component type="PushButton" name="FSS:Intent:Fill" bold="true" label="Fill and sign" fontSize="14" />	
+								</Component>
+							</Component>
+							<Component type="Table" columns="1" vAlign="near" bottomOffset="20" border="2" UIStyle="FillSignIntentScreenTextBackGround">
+								<Component type="Table" leftBorder="2" rightBorder="2" topBorder="2" UIStyle="FillSignIntentScreenCardBackGround" hAlign="center" vAlign="near" topOffset = "20">
+									<Component type="Bitmap" name="FSSIntentOthersIcon" width="160" height="160" colorize="false" />
+								</Component>
+								<Component type="Table" columns="1" leftOffset="20" rightOffset="20" rowSpacing="10">
+									<Component type="Label" multiline="true" label="Others" fontSize="14" bold="true" hAlign="center" />
+									<Component type="Label" width="240" adjustHeightWithText="Fill form fields, add text and draw or type your signature." multiline="true" label="Add signers, mark where to fill and sign, send it out and track progress." fontSize="14" hAlign="center" />
+								</Component>
+								<Component type="Table" hAlign="center" leftOffset="20" rightOffset="20">
+									<Component type="PushButton" name="FSS:Intent:Sign" bold="true" label="Request E-signatures" fontSize="14" />
+								</Component>
+							</Component>
+						</Component>
+						<Component type="HyperLink" label="Help" name="HelpLink"/>
+						<Component type="Table" columns="1" hAlign="center" vAlign="center" topOffset="10">
+						</Component>
+						
+					</Component>
+					
+				</Component>
+			</ContentView>
+		</Layout>		
+	</Layouts>
+</Application>

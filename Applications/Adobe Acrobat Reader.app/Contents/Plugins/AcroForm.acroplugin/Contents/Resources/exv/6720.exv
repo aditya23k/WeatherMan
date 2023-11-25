@@ -1,0 +1,40 @@
+gTitle = '$$$IDS_NOSAVE_ONFOCUS_TITLE';
+gNoShow = '$$$IDS_DONT_SHOW_AGAIN';
+
+gPleaseNote = '$$$IDS_PLEASE_NOTE';
+gPleaseNoteWidth = zstring_width(zstring: '$$$IDS_PLEASE_NOTE');
+
+gLineOneMaxWidth = max(	zstring_width(zstring: '$$$IDS_NOSAVE_ONOPEN_MESSAGE1'),
+						zstring_width(zstring: '$$$IDS_NOSAVE_ONFOCUS_MESSAGE1'),
+						zstring_width(zstring: '$$$IDS_ESUBMIT_ONFOCUS_MESSAGE1'),
+						zstring_width(zstring: '$$$IDS_NOSAVE_ATTACHMENT_MESSAGE1'),
+						zstring_width(zstring: '$$$IDS_NOSAVE_PORTFOLIO_MESSAGE1'));
+						
+gHelpTextWidth = max(zstring_width(zstring: '$$$IDS_NOSAVE_ONOPEN_MESSAGE2'),zstring_width(zstring: '$$$IDS_NOSAVE_ONOPEN_MESSAGE3'), 
+		zstring_width(zstring: '$$$IDS_NOSAVE_ONFOCUS_MESSAGE2'),zstring_width(zstring: '$$$IDS_NOSAVE_ONFOCUS_MESSAGE3'), 
+		zstring_width(zstring: '$$$IDS_ESUBMIT_ONFOCUS_MESSAGE2'),zstring_width(zstring: '$$$IDS_ESUBMIT_ONFOCUS_MESSAGE3'), 
+		zstring_width(zstring: '$$$IDS_NOSAVE_ATTACHMENT_MESSAGE2'),zstring_width(zstring: '$$$IDS_NOSAVE_ATTACHMENT_MESSAGE3'));
+
+gHelpTextHeight = gStaticTextHeight * 4;
+
+dialog(name: gTitle)
+{
+	view(align_children: align_left)
+	{
+		cluster(item_id: 'clus', name: gTitle, align_children: align_top, alignment: align_fill)
+		{
+			picture(item_id: 'icon', width: 32, height: 32);
+			view(align_children: align_left, alignment: align_fill)
+			{
+				view(align_children: align_row, alignment: align_fill)
+				{
+					static_text(name: gPleaseNote, font_id: 5);
+					static_text(item_id: 'txt1', width: gLineOneMaxWidth);
+				}
+				static_text(item_id: 'txt2', width: gHelpTextWidth, height: gHelpTextHeight);
+			}
+		}
+		check_box(item_id: 'chkb', name: gNoShow);
+		ok(ok_name: '$$$IDS_CLOSE_BUTTON');
+	}
+}

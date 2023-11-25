@@ -1,0 +1,80 @@
+gMaxWidthFieldCheckBox=max(
+	zstring_width(zstring: '$$$/Dialogs/PropsSubmit/Select/All'),
+	zstring_width(zstring: '$$$/Dialogs/PropsSubmit/Select/Except'),
+	zstring_width(zstring: '$$$/Dialogs/PropsSubmit/Select/Only'));
+gMaxWidthDateFormat=max(
+	zstring_width(zstring: '$$$/Dialogs/PropsSubmit/Date/ClusterName'),
+	zstring_width(zstring: '$$$/Dialogs/PropsSubmit/Date/Convert'));
+dialog(name: '$$$/Dialogs/PropsSubmit', target_id: 'eURL')
+{
+	group()
+	{
+		view(align_children: align_left)
+		{
+			view(align_children: align_left)
+			{
+				static_text(item_id: 'txt1', name: '$$$/Dialogs/PropsSubmit/StaticURL');
+				edit_text(item_id: 'eURL', width: max_char_width() * 30, PopupEdit: true);
+			}			
+			view(align_children: align_top)
+			{
+				cluster(item_id: 'clu1', name: '$$$/Dialogs/PropsSubmit/Export/ClusterName', align_children: align_left)
+				{
+					group()
+					{
+						radio(item_id: 'rad1', group_id: 'rgrp', name: '$$$/Dialogs/PropsSubmit/Export/FDF');						
+							view(align_children: align_row)
+							{	gap(width: max_char_width()*1);
+								check_box(item_id: 'box1', name: '$$$/Dialogs/PropsSubmit/FDF/Data');
+							}
+							view(align_children: align_row)
+							{	gap(width: max_char_width()*1);
+								check_box(item_id: 'box2', name: '$$$/Dialogs/PropsSubmit/FDF/Annots');
+							}
+							view(align_children: align_row)
+							{	gap(width: max_char_width()*1);
+								check_box(item_id: 'box3', name: '$$$/Dialogs/PropsSubmit/FDF/Changes');
+							}
+						radio(item_id: 'rad2', group_id: 'rgrp', name: '$$$/Dialogs/PropsSubmit/Export/HTML');					
+						radio(item_id: 'rad3', group_id: 'rgrp', name: '$$$/Dialogs/PropsSubmit/Export/XML');					
+							view(align_children: align_row)
+							{	gap(width: max_char_width()*1);
+								check_box(item_id: 'box4', name: '$$$/Dialogs/PropsSubmit/XML/Data');
+							}
+							view(align_children: align_row)
+							{	gap(width: max_char_width()*1);
+								check_box(item_id: 'box5', name: '$$$/Dialogs/PropsSubmit/XML/Annots');
+							}
+						radio(item_id: 'rad4', group_id: 'rgrp', name: '$$$/Dialogs/PropsSubmit/Export/PDF');					
+					}
+				}
+				view(align_children: align_fill)
+				{
+					cluster(item_id: 'clu2', name: '$$$/Dialogs/PropsSubmit/Field/ClusterName', align_children: align_left)
+					{
+						group()
+						{
+							radio(item_id: 'rad6', group_id: 'fgrp', name: '$$$/Dialogs/PropsSubmit/Select/All', width: gMaxWidthFieldCheckBox);						
+							view(align_children: align_row)
+							{
+								radio(item_id: 'rad8', group_id: 'fgrp', name: '$$$/Dialogs/PropsSubmit/Select/Only', width: gMaxWidthFieldCheckBox);					
+								button(item_id: 'but2', name: '$$$/Dialogs/PropsSubmit/Select/Fields');
+							}
+						}
+						gap(); 
+					}
+					cluster(item_id: 'clu3', name: '$$$/Dialogs/PropsSubmit/Date/ClusterName', align_children: align_left)
+					{
+						check_box(item_id: 'box7', name: '$$$/Dialogs/PropsSubmit/Date/Convert');
+						gap(height: gStaticTextHeight * 3);
+						view(align_children: align_row)
+						{	gap(width: max_char_width()*1);
+							static_text(item_id: 'rrrr', width: gMaxWidthDateFormat, height: gStaticTextHeight * 5);
+						}
+					}
+				}
+			}
+			ok_cancel();
+		}
+	}
+}

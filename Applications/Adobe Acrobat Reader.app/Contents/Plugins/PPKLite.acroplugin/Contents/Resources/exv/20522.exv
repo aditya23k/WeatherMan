@@ -1,0 +1,90 @@
+theButtonWidth = max(
+	zstring_width( zstring: '$$$/Dialogs/EDC_Recipients/AddUser' ),
+	zstring_width( zstring: '$$$/Dialogs/EDC_Recipients/AddGroup' ),
+	zstring_width( zstring: '$$$/Dialogs/EDC_Recipients/AddExternal' ),
+	zstring_width( zstring: '$$$/Dialogs/EDC_Recipients/Remove' ),
+	zstring_width( zstring: '$$$/Dialogs/EDC_Recipients/Permissions' ) );
+
+theListHeight = gEditTextHeight * 9;
+ 
+theLabelWidth = max (
+	zstring_width( zstring: '$$$IDS_SP_PREV_SECURITY'),
+	zstring_width( zstring: '$$$IDS_SP_PREV_CHANGES'),
+	zstring_width( zstring: '$$$IDS_SP_PREV_PRINTING'),
+	zstring_width( zstring: '$$$IDS_SP_PREV_COPYING'),
+	zstring_width( zstring: '$$$IDS_SP_PREV_ACCESSIBLE'),
+	zstring_width( zstring: '$$$IDS_SP_PREV_OFFLINE') );
+	
+thePermsWidth = max(
+	zstring_width(zstring: '$$$IDS_USER_PERMS_VARIES'),
+	zstring_width(zstring: '$$$IDS_USER_PERMS_CHANGE_NONE'),
+	zstring_width(zstring: '$$$IDS_USER_PERMS_CHANGE_DOC_ASSEMBLY'),
+	zstring_width(zstring: '$$$IDS_USER_PERMS_CHANGE_FORM_FILL'),
+	zstring_width(zstring: '$$$IDS_USER_PERMS_CHANGE_ANNOT_FILL'),
+	zstring_width(zstring: '$$$IDS_USER_PERMS_CHANGE_ALL'),
+	zstring_width(zstring: '$$$IDS_USER_PERMS_PRINT_NONE'),
+	zstring_width(zstring: '$$$IDS_USER_PERMS_PRINT_BASIC'),
+	zstring_width(zstring: '$$$IDS_USER_PERMS_PRINT_PS'),
+	zstring_width(zstring: '$$$/Dialogs/STD_Permissions/EnableCopy'),
+	zstring_width(zstring: '$$$/Dialogs/STD_Permissions/EnableAccess'),
+	zstring_width(zstring: '$$$IDS_EncryptedComponents_Metadata'),
+	zstring_width(zstring: '$$$IDS_EncryptedComponents_Attach'),
+	zstring_width(zstring: '$$$IDS_EncryptedComponents_All'),
+	zstring_width(zstring: '$$$IDS_REQUIRED'),
+	zstring_width(zstring: '$$$IDS_NOT_REQUIRED'),
+	zstring_width(zstring: '$$$IDS_Allowed'),
+	zstring_width(zstring: '$$$IDS_NotAllowed')	) + gGap;
+
+dialog(margin_height: 0, margin_width: 0)
+{
+    view(alignment: align_fill, align_children: align_left)
+    {
+		gap(height: gGap);
+		
+		static_text(item_id: 'note', font_id: 5, alignment: align_fill);
+		
+		gap(height: gGap);
+
+		view(alignment: align_fill, align_children: align_top)
+		{
+			mclv(item_id: 'recl', alignment: align_fill, height: theListHeight);
+	        
+			view(align_children: align_left, width: theButtonWidth)
+			{
+				button(item_id: 'add1', name: '$$$/Dialogs/EDC_Recipients/AddUser', alignment: align_fill);
+				button(item_id: 'add2', name: '$$$/Dialogs/EDC_Recipients/AddGroup', alignment: align_fill);
+				button(item_id: 'add3', name: '$$$/Dialogs/EDC_Recipients/AddExternal', alignment: align_fill);
+				button(item_id: 'rmve', name: '$$$/Dialogs/EDC_Recipients/Remove', alignment: align_fill);
+				button(item_id: 'perm', name: '$$$/Dialogs/EDC_Recipients/Permissions', alignment: align_fill);
+			}
+		}
+		
+		cluster(item_id: 'pclu', name: '$$$/Dialogs/UserPerms/ClusterName', align_children: align_row, alignment: align_fill) 
+		{
+			view(align_children: align_right, width: theLabelWidth)
+			{
+				static_text(item_id: 'lsec', name: '$$$IDS_SP_PREV_SECURITY');
+				static_text(item_id: 'lchg', name: '$$$IDS_SP_PREV_CHANGES');
+				static_text(item_id: 'lprn', name: '$$$IDS_SP_PREV_PRINTING');
+				static_text(item_id: 'lcpy', name: '$$$IDS_SP_PREV_COPYING');
+				static_text(item_id: 'lacc', name: '$$$IDS_SP_PREV_ACCESSIBLE');
+				static_text(item_id: 'loff', name: '$$$IDS_SP_PREV_OFFLINE');
+			}
+			
+			gap(width: gGap);
+		
+			view(alignment: align_left, alignment: align_fill)
+			{
+				static_text(item_id: 'csec', width: thePermsWidth);
+				static_text(item_id: 'chgs', width: thePermsWidth);
+				static_text(item_id: 'prnt', width: thePermsWidth);
+				static_text(item_id: 'copy', width: thePermsWidth);
+				static_text(item_id: 'accs', width: thePermsWidth);
+				static_text(item_id: 'offl', width: thePermsWidth);
+			}				
+		}
+
+		static_text(item_id: 'pnot');
+                gap();
+	}
+}

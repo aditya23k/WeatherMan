@@ -1,0 +1,20 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="Preparar formulario" av2Title="Preparar formulario" description="Convierta rápidamente formularios digitalizados de Microsoft Word y Excel en formularios PDF." av2Description="Convertir formularios de Microsoft Word, Excel o digitalizados en formularios PDF" richTooltip="Convierta formularios escaneados, archivos de Microsoft Word o documentos de Excel en formularios PDF rellenables." id="FormsRdrApp" majorVersion="1" showLabels="true" minorVersion="0">
+  <Commands>
+    <Command name="AcroForm:Forms_CreateNewFormRdr"/>
+	<Command name="AcroForm:Forms_EditFormInAcrobatRdr"/>
+	<Command name="AcroForm:Forms_HighlightRdr"/>
+	<Command name="AcroForm:Forms_ClearFormRdr"/>
+    <Command name="AcroForm:Advanced_CreateSpreadsheetRdr"/>
+    <Command name="AcroForm:Forms_ImportDataRdr"/>
+    <Command name="AcroForm:FormData_ExportDataRdr"/>
+    <Command name="AcroForm:Forms_DistributeFormRdr"/>
+	<Command name="AcroForm:Forms_TrackReturnedFormsRdr"/>
+  </Commands>
+  <Layouts>
+    <Layout name="Default">
+      <ContentView>
+		<Component name="FormsAppRHPView" fontSize="12"/>
+      </ContentView>
+    </Layout>
+  </Layouts>
+</Application>

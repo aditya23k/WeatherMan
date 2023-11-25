@@ -1,0 +1,54 @@
+theLabelWidth = max (
+	zstring_width( zstring: '$$$/Dialogs/EDCSelectPolicy/PolicyName'),
+	zstring_width( zstring: '$$$/Dialogs/EDCSelectPolicy/Comment'),
+	zstring_width( zstring: '$$$/Dialogs/EDCSelectPolicy/EncryptType'),
+	zstring_width( zstring: '$$$/Dialogs/EDCSelectPolicy/Type'),
+	zstring_width( zstring: '$$$/Dialogs/EDCSelectPolicy/ModDate')	);
+ 
+theTextWidth = max(
+	zstring_width(zstring: '$$$/Dialogs/STD_Permissions/EnableCopy'),
+	zstring_width(zstring: '$$$/Dialogs/STD_Permissions/EnableAccess'),
+	zstring_width(zstring: '$$$IDS_EncryptedComponents_Metadata'),
+	zstring_width(zstring: '$$$IDS_EncryptedComponents_Attach'),
+	zstring_width(zstring: '$$$IDS_EncryptedComponents_All'),
+	zstring_width(zstring: '$$$IDS_REQUIRED'),
+	zstring_width(zstring: '$$$IDS_NOT_REQUIRED'),
+	zstring_width(zstring: '$$$IDS_Allowed'),
+	zstring_width(zstring: '$$$IDS_NotAllowed')	) + gGap;
+
+dialog(margin_height: 0, margin_width: 0)
+{
+	view(alignment: align_fill)
+	{
+		gap(height: gGap);
+		
+		static_text(item_id: 'note', font_id: 5, alignment: align_fill);
+		
+		gap(height: gGap);
+		
+		cluster(item_id: 'clst', name:'$$$/Dialogs/EDCSelectPolicy/PolicyDetails', alignment: align_fill, align_children: align_fill)
+		{
+			view(align_children: align_row)
+			{
+				view(alignment: align_right)
+				{
+					static_text(name: '$$$/Dialogs/EDCSelectPolicy/PolicyName', alignment: align_right, width: theLabelWidth);
+					static_text(name: '$$$/Dialogs/EDCSelectPolicy/Comment', alignment: align_right, width: theLabelWidth);
+					static_text(name: '$$$/Dialogs/EDCSelectPolicy/EncryptType', alignment: align_right, width: theLabelWidth);
+					static_text(name: '$$$/Dialogs/EDCSelectPolicy/Type', alignment: align_right, width: theLabelWidth);
+					static_text(name: '$$$/Dialogs/EDCSelectPolicy/ModDate', alignment: align_right, width: theLabelWidth);
+				}
+				
+				view(alignment: align_fill)
+				{
+					static_text(item_id: 'pnam', width: theTextWidth);
+					static_text(item_id: 'pcmt', width: theTextWidth);
+					static_text(item_id: 'pect', width: theTextWidth);
+					static_text(item_id: 'ptyp', width: theTextWidth);
+					static_text(item_id: 'pmdt', width: theTextWidth);
+				}
+			}
+		}
+                gap();
+	}
+}

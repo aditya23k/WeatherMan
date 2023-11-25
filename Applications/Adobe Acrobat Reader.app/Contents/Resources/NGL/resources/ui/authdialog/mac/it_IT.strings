@@ -1,0 +1,8 @@
+"userNameLabelAuthDialog" = "Nome utente";
+"passwordLabelAuthDialog" = "Password";
+"okButtonAuthDialog" = "OK";
+"cancelButtonAuthDialog" = "Annulla";
+"titleAuthDialog" = "Autenticazione obbligatoria";
+"messageForHostInfoAuthDialog" = "%@ richiede il tuo nome utente e la tua password.";
+"messageForSecurityInfoAuthDialog" = "Le tue informazioni di accesso saranno inviate in modo sicuro.";
+"checkBoxTextAuthDialog" = "Ricorda questa password nel mio portachiavi";

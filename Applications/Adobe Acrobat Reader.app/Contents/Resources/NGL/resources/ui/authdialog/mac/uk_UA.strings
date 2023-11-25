@@ -1,0 +1,8 @@
+"userNameLabelAuthDialog" = "Ім’я користувача";
+"passwordLabelAuthDialog" = "Пароль";
+"okButtonAuthDialog" = "OK";
+"cancelButtonAuthDialog" = "Скасувати";
+"titleAuthDialog" = "Необхідно автентифікуватися";
+"messageForHostInfoAuthDialog" = "%@ потрібні ваші ім'я користувача й пароль.";
+"messageForSecurityInfoAuthDialog" = "Ваша інформація про вхід надсилатиметься в безпечний спосіб.";
+"checkBoxTextAuthDialog" = "Запам'ятати цей пароль у ланцюгу ключів";

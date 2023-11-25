@@ -1,0 +1,9 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="Design Pages" id="CCXRdrApp" description="Easily create stand out content with Adobe Express" majorVersion="1" minorVersion="0">
+	<Layouts>
+		<Layout name="Default">
+			<ContentView>
+				<Component name="CCXAppRHPView" fontSize="12"/>
+			</ContentView>
+		</Layout>
+	</Layouts>
+</Application>

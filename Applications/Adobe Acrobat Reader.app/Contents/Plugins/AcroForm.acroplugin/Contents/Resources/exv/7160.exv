@@ -1,0 +1,22 @@
+dialog(name: '$$$/Dialogs/ShowHide')
+{
+	view(align_children: align_left)
+	{
+		cluster(item_id: 'clu1', name: '$$$/Dialogs/ShowHide/Msg1', align_children: align_left)
+		{
+			view(align_children: align_top)
+			{
+				view(align_children: align_left)
+				{
+					list_box(item_id: 'list', width: max_char_width() * 16, height: gEditTextHeight * 9);
+				}
+				view(align_children: align_left)
+				{
+					radio(item_id: 'show', group_id: 'rgrp', name: '$$$/Dialogs/ShowHide/Show');
+					radio(item_id: 'hide', group_id: 'rgrp', name: '$$$/Dialogs/ShowHide/Hide');
+				}
+			}
+		}
+		ok_cancel();
+	}
+}

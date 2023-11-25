@@ -1,0 +1,50 @@
+gEditWidth = max_char_width() * 15;
+
+dialog(name: '$$$/Dialogs/AuthenticateSimple', target_id: 'name')
+{
+	view(align_children: align_left, alignment: align_fill)
+	{
+		static_text(item_id: 'Fail', alignment: align_fill);
+		
+		static_text(item_id: 'Resn', alignment: align_fill, font_id: 5);
+				
+		static_text(item_id: 'Note', alignment: align_fill);
+		
+		view(align_children: align_row, alignment: align_fill)
+		{
+			static_text(item_id: 'stxt', name: '$$$/Dialogs/AuthenticateSimple/Server', alignment: align_right);
+			static_text(item_id: 'srvr', width: gEditWidth);
+		}
+		
+		view(align_children: align_row, alignment: align_fill)
+		{
+			static_text(item_id: 'rtxt', name: '$$$/Dialogs/AuthenticateSimple/Realm', alignment: align_right);
+			static_text(item_id: 'relm', width: gEditWidth);
+		}
+			
+		gap(width: 8);
+				
+		view(align_children: align_row, alignment: align_fill)
+		{
+			gap( width: 10);
+					
+			view(align_children: align_left, alignment: align_fill)
+			{			
+				static_text(item_id: 'utxt', name: '$$$/Dialogs/AuthenticateSimple/Username');
+				static_text(item_id: 'ptxt', name: '$$$/Dialogs/AuthenticateSimple/Password');
+			}
+			
+			view(align_children: align_right, alignment: align_fill)
+			{
+				edit_text(item_id: 'user', alignment: align_fill, width: gEditWidth  );
+				edit_text(item_id: 'pswd', password: true, alignment: align_fill, width: gEditWidth  );
+			}
+			gap( width: 10);
+		}
+		view(align_children: align_fill, alignment: align_center)
+		{
+			gap( height: 4 );
+			ok_cancel();
+		}
+	}
+}

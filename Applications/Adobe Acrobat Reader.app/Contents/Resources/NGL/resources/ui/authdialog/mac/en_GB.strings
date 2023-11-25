@@ -1,0 +1,8 @@
+"userNameLabelAuthDialog" = "User Name";
+"passwordLabelAuthDialog" = "Password";
+"okButtonAuthDialog" = "Ok";
+"cancelButtonAuthDialog" = "Cancel";
+"titleAuthDialog" = "Authentication Required";
+"messageForHostInfoAuthDialog" = "%@ requires your user name and password.";
+"messageForSecurityInfoAuthDialog" = "Your login information will be sent securely.";
+"checkBoxTextAuthDialog" = "Remember this password in my keychain";

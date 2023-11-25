@@ -1,0 +1,20 @@
+dialog(name: '$$$/Dialogs/CalcOrder')
+{
+	view(align_children: align_left)
+	{
+		view(align_children: align_top)
+		{
+			view(align_children: align_left)
+			{
+				hier_list_box(item_id: 'list', width: max_char_width() * 16, height: gEditTextHeight * 9);
+			}
+			view(align_children: align_left)
+			{
+				button(item_id: 'upup', name: '$$$/Dialogs/CalcOrder/Up');
+				button(item_id: 'down', name: '$$$/Dialogs/CalcOrder/Down');
+			}
+		}
+		static_text(item_id: 'txt1', alignment: align_fill, height: gEditTextHeight * 3);
+		ok_cancel();
+	}
+}

@@ -1,0 +1,47 @@
+gListWidth = max_char_width() * 30;
+gListHeight = gEditTextHeight * 4;
+gPromptWidth = 10;
+gCertPromptWidth = 10;
+
+dialog()
+{
+	view( align_children: align_left )
+	{
+		cluster(item_id: 'cls2', alignment: align_fill, align_children: align_left, name: '$$$/Dialogs/ImportSingleContact/DetailsCluster')
+		{
+			view( align_children: align_row, alignment: align_fill )
+			{
+				static_text(item_id: 'cspr', name: '$$$/Dialogs/ImportSingleContact/CertSubject', dwidth: gCertPromptWidth, alignment: align_right );
+				static_text( item_id: 'Csub', alignment: align_fill, wrap: true, width: 300 );
+			}
+
+			view( align_children: align_row, alignment: align_fill )
+			{
+				static_text(item_id: 'cipr', name: '$$$/Dialogs/ImportSingleContact/CertIssuer', dwidth: gCertPromptWidth, alignment: align_right );
+				static_text( item_id: 'Ciss', alignment: align_fill, wrap: true, width: 300 );
+			}
+
+			view( align_children: align_row, alignment: align_fill )
+			{
+				static_text( item_id: 'cupr', name: '$$$/Dialogs/ImportSingleContact/CertUsage', dwidth: gCertPromptWidth, height: 30, alignment: align_right );
+				static_text( item_id: 'Cuse', alignment: align_fill, wrap: true, width: 300, height: 30 );
+			}
+
+			view( align_children: align_row, alignment: align_fill )
+			{
+				static_text( item_id: 'cepr', name: '$$$/Dialogs/ImportSingleContact/CertExpiration', dwidth: gCertPromptWidth, alignment: align_right );
+				static_text( item_id: 'Cexp', alignment: align_fill, wrap: true, width: 300 );
+			}
+
+			tab_group(item_id: 'Tabs', width: 500, height: 400);
+			
+			view( align_children: align_row, alignment: align_fill )
+			{
+				button( item_id: 'More', name: '$$$/Dialogs/ImportSingleContact/DetailsButton' );
+				button( item_id: 'Attr', name: '$$$/Dialogs/ImportSingleContact/SetAttrCerts' );
+			}
+		}
+		
+		ok_cancel_help( ok_name: '$$$/Dialogs/ImportMultipleContacts/ImportButton' );
+	}
+}

@@ -1,0 +1,124 @@
+H_BUTTON = 20;
+W_BUTTON = 22;
+
+W_COLUMN = 160;
+
+W_POPUPENTRIES_END=max(
+	zstring_width(zstring: '$$$IDS_LINECAP_NONE'),
+	zstring_width(zstring: '$$$IDS_LINECAP_OPENARROW'),
+	zstring_width(zstring: '$$$IDS_LINECAP_CLOSEDARROW'),
+	zstring_width(zstring: '$$$IDS_LINECAP_SQUARE'),
+	zstring_width(zstring: '$$$IDS_LINECAP_SLASH'),
+	zstring_width(zstring: '$$$IDS_LINECAP_CIRCLE'),
+	zstring_width(zstring: '$$$IDS_LINECAP_DIAMOND'),
+	zstring_width(zstring: '$$$IDS_LINECAP_BUTT'),
+	zstring_width(zstring: '$$$IDS_LINECAP_ROPENARROW'),
+	zstring_width(zstring: '$$$IDS_LINECAP_RCLOSEDARROW'));
+
+W_LABELS_LEFT=max(
+	zstring_width(zstring: '$$$/Dialogs/FreeText/Head'),
+	zstring_width(zstring: '$$$/Panels/Generic/StrokeStyle'),
+	zstring_width(zstring: '$$$/Dialogs/FreeText/Color'),
+	zstring_width(zstring: '$$$/Dialogs/Generic/Opacity'));
+W_LABELS_RIGHT=max(
+	zstring_width(zstring: '$$$/Dialogs/Ink/Thickness'),
+	zstring_width(zstirng: '$$$/Dialogs/CircleSquare/FillColor'));
+W_STYLES=max(
+	zstring_width(zstring: '$$$IDS_STROKESTYLE_CLOUDY1'),
+	zstring_width(zstring: '$$$IDS_STROKESTYLE_CLOUDY2'),
+	zstring_width(zstring: '$$$IDS_STROKESTYLE_DASHED1'),
+	zstring_width(zstring: '$$$IDS_STROKESTYLE_DASHED2'),
+	zstring_width(zstring: '$$$IDS_STROKESTYLE_DASHED3'),
+	zstring_width(zstring: '$$$IDS_STROKESTYLE_DASHED4'),
+	zstring_width(zstring: '$$$IDS_STROKESTYLE_DASHED5'),
+	zstring_width(zstring: '$$$IDS_STROKESTYLE_DASHED6'),
+	zstring_width(zstirng: '$$$IDS_STROKESTYLE_SOLID'));
+
+dialog()
+{
+	view(align_children: align_left)
+	{
+		view(align_children: align_top)
+		{
+			view(align_children: align_left, width: W_COLUMN)
+			{
+				view(align_children: align_row)
+				{
+					view(align_children: align_right, width : W_LABELS_LEFT)
+					{
+						static_text(item_id: 'txt0', name: '$$$/Dialogs/FreeText/Head');
+					}
+					view(align_children: align_left)
+					{
+						popup(item_id: 'head', width: W_POPUPENTRIES_END);
+					}
+				}
+
+				view(align_children: align_row)
+				{
+					view(align_children: align_right, width: W_LABELS_LEFT)
+					{
+						static_text(item_id: 'txt1', name: '$$$/Panels/Generic/StrokeStyle');
+					}
+					view(align_children: align_left)
+					{
+						popup(item_id: 'styl', width: W_STYLES, style: 1);
+					}
+				}
+
+				view(align_children: align_row)
+				{
+					view(align_children: align_right, width: W_LABELS_LEFT)
+					{
+						static_text(item_id: 'txt2', name: '$$$/Dialogs/FreeText/Color', height: H_BUTTON);
+					}
+					view(align_children: align_left)
+					{
+						button(item_id: 'sclr', picture: true, height: H_BUTTON, width: W_BUTTON);
+					}
+				}
+
+				view(align_children: align_row)
+				{
+					view(align_children: align_right, width: W_LABELS_LEFT)
+					{
+						static_text(item_id: 'txt3', name: '$$$/Dialogs/Generic/Opacity');
+						gap(height: gStaticTextHeight);
+					}
+					view(align_children: align_left)
+					{
+						edit_text(item_id: 'opac', width: 4 * max_char_width(), height: gEditTextHeight);
+						slider(item_id: 'opas', width : 101, height: 9);
+					}
+				}
+			}
+
+			view(align_children: align_left, width: W_COLUMN)
+			{
+				view(align_children: align_row)
+				{
+					view(align_children: align_right, width: W_LABELS_RIGHT)
+					{
+						static_text(item_id: 'txt4', name: '$$$/Dialogs/Ink/Thickness');
+					}
+					view(align_children: align_left)
+					{
+						edit_text(item_id: 'bwid', SpinEdit: true, width: 6 * max_char_width());
+					}
+				}
+				view(align_children: align_row)
+				{
+					view(align_children: align_right, width: W_LABELS_RIGHT)
+					{
+						static_text(item_id: 'txt5', name: '$$$/Dialogs/CircleSquare/FillColor');
+					}
+					view(align_children: align_left)
+					{
+						button(item_id: 'fclr', picture: true, height: H_BUTTON, width: W_BUTTON);
+					}
+				}
+			}
+		}
+		gap(height: 2 * gEditTextHeight);
+	}
+}

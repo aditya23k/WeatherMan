@@ -1,0 +1,13 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="索引" av2Title="添加搜索索引" description="为 PDF 文件建立索引以加快在文档集中的搜索速度" av2Description="创建索引以加快文件内和文件间的搜索" id="IndexRdrApp" showLabels="true" majorVersion="1" minorVersion="0">
+	<Commands>
+			<Command name="ADBE:CatalogRdr"/>
+			<Command name="ADBE:EmbedIndexRdr"/>
+	</Commands>
+	<Layouts>
+		<Layout name="Default">
+			<ContentView>
+				<Component name="IndexAppRhpView" fontSize="12"/>
+			</ContentView>
+		</Layout>
+	</Layouts>
+</Application>

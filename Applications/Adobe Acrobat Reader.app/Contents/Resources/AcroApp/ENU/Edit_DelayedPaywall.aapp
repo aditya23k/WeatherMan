@@ -1,0 +1,85 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="Edit PDF" av2Title="Edit a PDF" id="EditDelayedRdrApp" description="Edit text and images in a PDF file" richTooltip = "Modify text and images, edit scanned pages, and organize pages." av2Description="Modify or add text, images, pages, and more" showLabels="true" requiresDoc="true" majorVersion="1" minorVersion="0">
+	<Layouts>
+		<Layout name="Default">
+			<TopBar align="Center">
+        <Component name="TouchUpEditPDFToolDP"/>
+        <Component name="TouchUpAddTextboxDP"/>
+        <Component name="TouchUpAddImageDP"/>    
+        <Component name="LinkMenuDP"/>    
+		<Component name="CropDP"/>
+        <Component name="HeaderFooterDP"/>
+        <Component name="WatermarkDP"/>
+		<Component name="EditMoreOptionsDP"/>
+      </TopBar>
+      <RHP>
+        <Component label="FORMAT" type="Label" name="TouchUpFormatHeading" fontSize="12" bold="true"/>        
+		<Component name="TouchUpFontName"/>
+        <Component type="Group">		  
+          <Component name="TouchUpFontSize"/>
+		  <Component name="TouchUpFillColor"/>
+        </Component>
+        <Component type="Group" spacing="15">
+          <Component name="TouchUpBold"/>
+          <Component name="TouchUpItalic"/>
+          <Component name="TouchUpUnderline"/>
+          <Component name="TouchUpSuperscript"/>
+          <Component name="TouchUpSubscript"/>
+        </Component>
+        <Component type="Group" spacing="10">
+		  <Component name="TouchUpBulletedList"/>
+		  <Component name="TouchUpNumberedList"/>
+        </Component>
+        <Component type="Group" spacing="15">
+          <Component name="TouchUpLeftAlign"/>
+          <Component name="TouchUpCenterAlign"/>
+          <Component name="TouchUpRightAlign"/>
+          <Component name="TouchUpJustifyAlign"/>
+        </Component>
+        <Component type="Group" spacing="11">
+          <Component type="Group" spacing="5">
+		  <Component name="TouchUpLineSpacingIcon"/>
+		  <Component name="TouchUpLineSpacing"/>
+          </Component>
+          <Component type="Group" spacing="5">
+		  <Component name="TouchUpParagraphSpacingIcon"/>
+		  <Component name="TouchUpParagraphSpacing"/>
+          </Component>
+        </Component>
+        <Component type="Group" spacing="11">
+          <Component type="Group" spacing="5">
+		  <Component name="TouchUpHorizontalScalingIcon"/>
+		  <Component name="TouchUpHorizontalScaling"/>
+          </Component>
+          <Component type="Group" spacing="5">
+		  <Component name="TouchUpCharacterSpacingIcon"/>
+		  <Component name="TouchUpCharacterSpacing"/>
+          </Component>
+        </Component>
+        <Component type="Separator"/>
+        <Component label="OBJECTS" fontSize="12" bold="true"/>
+        <Component type="Group" spacing="15">
+          <Component name="TouchUpFlipVertical"/>
+          <Component name="TouchUpFlipHorizontal"/>
+		  <Component name="TouchUpCrop"/>
+		  <Component name="TouchUpMenuAlign"/>
+		</Component>
+		<Component type="Group" spacing="15">
+		    <Component name="TouchUpRotateCounterClockwise"/>
+			<Component name="TouchUpRotateClockwise"/>
+			<Component name="TouchUpReplaceImage"/>			
+			<Component name="TouchUpMenuArrange"/>
+        </Component>
+        <Component name="TouchUpEditUsing"/>
+		<Component type="Separator" name="TouchUpScanToolsSeparator"/>
+        <Component type="Group" spacing="11" name="TouchUpScanToolsGroup" verticalLayout="true" alignWidgets="Stretch">			
+			<Component label="SCANNED DOCUMENTS" type="Label" name="TouchUpScanDocumentsHeading" fontSize="12" bold="true"/>
+			<Component name="ScanDocEditingSettings"/>
+			<Component name="ScanDocAutomaticOCR" type="Checkbox"/>
+		</Component>
+		<Component type="Separator"/>
+		<Component name="TouchUpOutline" type="Checkbox"/>
+        <Component name="TouchUpRestrictEditing" type="Checkbox"/>
+      </RHP>
+		</Layout>
+	</Layouts>
+</Application>

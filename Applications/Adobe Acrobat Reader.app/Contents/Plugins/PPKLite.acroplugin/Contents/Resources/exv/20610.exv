@@ -1,0 +1,57 @@
+gMaxNameWidth = max( max_char_width() * 25, zstring_width(zstring: '$$$/Dialogs/CADMConfigureAPS/Title'));
+
+gMaxPortWidth = max_char_width() * 5;
+
+gMaxTextWidth = max( 
+	zstring_width(zstring: '$$$/Dialogs/CADMConfigureAPS/Server'),
+	zstring_width(zstring: '$$$/Dialogs/CADMConfigureAPS/Port'),
+	zstring_width(zstring: '$$$/Dialogs/CADMConfigureTSS/User'),
+	zstring_width(zstring: '$$$/Dialogs/CADMConfigureTSS/Password'),
+	zstring_width(zstring: '$$$/Dialogs/CADMConfigureAPS/SavePassword'));
+
+dialog(name: '$$$/Dialogs/CADMConfigureAPS/Title')
+{
+	view(align_children: align_left, alignment: align_fill)
+	{
+		view(align_children: align_row, alignment: align_fill)
+		{
+			static_text(name: '$$$/Dialogs/CADMConfigureAPS/Name');
+			edit_text(item_id: 'name', width: gMaxNameWidth);
+		}
+		
+		cluster(name: '$$$/Dialogs/CADMConfigureAPS/Settings')
+		{
+			view(align_children: align_row, alignment: align_fill)
+			{
+				static_text(name: '$$$/Dialogs/CADMConfigureAPS/Server', alignment: align_right);
+				edit_text(item_id: 'srvr', alignment: align_fill);
+				static_text(name: '$$$/Dialogs/CADMConfigureAPS/Port', alignment: align_right);
+				edit_text(item_id: 'port', width: gMaxPortWidth);
+			}
+			
+			gap(height: gGap);
+			
+			check_box(item_id: 'auth', name: '$$$/Dialogs/CADMConfigureAPS/SavePassword' );
+			
+			view(align_children: align_row, alignment: align_fill)
+			{
+				static_text(item_id: 'usrT', name: '$$$/Dialogs/CADMConfigureTSS/User', width: gMaxTextWidth, alignment: align_right);
+				edit_text(item_id: 'user', alignment: align_fill);
+			}
+			
+			view(align_children: align_row, alignment: align_fill)
+			{
+				static_text(item_id: 'pwdT', name: '$$$/Dialogs/CADMConfigureTSS/Password', width: gMaxTextWidth, alignment: align_right);
+				edit_text(item_id: 'pass', password: true, alignment: align_fill);
+			}
+			
+			view(align_children: align_top, alignment: align_fill)
+			{
+				picture(item_id: 'icon', width: 16, height: 16);
+				static_text(item_id: 'note', alignment: align_fill);
+			}
+		}
+		
+		ok_cancel(ok_name: '$$$/Dialogs/CADMConfigureAPS/Connect');
+	}
+}

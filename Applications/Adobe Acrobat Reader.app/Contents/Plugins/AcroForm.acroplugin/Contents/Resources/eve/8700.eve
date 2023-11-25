@@ -1,0 +1,21 @@
+dialog(name: '$$$/Dialogs/QuickBooksSelectForm')
+{
+    column(horizontal: align_left)
+    {
+		static_text(name: '$$$/Dialogs/QuickBooksSelectForm/Step', wrap: true, width: 400);
+		
+		radio_button(identifier: 'opt1', group_id: 'grp1', name:'$$$/Dialogs/QuickBooksSelectForm/opt1Text');
+
+		row () {
+			gap(width: 5);
+			edit_text(identifier: 'fna1', width: 300);
+			button(identifier: 'idbt', name: '$$$/Dialogs/Common/btnBrowse');
+		}
+		
+        gap(height: 3);
+ 		row () {
+			radio_button(identifier: 'opt2', group_id: 'grp1', name:'$$$/Dialogs/QuickBooksSelectForm/opt2Text');
+		}
+				
+    }
+}

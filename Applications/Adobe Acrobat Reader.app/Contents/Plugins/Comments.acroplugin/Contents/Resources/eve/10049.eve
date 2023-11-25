@@ -1,0 +1,16 @@
+dialog(name: '$$$/Dialogs/SendSignedDocument', margin_height:5, margin_width:15)
+{
+	panel(margin_width:0 )
+	{
+		column(vertical: align_top, horizontal:align_fill, spacing:15)
+		{
+			static_text( identifier: 'cont', width:400, wrap:true);
+			
+			row(horizontal: align_fill)
+			{
+				checkbox(name: '$$$/Dialogs/SendSignedDocument/DoNotShow', identifier: 'dnsa');
+				ok_cancel();
+			}
+		}
+	}
+}

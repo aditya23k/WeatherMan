@@ -1,0 +1,15 @@
+dialog( name: '$$$/Dialogs/Multimedia/GetURL' )
+{
+	view( align_children: align_right )
+	{
+		view( align_children: align_row )
+		{
+			static_text( name: '$$$/Dialogs/Multimedia/GetURL/LocationLabel' );
+			edit_text( item_id: 'path', width: max_char_width() * 25 );
+		}
+
+		gap();
+
+		ok_cancel();
+	}
+}

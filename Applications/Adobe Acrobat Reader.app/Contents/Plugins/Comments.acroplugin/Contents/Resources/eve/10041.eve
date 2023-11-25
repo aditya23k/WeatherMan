@@ -1,0 +1,21 @@
+dialog( name: '$$$/Dialogs/SPVersioning' )
+{
+	panel(identifier: 'pnl1', horizontal: align_fill, spacing: [0, 4, 3, 3, 3])
+	{
+		static_text(identifier: 'vert', name: '$$$/Dialogs/SPVersioning/VersionType', font_id: @dialog_font_bold);
+		horizontal_separator(horizontal: align_fill);
+		static_text(identifier: 'vmsg', name: '$$$/Dialogs/SPVersioning/VersionType/Message');
+		radio_button(identifier: 'rdb1', group_id: 'grp1', name: '$$$/Dialogs/SPVersioning/VersionType/MinorVersion');
+		radio_button(identifier: 'rdb2', group_id: 'grp1', name: '$$$/Dialogs/SPVersioning/VersionType/MajorVersion');
+		radio_button(identifier: 'rdb3', group_id: 'grp1', name: '$$$/Dialogs/SPVersioning/VersionType/OverwriteVersion');
+	}
+
+	panel(identifier: 'pnl2', horizontal: align_fill, spacing: [0, 4, 15])
+	{
+		static_text(identifier: 'verc', name: '$$$/Dialogs/SPVersioning/VersionComments', font_id: @dialog_font_bold);
+		horizontal_separator(horizontal: align_fill);
+		edit_text(identifier: 'edtc', char_count_width: 50, dheight: 80, wrap: true, scrollable:true);
+		checkbox(identifier: 'chk1', name: '$$$/Dialogs/SPVersioning/KeepCheckedOut');
+		ok_cancel();
+	}
+}

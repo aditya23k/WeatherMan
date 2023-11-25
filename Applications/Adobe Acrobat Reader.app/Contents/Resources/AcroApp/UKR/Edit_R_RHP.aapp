@@ -1,0 +1,26 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="Редагувати PDF-файл" av2Title="Редагування PDF" id="EditPDFRdrApp" description="Редагувати текст і зображення в PDF-файлі" av2Description="Змінюйте або додавайте текст, зображення, сторінки тощо" richTooltip="Змінюйте текст і зображення, редагуйте та впорядковуйте відскановані сторінки." majorVersion="1" minorVersion="0" inAppUpsellEnabled="true">
+	<Commands>
+	 <Command name="TouchUpEditPDFToolRdr"/>
+    <Command name="TouchUpAddTextboxRdr"/>
+    <Command name="TouchUpAddImageRdr"/>    
+	<Command name="TouchUpEditImageRdr"/>
+    <Command name="LinkMenuRdr"/>    
+	<Command name="CropRdr"/>
+    <Command name="HeaderFooterRdr"/>
+    <Command name="WatermarkRdr"/>
+    <Command name="BatesNumberingRdr" />
+    <Command name="DocBackgroundRdr"/>
+    <Command name="NewBookmarkRdr"/>
+	<Command name="EditMoreOptionsRdr"/>
+  <Command name="AddFileAttachmentRdr"/>
+    <Command name="LinkRdr"/>
+	<Command name="ThreadRdr"/>
+	</Commands>
+	<Layouts>
+		<Layout name="Default">
+			<ContentView>
+				<Component name="EditPDFRHPView" fontSize="12"/>
+			</ContentView>
+		</Layout>
+	</Layouts>
+</Application>

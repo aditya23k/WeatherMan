@@ -1,0 +1,11 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="Edit PDF" av2Title="Edit a PDF" id="EditPDFRdrAppFull" description="Edit text and images in a PDF file" richTooltip = "Modify text and images, edit scanned pages, and organize pages." av2Description="Modify or add text, images, pages, and more" majorVersion="1" minorVersion="0" inAppUpsellEnabled="true">
+	<Commands>
+	</Commands>
+	<Layouts>
+		<Layout name="Default">
+			<ContentView>
+				<Component name="EditPDFView" type="Custom"/>
+			</ContentView>
+		</Layout>
+	</Layouts>
+</Application>

@@ -1,0 +1,13 @@
+dialog(name: '$$$/Dialogs/SendMail/GmailAccountTitle')
+{
+	column(horizontal: align_fill)
+	{
+		edit_text(name: '$$$/Dialogs/SendMail/EmailAddress', identifier: 'iusr', horizontal: align_fill);
+		row()
+		{
+			gap(width: 85);
+			static_text(identifier: 'hint', name: '$$$/Dialogs/SendMail/UHint');
+		}
+	}
+	ok_cancel();
+}

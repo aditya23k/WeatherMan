@@ -1,0 +1,15 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="Chroń" av2Title="Chroń plik PDF" description="Chroń informacje w plikach PDF przed kopiowaniem, drukowaniem i edytowaniem przez osoby trzecie" av2Description="Zabezpiecz plik PDF hasłem lub certyfikatem i ustaw uprawnienia" id="ProtectPDFRdrApp" showLabels="true" majorVersion="1" minorVersion="0"  inAppUpsellEnabled="true">
+	<Commands>
+		<Command name="RestrictWithPasswordRdr"/>
+		<Command name="SecurityPolicyFavoritesRdr"/>
+		<Command name="MoreProtectionRdr"/>
+		<Command name="RemoveHiddenInfoRdr"/>
+	</Commands>
+	<Layouts>
+		<Layout name="Default">
+			<ContentView>
+				<Component name="ProtectAppRHPView" fontSize="12"/>
+			</ContentView>
+		</Layout>
+	</Layouts>
+</Application>

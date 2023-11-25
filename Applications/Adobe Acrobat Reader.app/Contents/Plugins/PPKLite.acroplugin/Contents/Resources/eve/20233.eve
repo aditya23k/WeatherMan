@@ -1,0 +1,133 @@
+dialog(name:'$$$/GetSigningParams/Title')
+{
+	column(child_horizontal:align_fill, margin_width:0, margin_height:0)
+	{
+		panel(identifier:'id__', margin_width:0, margin_height:0)
+		{
+			row(horizontal:align_fill, child_vertical:align_center, margin_width:0, margin_height:0)
+			{
+				static_text(name:'$$$/GetSigningParams/IdTitle');
+				popup(identifier:'id_N', width:250, horizontal:align_right);
+			}
+			
+			row(horizontal:align_fill, child_vertical:align_center, margin_width:0, margin_height:0)
+			{
+				static_text(identifier:'id_C', name:'$$$/GetSigningParams/CertIssuer');
+				button(identifier:'idCi', horizontal:align_right, name:'$$$/GetSigningParams/GetCertInfo');
+			}
+			
+			static_text(identifier:'idH1', horz_separator:true, width:200, horizontal:align_fill, margin_height:0);
+			
+			panel(identifier:'ap__', margin_width:0, margin_height:0)
+			{
+				row(horizontal:align_left, child_vertical:align_center, margin_width:0, margin_height:2)
+				{
+					static_text(identifier:'apal', name:'$$$/GetSigningParams/AppearanceTitle');
+					popup(identifier:'ap_N', width:120, horizontal:align_right, 
+						items:[	{name:'IDS_GSP_CreateNewAppearance'} ]);
+				}
+				
+				row(horizontal:align_fill, child_vertical:align_center, margin_width:0, margin_height:0)
+				{
+					picture(identifier:'ap_p', width:320, height:100);	
+				}
+				
+				static_text(identifier:'idH1', horz_separator:true, width:200, horizontal:align_fill, margin_height:0);
+			}
+		}
+		
+		panel(identifier:'ld__', child_horizontal:align_fill, margin_width:0, margin_height:0)
+		{
+			row(horizontal:align_fill, child_vertical:align_center, margin_width:0, margin_height:0)
+			{
+				checkbox(identifier:'ldcb', name:'$$$/GetSigningParams/LockDocAfterSigning');
+			}
+			static_text(horz_separator:true, width:200);
+		}
+	
+		panel(identifier:'oi__', child_horizontal:align_fill, margin_width:0, margin_height:0)
+		{
+			row(horizontal:align_fill, child_vertical:align_center, margin_width:0, margin_height:0)
+			{
+				static_text(name:'$$$/GetSigningParams/OtherInfoTitle');
+			}
+			row(margin_width:0, margin_height:0)
+			{
+				column(child_vertical:align_fill, margin_width:0, margin_height:0)
+				{
+					static_text(identifier:'re_t', name:'$$$/GetSigningParams/Reason', horizontal:align_left);
+				}
+				column(child_vertical:align_fill, child_horizontal:align_fill, horizontal:align_fill, margin_width:0, margin_height:0)
+				{
+					static_text(identifier:'re_1', width:250, wrap:true, horizontal:align_right);
+					popup(identifier:'re_N', width:250, horizontal:align_right);
+					edit_text(identifier:'re_E', width:250, PopupEdit:true, horizontal:align_right);
+				}
+			}
+			row(margin_width:0, margin_height:0)
+			{
+				column(child_vertical:align_fill, margin_width:0, margin_height:0)
+				{
+					static_text(identifier:'oilt', name:'$$$/GetSigningParams/Location', horizontal:align_right);
+				}
+				column(child_vertical:align_fill, child_horizontal:align_fill, horizontal:align_fill, margin_width:0, margin_height:0)
+				{
+					edit_text(identifier:'oiLo', width:250, horizontal:align_right);
+				}
+			}
+			row(margin_width:0, margin_height:0)
+			{
+				column(child_vertical:align_fill, margin_width:0, margin_height:0)
+				{
+					static_text(identifier:'oict', name:'$$$/GetSigningParams/ContactInfo', horizontal:align_right);
+				}
+				column(child_vertical:align_fill, child_horizontal:align_fill, horizontal:align_fill, margin_width:0, margin_height:0)
+				{
+					edit_text(identifier:'oiCI', width:250, horizontal:align_right);
+				}
+			}
+			static_text(horz_separator:true, width:200);
+		}
+	
+		panel(identifier:'ch__', child_horizontal:align_fill, margin_width:0, margin_height:0)
+		{
+			static_text(name:'$$$/GetSigningParams/ChangesTitle');	
+			row(horizontal:align_fill, child_vertical:align_center, margin_width:0, margin_height:0)
+			{
+				popup(identifier:'ch_N', width:200, horizontal:align_fill, 
+					items:[{name:'$$$/GetSigningParams/ChangesNone', select:true}, 
+							{name:'$$$/GetSigningParams/ChangesForm'}, 
+							{name:'$$$/GetSigningParams/ChangesAnnot'}]);
+			}
+			static_text(horz_separator:true, width:200);
+		}
+	
+		panel(identifier:'dw__', child_horizontal:align_fill, margin_width:0, margin_height:0)
+		{
+			row(child_vertical:align_center, margin_width:0, margin_height:0)
+			{
+				static_text(identifier: 'dw_p', name:'$$$/GetSigningParams/DocWarnings', wrap:true, horizontal:align_left);
+				button(identifier:'dw_v', name:'$$$/GetSigningParams/ReviewWarnings', horizontal:align_right);
+			}
+			static_text(horz_separator:true, width:200);
+		}
+	}
+	
+	panel(identifier:'idp_', margin_width:0, margin_height:0)
+	{
+		row(horizontal:align_fill, margin_width:0, margin_height:0) 
+		{
+			static_text(identifier:'idPS', name:'$$$/GetSigningParams/EnterPassword');
+		}
+		row(horizontal:align_fill, margin_width:0, margin_height:0) 
+		{
+			edit_text(identifier:'idPW', password:true, width:100);
+		}
+	}
+
+	row( horizontal: align_fill, vertical: align_bottom )
+	{
+				button(identifier:'id_?', flat:true, horizontal:align_left, name: '$$$/ControlsStrings/Help', width: 100, height: 22);
+				ok_cancel(horizontal:align_right, ok_name:'$$$/GetSigningParams/SaveAsButton');
+	}
+}

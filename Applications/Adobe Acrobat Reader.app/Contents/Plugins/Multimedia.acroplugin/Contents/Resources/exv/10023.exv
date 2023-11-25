@@ -1,0 +1,26 @@
+gFileWidth			= gCheckBoxWidth + gCheckRadioSpace + zstring_width( zstring: '$$$/Dialogs/Multimedia/PosterOptions/File' );
+gMaxPosterPathWidth = 300 - gFileWidth;
+
+dialog( name: '$$$/Dialogs/Multimedia/PosterOptions' )
+{
+	group()
+	{
+		cluster( name: '$$$/Dialogs/Multimedia/ScreenAnnotAppearance/NewSetting' )
+		{
+			radio( item_id: 'pno ', group_id: 'rgrp', name: '$$$/Dialogs/Multimedia/AddContent/NoPoster');
+			radio( item_id: 'pemb', group_id: 'rgrp', name: '$$$/Dialogs/Multimedia/AddContent/RetrieveEmbed');
+			radio( item_id: 'pfil', group_id: 'rgrp', name: '$$$/Dialogs/Multimedia/AddContent/File');
+
+			view( align_children: align_row, alignment: align_fill )
+			{
+				static_text( item_id: 'file', name: '$$$/Dialogs/Multimedia/PosterOptions/File', width: gFileWidth, alignment: align_right );
+				static_text( item_id: 'pnam', width: gMaxPosterPathWidth, alignment: align_left );
+				button( item_id: 'popn', name: '$$$/Dialogs/Multimedia/AddContent/ChoosePoster', alignment: align_right );
+			}
+		}
+
+		gap();
+
+		ok_cancel();
+	}
+}

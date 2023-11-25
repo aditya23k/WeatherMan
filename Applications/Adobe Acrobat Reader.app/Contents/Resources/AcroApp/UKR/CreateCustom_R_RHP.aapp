@@ -1,0 +1,5 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="Створити власний інструмент" av2Title="Створення власного інструмента" description="Створюйте власні набори функцій Acrobat і надавайте іншим доступ до них" av2Description="Створення користувацького набору функції Acrobat" id="CreateCustomUIRdrApp" majorVersion="1" minorVersion="0">
+	<Commands>
+			<Command name="CreateUICustomizationRdr"/>
+	</Commands>
+</Application>

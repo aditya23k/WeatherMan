@@ -1,0 +1,17 @@
+dialog(name: '$$$/Dialogs/DupField')
+{
+	view(align_children: align_left)
+	{
+		static_text(item_id: 'ques', name: '$$$/Dialogs/DupField/Quest');
+		radio(item_id: 'alll', group_id: 'rgrp', name: '$$$/Dialogs/DupField/All');
+		view(align_children: align_row)
+		{
+			radio(item_id: 'from', group_id: 'rgrp', name: '$$$/Dialogs/DupField/From');
+			edit_text(item_id: 'frm1', height: gEditTextHeight, width: max_char_width() * 3);
+			static_text(item_id: 'tooo', name: '$$$/Dialogs/DupField/To');
+			edit_text(item_id: 'toto', height: gEditTextHeight, width: max_char_width() * 3);
+			static_text(item_id: 'ofof', name: '$$$/Dialogs/DupField/Of');
+		}
+		ok_cancel();
+	}
+}

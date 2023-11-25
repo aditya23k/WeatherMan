@@ -1,0 +1,14 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="Створити PDF" av2Title="Створення документа PDF" description="Створюйте документ PDF із файлу будь-якого формату" richTooltip="Створюйте PDF-файли із зображень, файлів Microsoft, відсканованих файлів, вебсторінок або порожньої сторінки." av2Description="Створюйте PDF-файли із зображень, файлів Microsoft Office тощо" id="CPDFAppFull" majorVersion="1" minorVersion="0">
+	<Commands>
+	</Commands>
+	<Layouts>
+		<Layout name="Default">
+			<TopBarRight align="Right">
+				<Component type="PushButton" buttonType="secondary" name="ExitApp"/>
+			</TopBarRight>
+			<ContentView>
+				<Component name="CreatePDFView" type="Custom"/>
+			</ContentView>
+		</Layout>
+	</Layouts>
+</Application>

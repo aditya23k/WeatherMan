@@ -1,0 +1,62 @@
+gExtraWidthPad = max_char_width() * 2;
+gSymbologyPopupWidth = max(gExtraWidthPad,
+    gExtraWidthPad + zstring_width(zstring: '$$$IDS_BARCODE_SYMB_PDF417'),
+    gExtraWidthPad + zstring_width(zstring: '$$$IDS_BARCODE_SYMB_QRCODE'),
+    gExtraWidthPad + zstring_width(zstring: '$$$IDS_BARCODE_SYMB_DATAMATRIX')
+    );
+gDecodeCondPopupWidth = max(max_char_width(),
+    max_char_width() + zstring_width(zstring: '$$$IDS_BARCODE_DCND_HANDHELD'),
+    max_char_width() + zstring_width(zstring: '$$$IDS_BARCODE_DCND_FAX'),
+    max_char_width() + zstring_width(zstring: '$$$IDS_BARCODE_DCND_DOCSCANNER'),
+    max_char_width() + zstring_width(zstring: '$$$IDS_BARCODE_DCND_CUSTOM')
+    );
+
+gParamListWidth = 280;
+gParamListHeight = 100;
+gHintHeight = gEditTextHeight * 3;
+
+dialog(name: '$$$/Dialogs/FieldProps', target_id: 'symb')
+{
+	view(align_children: align_left, alignment: align_fill)
+	{
+        view(align_children: align_row)
+        {
+            static_text(name: '$$$/Dialogs/FieldProps/Barcode/Symbology');
+            popup(item_id: 'symb', width: gSymbologyPopupWidth);
+        }
+
+        gap();
+
+        view(align_children: align_row)
+        {
+            check_box(item_id: 'comp', name: '$$$/Dialogs/FieldProps/Barcode/Compression');
+        }
+
+        gap();
+
+        view(align_children: align_row, alignment: align_fill)
+        {
+            static_text(name: '$$$/Dialogs/FieldProps/Barcode/DecodeCondition');
+            popup(item_id: 'dcnd', width: gDecodeCondPopupWidth);
+            button(item_id: 'dcst', name: '$$$/Dialogs/FieldProps/Barcode/DecodeCustom');
+        }
+        
+        button(item_id: 'mng1', name: '$$$/Dialogs/FieldProps/Barcode/ManageParams', alignment: align_right);
+        
+        gap();
+
+		cluster(item_id: 'clst', align_children: align_center, alignment: align_fill)
+        {
+            gap(height: gEditTextHeight/2);
+			mclv(item_id: 'prms', alignment: align_fill, width: gParamListWidth, height: gParamListHeight);
+		    view(align_children: align_left, alignment: align_fill)
+            {
+                view(align_children: align_top, alignment: align_fill)
+		        {	
+			        picture(item_id: 'bulb', width: 32, height: 32);
+			        static_text(item_id: 'desc', mutliline:true, width: gParamListWidth, height: gHintHeight);
+		        }
+            }
+        }
+	}
+}

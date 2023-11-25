@@ -1,0 +1,23 @@
+
+dialog( name: '$$$/Dialogs/ChooseSingleRecipient', height: 305, width: 568 )
+{
+	static_text(identifier: 'tswr', alignment: align_fill);
+	group( name: '$$$/Dialogs/ChooseSingleRecipient/SelectRecipient', horizontal: align_fill )
+	{
+		row( align_children: align_fill, horizontal: align_fill )
+		{
+			mclv( identifier: 'recl', horizontal: align_fill, height: 189, width: 438 );
+			
+			column(horizontal:align_fill)
+			{
+				button( identifier: 'add1', name: '$$$/Dialogs/ChooseSingleRecipient/Search', width: 90 );
+				button( identifier: 'add2', name: '$$$/Dialogs/ChooseSingleRecipient/Browse', width: 90 );
+			}
+		}
+	}
+	row( horizontal: align_right )
+	{
+		gap( height: 4 );
+		ok_cancel();
+	}
+}

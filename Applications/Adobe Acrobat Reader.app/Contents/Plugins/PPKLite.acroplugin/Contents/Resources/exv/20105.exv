@@ -1,0 +1,72 @@
+gPopupWidth = max( zstring_width(zstring: '$$$IDS_PwdTimeout_PLURAL'), 
+				zstring_width(zstring: '$$$IDS_PwdTimeout_SINGULAR') )
+			+ max(
+				zstring_width(zstring: '$$$IDS_PwdTimeout_SEC'),
+				zstring_width(zstring: '$$$IDS_PwdTimeout_min'),
+				zstring_width(zstring: '$$$IDS_PwdTimeout_MIN'),
+				zstring_width(zstring: '$$$IDS_PwdTimeout_hour'),
+				zstring_width(zstring: '$$$IDS_PwdTimeout_HOUR')) 
+			+ 10;
+
+dialog(name: '$$$IDS_PwdTimeout_Title')
+{
+	view(align_children: align_left)
+	{
+	    static_text(item_id: 'note', alignment: align_fill);
+	
+		gap(height: 5);
+
+        view(alignment: align_fill, align_children: align_top)
+        {
+            gap(width: 5);
+		    view(alignment: align_fill, align_children: align_left)
+		    {
+			    view(align_children: align_row)
+			    {
+    			    radio(item_id: 'rad1', group_id: 'rgrp', name: '$$$IDS_PwdTimeout_Always');
+    			    popup( item_id: 'pop1');
+    			}
+
+			    view(align_children: align_row)
+			    {
+			        radio( item_id: 'rad2', group_id: 'rgrp', name: '$$$IDS_PwdTimeout_After');
+				    popup( item_id: 'pop2', width: gPopupWidth );
+			    }
+			    
+			    view(align_children: align_row)
+			    {
+    			    radio(item_id: 'rad3', group_id: 'rgrp', name: '$$$IDS_PwdTimeout_Once');
+    			    popup( item_id: 'pop3');
+    			}
+    			
+			    view(align_children: align_row)
+			    {
+    			    radio(item_id: 'rad4', group_id: 'rgrp', name: '$$$IDS_PwdTimeout_Never');
+    			    popup( item_id: 'pop4');
+    			}
+		    }
+		}
+		
+		gap(height: 1);
+		
+        view(alignment: align_fill, align_children: align_top)
+        {
+            gap(width: 30);
+            picture(item_id: 'icon', width: 31, height: 31);
+            static_text(item_id: 'not4', alignment: align_fill);
+        }
+
+		gap(height: 1);
+
+		view(align_children: align_row, alignment: align_fill)
+		{
+			static_text(item_id: 'pwn1', name: '$$$IDS_PwdTimeout_PwdReq');
+			edit_text(item_id: 'pwd ', password: true, alignment: align_fill);
+			static_text(item_id: 'pwn2', name: '$$$IDS_PwdTimeout_PwdReqNote');
+		}
+
+		gap(height: 5);
+
+		ok_cancel();
+	}
+}

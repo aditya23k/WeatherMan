@@ -1,0 +1,11 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="建立 PDF" av2Title="建立 PDF" description="從任何格式建立 PDF" av2Description="從影像、Microsoft Office 檔案等項目建立 PDF" richTooltip="從影像、Microsoft 檔案、掃描的檔案、網頁或空白頁面建立 PDF。" id="CPDFApp" majorVersion="1" minorVersion="0" inline="true">
+	<Commands>
+	</Commands>
+	<Layouts>
+		<Layout name="Default">
+			<ContentView>
+				<Component name="CreatePDFRHPView" fontSize="12"/>
+			</ContentView>
+		</Layout>
+	</Layouts>
+</Application>

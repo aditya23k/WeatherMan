@@ -1,0 +1,50 @@
+dialog(name: '$$$/Dialogs/MeetingWelcome', target_id: 'name', margin_width:0, margin_height:0 )
+{
+	row( horizontal: align_fill )
+	{
+		panel(identifier:'tihd', back_color:@wizard_title_background, gradient_direction:@top_to_bottom
+			, gradient_type:@normal_to_dark, horizontal: align_fill, height: 100)
+		{
+			picture(identifier: 'icon', width: 36, height: 36, vertical: align_center);
+			static_text(identifier: 'strt', font_id: @title_font_bold, name: '$$$/Dialogs/MeetingCommon/StartMeeting',
+			horizontal: align_fill, vertical: align_center);
+		}
+	}
+	panel( margin_width: 15, margin_height: 15)
+	{
+		row( width: 400 )
+		{
+			column( guide_mask: [@guide_baseline, @guide_label] )
+			{
+				picture(identifier: 'meet', width: 140, height: 139);
+				gap( );
+				static_text(identifier: 'clu6', name: '$$$/Dialogs/MeetingCommon/AboutBreeze', width: 140, wrap: true );
+				gap( height: 5 );
+				hyperlink(identifier: 'link', name: '$$$/Dialogs/MeetingCommon/LearnMore');
+				hyperlink(identifier: 'bnow', name: '$$$/Dialogs/MeetingCommon/BuyNow');
+			}
+			column( )
+			{
+				group( guide_mask: [@guide_baseline, @guide_label], horizontal: align_fill )
+				{
+					static_text(identifier: 'clu1', font_id: @heading_font_bold, name: '$$$/Dialogs/MeetingWelcome/SignUp');
+					static_text(identifier: 'clu2', name: '$$$/Dialogs/MeetingWelcome/Start', width: 280, wrap: true );
+					static_text(identifier: 'clu3', name: '$$$/Dialogs/MeetingWelcome/Learn', width: 280, wrap: true );
+					button(identifier: 'crea', name: '$$$/Dialogs/MeetingWelcome/CreateTrialButton');
+				}
+				gap( );
+				group( guide_mask: [@guide_baseline, @guide_label], horizontal: align_fill )
+				{
+					static_text(identifier: 'clu4', font_id: @heading_font_bold, name: '$$$/Dialogs/MeetingCommon/AlreadyHave');
+					static_text(identifier: 'clu5', name: '$$$/Dialogs/MeetingWelcome/LoginText');
+					button(identifier: 'logi', name: '$$$/Dialogs/MeetingCommon/LoginButton');
+				}
+			}
+		}
+		row( horizontal: align_right )
+		{
+			gap( height: 4 );
+			ok(ok_name: '$$$/Dialogs/MeetingCommon/Close');
+		}
+	}
+}

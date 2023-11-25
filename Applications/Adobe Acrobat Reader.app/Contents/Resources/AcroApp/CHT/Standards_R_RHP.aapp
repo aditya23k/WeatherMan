@@ -1,0 +1,15 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="PDF 標準" av2Title="套用 PDF 標準" description="建立 PDF/A、PDF/E 或 PDF/X 檔案以符合 ISO 標準"  av2Description="建立 PDF/A、PDF/E 或 PDF/X 檔案以符合 ISO 標準" id="StandardsRdrApp" showLabels="true" majorVersion="1" minorVersion="0">
+	<Commands>
+			<Command name="SaveAsPDFARdr"/>
+			<Command name="SaveAsPDFXRdr"/>
+			<Command name="SaveAsPDFERdr"/>
+			<Command name="CALS:PreflightStRdr"/>
+	</Commands>
+	<Layouts>
+		<Layout name="Default">
+			<ContentView>
+				<Component name="StandardsAppRHPView" fontSize="12"/>
+			</ContentView>
+		</Layout>
+	</Layouts>
+</Application>

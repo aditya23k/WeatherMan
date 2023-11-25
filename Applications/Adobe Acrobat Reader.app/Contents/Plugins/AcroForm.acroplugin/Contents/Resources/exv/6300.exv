@@ -1,0 +1,14 @@
+dialog(name: '$$$/Dialogs/Import', target_id: 'text')
+{
+	view(align_children: align_left)
+	{
+		view(align_children: align_top)
+		{
+			view(align_children: align_left)
+			{
+				mclv(item_id: 'list', width: max_char_width() * 48, height: gEditTextHeight * 10);
+			}
+		}
+		ok_cancel();
+	}
+}

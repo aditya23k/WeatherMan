@@ -1,0 +1,11 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="Share" av2Title="Share" description="Share files for viewing or review and track responses" av2Description="Send a file to others for commenting or viewing" id="SendAppFull" requiresDoc="true" majorVersion="1" minorVersion="0">
+	<Commands>
+	</Commands>
+	<Layouts>
+		<Layout name="Default" rhpModes="expanded,collapsed">
+			<RHP>
+				<Component name="UnifiedShareRHPView" type="Custom"/>
+			</RHP>
+		</Layout>
+	</Layouts>
+</Application>

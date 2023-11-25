@@ -1,0 +1,27 @@
+//@@FORMSWORKFLOW auto-generated script
+
+/**************************************************************
+AdobePatentID="B643"
+**************************************************************/
+var AdobePatentID = "AdobePatentID=\"B643\"";
+
+// initialize some constants
+var METADATA_ANNOT_NAME = "adhocFormState";
+var STATE_DISTRIBUTED   = "distributed";
+var STATE_RETURNED      = "returned";
+var PROP_WFSTATE        = "wfState";
+
+// The following code executes only for Acrobat/Reader under 8.0
+if (app.viewerVersion < 9) {
+    // Change the distributed state to returned state
+    var annot = this.getAnnot(0, METADATA_ANNOT_NAME);
+    if (annot != null) {
+        var arrProps = new Array();
+        arrProps = annot.contents.split(";");
+        var wfState = getProperty(arrProps, PROP_WFSTATE);
+        if (wfState == STATE_DISTRIBUTED) {
+            setProperty(arrProps, PROP_WFSTATE, STATE_RETURNED);
+            annot.contents = arrProps.join(";");
+        }
+    }
+}

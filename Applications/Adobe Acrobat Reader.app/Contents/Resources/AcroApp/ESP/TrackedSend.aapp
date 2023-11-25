@@ -1,0 +1,11 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="Compartir" av2Title="Compartir" description="Comparta archivos para verlos o revisarlos y realice un seguimiento de las respuestas." av2Description="Envíe archivos a otras personas para que los vean o los comenten" id="SendAppFull" requiresDoc="true" majorVersion="1" minorVersion="0">
+	<Commands>
+	</Commands>
+	<Layouts>
+		<Layout name="Default" rhpModes="expanded,collapsed">
+			<RHP>
+				<Component name="UnifiedShareRHPView" type="Custom"/>
+			</RHP>
+		</Layout>
+	</Layouts>
+</Application>

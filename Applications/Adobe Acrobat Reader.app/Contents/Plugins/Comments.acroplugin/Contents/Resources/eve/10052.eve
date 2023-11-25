@@ -1,0 +1,12 @@
+dialog(name: '$$$/Dialogs/SaveACopy')
+{
+	column(vertical: align_fill)
+	{
+		static_text( name: '$$$/Dialogs/SaveACopy/Alert', identifier: 'asdf', wrap: true, width:400 );
+		gap(height:20);
+		row(horizontal: align_fill)
+		{
+			ok_cancel(ok_name:'$$$/Dialogs/SaveACopy/Save');
+		}
+	}
+}

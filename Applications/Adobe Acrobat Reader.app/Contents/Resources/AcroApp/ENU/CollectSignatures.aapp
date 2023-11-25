@@ -1,0 +1,17 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="Request E-signatures" av2Title="Request e-signatures" description="Send a document to others for easy, trusted signing online" richTooltip = "Send a document to anyone to e-sign fast online. Recipients sign in a browser for free." av2Description="Send a document to anyone to e-sign online fast" id="CollectSignaturesApp" majorVersion="1" minorVersion="0">
+	<Layouts>
+		<Layout name="Default" rhpModes="collapsed" topToolbarState="disable">
+			<TopBar align="Center">
+				<Component name="FSS:State:Progress"/>
+			</TopBar>
+			<TopBarRight align="Right">
+				<Component type="PushButton" buttonType="secondary" name="ExitApp"/>
+			</TopBarRight>
+			<ContentView>
+				<Component name="CollectSignaturesView" type="Custom"/>
+			</ContentView>
+		</Layout>
+		<Layout name="Native" OpenInDocumentTab="true">
+		</Layout>
+	</Layouts>
+</Application>

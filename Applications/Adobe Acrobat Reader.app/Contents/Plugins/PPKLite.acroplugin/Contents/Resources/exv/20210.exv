@@ -1,0 +1,49 @@
+gListWidth = max_char_width() * 30;
+
+gListHeight = gEditTextHeight * 12;
+
+gButtonWidth = max(
+	zstring_width(zstring: '$$$/Dialogs/AddressBook/ImportButton'),
+	zstring_width(zstring: '$$$/Dialogs/AddressBook/AddContactsButton'),
+	zstring_width(zstring: '$$$/Dialogs/AddressBook/RequestButton'),
+	zstring_width(zstring: 'IDS_ADDRESSBOOK_EDITTRUST'),
+	zstring_width(zstring: 'IDS_ADDRESSBOOK_EDITBUTTON'),	
+	zstring_width(zstring: '$$$/Dialogs/AddressBook/ExportButton'),
+	zstring_width(zstring: '$$$/Dialogs/AddressBook/DeleteButton'),
+	zstring_width(zstring: '$$$/Dialogs/AddressBook/NewGroupButton') );
+
+dialog( name: '$$$/Dialogs/AddressBook/Title' )
+{
+	view( alignment: align_fill ) 
+	{
+		view( alignment: align_fill )
+		{
+			view( align_children: align_row, width: gListWidth )
+			{
+				static_text(name: '$$$/Dialogs/AddressBook/Display' );
+				popup( item_id: 'view', alignment: align_fill );
+			}
+
+			view( align_children: align_top, alignment: align_fill )
+			{
+				mclv( item_id: 'list', dheight: gListHeight, dwidth: gListWidth );
+
+				view( alignment: align_fill )
+				{
+					button( item_id: 'mprt', name: '$$$/Dialogs/AddressBook/ImportButton', dwidth: gButtonWidth );
+					button( item_id: 'reqB', name: '$$$/Dialogs/AddressBook/RequestButton', dwidth: gButtonWidth );
+					gap( width: 5 );
+					button( item_id: 'edit', name: '$$$/Dialogs/AddressBook/EditButton', dwidth: gButtonWidth );
+					button( item_id: 'xprt', name: '$$$/Dialogs/AddressBook/ExportButton', dwidth: gButtonWidth );
+					button( item_id: 'del_', name: '$$$/Dialogs/AddressBook/DeleteButton', dwidth: gButtonWidth );
+					gap( width: 5 );
+					button( item_id: 'newg', name: '$$$/Dialogs/AddressBook/NewGroupButton', dwidth: gButtonWidth );
+					gap( width: 5 );
+					button( item_id: 'shwc', name: '$$$/Dialogs/AddressBook/ShowCertButton', dwidth: gButtonWidth );
+				}
+			}
+		}
+
+		ok_help( ok_name: '$$$/Dialogs/CloseButton' );
+	}
+}

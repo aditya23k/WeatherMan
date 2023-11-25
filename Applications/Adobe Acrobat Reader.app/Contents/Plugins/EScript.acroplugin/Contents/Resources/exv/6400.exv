@@ -1,0 +1,23 @@
+dialog(name: '$$$/Dialogs/Select')
+{
+	view(align_children: align_right)
+	{
+		view(align_children: align_top)
+		{
+			view(align_children: align_left)
+			{
+				list_box(item_id: 'list', width: max_char_width() * 20, height: gEditTextHeight * 8);
+			}
+			view(align_children: align_fill)
+			{
+				button(item_id: 'but1', name: '$$$/Dialogs/Select/Button1');
+				button(item_id: 'but2', name: '$$$/Dialogs/Select/Button2');
+				button(item_id: 'but3', name: '$$$/Dialogs/Select/Button3');
+				button(item_id: 'but4', name: '$$$/Dialogs/Select/Button4');
+				button(item_id: 'but5', name: '$$$/Dialogs/Select/Button5');
+			}
+		}
+		static_text(item_id: 'msgs', alignment: align_fill, height: gEditTextHeight * 4, multiline: true);
+		button(view_id: 'ok  ', name: '$$$/Dialogs/Select/CloseButton');
+	}
+}

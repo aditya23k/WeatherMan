@@ -1,0 +1,168 @@
+gColumnOneWidth = max(
+	zstring_width(zstring: '$$$/Dialogs/TextProps/Left'),
+	zstring_width(zstring: '$$$/Dialogs/TextProps/Right'),
+	zstring_width(zstring: '$$$/Dialogs/TextProps/Above'),
+	zstring_width(zstring: '$$$/Dialogs/TextProps/Below'));
+gColumnOneWidth1 = max(
+	zstring_width(zstring: '$$$/Dialogs/TextProps/First'),
+	zstring_width(zstring: '$$$/Dialogs/TextProps/By'),
+	zstring_width(zstring: '$$$/Dialogs/TextProps/Line'),
+	zstring_width(zstring: '$$$/Dialogs/TextProps/At'));
+
+gAlignmentCluster = '$$$/Dialogs/TextProps/Alignment';
+gDirectionCluster = '$$$/Dialogs/TextProps/ParaDirection';
+gIdentsCluster = '$$$/Dialogs/TextProps/Idents';
+gSpacingCluster = '$$$/Dialogs/TextProps/Spacing';
+gLeft = '$$$/Dialogs/TextProps/Left';
+gRight = '$$$/Dialogs/TextProps/Right';
+gFirst = '$$$/Dialogs/TextProps/First';
+gBy = '$$$/Dialogs/TextProps/By';
+gAbove = '$$$/Dialogs/TextProps/Above';
+gBelow = '$$$/Dialogs/TextProps/Below';
+gLine = '$$$/Dialogs/TextProps/Line';
+gAt = '$$$/Dialogs/TextProps/At';
+gPoints = '$$$/Dialogs/TextProps/Points';
+
+dialog(name: '$$$/Dialogs/TextProps/Paragraph', target_id: 'Paragraph')
+{
+	view(align_children: align_top, alignment: align_fill)
+	{
+		view(align_children: align_left)
+		{
+			cluster(item_id: 'fnt1', name: gAlignmentCluster, align_children: align_row)
+			{
+				button(item_id: 'plft', radio:true, group_id: 'raln', picture: true, height: 28, width: 30);
+				button(item_id: 'cntr', radio:true, group_id: 'raln', picture: true, height: 28, width: 30);
+				button(item_id: 'prgt', radio:true, group_id: 'raln', picture: true, height: 28, width: 30);
+				button(item_id: 'dist', radio:true, group_id: 'raln', picture: true, height: 28, width: 30);
+				picture(item_id: 'nada', height: 28, width: 30);
+				button(item_id: 'uppr', radio:true, group_id: 'rhln', picture: true, height: 28, width: 30);
+				button(item_id: 'midd', radio:true, group_id: 'rhln', picture: true, height: 28, width: 30);
+				button(item_id: 'belw', radio:true, group_id: 'rhln', picture: true, height: 28, width: 30);
+			}
+			cluster(item_id: 'iden', name: gIdentsCluster, align_children: align_row)
+			{
+				view(align_children: align_left)
+				{
+					view(align_children: align_row)
+					{
+						view(align_children: align_right, width: gColumnOneWidth)
+						{
+							static_text(name: gLeft);
+						}
+						view(align_children: align_row)
+						{
+							edit_text(item_id: 'left', width: gColumnOneWidth);			
+						}
+						view(align_children: align_left, width: gColumnOneWidth)
+						{
+							static_text(name: gPoints);
+						}
+						view(align_children: align_right, width: gColumnOneWidth1)
+						{
+							static_text(name: gFirst);
+						}
+						view(align_children: align_row)
+						{
+							popup(item_id: 'frst', width: gColumnOneWidth + 10);			
+						}
+					}
+					view(align_children: align_row)
+					{
+						view(align_children: align_right, width: gColumnOneWidth)
+						{
+							static_text(name: gRight);
+						}
+						view(align_children: align_row)
+						{
+							edit_text(item_id: 'rght', width: gColumnOneWidth);			
+						}
+						view(align_children: align_left, width: gColumnOneWidth)
+						{
+							static_text(name: gPoints);
+						}
+						view(align_children: align_right, width: gColumnOneWidth1)
+						{
+							static_text(name: gBy);
+						}
+						view(align_children: align_row)
+						{
+							edit_text(item_id: 'byby', width: gColumnOneWidth);			
+						}
+						view(align_children: align_left, width: gColumnOneWidth)
+						{
+							static_text(name: gPoints);
+						}
+					}
+				}
+			}
+			cluster(item_id: 'spce', name: gSpacingCluster, align_children: align_row)
+			{
+				view(align_children: align_left)
+				{
+					view(align_children: align_row)
+					{
+						view(align_children: align_right, width: gColumnOneWidth)
+						{
+							static_text(name: gAbove);
+						}
+						view(align_children: align_row)
+						{
+							edit_text(item_id: 'abov', width: gColumnOneWidth);			
+						}
+						view(align_children: align_left, width: gColumnOneWidth)
+						{
+							static_text(name: gPoints);
+						}
+						view(align_children: align_right, width: gColumnOneWidth1)
+						{
+							static_text(name: gLine);
+						}
+						view(align_children: align_row)
+						{
+							popup(item_id: 'line', width: gColumnOneWidth + 10);			
+						}
+					}
+					view(align_children: align_row)
+					{
+						view(align_children: align_right, width: gColumnOneWidth)
+						{
+							static_text(name: gBelow);
+						}
+						view(align_children: align_row)
+						{
+							edit_text(item_id: 'belo', width: gColumnOneWidth);			
+						}
+						view(align_children: align_left, width: gColumnOneWidth)
+						{
+							static_text(name: gPoints);
+						}
+						view(align_children: align_right, width: gColumnOneWidth1)
+						{
+							static_text(item_id: 'gAtt', name: gAt);
+						}
+						view(align_children: align_row)
+						{
+							edit_text(item_id: 'atat', width: gColumnOneWidth);			
+						}
+						view(align_children: align_left, width: gColumnOneWidth)
+						{
+							static_text(item_id: 'gPts', name: gPoints);
+						}
+					}
+				}
+			}
+			cluster(item_id: 'pclu', name: gDirectionCluster, align_children: align_row)
+			{
+				view(align_children: align_left)
+				{
+					view(align_children: align_row)
+					{
+						radio(group_id: 'rdir', item_id: 'pltr', name: '$$$/Dialogs/TextProps/TextDirLTR');
+						radio(group_id: 'rdir', item_id: 'prtl', name: '$$$/Dialogs/TextProps/TextDirRTL');
+					}
+				}
+			}
+		}
+	}
+}

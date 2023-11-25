@@ -1,0 +1,16 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="Certificates" av2Title="Use a certificate" description="Digitally sign or certify documents and validate authenticity" av2Description="Digitally sign or certify documents and validate authenticity" id="CertificatesApp" showLabels="true" requiresDoc="true" majorVersion="1" minorVersion="0">
+	<Commands>
+				<Command name="DIGSIG:SignWithBoxDragOrClick"/>
+				<Command name="DIGSIG:TimestampDocument"/>
+				<Command name="DIGSIG:ValidateAll"/>
+	</Commands>
+	<Layouts>
+		<Layout name="Default" OpenInDocumentTab="true">
+			<TopBar align="Center">
+				<Component name="DIGSIG:SignWithBoxDragOrClick"/>
+				<Component name="DIGSIG:TimestampDocument"/>
+				<Component name="DIGSIG:ValidateAll"/>
+			</TopBar>
+		</Layout>
+	</Layouts>
+</Application>

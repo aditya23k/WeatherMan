@@ -1,0 +1,17 @@
+gMyStaticTextWidth = ( gButtonWidth * 4 ) + ( gButtonSpace * 3 ) ;
+
+dialog( name: '$$$IDS_APPROVAL_FINAL_TITLE', target_id: 'mail' )
+{
+	view( align_children: align_left )
+	{
+		static_text( name: '$$$IDS_APPROVAL_FINAL_TEXT', wrap_name: true, alignment: align_fill, width: gMyStaticTextWidth );
+
+		view( align_children: align_row )
+		{
+			button( item_id: 'prnt', name: '$$$IDS_APPROVAL_FINAL_PRINT', next_tab: 'save' );
+			button( item_id: 'save', name: '$$$IDS_APPROVAL_FINAL_SAVE', next_tab: 'mail' );
+			button( item_id: 'mail', name: '$$$IDS_APPROVAL_FINAL_EMAIL', next_tab: 'cncl' );
+			button( item_id: 'cncl', name: '$$$IDS_APPROVAL_FINAL_CANCEL', next_tab: 'prnt' );
+		}
+	}
+}

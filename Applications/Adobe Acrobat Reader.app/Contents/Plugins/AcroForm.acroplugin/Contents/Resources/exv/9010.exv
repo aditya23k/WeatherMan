@@ -1,0 +1,42 @@
+gEditWidth = max_char_width() * 4;
+gLabelWidth = max(
+    zstring_width(zstring: '$$$/Dialogs/FieldProps/Barcode/Custom/QRCode/XCellSize'),
+    zstring_width(zstring: '$$$/Dialogs/FieldProps/Barcode/Custom/QRCode/ECC')
+    );
+
+gUnitWidth = zstring_width(zstring: '$$$/Dialogs/FieldProps/Barcode/Custom/QRCode/XCellLabel');
+
+dialog(name: '$$$/Dialogs/FieldProps/Barcode/Custom/QRCode/Title')
+{
+	view(align_children: align_left)
+	{
+		picture(item_id: 'dmpc', width: 185, height: 115, alignment: align_center);
+		gap();
+        view(align_children: align_row)
+        {
+            view(align_children: align_right, width: gLabelWidth)
+            {
+                static_text(name: '$$$/Dialogs/FieldProps/Barcode/Custom/QRCode/XCellSize');
+            }
+            view(align_children: align_fill)
+            {
+                popup(item_id: 'qclx', align: align_left, width: gEditWidth);
+            }
+        }
+        view(align_children: align_row)
+        {
+            view(align_children: align_right, width: gLabelWidth)
+            {
+                static_text(name: '$$$/Dialogs/FieldProps/Barcode/Custom/QRCode/ECC');
+            }
+            view(align_children: align_fill)
+            {
+                popup(item_id: 'qecc', align: align_left, width: gEditWidth);
+            }
+            gap(width: gUnitWidth);
+        }
+        
+        gap();
+		ok_cancel(ok_name: '$$$/ControlsStrings/OK', cancel_name: '$$$/ControlsStrings/Cancel');
+	}
+}

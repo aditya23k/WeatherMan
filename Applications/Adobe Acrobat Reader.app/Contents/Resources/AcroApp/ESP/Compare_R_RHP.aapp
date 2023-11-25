@@ -1,0 +1,12 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="Comparar archivos" av2Title="Comparar archivos" description="Compare y resalte las diferencias entre dos archivos." av2Description="Comparar dos archivos y resaltar las diferencias" id="CompareRdrApp" showLabels="true" majorVersion="2" minorVersion="0" manualLayout="true">
+	<Commands>
+		<Command name="DIGSIG:CompareDocumentsRdr"/>
+	</Commands>
+	<Layouts>
+		<Layout name="Default">
+			<ContentView>
+				<Component name="CompareAppRhpView" fontSize="12"/>
+			</ContentView>
+		</Layout>
+	</Layouts>
+</Application>

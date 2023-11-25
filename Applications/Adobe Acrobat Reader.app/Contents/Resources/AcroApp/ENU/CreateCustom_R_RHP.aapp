@@ -1,0 +1,5 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="Create Custom Tool" av2Title="Create custom tool" description="Create a customized collection of Acrobat features and share it with others" av2Description="Create a custom set of Acrobat features" id="CreateCustomUIRdrApp" majorVersion="1" minorVersion="0">
+	<Commands>
+			<Command name="CreateUICustomizationRdr"/>
+	</Commands>
+</Application>

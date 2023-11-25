@@ -1,0 +1,64 @@
+gAutoCompleteOptions = max(
+	zstring_width(zstring: '$$$/Dialogs/AFPrefs/BackgroundColor'),
+	zstring_width(zstring: '$$$/Dialogs/AFPrefs/AutoCompleteBasic'),
+	zstring_width(zstring: '$$$/Dialogs/AFPrefs/AutoCompleteAdvanced'));
+
+gColorLabelWidth =  max(
+	zstring_width(zstring: '$$$/Dialogs/AFPrefs/AutoCompleteOff'),
+	zstring_width(zstring: '$$$/Dialogs/AFPrefs/RequiredFieldHLColor'));
+
+dialog(name: '$$$/Dialogs/AFPrefs', margin_height: 0, margin_width: 0)
+{
+	view(align_children: align_left, dwidth: gPrefsPanelWidth)
+	{
+		cluster(name: '$$$/Dialogs/AFPrefs/General', dwidth: gPrefsPanelWidth, align_children: align_left)
+		{
+			view(align_children: align_top, alignment: align_fill)
+			{
+				view(align_children: align_left)
+				{
+					check_box(item_id: 'auto', name: '$$$/Dialogs/AFPrefs/Auto');
+					check_box(item_id: 'tabo', name: '$$$/Dialogs/AFPrefs/TabOrder');
+					check_box(item_id: 'focs', name: '$$$/Dialogs/AFPrefs/Focus');
+					check_box(item_id: 'oflw', name: '$$$/Dialogs/AFPrefs/Overflow');
+					check_box(item_id: 'appr', name: '$$$/Dialogs/AFPrefs/ShowAppearance');
+					check_box(item_id: 'rffr', name: '$$$/Dialogs/AFPrefs/RunFormFieldRecognition');
+					check_box(item_id: 'teae', name: '$$$/Dialogs/AFPrefs/TextEditingAutoEnable');
+				}
+				view(align_children: align_right, alignment: align_fill)
+				{
+					gap(alignment: align_fill);
+					button(item_id: 'mbcp', name: '$$$/Dialogs/FieldProps/Barcode/ManageParams');
+				}
+			}
+		}
+		cluster(name: '$$$/Dialogs/AFPrefs/FormsDisplay', dwidth: gPrefsPanelWidth)
+		{
+			view(align_children: align_left)
+			{
+				check_box(item_id: 'bgcr', name: '$$$/Dialogs/AFPrefs/ShowBackgroundColor');
+				view(align_children: align_row)
+				{
+					static_text(item_id: 'txtc', name: '$$$/Dialogs/AFPrefs/BackgroundColor', alignment: align_left, width: gColorLabelWidth );
+					button(item_id: 'col1', picture: true, height: 20, width: 22);
+				}				
+				view(align_children: align_row)
+				{
+					static_text(item_id: 'txtd', name: '$$$/Dialogs/AFPrefs/RequiredFieldHLColor', alignment: align_left, width: gColorLabelWidth );
+					button(item_id: 'col2', picture: true, height: 20, width: 22);
+				}				
+			}
+		}
+		cluster(name: '$$$/Dialogs/AFPrefs/AutoComplete', dwidth: gPrefsPanelWidth, align_children: align_left)
+		{			
+			view(align_children: align_row, margin_height: 0, alignment: align_fill)
+			{	
+				popup(item_id: 'acpu', width: gAutoCompleteOptions + 10);
+				check_box(item_id: 'acc4', name: '$$$/Dialogs/AFPrefs/StoreNumerical');				
+			}
+			button(item_id: 'acb1', name: '$$$/Dialogs/AFPrefs/EditListButton');
+			edit_text(item_id:'acst', height: gStaticTextHeight * 6, alignment: align_fill, multiline: true, readonly: true);
+		}
+		link_text(item_id: 'tlnk', wrap: true, name: '$$$/Dialogs/AFPrefs/TrackerPrefsLink');
+	}
+}

@@ -1,0 +1,18 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="壓縮 PDF" av2Title="壓縮 PDF" description="縮小 PDF 檔案大小、啟用快速 Web 檢視、控制影像與字型選項" richTooltip="縮小 PDF 檔案大小。亦可控制影像和字型設定。" av2Description="減少 PDF 檔案大小，並控制影像和字型設定" id="OptimizePDFRdrApp" majorVersion="1" minorVersion="0" inAppUpsellEnabled="true">
+	<OverrideTitles>
+		<OverrideTitle locale="JPN" appName="ファイルサイズを縮小"/>
+	</OverrideTitles>
+	<Commands>
+			<Command name="ReduceFileSizeRdr"/>
+			<Command name="PDFOptimizerRdr"/>
+			<Command name="OptimizeScannedPdfRdr"/>
+			<Command name="PreflightRdr"/>
+	</Commands>
+	<Layouts>
+		<Layout name="Default">
+			<ContentView>
+				<Component name="OptimizePDFAppRHPView" fontSize="12"/>
+			</ContentView>
+		</Layout>
+	</Layouts>	
+</Application>

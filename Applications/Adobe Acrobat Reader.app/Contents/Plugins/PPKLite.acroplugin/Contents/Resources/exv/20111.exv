@@ -1,0 +1,53 @@
+theInnerAdjustment = gGap * 8;
+theTabDecorationWidth = gGap * 4;
+gTabWidth = zstring_width(zstring: '$$$IDS_CV_CERT_GENERAL_TAB') + theTabDecorationWidth +
+				   zstring_width(zstring: '$$$IDS_CV_CERT_DETAILS_TAB') + theTabDecorationWidth +
+				   zstring_width(zstring: '$$$IDS_CV_CERT_REVOCATION_TAB') + theTabDecorationWidth +
+				   zstring_width(zstring: '$$$IDS_CV_CERT_TRUST_TAB') + theTabDecorationWidth +
+				   zstring_width(zstring: '$$$IDS_CV_CERT_POLICY_TAB') + theTabDecorationWidth +
+				   zstring_width(zstring: '$$$IDS_CV_CERT_LEGAL_TAB') + theTabDecorationWidth - theInnerAdjustment;
+
+dialog()
+{
+	view(margin_height: 0, margin_width: 0, width: gTabWidth)
+	{
+		static_text(item_id: 's5Nt', height: 16, alignment: align_fill);
+		
+		cluster(item_id: 'c5TR', name: '$$$/Dialogs/EditCertificate/TrustLabel', alignment: align_fill)
+		{
+			static_text(item_id: 's500', height: 16, alignment: align_fill);
+			
+			view(align_children: align_top, alignment: align_fill)
+			{
+				picture(item_id: 'i501', width: 20, height: 20);
+				static_text(item_id: 's501', alignment: align_fill);
+			}
+			view(align_children: align_top, alignment: align_fill)
+			{
+				picture(item_id: 'i502', width: 20, height: 20);
+				static_text(item_id: 's502', alignment: align_fill);
+			}
+			view(align_children: align_top, alignment: align_fill)
+			{
+				picture(item_id: 'i503', width: 20, height: 20);
+				static_text(item_id: 's503', alignment: align_fill);
+			}
+			view(align_children: align_top, alignment: align_fill)
+			{
+				picture(item_id: 'i504', width: 20, height: 20);
+				static_text(item_id: 's504', alignment: align_fill);
+			}			
+			view(align_children: align_top, alignment: align_fill)
+			{
+				picture(item_id: 'i506', width: 20, height: 20);
+				static_text(item_id: 's506', alignment: align_fill);
+			}			
+			static_text(item_id: 's505', alignment: align_fill);
+
+    	    view(align_children: align_row, alignment: align_center)
+	        {			
+    	        button(item_id: 'b5Im', name: '$$$/Dialogs/CertGeneralTabs/ImportButton');		    	    
+			}
+		}
+	}
+}

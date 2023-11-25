@@ -1,0 +1,11 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="编辑 PDF" av2Title="编辑 PDF" id="EditPDFRdrExpApp" description="编辑 PDF 文件中的文本和图像" richTooltip="修改文本和图像、编辑扫描的页面并整理页面。" av2Description="修改或添加文本、图像、页面等" majorVersion="1" minorVersion="0" inAppUpsellEnabled="true">
+	<Commands>
+	</Commands>
+	<Layouts>
+		<Layout name="Default">
+			<ContentView>
+				<Component name="EditPDFRHPExpView" fontSize="12"/>
+			</ContentView>
+		</Layout>
+	</Layouts>
+</Application>

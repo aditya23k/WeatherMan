@@ -1,0 +1,33 @@
+dialog(width: 500, height: 250)
+{
+	view(align_children: align_left)
+	{
+		static_text( item_id: 'TRNt', name: '$$$IDS_CE_TrustRootNote', wrap_name: true, width: 450);
+		check_box( item_id: 'TrAn', name: '$$$/Dialogs/EditTrust/TrustAnchor' );
+		static_text( item_id: 'NTST', name: '$$$IDS_CE_TrustNote', width: 350, wrap_name: true );
+    	cluster( item_id: 'nTru', align_children: align_left, width: 350 )
+    	{
+   			check_box( item_id: 'TrSg', name: '$$$/Dialogs/EditTrust/Signing' );
+   			check_box( item_id: 'TrCe', name: '$$$/Dialogs/EditTrust/AuthenticDocuments');
+   			view(align_children: align_row)
+   			{
+   				gap(width: gRadioCheckBoxWidthPad );
+   				view(align_children: align_left)
+   				{
+					view(align_children: align_row)
+					{
+						check_box( item_id: 'TrDy', name: '$$$/Dialogs/EditTrust/DynamicContent', wrap_name: true, width: 325); 
+					}
+					view(align_children: align_row)
+					{
+						check_box( item_id: 'TrJS', name: '$$$/Dialogs/EditTrust/JavaScript', wrap_name: true, width: 325);
+					}
+					view(align_children: align_row)
+					{
+						check_box( item_id: 'TrRS', name: '$$$/Dialogs/EditTrust/ReducedSecurity', wrap_name: true, width: 325);
+					}
+				}
+			}
+    	}
+	}
+}

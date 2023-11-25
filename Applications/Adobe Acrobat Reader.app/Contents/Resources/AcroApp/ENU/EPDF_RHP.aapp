@@ -1,0 +1,11 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="Export PDF" av2Title="Export a PDF" description="Convert a PDF to Microsoft Word, Excel, PowerPoint, and more" av2Description="Convert PDFs to Microsoft Office files, images, and more" richTooltip = "Convert PDFs to Microsoft Word, Excel, or PowerPoint. Convert to image files too." id="EPDFApp" majorVersion="1" minorVersion="0" inline="true">
+	<Commands>
+	</Commands>
+	<Layouts>
+		<Layout name="Default">
+			<ContentView>
+				<Component name="ExportPDFRHPView" fontSize="12"/>
+			</ContentView>
+		</Layout>
+	</Layouts>
+</Application>

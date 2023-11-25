@@ -1,0 +1,54 @@
+dialog(name: '$$$/Dialogs/EDCAuthAdobeWelcomeRecipient', target_id: 'name', margin_width:0, margin_height:0 )
+{
+	row( horizontal: align_fill )
+	{
+		panel(identifier:'tihd', back_color:@wizard_title_background, gradient_direction:@top_to_bottom
+			, gradient_type:@normal_to_dark, horizontal: align_fill, height: 100)
+		{
+			picture(identifier: 'icon', width: 45, height: 45, vertical: align_center);
+			column( )
+			{
+				gap( height: 15 );
+				static_text(identifier: 'strt', font_id: @title_font_bold, name: '$$$/Dialogs/EDCAuthAdobeWelcome/OnlineServices',
+				horizontal: align_fill, vertical: align_center);
+				static_text(identifier: 'strt', font_id: @heading_font_bold, name: '$$$/Dialogs/EDCAuthAdobeWelcome/DocumentCenter',
+				horizontal: align_fill, vertical: align_center);
+			}
+		}
+	}
+	panel( margin_width: 15, margin_height: 15)
+	{
+		row( width: 400 )
+		{
+			column( guide_mask: [@guide_baseline, @guide_label] )
+			{
+				picture(identifier: 'meet', width: 140, height: 139);
+				gap( );
+				static_text(identifier: 'clu6', name: '$$$/Dialogs/EDCAuthAdobeWelcome/AboutConcerto', width: 140, wrap: true );
+				gap( height: 5 );
+				hyperlink(identifier: 'link', name: '$$$/Dialogs/EDCAuthAdobe/LearnMoreLink');
+			}
+			column( )
+			{
+				static_text(identifier: 'clu6', name: '$$$/Dialogs/EDCAuthAdobeRecipient/Info', width: 280, wrap: true );
+				group( guide_mask: [@guide_baseline, @guide_label], horizontal: align_fill )
+				{
+					static_text(identifier: 'clu1', font_id: @heading_font_bold, name: '$$$/Dialogs/EDCAuthAdobeWelcome/RegisterHeadingRecipient', width: 280, wrap: true );
+					button(identifier: 'crea', name: '$$$/Dialogs/EDCAuthAdobeWelcomeRecipient/RegisterButton');
+				}
+				gap( );
+				group( guide_mask: [@guide_baseline, @guide_label], horizontal: align_fill )
+				{
+					static_text(identifier: 'clu4', font_id: @heading_font_bold, name: '$$$/Dialogs/EDCAuthAdobeWelcomeRecipient/AlreadyRegistered');
+					static_text(identifier: 'clu5', name: '$$$/Dialogs/EDCAuthAdobeWelcome/SecurelyLogin');
+					button(identifier: 'logi', name: '$$$/Dialogs/EDCAuthAdobeWelcome/LoginButton');
+				}
+			}
+		}
+		row( horizontal: align_right )
+		{
+			gap( height: 4 );
+			ok(ok_name: '$$$/Dialogs/EDCAuthAdobeWelcome/CloseButton');
+		}
+	}
+}

@@ -1,0 +1,19 @@
+signNoteWidth = zstring_width(zstring: '$$$IDS_FDFExportOption_SignNote') / 2;
+
+dialog(margin_height: 0, margin_width: 0)
+{
+	view(alignment: align_fill, align_children: align_left)
+	{
+		gap(height: gGap);
+		
+		static_text(item_id: 'note', font_id: 5, alignment: align_fill);
+		
+		gap(height: gGap);
+
+		cluster(name: '$$$/Dialogs/FDFExportWiz/Signature', align_children: align_top, alignment: align_fill)
+		{
+			static_text(item_id: 'snot', width: signNoteWidth);
+			button(item_id: 'sign', name: '$$$IDS_BUTTON_SignPrompt');
+		}
+	}
+}

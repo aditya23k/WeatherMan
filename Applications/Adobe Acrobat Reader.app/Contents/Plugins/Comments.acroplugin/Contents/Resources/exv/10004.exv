@@ -1,0 +1,83 @@
+gMaxWidth=max(
+	zstring_width(zstring: '$$$/Prefs/Annotations/Font'),
+	zstring_width(zstring: '$$$/Prefs/Annotations/FontSize'),
+	zstring_width(zstring: '$$$/Prefs/Annotations/PopupOpacity'));
+
+dialog(name: '$$$/Prefs/Annotations', margin_height: 0, margin_width: 0)
+{
+	view(align_children: align_left)
+	{
+		cluster(name: '$$$/Prefs/Annotations/ViewingGroup', dwidth: gPrefsPanelWidth, align_children: align_fill)
+		{
+			view(align_children: align_row, alignment: align_fill)
+			{
+				view(align_children: align_right)
+				{
+					static_text(item_id: 'fonL', name: '$$$/Prefs/Annotations/Font');
+				}
+				view(align_children: align_left, alignment: align_fill)
+				{
+					popup(item_id: 'font', alignment: align_fill);
+				}
+				gap();
+				view(align_children: align_right)
+				{
+					static_text(item_id: 'fsiL', name: '$$$/Prefs/Annotations/FontSize');
+				}
+				view(align_children: align_left)
+				{
+					edit_text(item_id: 'fsiz', width: zstring_width(zstring: '$$$/Prefs/Annotations/ThreeZeros=000'), PopupEdit: true, numeric: true);
+				}
+			}
+			view(align_children: align_row)
+			{
+				view(align_children: align_right)
+				{
+					static_text(name: '$$$/Prefs/Annotations/PopupOpacity');
+				}
+				view(align_children: align_left)
+				{
+					edit_text(item_id: 'opaq', width: max_char_width() * 3, PopupEdit: true, numeric: true);
+				}
+			}
+			view(align_children: align_left)
+			{
+				check_box(item_id: 'swmm', name: '$$$/Prefs/Annotations/ShowMarkupModifiers');
+				check_box(item_id: 'ppop', name: '$$$/Prefs/Annotations/PrintPopups');
+				check_box(item_id: 'cnct', name: '$$$/Prefs/Annotations/ShowAnnotConnector');
+				check_box(item_id: 'pswp', name: '$$$/Prefs/Annotations/PopupsScrollWithPage');
+				check_box(item_id: 'ocaa', name: '$$$/Prefs/Annotations/OpenCommentAppAuto');
+			}
+		}
+
+		cluster(name: '$$$/Prefs/Annotations/PopupOpenGroup', dwidth: gPrefsPanelWidth, align_children: align_left)
+		{
+			view(align_children: align_left, alignment: align_fill)
+			{
+				check_box(item_id: 'aoot', name: '$$$/Prefs/Annotations/AutoOpenOther');
+				check_box(item_id: 'hpop', name: '$$$/Prefs/Annotations/HidePopupIfShowSummary');
+				check_box(item_id: 'hovr', name: '$$$/Prefs/Annotations/Hover');
+			}
+		}
+
+		cluster(name: '$$$/Prefs/Annotations/MakingGroup', dwidth: gPrefsPanelWidth, align_children: align_left)
+		{
+			view(align_children: align_left)
+			{
+				check_box(item_id: 'idnt', name: '$$$/Prefs/Annotations/IdentThing');
+				check_box(item_id: 'side', name: '$$$/Prefs/Annotations/SideNotes');
+				check_box(item_id: 'mdrn', name: '$$$/Prefs/Annotations/AllowNestedReplies');
+				check_box(item_id: 'atse', name: '$$$/Prefs/Annotations/EnableTextSelection');
+				check_box(item_id: 'eait', name: '$$$/Prefs/Annotations/EnableAnnotIconText');
+				check_box(item_id: 'scbx', name: '$$$/Prefs/Annotations/ShowCheckbox');
+				check_box(item_id: 'cpda', name: '$$$/Prefs/Annotations/CopyDrawAnnotText');
+				check_box(item_id: 'cpma', name: '$$$/Prefs/Annotations/CopyMarkupAnnotText');
+				check_box(item_id: 'epsf', name: '$$$/Prefs/Annotations/EnablePenSupportForFreeHand');
+			}
+		}
+		view(align_children: align_left)
+		{
+			static_text(name: '$$$/Prefs/Annotations/RequiresRestart');
+		}
+	}
+}

@@ -1,0 +1,203 @@
+dialog(name: '$$$/Dialogs/DistributeFormStart',
+	back_color: @dialog_background,
+	margin_width:0, margin_height:0)
+{
+	panel(identifier:'prfr',
+		margin_width:30, margin_height:10,
+		horizontal: align_fill)
+	{
+		column(spacing: "0")
+		{
+			static_text(identifier: 'titl',
+				name: '$$$/Dialogs/DistributeFormStart/txtTitle', 
+				font_id: @dialog_font_bold);
+
+			gap(dheight: 15);
+
+			panel(identifier: 'com1',
+				guide_mask: [@guide_baseline, @guide_label],
+				horizontal: align_fill,
+				margin_height: 0,
+				margin_width: 0,
+				spacing: "0")
+			{
+				row(spacing: "0",
+					vertical: align_center,
+					horizontal: align_left)
+				{
+					row(spacing: "0",
+						vertical: align_top,
+						horizontal: align_left)
+					{
+						column(spacing: "0",
+							vertical: align_center)
+						{
+							radio_button(identifier: 'emal', group_id: 'rgr1', 
+								name: '$$$/Dialogs/DistributeFormStart/optEmail');
+						}
+
+						gap(dwidth: 0);
+
+						column(spacing: "0",
+							vertical: align_top)
+						{
+							picture(identifier: 'emic',
+							horizontal: align_left,
+							height: 32,
+							width: 32);
+						}
+					}
+
+					gap(dwidth: 10);
+
+					column(spacing: "0",
+						vertical: align_center)
+					{
+						static_text(identifier: 'emlb',
+							name: '$$$/Dialogs/DistributeFormStart/lblEmail', 
+							font_id: @dialog_font_bold);
+
+						gap(dheight: 3);
+
+						static_text(identifier: 'emds',
+							name: '$$$/Dialogs/DistributeFormStart/descEmail',
+							wrap: true, width: 330);
+					}
+				}
+
+				gap(dheight: 30);
+			}
+
+			panel(identifier: 'com2',
+				guide_mask: [@guide_baseline, @guide_label],
+				horizontal: align_fill,
+				margin_height: 0,
+				margin_width: 0,
+				spacing: "0")
+			{
+				row(spacing: "0",
+					vertical: align_center,
+					horizontal: align_left)
+				{
+					row(spacing: "0",
+						vertical: align_top,
+						horizontal: align_left)
+					{
+						column(spacing: "0",
+							vertical: align_center)
+						{
+							radio_button(identifier: 'insv', group_id: 'rgr1', 
+								name: '$$$/Dialogs/DistributeFormStart/optInternalServer');
+						}
+
+						gap(dwidth: 0);
+
+						column(spacing: "0",
+							vertical: align_center)
+						{
+							picture(identifier: 'isic',
+							horizontal: align_left,
+							height: 32,
+							width: 32);
+						}
+					}
+
+					gap(dwidth: 10);
+
+					column(spacing: "0",
+						margin_width: 0, margin_height: 0,
+						vertical: align_center)
+					{
+						static_text(identifier: 'islb',
+							name: '$$$/Dialogs/DistributeFormStart/lblInternalServer', 
+							font_id: @dialog_font_bold);
+
+						gap(dheight: 3);
+
+						static_text(identifier: 'isds',
+							name: '$$$/Dialogs/DistributeFormStart/descInternalServer',
+							wrap: true, width: 330);
+					}
+				}
+
+				gap(dheight: 3);
+
+				row(spacing: "0",
+					margin_width: 0, margin_height: 0,
+					vertical: align_center)
+				{
+					gap(dwidth: 50);
+
+					popup(identifier: 'ispu',
+						horizontal: align_left,
+						name: '$$$/Dialogs/DistributeFormStart/popupInternalServer');
+				}
+			}
+
+			panel(identifier: 'com3',
+				guide_mask: [@guide_baseline, @guide_label],
+				horizontal: align_fill,
+				margin_height: 0,
+				margin_width: 0,
+				spacing: "0")
+			{
+				gap(dheight: 30);
+
+				row(spacing: "0",
+					vertical: align_center,
+					horizontal: align_left)
+				{
+					row(spacing: "0",
+						vertical: align_top,
+						horizontal: align_left)
+					{
+						column(spacing: "0",
+							vertical: align_center)
+						{
+							radio_button(identifier: 'adco', group_id: 'rgr1', 
+								name: '$$$/Dialogs/DistributeFormStart/optAdotCom');
+						}
+
+						gap(dwidth: 0);
+
+						column(spacing: "0",
+							vertical: align_top)
+						{
+							picture(identifier: 'adic',
+							horizontal: align_left,
+							height: 32,
+							width: 32);
+						}
+					}
+
+					gap(dwidth: 10);
+
+					column(spacing: "0",
+						vertical: align_center)
+					{
+						static_text(identifier: 'adlb',
+							name: '$$$/Dialogs/DistributeFormStart/lblAdotCom', 
+							font_id: @dialog_font_bold);
+
+						gap(dheight: 3);
+
+						static_text(identifier: 'adds',
+							name: '$$$/Dialogs/DistributeFormStart/descAdotCom',
+							wrap: true, width: 330);
+					}
+				}
+			}
+		}
+	}
+
+	panel(identifier:'btnf',
+		margin_width:20, margin_height:10,
+		horizontal: align_fill)
+	{
+		row(horizontal: align_right)
+		{
+			gap(dheight: 30);
+			ok_cancel();
+		}
+	}
+}

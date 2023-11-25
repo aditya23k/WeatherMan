@@ -1,0 +1,34 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="Unified Share" id="UnifiedShareApp" requiresDoc="false" majorVersion="1" minorVersion="0">
+	<Commands>
+		<Command name="UnifiedShareRHPView"/>
+		<Command name="UnifiedShareContentView"/>
+		<Command name="UnifiedShareModelView"/>
+	</Commands>
+	<Layouts>
+		<Layout name="Default" rhpModes="expanded">
+		</Layout>
+		<Layout name="contentPlusRHP" rhpModes="expanded">
+			<ContentView>
+				<Component name="UnifiedShareLandingView" type="Custom" columns="1" hAlign="center" vAlign="near">
+					<Component type="Table" columns="1" hAlign="center" vAlign="center" bottomOffset="35" >
+						<Component name="UnifiedShareContentView" type="Custom" />
+						<Component type="Label" name="UnifiedShareNonPdfOrMultipleFile" fontSize="16" />
+					</Component>
+				</Component>
+			</ContentView>
+			<RHP visibleByDefault = "true">
+				<Component name="UnifiedShareRHPView" type="Custom"/>
+			</RHP>
+		</Layout>
+		<Layout name="onlyRHP" rhpModes="expanded">
+			<RHP visibleByDefault = "true">
+				<Component name="UnifiedShareRHPView" type="Custom"/>
+			</RHP>
+		</Layout>
+		<Layout name="UnifiedShareModal" rhpModes="retainOriginal">
+			<ContentView>
+				<Component name="UnifiedShareModalView" type="Custom" />				
+			</ContentView>
+		</Layout>
+	</Layouts>
+</Application>

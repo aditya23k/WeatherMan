@@ -1,0 +1,23 @@
+gDialogWidth = max_char_width() * 35;
+
+dialog(name: '$$$/Dialogs/DigSigSaveAsCertified', target_id :'dsac')
+{
+	view(align_children: align_left)
+	{
+		view(align_children: align_top)
+		{
+			picture(item_id: 'icon', width: 32, height: 32);
+			view(align_children:align_left)
+			{
+				
+				static_text( item_id: 'exp1', width: gDialogWidth);
+				static_text( item_id: 'exp2', width: gDialogWidth);
+				button(item_id:'cert', name: '$$$/Dialogs/DigSigSaveAsCertified/GetCert');
+			}
+		}		
+
+		check_box(item_id: 'pref', name:'$$$/Dialogs/DontShow');
+			
+		ok_cancel_help();
+	}
+}

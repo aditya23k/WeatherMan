@@ -1,0 +1,183 @@
+H_BUTTON = 20;
+W_BUTTON = 22;
+
+W_LABELS_LEFT=max(
+	zstring_width(zstring: '$$$/Dialogs/Line/Head'),
+	zstring_width(zstring: '$$$/Panels/Generic/StrokeStyle'),
+	zstring_width(zstring: '$$$/Dialogs/Generic/Color'),
+	zstring_width(zstring: '$$$/Dialogs/Generic/Opacity'),
+	zstring_width(zstring: '$$$/Dialogs/Line/LeaderLength'));
+W_LABELS_RIGHT=max(
+	zstring_width(zstring: '$$$/Dialogs/Line/Tail'),
+	zstring_width(zstring: '$$$/Dialogs/Ink/Thickness'),
+	zstring_width(zstring: '$$$/Dialogs/CircleSquare/FillColor'),
+	zstring_width(zstring: '$$$/Dialogs/Line/LeaderOffset'),
+	zstring_width(zstring: '$$$/Dialogs/Line/LeaderExtension'));
+
+W_POPUPENTRIES_END=max(
+	zstring_width(zstring: '$$$IDS_LINECAP_NONE'),
+	zstring_width(zstring: '$$$IDS_LINECAP_OPENARROW'),
+	zstring_width(zstring: '$$$IDS_LINECAP_CLOSEDARROW'),
+	zstring_width(zstring: '$$$IDS_LINECAP_SQUARE'),
+	zstring_width(zstring: '$$$IDS_LINECAP_CIRCLE'),
+	zstring_width(zstring: '$$$IDS_LINECAP_DIAMOND'),
+	zstring_width(zstring: '$$$IDS_LINECAP_BUTT'),
+	zstring_width(zstring: '$$$IDS_LINECAP_ROPENARROW'),
+	zstring_width(zstring: '$$$IDS_LINECAP_RCLOSEDARROW'));
+
+W_POPUPENTRIES_STROKESSTYLE_STRS=max(
+	zstring_width(zstring: '$$$IDS_STROKESTYLE_SOLID'),
+	zstring_width(zstring: '$$$IDS_STROKESTYLE_DASHED1'),
+	zstring_width(zstring: '$$$IDS_STROKESTYLE_DASHED2'),
+	zstring_width(zstring: '$$$IDS_STROKESTYLE_DASHED3'),
+	zstring_width(zstring: '$$$IDS_STROKESTYLE_DASHED4'),
+	zstring_width(zstring: '$$$IDS_STROKESTYLE_DASHED5'),
+	zstring_width(zstring: '$$$IDS_STROKESTYLE_DASHED6'));
+	
+W_POPUPENTRIES_STROKESSTYLE=max( W_POPUPENTRIES_STROKESSTYLE_STRS, W_POPUPENTRIES_END );
+
+dialog()
+{
+	view(align_children: align_left)
+	{
+		view(align_children: align_top)
+		{
+			view(align_children: align_left)
+			{
+				view(align_children: align_row)
+				{
+					view(align_children: align_right, width : W_LABELS_LEFT)
+					{
+						static_text(item_id: 'txt1', name: '$$$/Dialogs/Line/Head');
+					}
+					view(align_children: align_left)
+					{
+						popup(item_id: 'head', width: W_POPUPENTRIES_END);
+					}
+				}
+				
+				view(align_children: align_row)
+				{
+					view(align_children: align_right, width: W_LABELS_LEFT)
+					{
+						static_text(item_id: 'txt4', name: '$$$/Panels/Generic/StrokeStyle');
+					}
+					view(align_children: align_left)
+					{
+						popup(item_id: 'styl', width: 64, style: 1);
+					}
+				}
+			
+				view(align_children: align_row) 
+				{
+					view(align_children: align_right, width: W_LABELS_LEFT)
+					{
+						static_text(item_id: 'txt6', name: '$$$/Dialogs/Generic/Color');
+					}
+					view(align_children: align_left)
+					{
+						button(item_id: 'sclr', picture: true, height: H_BUTTON, width: W_BUTTON);
+					}
+				}
+				
+				view(align_children: align_row)
+				{
+					view(align_children: align_right, width: W_LABELS_LEFT)
+					{
+						static_text(item_id: 'txt7', name: '$$$/Dialogs/Generic/Opacity');
+						gap(height: gStaticTextHeight);
+					}
+					view(align_children: align_left)
+					{
+						edit_text(item_id: 'opac', width: 4 * max_char_width(), height: gEditTextHeight);
+						slider(item_id: 'opas', width: 101, height: 9);
+					}
+				}
+
+				view(align_children: align_row)
+				{
+					view(align_children: align_right, width: W_LABELS_LEFT)
+					{
+						static_text(item_id: 'llen', name: '$$$/Dialogs/Line/LeaderLength');
+					}
+					view(align_children: align_left)
+					{
+						edit_text(item_id: 'llid', SpinEdit: true, width: max_char_width() * 4);
+					}
+				}
+
+			}
+
+			view(align_children: align_left)
+			{
+				view(align_children: align_row, alignment: align_fill)
+				{
+					view(align_children: align_right, width : W_LABELS_RIGHT)
+					{
+						static_text(item_id: 'txt2', name: '$$$/Dialogs/Line/Tail');
+					}
+					view(align_children: align_left, alignment: align_fill)
+					{
+						popup(item_id: 'tail', width: W_POPUPENTRIES_END, alignment: align_fill);
+					}
+				}
+
+				view(align_children: align_row)
+				{
+					view(align_children: align_right, width: W_LABELS_RIGHT)
+					{
+						static_text(item_id: 'txt3', name: '$$$/Dialogs/Ink/Thickness');
+					}
+					view(align_children: align_left)
+					{
+						edit_text(item_id: 'bwid', SpinEdit: true, width: 6 * max_char_width());
+					}
+				}
+
+				view(align_children: align_row) 
+				{
+					view(align_children: align_right, width: W_LABELS_RIGHT)
+					{
+						static_text(item_id: 'lfct', name: '$$$/Dialogs/CircleSquare/FillColor');
+					}
+					view(align_children: align_left)
+					{
+						button(item_id: 'lfcb', picture: true, height: H_BUTTON, width: W_BUTTON);
+					}
+				}
+
+				view(align_children: align_row, alignment: align_fill)
+				{
+					view(align_children: align_left, alignment: align_fill)
+					{
+						check_box(item_id: 'capt', name: '$$$/Dialogs/Line/Caption');
+					}
+				}
+
+				view(align_children: align_row)
+				{
+					view(align_children: align_right, width: W_LABELS_RIGHT)
+					{
+						static_text(item_id: 'loff', name: '$$$/Dialogs/Line/LeaderOffset');
+					}
+					view(align_children: align_left)
+					{
+						edit_text(item_id: 'loid', SpinEdit: true, width: max_char_width() * 4);
+					}
+				}
+
+				view(align_children: align_row)
+				{
+					view(align_children: align_right, width: W_LABELS_RIGHT)
+					{
+						static_text(item_id: 'lext', name: '$$$/Dialogs/Line/LeaderExtension');
+					}
+					view(align_children: align_left)
+					{
+						edit_text(item_id: 'leid', SpinEdit: true, width: max_char_width() * 4);
+					}
+				}
+			}
+		}
+	}
+}

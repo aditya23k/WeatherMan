@@ -1,0 +1,36 @@
+popUpMsgWidth = zstring_width(zstring: '$$$/Dialogs/PageTemplates/Name');
+myListWidth = max_char_width() * 16;
+myEditWidth = (myListWidth - popUpMsgWidth) - 12;
+myButtonWidth = max(zstring_width(zstring: '$$$/Dialogs/PageTemplates/Close'),
+					zstring_width(zstring: '$$$/Dialogs/PageTemplates/Add'),
+					zstring_width(zstring: '$$$/Dialogs/PageTemplates/Change'),
+					zstring_width(zstring: '$$$/Dialogs/PageTemplates/Delete'),
+					zstring_width(zstring: '$$$/Dialogs/PageTemplates/Goto'));
+
+dialog(name: '$$$/Dialogs/PageTemplates')
+{
+	view(align_children: align_left)
+	{
+		view(align_children: align_top)
+		{
+			view(align_children: align_left)
+			{
+				view(align_children: align_row)
+				{
+					static_text(item_id: 'txt1', name: '$$$/Dialogs/PageTemplates/Name');
+					edit_text(item_id: 'name', width: myEditWidth, height: gEditTextHeight);
+				}
+				mclv(item_id: 'list', width: myListWidth, height: gEditTextHeight * 9, style:2);
+			}
+			view(align_children: align_left)
+			{
+				button(view_id: 'cncl', name: '$$$/Dialogs/PageTemplates/Close', width: myButtonWidth);
+				button(item_id: 'addd', name: '$$$/Dialogs/PageTemplates/Add', width: myButtonWidth);
+				button(item_id: 'chan', name: '$$$/Dialogs/PageTemplates/Change', width: myButtonWidth);
+				button(item_id: 'dele', name: '$$$/Dialogs/PageTemplates/Delete', width: myButtonWidth);
+				button(item_id: 'goto', name: '$$$/Dialogs/PageTemplates/Goto', width: myButtonWidth);
+			}
+		}
+		static_text(item_id: 'txt2', alignment: align_fill, height: gEditTextHeight * 2, multiline: true);
+	}
+}

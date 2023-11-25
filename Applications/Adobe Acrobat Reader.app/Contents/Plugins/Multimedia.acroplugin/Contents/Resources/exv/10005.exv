@@ -1,0 +1,32 @@
+gOperationMenuWidth = max( zstring_width( zstring: '$$$IDS_PLAY' ),
+						   zstring_width( zstring: '$$$IDS_STOP' ),
+						   zstring_width( zstring: '$$$IDS_PAUSE' ),
+						   zstring_width( zstring: '$$$IDS_RESUME' ) );
+
+gMenuLabelsWidth = max( zstring_width( zstring: '$$$/Dialogs/Multimedia/Acro5MovieAction/SelectMovie' ),
+						zstring_width( zstring: '$$$/Dialogs/Multimedia/Acro5MovieAction/SelectOp' ) );
+
+dialog( name: '$$$/Dialogs/Multimedia/Acro5MovieAction', target_id: 'pick' )
+{
+	group()
+	{
+		group( align_children: align_left )
+		{
+			view( align_children: align_row )
+			{
+				static_text( name: '$$$/Dialogs/Multimedia/Acro5MovieAction/SelectMovie', width: gMenuLabelsWidth, alignment: align_right );
+				popup( item_id: 'pick', width: max_char_width( ) * 16 );
+			}
+
+			view( align_children: align_row )
+			{
+				static_text( name: '$$$/Dialogs/Multimedia/Acro5MovieAction/SelectOp', width: gMenuLabelsWidth, alignment: align_right );
+				popup( item_id: 'oper', width: gOperationMenuWidth );
+			}
+		}
+
+		gap();
+
+		ok_cancel();
+	}
+}

@@ -1,0 +1,8 @@
+"userNameLabelAuthDialog" = "Användarnamn";
+"passwordLabelAuthDialog" = "Lösenord";
+"okButtonAuthDialog" = "OK";
+"cancelButtonAuthDialog" = "Avbryt";
+"titleAuthDialog" = "Autentisering krävs";
+"messageForHostInfoAuthDialog" = "%@ kräver ditt användarnamn och lösenord.";
+"messageForSecurityInfoAuthDialog" = "Din inloggningsinformation skickas på ett säkert sätt.";
+"checkBoxTextAuthDialog" = "Kom ihåg det här lösenordet i min nyckelring";

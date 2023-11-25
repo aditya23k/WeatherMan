@@ -1,0 +1,68 @@
+gPopupWidth=max(
+	zstring_width(zstring: '$$$IDS_TAB_CALCULATE'),
+	zstring_width(zstring: '$$$IDS_CALCULATE_SUM'),
+	zstring_width(zstring: '$$$IDS_CALCULATE_AVG'),
+	zstring_width(zstring: '$$$IDS_CALCULATE_PRODUCT'),
+	zstring_width(zstring: '$$$IDS_CALCULATE_MINIMUM'),
+	zstring_width(zstring: '$$$IDS_CALCULATE_MAXIMUM'));
+
+gButtonWidth=max(
+	zstring_width(zstring: '$$$/Dialogs/FieldProps/Edit'),
+	zstring_width(zstring: '$$$/Dialogs/FieldProps/Pick'));
+
+gEditItemWidth = max_char_width() * 8;
+gGapWidth = max_char_width() * 1;
+gFieldItemHeight = gStaticTextHeight * 3;
+gFieldItemWidth = max_char_width() * 19;
+gJavaItemHeight = gStaticTextHeight * 6;
+gJavaItemWidth = max_char_width() * 19;
+
+gAdd = '$$$/Dialogs/FieldProps/Add';
+gDelete = '$$$/Dialogs/FieldProps/Delete';
+gEdit = '$$$/Dialogs/FieldProps/Edit';
+gPick = '$$$/Dialogs/FieldProps/Pick';
+
+gNo = '$$$/Dialogs/FieldProps/Calculate/No';
+gYesPart1 = '$$$/Dialogs/FieldProps/Calculate/Yes/Part1';
+gYesPart2 = '$$$/Dialogs/FieldProps/Calculate/Yes/Part2';
+gScript = '$$$/Dialogs/FieldProps/Calculate/Script';
+gEzCalc = '$$$/Dialogs/FieldProps/Calculate/EzCalc';
+
+dialog(name: '$$$/Dialogs/FieldProps', target_id: 'rad1', first_tab: 'rad1')
+{
+	view(align_children: align_left, alignment: align_fill)
+	{
+		group()
+		{
+			radio(item_id: 'rad1', group_id: 'rgrp', name: gNo, next_tab: 'rad2');
+			view(align_children: align_row)
+			{
+				radio(item_id: 'rad2', group_id: 'rgrp', name: gYesPart1, next_tab: 'pop1');
+				popup(item_id: 'pop1', width: gPopupWidth, next_tab: 'flds');
+				static_text(item_id: 'yes2', name: gYesPart2);
+			}
+			view(align_children: align_top)
+			{
+				gap(width: gGap);
+				edit_text(item_id: 'flds', readonly:true, width: gFieldItemWidth, height: gFieldItemHeight, next_tab: 'pick');
+				button(item_id: 'pick', width: gButtonWidth, name: gPick, next_tab: 'rad4');
+			}
+
+			radio(item_id: 'rad4', group_id: 'rgrp', name: gEzCalc, next_tab: 'jav2');
+			view(align_children: align_top)
+			{
+				gap(width: gGap);
+				edit_text(item_id: 'jav2', readonly:true, multiline: true, width: gFieldItemWidth, height: gFieldItemHeight, next_tab: 'edi1');
+				button(item_id: 'edi1', width: gButtonWidth, name: gEdit, next_tab: 'rad3');
+			}					
+
+			radio(item_id: 'rad3', group_id: 'rgrp', name: gScript, next_tab: 'java');
+			view(align_children: align_top)
+			{
+				gap(width: gGap);
+				edit_text(item_id: 'java', readonly:true, multiline: true, width: gJavaItemWidth, height: gJavaItemHeight, next_tab: 'edit');
+				button(item_id: 'edit', width: gButtonWidth, name: gEdit, next_tab: 'rad1');
+			}
+		}
+	}
+}

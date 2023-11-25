@@ -1,0 +1,15 @@
+theBodyHeight = gStaticTextHeight * 8;
+
+dialog(margin_height: 0, margin_width: 0) {
+	view(alignment: align_fill, align_children: align_left) {
+		gap(height: gGap);
+		static_text(item_id: 'encF',name: '$$$/Dialogs/eEnvelope/Finish/EnclosedFiles', alignment: align_fill);
+		edit_text(item_id: 'nFil', multiline: true, readonly: true, alignment: align_fill, height: theBodyHeight);
+		gap(height: gGap);
+		static_text(item_id : 'endE', name: '$$$/Dialogs/eEnvelope/Finish/Envelope', alignment: align_fill);
+		static_text(item_id: 'nEnv', alignment: align_fill);
+		gap(height: gGap);
+		static_text(item_id: 'nDel', alignment: align_fill);
+		gap(height: gGap);
+	}
+}

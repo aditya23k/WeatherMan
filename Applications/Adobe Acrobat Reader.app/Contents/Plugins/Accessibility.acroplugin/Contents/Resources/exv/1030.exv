@@ -1,0 +1,31 @@
+gDialogTitle = '$$$/Dialogs/ReadingDocument/DialogTitle';
+gStatus = '$$$/Dialogs/Progress/Status';
+gCancel = '$$$/Dialogs/ReadingDocument/Cancel';
+gStart = '$$$/Dialogs/ReadingDocument/Start';
+gMaxWidth  = 450;
+gPrefCloudSetting =  '$$$/Dialogs/ReadingDocument/EnableCloudSetting';
+gPrefDoNotShowSetting = '$$$/Dialogs/ReadingDocument/DoNotShowDialogSetting'; 
+
+                      
+
+dialog ( name: gDialogTitle )
+{
+	view ( align_children: align_left )
+	{
+		view ( align_children: align_left )
+		{
+			static_text ( item_id: 'dstx', width: gMaxWidth );
+		}
+		link_text ( item_id: 'prfp', name: '$$$/Dialogs/Progress/PrefPath');
+		
+		view ( align_children: align_left )
+		{
+			check_box ( item_id: 'dncb', name: gPrefDoNotShowSetting );		
+		}
+		gap();
+			
+		ok_cancel ( ok_name: gStart, cancel_name: gCancel );	
+		
+	}		
+	
+}

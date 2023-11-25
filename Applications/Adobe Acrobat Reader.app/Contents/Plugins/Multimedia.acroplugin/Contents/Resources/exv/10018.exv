@@ -1,0 +1,52 @@
+gColumnOneWidth = zstring_width( zstring: '$$$/Dialogs/Multimedia/EditRenditionAction/Operation' );
+
+gOperationPopupWidth = max( zstring_width( zstring: '$$$IDS_PLAY' ),
+							zstring_width( zstring: '$$$IDS_STOP' ),
+							zstring_width( zstring: '$$$IDS_PAUSE' ),
+							zstring_width( zstring: '$$$IDS_RESUME' ),
+							zstring_width( zstring: '$$$IDS_PLAY_FROM_START' ),
+							zstring_width( zstring: '$$$IDS_UNKNOWN' ),
+							zstring_width( zstring: '$$$IDS_CUSTOM_JAVASCRIPT' ) );
+
+gListBoxHeight	= gEditTextHeight * 5;
+gListBoxWidth = 325;
+
+gIconWidthAndHeight = 32;
+
+gJSButtonWidth = max( gButtonWidth, zstring_width( zstring: '$$$/Dialogs/Multimedia/EditRenditionAction/SpecifyCustomJS' ) + gButtonSpace );
+
+gInfoTextWidth = gListBoxWidth - gIconWidthAndHeight - gJSButtonWidth;
+
+
+dialog( name: '$$$IDS_EDIT_RENDITION_ACTION' )
+{
+	view( align_children: align_left )
+	{
+		view( align_children: align_row )
+		{
+			view( align_children: align_right )
+			{
+				static_text( name: '$$$/Dialogs/Multimedia/EditRenditionAction/Operation', width: gColumnOneWidth, alignment: align_fill );
+			}
+
+			view( align_children: align_left )
+			{
+				popup( item_id: ' op ', width: gOperationPopupWidth, alignment: align_fill );
+			}
+		}
+
+		cluster( name: '$$$/Dialogs/Multimedia/EditRenditionAction/AssociatedScreenAnnot' )
+		{
+			hier_list_box( item_id: 'ants', width: gListBoxWidth, height: gListBoxHeight, alignment: align_fill );
+		}
+
+		cluster( name: '$$$/Dialogs/Multimedia/EditRenditionAction/GroupTitle', align_children: align_row )
+		{
+			picture( item_id: 'icon', width: gIconWidthAndHeight, height: gIconWidthAndHeight, alignment: align_center );
+			static_text( item_id: 'info', width: gInfoTextWidth, alignment: align_top );
+			button( item_id: ' js ', name: '$$$/Dialogs/Multimedia/EditRenditionAction/SpecifyCustomJS', alignment: align_center );
+		}
+
+		ok_cancel();
+	}
+}

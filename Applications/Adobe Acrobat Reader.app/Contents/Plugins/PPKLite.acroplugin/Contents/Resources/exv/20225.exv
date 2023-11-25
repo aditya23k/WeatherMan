@@ -1,0 +1,20 @@
+gListWidth = max_char_width() * 20;
+gListHeight = gEditTextHeight * 4;
+
+dialog( name: '$$$/Dialogs/ImportMultipleContacts/Title' )
+{
+	view( align_children: align_left )
+	{
+		cluster(alignment: align_fill, align_children: align_left, name: '$$$/Dialogs/ImportMultipleContacts/ContactsCluster')
+		{
+			list_box( item_id: 'List', alignment: align_fill, dwidth: gListWidth, dheight: gListHeight );
+			view( align_children: align_row )
+			{
+				button( item_id: 'Set_', name: '$$$/Dialogs/ImportMultipleContacts/SettingsButton' );
+				button( item_id: 'Rem_', name: '$$$/Dialogs/ImportMultipleContacts/RemoveButton' );
+			}
+		}
+
+		ok_cancel_help( ok_name: '$$$/Dialogs/ImportMultipleContacts/ImportButton' );
+	}
+}

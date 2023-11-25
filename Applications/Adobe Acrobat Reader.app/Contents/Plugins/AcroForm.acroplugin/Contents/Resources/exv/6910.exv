@@ -1,0 +1,36 @@
+gButtonWidth=max(
+	zstring_width(zstring: '$$$/Dialogs/ExportFormData/AddFiles'),
+	zstring_width(zstring: '$$$/Dialogs/ExportFormData/RemoveFiles'));
+	
+dialog(name: '$$$/Dialogs/ExportFormData', target_id: 'btn1', first_tab: 'btn1')
+{
+	view(align_children: align_left)
+	{
+		cluster(name: '$$$/Dialogs/ExportFormData/DialogCluster', align_children: align_top)
+		{
+			view(align_children: align_left)
+			{
+				button(item_id: 'btn1', name:'$$$/Dialogs/ExportFormData/AddFiles', width: gButtonWidth);
+				button(item_id: 'btn2', name:'$$$/Dialogs/ExportFormData/RemoveFiles', width: gButtonWidth);
+			}
+			view(align_children: align_left)
+			{
+				cluster(name: '$$$/Dialogs/ExportFormData/FilesCluster', align_children: align_left)
+				{
+					list_box(item_id: 'lb01', width: max_char_width() * 25, height: gEditTextHeight * 5);
+				}				
+				check_box(item_id: ' cb1', name: '$$$/Dialogs/ExportFormData/IncludeMostRecent');
+			}
+		}
+		cluster(align_children:align_left)
+		{
+			gap(height: gEditTextHeight/2);
+			view(align_children:align_top)
+			{	
+				picture(item_id: 'bulb', width: 32, height: 32);
+				static_text(item_id: 'dsc1', mutliline:true, width: max_char_width() * 30, height: gEditTextHeight*3);
+			}
+		}
+		ok_cancel(ok_name: '$$$/Dialogs/ExportFormData/Export', cancel_name: '$$$/ControlsStrings/Cancel');
+	}
+}

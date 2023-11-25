@@ -1,0 +1,27 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="组织页面" av2Title="整理页面" id="PagesRdrApp" description="删除、插入、提取或旋转页面" richTooltip="设置完美的 PDF。重新排序、旋转、删除、插入或提取页面。" av2Description="删除、旋转、提取、插入或重新排序页面" majorVersion="1" minorVersion="0" inAppUpsellEnabled="true">
+	<Commands>
+			<Command name="DeleteSelectedPagesRdr"/>
+			<Command name="RotatePagesCCWRdr"/>
+			<Command name="RotatePagesCWRdr"/>
+			<Command name="ExtractSelectedPagesRdr"/>
+			<Command name="InsertPagesCmdForPagesAppRdr"/>
+			<Command name="ReplacePagesRdr"/>
+			<Command name="SplitDocumentCmdForPagesAppRdr"/>
+			<Command name="MorePageManipulationOptionsRdr"/>
+	  		<Command name="BatesNumberingRdr" />
+     		<Command name="CropPagesRdr" />
+      		<Command name="SetTransitionsRdr" />
+      		<Command name="PageTemplatesRdr" />
+      		<Command name="NumberPagesRdr" />
+      		<Command name="PrintRdr" />
+      		<Command name="PagePropertiesRdr" />
+
+	</Commands>
+	<Layouts>
+		<Layout name="Default">
+			<ContentView>
+				<Component name="PagesAppRHPView" fontSize="12"/>
+			</ContentView>
+		</Layout>
+	</Layouts>
+</Application>

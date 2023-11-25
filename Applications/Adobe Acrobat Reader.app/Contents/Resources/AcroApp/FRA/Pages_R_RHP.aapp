@@ -1,0 +1,27 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="Organiser les pages" av2Title="Organiser les pages" id="PagesRdrApp" description="Supprimez, insérez, extrayez ou faites pivoter les pages." richTooltip="Configurez un PDF parfait. Réorganisez, faites pivoter, supprimez, insérez ou extrayez des pages." av2Description="Supprimer, faire pivoter, extraire, insérer ou réorganiser des pages" majorVersion="1" minorVersion="0" inAppUpsellEnabled="true">
+	<Commands>
+			<Command name="DeleteSelectedPagesRdr"/>
+			<Command name="RotatePagesCCWRdr"/>
+			<Command name="RotatePagesCWRdr"/>
+			<Command name="ExtractSelectedPagesRdr"/>
+			<Command name="InsertPagesCmdForPagesAppRdr"/>
+			<Command name="ReplacePagesRdr"/>
+			<Command name="SplitDocumentCmdForPagesAppRdr"/>
+			<Command name="MorePageManipulationOptionsRdr"/>
+	  		<Command name="BatesNumberingRdr" />
+     		<Command name="CropPagesRdr" />
+      		<Command name="SetTransitionsRdr" />
+      		<Command name="PageTemplatesRdr" />
+      		<Command name="NumberPagesRdr" />
+      		<Command name="PrintRdr" />
+      		<Command name="PagePropertiesRdr" />
+
+	</Commands>
+	<Layouts>
+		<Layout name="Default">
+			<ContentView>
+				<Component name="PagesAppRHPView" fontSize="12"/>
+			</ContentView>
+		</Layout>
+	</Layouts>
+</Application>

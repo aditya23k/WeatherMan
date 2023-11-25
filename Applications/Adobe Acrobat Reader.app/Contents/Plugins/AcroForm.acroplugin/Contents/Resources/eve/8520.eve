@@ -1,0 +1,19 @@
+dialog(name: '$$$/Dialogs/AddForms')
+{
+	column(horizontal: align_left)
+	{
+		static_text(name: '$$$/Dialogs/AddForms/txtSelectForms');
+		row() {
+			mclv(identifier: 'flst', width: 300, height: 200,
+			     fixed_sort_order: true);
+			column(horizontal: align_left) {
+				button(identifier: 'addf', name: '$$$/Dialogs/CompileData/btnAddFile');
+				button(identifier: 'remv', name: '$$$/Dialogs/CompileData/btnRemove');
+			}
+		}
+		
+		gap(height: 10);
+
+		ok_cancel();
+	}
+}

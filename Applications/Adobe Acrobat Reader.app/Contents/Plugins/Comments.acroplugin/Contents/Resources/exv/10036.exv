@@ -1,0 +1,14 @@
+dialog(name: '$$$IDS_REDACTPAGE_TOOL')
+{
+	view(align_children: align_left)
+	{
+		radio(group_id: 'rgrp', name: '$$$/Dialogs/RedactPageRange/Current', item_id: 'rad1');
+		radio(group_id: 'rgrp', name: '$$$/Dialogs/RedactPageRange/Specify', item_id: 'rad2');
+		view(align_children: align_row)
+		{
+			static_text(name: '$$$/Dialogs/RedactPageRange/Range');
+			edit_text(item_id: 'rngt', width: 150);
+		}
+		ok_cancel();
+	}
+}

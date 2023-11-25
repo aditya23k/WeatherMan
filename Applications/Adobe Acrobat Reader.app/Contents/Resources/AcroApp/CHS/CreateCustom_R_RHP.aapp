@@ -1,0 +1,5 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="创建自定义工具" av2Title="创建自定义工具" description="创建自定义的 Acrobat 功能集合并与他人共享" av2Description="创建一组自定义 Acrobat 功能" id="CreateCustomUIRdrApp" majorVersion="1" minorVersion="0">
+	<Commands>
+			<Command name="CreateUICustomizationRdr"/>
+	</Commands>
+</Application>

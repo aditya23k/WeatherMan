@@ -1,0 +1,32 @@
+gButtonWidth=max(
+	zstring_width(zstring: '$$$/Dialogs/FieldProps/Edit'),
+	zstring_width(zstring: '$$$/Dialogs/FieldProps/Pick'));
+
+gJavaItemHeight = gStaticTextHeight * 6;
+gJavaItemWidth = max_char_width() * 15;
+
+gEdit = '$$$/Dialogs/FieldProps/Edit';
+
+gNo = '$$$/Dialogs/FieldProps/Selection/No';
+gYesPart1 = '$$$/Dialogs/FieldProps/Selection/Yes/Part1';
+gYesPart2 = '$$$/Dialogs/FieldProps/Selection/Yes/Part2';
+gScript = '$$$/Dialogs/FieldProps/Selection/Script';
+
+dialog(name: '$$$/Dialogs/FieldProps')
+{
+	view(align_children: align_left)
+	{
+		group()
+		{
+			static_text(item_id: 'yes2', name: gYesPart2);
+			radio(item_id: 'rad1', group_id: 'rgrp', name: gNo);
+			radio(item_id: 'rad3', group_id: 'rgrp', name: gScript);
+			view(align_children: align_top)
+			{
+				gap(width: gGap);
+				edit_text(item_id: 'java', readonly:true, multiline: true, width: gJavaItemWidth, height: gJavaItemHeight);
+				button(item_id: 'edit', width: gButtonWidth, name: gEdit);
+			}
+		}
+	}
+}

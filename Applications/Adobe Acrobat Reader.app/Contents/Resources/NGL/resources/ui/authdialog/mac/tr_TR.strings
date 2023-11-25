@@ -1,0 +1,8 @@
+"userNameLabelAuthDialog" = "Kullanıcı Adı";
+"passwordLabelAuthDialog" = "Şifre";
+"okButtonAuthDialog" = "Tamam";
+"cancelButtonAuthDialog" = "İptal";
+"titleAuthDialog" = "Kimlik Doğrulaması Gerekli";
+"messageForHostInfoAuthDialog" = "%@ için kullanıcı adınız ve şifreniz gerekiyor.";
+"messageForSecurityInfoAuthDialog" = "Oturum açma bilgileriniz güvenli bir şekilde gönderilecektir.";
+"checkBoxTextAuthDialog" = "Anahtarlığımdaki bu şifreyi hatırla";

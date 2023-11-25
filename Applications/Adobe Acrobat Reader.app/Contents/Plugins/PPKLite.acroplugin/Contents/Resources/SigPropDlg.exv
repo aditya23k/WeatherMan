@@ -1,0 +1,104 @@
+gIndentWidth = 1 * max_char_width();
+
+dialog(name: '$$$/Dialogs/SigProperties', target_id: 'name' )
+{
+	view(align_children: align_left)
+	{
+		view(align_children: align_row, alignment: align_fill)
+		{
+			picture(item_id: 'HSPI', width: 32, height: 48);
+			view(align_children: align_left)
+			{
+				static_text(item_id: 'HSST', width: 425, height: 16, alignment: align_fill);
+				static_text(item_id: 'HSTT', width: 425, height: 16, alignment: align_fill);
+				static_text(item_id: 'HSTS', width: 425, height: 16, alignment: align_fill);
+			}		
+		}
+
+		view(align_children: align_row, alignment: align_fill)
+		{
+			picture(item_id: 'HSQI', width: 32, height: 32);
+			view(align_children: align_left)
+			{
+				static_text(item_id: 'HSQT', width: 425, height: 16, alignment: align_fill);
+			}
+		}
+
+		view(align_children: align_row, alignment: align_fill)
+		{
+			gap(width: 32);
+			view(align_children: align_left)
+			{
+				static_text(item_id: 'REAS', width: 425, height: 16, alignment: align_fill);	
+				static_text(item_id: 'LOCA', width: 425, height: 16, alignment: align_fill);
+			}		
+		}
+
+		cluster(name: '$$$/Dialogs/SigPropDlg/ValiditySummary')
+		{
+			view(align_children: align_top, alignment: align_fill)
+			{
+				gap( width: gIndentWidth );
+				view(align_children: align_left)
+				{
+					view (align_children: align_row)
+					{
+						picture(item_id: 'VSI1', width: 16, height: 16);
+						static_text(item_id: 'VST1', width: 425);
+					}
+					view (align_children: align_row)
+					{
+						picture(item_id: 'VSI2', width: 16, height: 16);
+						static_text(item_id: 'VST2', width: 425);
+					}
+					view (align_children: align_row)
+					{
+						picture(item_id: 'VSI3', width: 16, height: 16);
+						static_text(item_id: 'VST3', width: 425);
+					}
+					view (align_children: align_row)
+					{
+						picture(item_id: 'VSI4', width: 16, height: 16);
+						static_text(item_id: 'VST4', width: 425);
+					}
+					view (align_children: align_row)
+					{
+						picture(item_id: 'VSI5', width: 16, height: 16);
+						static_text(item_id: 'VST5', width: 425);
+					}
+				}
+			}
+		}
+
+		cluster(name: '$$$/Dialogs/SigPropDlg/SignerInfo')
+		{
+			view(align_children: align_top, alignment: align_fill)
+			{
+				gap( width: gIndentWidth );
+				view()
+				{
+					view (align_children: align_row)
+					{
+						picture(item_id: 'SII1', width: 16, height: 16);
+						static_text(item_id: 'SIT1', width: 425, alignment: align_left);
+					}
+					view (align_children: align_row)
+					{
+						picture(item_id: 'SII2', width: 16, height: 16);
+						static_text(item_id: 'SIT2', width: 425, alignment: align_left);
+					}
+					view(alignment: align_center)
+					{
+						button(name: '$$$/Dialogs/SigPropDlg/ShowSignersCertificate', item_id: 'SCTB', alignment: align_center);
+					}
+				}
+			}
+		}
+
+		view(align_children: align_row, alignment: align_fill)
+		{
+			button(name: '$$$/Dialogs/SigPropDlg/AdvancedProperties', item_id: 'ASPB', alignment: align_left);
+			ok_cancel(ok_name: '$$$/Dialogs/SigPropDlg/ValidateSignature', cancel_name: '$$$/Dialogs/CloseButton');
+		}
+	}
+}

@@ -1,0 +1,26 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="Edit PDF" av2Title="Edit a PDF" id="EditPDFRdrApp" description="Edit text and images in a PDF file" av2Description="Modify or add text, images, pages, and more" richTooltip = "Modify text and images, edit scanned pages, and organize pages." majorVersion="1" minorVersion="0" inAppUpsellEnabled="true">
+	<Commands>
+	 <Command name="TouchUpEditPDFToolRdr"/>
+    <Command name="TouchUpAddTextboxRdr"/>
+    <Command name="TouchUpAddImageRdr"/>    
+	<Command name="TouchUpEditImageRdr"/>
+    <Command name="LinkMenuRdr"/>    
+	<Command name="CropRdr"/>
+    <Command name="HeaderFooterRdr"/>
+    <Command name="WatermarkRdr"/>
+    <Command name="BatesNumberingRdr" />
+    <Command name="DocBackgroundRdr"/>
+    <Command name="NewBookmarkRdr"/>
+	<Command name="EditMoreOptionsRdr"/>
+  <Command name="AddFileAttachmentRdr"/>
+    <Command name="LinkRdr"/>
+	<Command name="ThreadRdr"/>
+	</Commands>
+	<Layouts>
+		<Layout name="Default">
+			<ContentView>
+				<Component name="EditPDFRHPView" fontSize="12"/>
+			</ContentView>
+		</Layout>
+	</Layouts>
+</Application>

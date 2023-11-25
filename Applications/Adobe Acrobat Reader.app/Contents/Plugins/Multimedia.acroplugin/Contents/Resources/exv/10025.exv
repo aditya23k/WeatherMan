@@ -1,0 +1,13 @@
+dialog( name: '$$$/Dialogs/Multimedia/URLWarningDlg', target_id: 'ok  ' )
+{
+	view( align_children: align_left )
+	{
+		static_text( item_id: 'desc', height: gStaticTextHeight * 2, alignment: align_fill );
+
+		view( align_children: align_row )
+		{
+			check_box( item_id: 'dns ', name: '$$$/ControlsStrings/DoNotShowAgain' );
+			ok_cancel();
+		}
+	}
+}

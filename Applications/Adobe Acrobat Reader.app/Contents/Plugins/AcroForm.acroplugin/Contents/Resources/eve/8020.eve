@@ -1,0 +1,171 @@
+dialog(name: '$$$/Dialogs/CreateFormPanel_Start')
+{
+	column(spacing: "0")
+	{
+		static_text(identifier: 'titl',
+			name: '$$$/Dialogs/CreateFormPanel_Start/txtTitle', 
+			font_id: @dialog_font_bold);
+
+		gap(dheight: 15);
+
+		panel(identifier: 'pro1',
+			guide_mask: [@guide_baseline, @guide_label],
+			horizontal: align_fill,
+			margin_height: 0,
+			margin_width: 0,
+			spacing: "0")
+		{
+			row(spacing: "0",
+				vertical: align_center,
+				horizontal: align_left)
+			{
+				row(spacing: "0",
+					vertical: align_top,
+					horizontal: align_left)
+				{
+					column(spacing: "0",
+						vertical: align_center)
+					{
+						radio_button(identifier: 'pfst', group_id: 'rgr1', 
+							name: '$$$/Dialogs/CreateFormPanel_Start/optProFromScratch');
+					}
+
+					gap(dwidth: 0);
+
+					column(spacing: "0",
+						vertical: align_top)
+					{
+						picture(identifier: 'pfic',
+							horizontal: align_left,
+							height: 32,
+							width: 32);
+					}
+				}
+
+				gap(dwidth: 10);
+
+				column(spacing: "0",
+					vertical: align_center)
+				{
+					static_text(identifier: 'pslb',
+						name: '$$$/Dialogs/CreateFormPanel_Start/lblProFromScratch', 
+						font_id: @dialog_font_bold);
+
+					gap(dheight: 3);
+
+					static_text(identifier: 'psds',
+						name: '$$$/Dialogs/CreateFormPanel_Start/descProFromScratch',
+						wrap: true, width: 270);
+				}
+			}
+
+			gap(dheight: 30);
+		}
+		
+		panel(identifier: 'comn',
+			guide_mask: [@guide_baseline, @guide_label],
+			horizontal: align_fill,
+			margin_height: 0,
+			margin_width: 0,
+			spacing: "0")
+		{
+			row(spacing: "0",
+				vertical: align_center,
+				horizontal: align_left)
+			{
+				row(spacing: "0",
+					vertical: align_top,
+					horizontal: align_left)
+				{
+					column(spacing: "0",
+						vertical: align_center)
+					{
+						radio_button(identifier: 'exdc', group_id: 'rgr1', 
+							name: '$$$/Dialogs/CreateFormPanel_Start/optExistingDocument');
+					}
+
+					gap(dwidth: 0);
+
+					column(spacing: "0",
+						vertical: align_center)
+					{
+						picture(identifier: 'edic',
+						horizontal: align_left,
+						height: 32,
+						width: 32);
+					}
+				}
+
+				gap(dwidth: 10);
+
+				column(spacing: "0",
+					vertical: align_center)
+				{
+					static_text(identifier: 'edlb',
+						name: '$$$/Dialogs/CreateFormPanel_Start/lblExistingDocument', 
+						font_id: @dialog_font_bold);
+
+					gap(dheight: 3);
+
+					static_text(identifier: 'edds',
+						name: '$$$/Dialogs/CreateFormPanel_Start/descExistingDocument',
+						wrap: true, width: 270);
+				}
+			}
+		}
+
+		gap(dheight: 30);
+
+		panel(identifier: 'std1',
+			guide_mask: [@guide_baseline, @guide_label],
+			horizontal: align_fill,
+			margin_height: 0,
+			margin_width: 0,
+			spacing: "0")
+		{
+			row(spacing: "0",
+				vertical: align_center,
+				horizontal: align_left)
+			{
+				row(spacing: "0",
+					vertical: align_top,
+					horizontal: align_left)
+				{
+					column(spacing: "0",
+						vertical: align_center)
+					{
+						radio_button(identifier: 'sfst', group_id: 'rgr1', 
+							name: '$$$/Dialogs/CreateFormPanel_Start/optStdFromScratch');
+					}
+
+					gap(dwidth: 0);
+
+					column(spacing: "0",
+						vertical: align_top)
+					{
+						picture(identifier: 'rfic',
+							horizontal: align_left,
+							height: 32,
+							width: 32);
+					}
+				}
+
+				gap(dwidth: 10);
+
+				column(spacing: "0",
+					vertical: align_top)
+				{
+					static_text(identifier: 'rslb',
+						name: '$$$/Dialogs/CreateFormPanel_Start/lblStdFromScratch', 
+						font_id: @dialog_font_bold);
+
+					gap(dheight: 3);
+
+					static_text(identifier: 'rsds',
+						name: '$$$/Dialogs/CreateFormPanel_Start/descStdFromScratch',
+						wrap: true, width: 270);
+				}
+			}
+		}
+	}	
+}

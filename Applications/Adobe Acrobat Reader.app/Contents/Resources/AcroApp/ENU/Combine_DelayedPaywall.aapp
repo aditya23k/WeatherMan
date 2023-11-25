@@ -1,0 +1,30 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="Combine Files" av2Title="Combine files" id="CombineDelayedRdrApp" description="Combine multiple files into a single PDF" richTooltip = "Merge multiple files into a single PDF for easy storing and sharing." av2Description="Merge multiple files into a single PDF" showLabels="true" requiresDoc="false" majorVersion="1" minorVersion="0">
+	<Layouts>
+		<Layout name="Default">
+		    <TopBar align="Center">
+				<Component name="MultiFileViewInsertPagesDP"/>
+				<Component name="DeleteCombineNodes"/>
+				<Component type="Separator"/>
+				<Component name="MultiFileThumbnailViewSelector"/>
+				<Component name="MultiFileListViewSelector"/>
+				<Component type="Separator"/>
+				<Component name="MultiFileViewOption"/>
+			</TopBar>
+			<ContentView>
+				<Component name="CombineLandingViewRdr" type="Custom" columns="1" hAlign="center" vAlign="center">
+					<Component type="Table" columns="1" hAlign="center" vAlign="center">
+						<Component type="Bitmap" name="CombineInitialGraphicBitmapIcon" width="130" height="130" />
+						<Component type="Label" label="Add files by clicking the button below" fontSize="18" multiline="true" hAlign="center" width="580" />
+						<Component type="Label" label="You can also add the current open files from below." fontSize="18" multiline="true" hAlign="center" width="500" />
+						<Component type="Table" columns="1" hAlign="center" vAlign="center" topOffset="15">
+							<Component type="PushButton" buttonType="buttonCTA" name="CombineAddFilesExecuteDP" label="Add Files" vAlign="center" fontSize="15" bold="true"/>
+						</Component>
+						<Component type="Table" columns="1" hAlign="center" vAlign="center" topOffset="10" rowSpacing="20">
+							<Component type="PushButton" buttonType="buttonPrimaryQuiet" name="CombineAddOpenFilesExecuteDP" label="Add Open Files" vAlign="center" fontSize="15" bold="true"/>
+						</Component>
+					</Component>
+				</Component>
+			</ContentView>
+		</Layout>
+	</Layouts>
+</Application>

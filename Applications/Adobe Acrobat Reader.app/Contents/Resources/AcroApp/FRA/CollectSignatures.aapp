@@ -1,0 +1,17 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="Demander signatures électroniques" av2Title="Demander des signatures électroniques" description="Envoyez des PDF à d’autres personnes pour qu’elles signent en ligne sans avoir besoin d’Acrobat." richTooltip="Envoyez un document à n’importe qui pour qu’il le signe rapidement en ligne. Les destinataires signent gratuitement dans un navigateur." av2Description="Envoyer un document à d’autres personnes pour qu’elles le signent en ligne rapidement" id="CollectSignaturesApp" majorVersion="1" minorVersion="0">
+	<Layouts>
+		<Layout name="Default" rhpModes="collapsed" topToolbarState="disable">
+			<TopBar align="Center">
+				<Component name="FSS:State:Progress"/>
+			</TopBar>
+			<TopBarRight align="Right">
+				<Component type="PushButton" buttonType="secondary" name="ExitApp"/>
+			</TopBarRight>
+			<ContentView>
+				<Component name="CollectSignaturesView" type="Custom"/>
+			</ContentView>
+		</Layout>
+		<Layout name="Native" OpenInDocumentTab="true">
+		</Layout>
+	</Layouts>
+</Application>

@@ -1,0 +1,20 @@
+dialog( name: '$$$/CADMFriendlyCredInfo/Title' )
+{
+	view( align_children: align_left, alignment: align_fill )
+	{
+		static_text( item_id: 'note', width:320 );
+
+		cluster( name: '$$$/CADMFriendlyCredInfo/Cluster' ) 
+		{
+			edit_text( item_id: 'name', alignment: align_fill );
+			picture( item_id: 'card', width:320, height:180, alignment: align_fill );
+		}		
+		
+		view( align_children: align_row )
+		{
+			button( item_id: 'rset', name: '$$$/CADMFriendlyCredInfo/Defaults' );
+			gap( alignment: align_fill );
+			ok_cancel();
+		}
+	}
+}

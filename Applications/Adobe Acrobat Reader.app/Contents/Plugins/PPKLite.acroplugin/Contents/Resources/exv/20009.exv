@@ -1,0 +1,17 @@
+theBodyHeight = gStaticTextHeight * 8;
+
+dialog(margin_height: 0, margin_width: 0)
+{
+    view(alignment: align_fill, align_children: align_left)
+    {
+		gap(height: gGap);
+		static_text(item_id: 'note', font_id: 5, alignment: align_fill);
+		
+		static_text(name: '$$$/Dialogs/FDFExportWiz/Type', font_id: 5);
+		edit_text(item_id: 'type', multiline: true, readonly: true, alignment: align_fill, height: theBodyHeight);
+		gap(height: gGap);
+			
+		static_text(name: '$$$/Dialogs/FDFExportWiz/ExportDetails', font_id: 5);
+		static_text(item_id: 'dtls', alignment: align_fill);
+    }
+}

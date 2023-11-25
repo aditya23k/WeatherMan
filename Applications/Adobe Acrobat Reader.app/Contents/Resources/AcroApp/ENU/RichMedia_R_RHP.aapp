@@ -1,0 +1,17 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="Rich Media" av2Title="Add rich media" description="Add audio, video, and interactive elements" av2Description="Add audio, video, and interactive elements" id="RichMediaRdrApp" showLabels="true" requiresDoc="true" majorVersion="1" minorVersion="0">
+	<Commands>
+			<Command name="3DRdr"/>
+			<Command name="ButtonRdr"/>
+			<Command name="RichMediaSoundRdr"/>
+			<Command name="RichMediaFlashRdr" lockdown="EnableFlashEditing" lockdownType="pilot" />
+			<Command name="RichMediaVideoRdr"/>
+			<Command name="AuthoringRdr"/>
+	</Commands>
+	<Layouts>
+		<Layout name="Default">
+			<ContentView>
+				<Component name="RichMediaAppRhpView" fontSize="12"/>
+			</ContentView>
+		</Layout>
+	</Layouts>
+</Application>

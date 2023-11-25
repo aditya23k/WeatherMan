@@ -1,0 +1,11 @@
+dialog( name: '$$$/Dialogs/VirusCheckOptions' )
+{
+	view( align_children: align_left )
+	{
+		hier_list_box( item_id: 'Strs', width: 400, height: 220 );
+		view( alignment: align_center )
+		{
+			ok();
+		}
+	}
+}

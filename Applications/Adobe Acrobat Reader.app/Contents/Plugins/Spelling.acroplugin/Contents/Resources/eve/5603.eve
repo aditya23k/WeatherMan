@@ -1,0 +1,8 @@
+dialog(name: '$$$/Prefs/Spelling/AddDictionary/Title')
+{
+	column()
+	{
+		mclv(identifier: 'mclv', width: 300, height: 300, style: 2);
+		ok_cancel(ok_name: '$$$/Prefs/Spelling/AddDictionary/Add');
+	}
+}

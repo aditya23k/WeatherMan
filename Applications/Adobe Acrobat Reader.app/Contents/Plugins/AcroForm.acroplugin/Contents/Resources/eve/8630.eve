@@ -1,0 +1,41 @@
+dialog(name: '$$$/Dialogs/DistributeForm')
+{
+    column(horizontal: align_left, margin_width: 10)
+    {
+		static_text(name: '$$$/Dialogs/DistributeFinish/Title',
+					font_id: @dialog_font_bold, width: 450);
+        gap(height: 5);
+		row(horizontal: align_center) {
+		    picture(resource_id: 'A_DistributionDone_Xl_N.png', width:150, height:150);
+		}
+        gap(height: 5);
+		
+		row() {
+		    picture(resource_id: 'A_Bullet_Sm_N.png', width:10, height:15);
+            static_text(identifier: 'sum1', width: 440, height: 30, wrap: true,
+                        name: ''); 
+        }
+        
+		row() {
+		    picture(resource_id: 'A_Bullet_Sm_N.png', width:10, height:15);
+            static_text(identifier: 'sum2', width: 440, height: 30, wrap: true,
+                        name: ''); 
+        }
+		row() {
+		    gap(width:10);
+            button(identifier: 'chlc',
+                   name: '$$$/DistributeFinish/ChangeLocation=Change Location'); 
+        }
+        
+		row() {
+		    picture(identifier: 'dot3', resource_id: 'A_Bullet_Sm_N.png', width:10, height:15);
+            static_text(identifier: 'sum3', width: 440, height: 30,  wrap: true,
+                        name: ''); 
+        }
+        
+        row(horizontal: align_fill) {
+            gap(horizontal: align_fill);
+            button(identifier: 'fnsh', name: '$$$/Dialogs/DistributeFinish/Finish');
+        }
+    }
+}

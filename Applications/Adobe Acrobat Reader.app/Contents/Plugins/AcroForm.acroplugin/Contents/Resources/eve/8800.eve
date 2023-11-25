@@ -1,0 +1,29 @@
+dialog(name: '$$$/Dialogs/Authentication')
+{
+	column()
+	{
+		static_text(name: '$$$/Dialogs/Authentication/Description', width: 270, wrap: true);
+
+		panel(placement: place_row)
+		{
+			column()
+			{
+				static_text(name: '$$$/Dialogs/Authentication/Server');
+				static_text(identifier: 'rsrc', name: '$$$/Dialogs/Authentication/Resource');
+				static_text(name: '$$$/Dialogs/Authentication/Username');
+				static_text(name: '$$$/Dialogs/Authentication/Password');
+			}
+		
+			column()
+			{
+				static_text(identifier: 'svr ', width: 170, wrap: true);
+				static_text(identifier: 'rlm ', width: 170, wrap: true);
+				edit_text(identifier: 'unam', width: 170);
+				edit_text(identifier: 'pswd', width: 170, password: true);
+				checkbox(identifier: 'cach', name: '$$$/Dialogs/Authentication/CacheCred');		
+			}
+		}
+
+		ok_cancel();
+	}
+}

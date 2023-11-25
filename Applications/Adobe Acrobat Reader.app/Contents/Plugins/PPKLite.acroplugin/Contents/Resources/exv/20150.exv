@@ -1,0 +1,65 @@
+gEditTextWidth = max_char_width() * 12;
+gNumericTextWidth = max_char_width() * 3;
+gMaxTextWidth = max( 
+	zstring_width(zstring: '$$$/Dialogs/CDSADMConfigureADSI/AccessTypeText'),
+	zstring_width(zstring: '$$$/Dialogs/CDSADMConfigureADSI/ServerText'),
+	zstring_width(zstring: '$$$/Dialogs/CDSADMConfigureADSI/UserText'),
+	zstring_width(zstring: '$$$/Dialogs/CDSADMConfigureADSI/PassText'),
+	zstring_width(zstring: '$$$/Dialogs/CDSADMConfigureADSI/BaseDNText'));
+gMaxNumericWidth = max( 
+	zstring_width(zstring: '$$$/Dialogs/CDSADMConfigureADSI/TimeText'),
+	zstring_width(zstring: '$$$/Dialogs/CDSADMConfigureADSI/MaxRecText'));
+
+dialog(name: '$$$/Dialogs/CDSADMConfigureADSI', target_id: 'dlst')
+{
+	view(align_children: align_left, alignment: align_fill)
+	{
+		view(align_children: align_row, alignment: align_fill)
+		{
+			static_text(item_id: 'NamT', name: '$$$/Dialogs/CDSADMConfigureADSI/DirNameText');
+			edit_text(item_id: 'dirn', alignment: align_fill);
+		}
+		cluster(item_id: 'DirC', name: '$$$/Dialogs/CDSADMConfigureADSI/ServerSettings', align_children: align_left)
+		{
+			view(align_children: align_row, alignment: align_fill)
+			{
+				static_text(item_id: 'acsT', name: '$$$/Dialogs/CDSADMConfigureADSI/AccessTypeText', width: gMaxTextWidth, alignment: align_right);
+				edit_text(item_id: 'actp', alignment: align_fill);
+			}
+			view(align_children: align_row, alignment: align_fill)
+			{
+				static_text(item_id: 'SerT', name: '$$$/Dialogs/CDSADMConfigureADSI/ServerText', width: gMaxTextWidth, alignment: align_right);
+				edit_text(item_id: 'srvr', width: gEditTextWidth, alignment: align_fill);
+				static_text(item_id: 'PrtT', name: '$$$/Dialogs/CDSADMConfigureADSI/PortText');
+				edit_text(item_id: 'prtn', SpinEdit: true, numeric: true, width: gNumericTextWidth);
+			}
+			view(align_children: align_row, alignment: align_fill)
+			{
+				static_text(item_id: 'bdnT', name: '$$$/Dialogs/CDSADMConfigureADSI/BaseDNText', width: gMaxTextWidth, alignment: align_right);
+				edit_text(item_id: 'bsdn', alignment: align_fill);
+			}
+			check_box(item_id: 'auth', name: '$$$/Dialogs/CDSADMConfigureADSI/AuthText' );
+			view(align_children: align_row, alignment: align_fill)
+			{
+				static_text(item_id: 'usrT', name: '$$$/Dialogs/CDSADMConfigureADSI/UserText', width: gMaxTextWidth, alignment: align_right);
+				edit_text(item_id: 'user', alignment: align_fill);
+			}
+			view(align_children: align_row, alignment: align_fill)
+			{
+				static_text(item_id: 'pwdT', name: '$$$/Dialogs/CDSADMConfigureADSI/PassText', width: gMaxTextWidth, alignment: align_right);
+				edit_text(item_id: 'pass', password: true, alignment: align_fill);
+			}
+			view(align_children: align_row, alignment: align_right)
+			{
+				static_text(item_id: 'tmoT', name: '$$$/Dialogs/CDSADMConfigureADSI/TimeText', width: gMaxNumericWidth, alignment: align_right);
+				edit_text(item_id: 'time', SpinEdit: true, numeric: true, width: gNumericTextWidth);
+			}
+			view(align_children: align_row, alignment: align_right)
+			{
+				static_text(item_id: 'mxrT', name: '$$$/Dialogs/CDSADMConfigureADSI/MaxRecText', width: gMaxNumericWidth, alignment: align_right);
+				edit_text(item_id: 'maxr', SpinEdit: true, numeric: true, width: gNumericTextWidth);
+			}
+		}
+		ok_cancel_help();
+	}
+}

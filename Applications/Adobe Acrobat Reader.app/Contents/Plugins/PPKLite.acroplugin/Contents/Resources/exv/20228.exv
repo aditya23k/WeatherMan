@@ -1,0 +1,9 @@
+dialog(name: '$$$/Dialogs/RejectedRecipients')
+{
+	view(align_children: align_left)
+	{
+		static_text(item_id: 'Note', alignment: align_fill);
+		mclv(item_id: 'List', width: 425, height: 150);
+		ok(ok_name: '$$$/Dialogs/CloseButton');
+	}
+}

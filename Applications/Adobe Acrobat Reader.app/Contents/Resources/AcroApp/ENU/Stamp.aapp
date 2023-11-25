@@ -1,0 +1,16 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="Stamp" av2Title="Add a stamp" description="Add stamps such as 'approved' or 'draft'" av2Description="Add or delete stamps such as Approved or Draft" id="StampApp" showLabels="true" majorVersion="1" minorVersion="0">
+	<Commands>
+			<Command name="AddStamp"/>
+			<Command name="ShowStampsPalette"/>			
+			<Command name="CustomStamps"/>
+	</Commands>
+	<Layouts>
+		<Layout name="Default" OpenInDocumentTab="true">
+			<TopBar align="Center">
+				<Component name="AddStamp"/>
+				<Component name="ShowStampsPalette"/>
+				<Component name="CustomStamps"/>
+			</TopBar>
+		</Layout>
+	</Layouts>
+</Application>

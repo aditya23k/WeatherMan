@@ -1,0 +1,55 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="Конвертування PDF" av2Title="Перетворити на PDF" description="Перетворюйте PDF-файли на файли Word, Powerpoint, Excel або створюйте PDF-файли із цих власних форматів" av2Description="Перетворюйте файли майже всіх форматів на PDF" id="ConvertPDFAppFull" majorVersion="1" minorVersion="0">
+	<Commands>
+	</Commands>
+	<Layouts>
+		<Layout name="Default">
+			<ContentView>
+				<Component name="ConvertPDFView" type="Custom">
+					<Component type="Table" columns="1" hAlign="center" rowSpacing="48">
+							<Component type="Table" columns="3" hAlign="center" vAlign="near" columnSpacing="80">
+								<Component type="Table" columns="1" vAlign="near" bottomOffset="20" useborder="false" rowSpacing="18">
+									<Component type="Table" columns="1" hAlign="center" rowSpacing="10">
+										<Component type="Label" label="Перетворити PDF-файл в інші формати" fontSize="31"/>
+										<Component type="Label" hAlign="center" width="235" adjustHeightWithText="Перетворюйте файли Word, Excel і PowerPoint у високоякісні PDF-файли." multiline="true" label="Перетворюйте PDF-файли на файли Word, Excel та інших форматів." fontSize="16"/>
+									</Component>
+									<Component type="Table" useborder="false"  hAlign="center" vAlign="near" topOffset = "20">
+										<Component type="Bitmap" name="ConvertIntentExportIcon" width="160" height="143" colorize="false"/>
+									</Component>
+									<Component type="Table" leftOffset="20" rightOffset="20" hAlign="center">
+										<Component type="PushButton" name="Convert:Intent:Export" bold="true" label="Вибрати файли" fontSize="16" />
+										<Component type="Label" width="240" adjustHeightWithText="Підтримувані формати: .docx, .xlsx, .ppt, .txt тощо." hAlign="center" multiline="true" label="" fontSize="14" style="helpText"/>
+									</Component>
+								</Component>
+								<Component type="VerticalSeparator" height="420"/>
+								<Component type="Table" columns="1" vAlign="near" bottomOffset="20" useborder="false" rowSpacing="18">
+									<Component type="Table" hAlign="center" rowSpacing="10">
+										<Component type="Label" label="Перетворити файли інших форматів на PDF-файл" fontSize="31"/>
+										<Component type="Label" width="240" adjustHeightWithText="Перетворюйте PDF-файли на файли Word, Excel та інших форматів." hAlign="center" multiline="true" label="Перетворюйте файли Word, Excel і PowerPoint у високоякісні PDF-файли." fontSize="16" />
+									</Component>
+									<Component type="Table" useborder="false" hAlign="center" vAlign="near" topOffset = "20">
+										<Component type="Bitmap" name="ConvertIntentCreateIcon" width="160" height="143" colorize="false" />
+									</Component>
+									<Component type="Table" leftOffset="20" rightOffset="20" rowSpacing="10" hAlign="center">
+										<Component type="PushButton" name="Convert:Intent:Create" bold="true" label="Вибрати файли" fontSize="16" />
+										<Component type="Label" width="240" hAlign="center" multiline="true" label="Підтримувані формати: .docx, .xlsx, .ppt, .txt тощо." fontSize="14"/>
+									</Component>
+								</Component>
+							</Component>
+						</Component>
+					</Component>
+			</ContentView>
+		</Layout>
+		<Layout name="CreatePDFLayout">
+			<ContentView>
+				<Component name="CreatePDFView" type="Custom">
+				</Component>
+			</ContentView>
+		</Layout>
+		<Layout name="ExportPDFLayout">
+			<ContentView>
+				<Component name="ExportPDFView" type="Custom">
+				</Component>
+			</ContentView>
+		</Layout>
+	</Layouts>
+</Application>

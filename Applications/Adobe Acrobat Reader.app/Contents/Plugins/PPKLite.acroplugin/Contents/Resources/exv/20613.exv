@@ -1,0 +1,13 @@
+dialog(name: '$$$/Dialogs/EDCNeedCertificate', target_id: 'name')
+{
+	view(align_children: align_center, alignment: align_fill)
+	{
+		static_text(item_id: 'pmpt', alignment: align_fill);
+		gap( height: 10 );
+		view( align_children: align_row, alignment: align_fill)
+		{
+			gap( height: 10 );
+			ok_cancel();
+		}
+	}
+}

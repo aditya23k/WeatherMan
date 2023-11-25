@@ -1,0 +1,29 @@
+dialog(name: '$$$/Dialogs/Authorization')
+{
+	view(align_children: align_left)
+	{
+		view(align_children: align_row)
+		{
+			static_text(item_id: 'txt1', name: '$$$/Dialogs/Authorization/Server', width: max_char_width() * 5);
+			static_text(item_id: 'srvr', width: max_char_width() * 20);
+		}
+		view(align_children: align_row)
+		{
+			static_text(item_id: 'txt2', name: '$$$/Dialogs/Authorization/Resource', width: max_char_width() * 5);
+			static_text(item_id: 'rsrc', width: max_char_width() * 20);
+		}
+		cluster(align_children: align_fill)
+		{	view(align_children: align_row)
+			{
+				static_text(item_id: 'txt3', name: '$$$/Dialogs/Authorization/Username');
+				edit_text(item_id: 'name', width: max_char_width() * 16);
+			}
+			view(align_children: align_row)
+			{
+				static_text(item_id: 'txt4', name: '$$$/Dialogs/Authorization/Password');
+				edit_text(item_id: 'pwrd', password: true, width: max_char_width() * 16 );
+			}
+		}
+		ok_cancel();
+	}
+}

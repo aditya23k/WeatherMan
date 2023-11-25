@@ -1,0 +1,16 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="标记密文" av2Title="将 PDF 标记为密文" description="永久删除敏感文本、图形或隐藏数据" av2Description="永久删除敏感内容和隐藏数据" richTooltip="永久删除内容和隐藏信息以保护敏感数据。" id="RedactPDFRdrApp" majorVersion="1" minorVersion="0" inAppUpsellEnabled="true" >
+	<Commands>
+	       <Command name="MarkForRedactionDropDownRdr"/>
+			<Command name="AnnotsApplyRedactionsRdr"/>
+			<Command name="AnnotsRedactToolPropsRdr"/>
+			<Command name="RemoveHiddenInfoRdr"/>
+			<Command name="SanitizeDocumentRdr"/>
+	</Commands>
+	<Layouts>
+		<Layout name="Default">
+			<ContentView>
+				<Component name="RedactAppRHPView" fontSize="12"/>
+			</ContentView>
+		</Layout>
+	</Layouts>
+</Application>

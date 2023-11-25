@@ -1,0 +1,116 @@
+gPaneWidth		= 600;
+gPlayPopupWidth	= max( zstring_width( zstring: '$$$IDS_RENDITIONLOCATION_ONPAGE' ), 
+					   zstring_width( zstring: '$$$IDS_RENDITIONLOCATION_HIDDEN' ), 
+					   zstring_width( zstring: '$$$IDS_RENDITIONLOCATION_FLOATINGWINDOW' ), 
+					   zstring_width( zstring: '$$$IDS_RENDITIONLOCATION_FULLSCREEN' ) );
+
+gStaticWidth	= max( zstring_width( zstring: '$$$/Dialogs/Multimedia/RenditionLocation/TitleText' ), 
+					   zstring_width( zstring: '$$$/Dialogs/Multimedia/RenditionLocation/Size' ), 
+					   zstring_width( zstring: '$$$/Dialogs/Multimedia/RenditionLocation/Position' ), 
+					   zstring_width( zstring: '$$$/Dialogs/Multimedia/RenditionLocation/Width' ), 
+					   zstring_width( zstring: '$$$/Dialogs/Multimedia/RenditionLocation/WindowOffscreen' ), 
+					   zstring_width( zstring: '$$$/Dialogs/Multimedia/RenditionLocation/WindowType' ), 
+					   zstring_width( zstring: '$$$/Dialogs/Multimedia/RenditionLocation/BackgroundColor' ) );
+
+gMaxEditWidth	= 385;
+gCoordSize		= max_digit_width() * 5;
+gLineHeight		= 30;
+gEditHeight		= 20;
+
+dialog( target_id: 'onpg', first_tab: 'st01' )
+{
+	view( align_children: align_left )
+	{
+		cluster( name: '$$$/Dialogs/Multimedia/RenditionLocation/WindowSettings', align_children: align_left, alignment: align_fill, dwidth: gPaneWidth)
+		{
+			view( align_children: align_row )
+			{
+				view( align_children: align_right, width: gStaticWidth )
+				{
+					static_text( item_id: 'st01', name: '$$$/Dialogs/Multimedia/RenditionLocation/WindowType', height: gPopupHeight, next_tab: 'wset' );
+					static_text( item_id: 'st02', name: '$$$/Dialogs/Multimedia/RenditionLocation/BackgroundColor', hieght: gButtonHeight, next_tab: 'colr' );
+				}
+
+				view( align_children: align_left )
+				{
+					popup( item_id: 'wset', width: gPlayPopupWidth, next_tab: 'st02' );
+					button( item_id: 'colr', picture: true, height: 20, width: 22, next_tab: 'titl' );
+				}
+			}
+		}
+
+		cluster( item_id: 'fl01', name: '$$$/Dialogs/Multimedia/RenditionLocation/FloatWindowSettings', align_children: align_left, alignment: align_fill, dwidth: gPaneWidth )
+		{
+			view( align_children: align_row )
+			{
+				view( align_children: align_right, width: gStaticWidth )
+				{
+					gap( alignment: align_fill, height: gRadioCheckBoxHeight );
+					gap( alignment: align_fill, height: gRadioCheckBoxHeight );
+				}
+
+				view( align_children: align_left )
+				{
+					check_box( item_id: 'titl', name: '$$$/Dialogs/Multimedia/RenditionLocation/ShowTitle', alignment: align_fill, next_tab: 'acls' );
+					check_box( item_id: 'acls', name: '$$$/Dialogs/Multimedia/RenditionLocation/AllowClose', alignment: align_fill, next_tab: 'fl02' );
+				}
+			}
+
+			view( align_children: align_row )
+			{
+				view( align_children: align_right, width: gStaticWidth )
+				{
+					static_text( item_id: 'fl02', name: '$$$/Dialogs/Multimedia/RenditionLocation/TitleText', next_tab: 'ttxt' );
+				}
+				edit_text( item_id: 'ttxt', alignment: align_fill, next_tab: 'fl03', height: gEditHeight, width: gMaxEditWidth );
+			}
+			
+			view( align_children: align_row )
+			{
+				view( align_children: align_right, width: gStaticWidth )
+				{
+					static_text( item_id: 'fl03', name: '$$$/Dialogs/Multimedia/RenditionLocation/Size', height: gPopupHeight, next_tab: 'sset' );
+				}
+				popup( item_id: 'sset', alignment: align_fill, next_tab: 'fl05', height: gLineHeight, width: 120 );
+			}
+			
+			view( align_children: align_row )
+			{
+				view( align_children: align_right, width: gStaticWidth )
+				{
+					static_text( item_id: 'fl05', name: '$$$/Dialogs/Multimedia/RenditionLocation/Position', height: gPopupHeight, next_tab: 'pset' );
+				}
+				view( align_children: align_row, alignment: align_fill )
+				{
+					popup( item_id: 'pset', width: 120, next_tab: 'fl06', height: gLineHeight );
+					static_text( item_id: 'fl06', name: '$$$/Dialogs/Multimedia/RenditionLocation/RelativeTo', next_tab: 'rset', height: gPopupHeight );
+					popup( item_id: 'rset', width: 120, alignment: align_fill, next_tab: 'fl07', height: gLineHeight );
+				}
+			}
+			
+			view( align_children: align_row )
+			{
+				view( align_children: align_right, width: gStaticWidth )
+				{
+					static_text( item_id: 'fl07', name: '$$$/Dialogs/Multimedia/RenditionLocation/Width', next_tab: 'sizx' );
+				}
+				view( align_children: align_row, alignment: align_fill )
+				{
+					edit_text( item_id: 'sizx', width: gCoordSize, next_tab: 'fl08' , height: gEditHeight  );
+					static_text( item_id: 'fl08', name: '$$$/Dialogs/Multimedia/RenditionLocation/Height', next_tab: 'sizy');
+					edit_text( item_id: 'sizy', width: gCoordSize, next_tab: 'gmov', height: gEditHeight);
+					button( item_id: 'gmov', name: '$$$/Dialogs/Multimedia/RenditionLocation/GetFromMovie', next_tab: 'fl09', height: gEditHeight);
+				}
+			}
+			
+			view( align_children: align_row )
+			{
+				view( align_children: align_right, width: gStaticWidth )
+				{
+					static_text( item_id: 'fl09', name: '$$$/Dialogs/Multimedia/RenditionLocation/WindowOffscreen', height: gPopupHeight, next_tab: 'oset' );
+				}
+				popup( item_id: 'oset', alignment: align_fill, width: 120, height: gLineHeight);
+			}
+		}
+	}
+}

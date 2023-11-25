@@ -1,0 +1,16 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="Redact" av2Title="Redact a PDF" description="Permanently delete sensitive text, graphics, or hidden data" av2Description="Permanently delete sensitive content and hidden data" richTooltip = "Permanently delete content and hidden information to protect sensitive data." id="RedactPDFRdrApp" majorVersion="1" minorVersion="0" inAppUpsellEnabled="true" >
+	<Commands>
+	       <Command name="MarkForRedactionDropDownRdr"/>
+			<Command name="AnnotsApplyRedactionsRdr"/>
+			<Command name="AnnotsRedactToolPropsRdr"/>
+			<Command name="RemoveHiddenInfoRdr"/>
+			<Command name="SanitizeDocumentRdr"/>
+	</Commands>
+	<Layouts>
+		<Layout name="Default">
+			<ContentView>
+				<Component name="RedactAppRHPView" fontSize="12"/>
+			</ContentView>
+		</Layout>
+	</Layouts>
+</Application>

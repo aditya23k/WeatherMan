@@ -1,0 +1,178 @@
+gColumnOneWidth = max(
+	zstring_width(zstring: '$$$/Dialogs/FieldProps/BorderColor'),
+	zstring_width(zstring: '$$$/Dialogs/FieldProps/BorderWidth'),
+	zstring_width(zstring: '$$$/Dialogs/FieldProps/BorderStyle'),
+	zstring_width(zstring: '$$$/Dialogs/FieldProps/Border/FillColor'),
+	zstring_width(zstring: '$$$/Dialogs/FieldProps/TextColor'),
+	zstring_width(zstring: '$$$/Dialogs/FieldProps/Font'),
+	zstring_width(zstring: '$$$/Dialogs/FieldProps/TextSize'),
+	zstring_width(zstring: '$$$/Dialogs/FieldProps/Text/Digits'),
+	zstring_width(zstring: '$$$/Dialogs/TextProps/TextDirection'));
+	
+gColumnTwoWidth = max(
+	zstring_width(zstring: '$$$/Dialogs/FieldProps/FontSize/AUTO'),
+	zstring_width(zstring: '$$$/Dialogs/FieldProps/FontSize/SIX'),
+	zstring_width(zstring: '$$$/Dialogs/FieldProps/FontSize/EIGHT'),
+	zstring_width(zstring: '$$$/Dialogs/FieldProps/FontSize/NINE'),
+	zstring_width(zstring: '$$$/Dialogs/FieldProps/FontSize/TEN'),
+	zstring_width(zstring: '$$$/Dialogs/FieldProps/FontSize/TWELVE'),
+	zstring_width(zstring: '$$$/Dialogs/FieldProps/FontSize/FOURTEEN'),
+	zstring_width(zstring: '$$$/Dialogs/FieldProps/FontSize/EIGHTEEN'),
+	zstring_width(zstring: '$$$/Dialogs/FieldProps/Style/SOLID'),
+	zstring_width(zstring: '$$$/Dialogs/FieldProps/Style/DASHED'),
+	zstring_width(zstring: '$$$/Dialogs/FieldProps/Style/BEVELED'),
+	zstring_width(zstring: '$$$/Dialogs/FieldProps/Style/INSET'),
+	zstring_width(zstring: '$$$/Dialogs/FieldProps/Style/UNDERLINED'),
+	zstring_width(zstring: '$$$/Dialogs/FieldProps/Width/THIN'),
+	zstring_width(zstring: '$$$/Dialogs/FieldProps/Width/MEDIUM'),
+	zstring_width(zstring: '$$$/Dialogs/FieldProps/Width/THICK'),
+	zstring_width(zstring: '$$$/Dialogs/FieldProps/Text/NativeDigits'));
+
+gBorderCluster = '$$$/Dialogs/FieldProps/Border/ClusterName';
+gBorderColor = '$$$/Dialogs/FieldProps/BorderColor';
+gBorderWidth = '$$$/Dialogs/FieldProps/BorderWidth';
+gBorderStyle = '$$$/Dialogs/FieldProps/BorderStyle';
+gFillColor = '$$$/Dialogs/FieldProps/FillColor';
+
+gTextCluster = '$$$/Dialogs/FieldProps/Text/ClusterName';
+gTextColor = '$$$/Dialogs/FieldProps/TextColor';
+gTextFont = '$$$/Dialogs/FieldProps/Font';
+gTextSize = '$$$/Dialogs/FieldProps/TextSize';
+gTextDigits = '$$$/Dialogs/FieldProps/Text/Digits';
+gTextNativeDigits = '$$$/Dialogs/FieldProps/Text/NativeDigits';
+gDirection = '$$$/Dialogs/TextProps/TextDirection';
+gParDirRTL = '$$$/Dialogs/FieldProps/Text/ParDirRTL';
+gParDirLTR = '$$$/Dialogs/FieldProps/Text/ParDirLTR';
+
+dialog(name: '$$$/Dialogs/FieldProps', target_id: 'brdr')
+{
+	view(align_children: align_top, alignment: align_fill)
+	{
+		view(align_children: align_left)
+		{
+			cluster(item_id: 'bdcl', name:gBorderCluster, align_children: align_row)
+			{
+				view(align_children: align_left)
+				{
+					view(align_children: align_row)
+					{
+						view(align_children: align_right, width: gColumnOneWidth)
+						{
+							static_text(name: gBorderColor);
+						}
+						view(align_children: align_row)
+						{
+							button(item_id: 'brdr', picture: true, height: 20, width: 22, acc_title: gBorderColor);
+						}
+					}
+					view(align_children: align_row)
+					{
+						view(align_children: align_right, width: gColumnOneWidth)
+						{
+							static_text(name: gFillColor);
+						}
+						view(align_children: align_row)
+						{
+							button(item_id: 'back', picture: true, height: 20, width: 22, acc_title: gFillColor);
+						}
+					}
+				}
+
+				view(align_children: align_right)
+				{
+					view(align_children: align_row)
+					{
+						view(align_children: align_right, width: gColumnOneWidth)
+						{
+							static_text(name: gBorderWidth);
+						}
+						view(align_children: align_left)
+						{
+							popup(item_id: 'wdth', width: gColumnTwoWidth);
+						}
+					}
+					view(align_children: align_row)
+					{
+						view(align_children: align_right, width: gColumnOneWidth)
+						{
+							static_text(name: gBorderStyle);
+						}
+						view(align_children: align_left)
+						{
+							popup(item_id: 'styl', width: gColumnTwoWidth);
+						}
+					}
+				}
+			}
+			cluster(item_id: 'txcl', name:gTextCluster, align_children:align_top)
+			{
+				view(align_children: align_left, alignment: align_fill)
+				{
+					view(align_children: align_row, alignment: align_fill)
+					{
+						view(align_children: align_row, alignment: align_fill)
+						{
+							view(align_children: align_right, width: gColumnOneWidth)
+							{
+								static_text(name: gTextSize);
+							}
+							view(alignment: align_fill, align_children: align_offscreen) 
+							{
+								view(align_children: align_left)
+								{
+									edit_text(item_id: 'size', width: gColumnTwoWidth, PopupEdit: true);
+								}
+							}
+						}
+						view(align_children: align_row)
+						{
+							view(align_children: align_right, width: gColumnOneWidth)
+							{
+								static_text(name: gTextColor);
+							}
+							view(align_children: align_left)
+							{
+								button(item_id: 'text', picture: true, height: 20, width: 22, acc_title: gTextColor);
+							}
+						}
+					}
+
+					view(align_children: align_row, alignment: align_fill)
+					{
+						view(align_children: align_right, width: gColumnOneWidth)
+						{
+							static_text(name: gTextFont);
+						}
+						view(alignment:align_fill, align_children: align_fill)
+						{
+							popup(item_id: 'font');
+						}
+					}
+					
+
+					view(align_children: align_row, alignment: align_fill)
+					{
+						view(align_children: align_right, width: gColumnOneWidth)
+						{
+							static_text(item_id: 'digl', name: gTextDigits);
+						}
+						view(alignment:align_fill, align_children: align_left)
+						{
+							popup(item_id: 'digi', width: gColumnTwoWidth);
+						}
+					}
+
+					view(align_children: align_row, alignment: align_fill)
+					{
+						view(align_children: align_right, width: gColumnOneWidth)
+						{
+							static_text(item_id: 'pdir', name: gDirection);
+						}
+						radio(item_id: 'pltr', group_id: 'rgr1', name: gParDirLTR);
+						radio(item_id: 'prtl', group_id: 'rgr1', name: gParDirRTL);
+					}
+				}
+			}
+		}
+	}
+}

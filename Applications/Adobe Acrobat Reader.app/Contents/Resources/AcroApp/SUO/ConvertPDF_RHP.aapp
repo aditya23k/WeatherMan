@@ -1,0 +1,11 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="Muunna PDF-tiedosto" av2Title="Muunna PDF-muotoon" description="Muunna PDF-tiedosto Word-, PowerPoint- tai Excel-muotoon tai luo PDF-tiedostoja näistä alkuperäisistä muodoista" av2Description="Muunna lähes mikä tahansa tiedosto PDF-muotoon" id="ConvertPDFApp" majorVersion="1" minorVersion="0" inline="true">
+	<Commands>
+	</Commands>
+	<Layouts>
+		<Layout name="Default">
+			<ContentView>
+				<Component name="ConvertPDFRHPView" fontSize="12"/>
+			</ContentView>
+		</Layout>
+	</Layouts>
+</Application>

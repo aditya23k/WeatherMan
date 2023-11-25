@@ -1,0 +1,12 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="Połącz pliki" av2Title="Połącz pliki" id="CombinePDFRdrApp" description="Łącz wiele plików w jeden plik PDF" av2Description="Scalaj wiele plików w jeden plik PDF" richTooltip="Połącz wiele plików w jeden plik PDF w celu łatwego przechowywania i udostępniania." majorVersion="1" minorVersion="0" inAppUpsellEnabled="true">
+	<Commands>
+			<Command name="NewDocCombineFilesRdr"/>
+	</Commands>
+	<Layouts>
+		<Layout name="Default">
+			<ContentView>
+				<Component name="CombinePDFRHPView" fontSize="12"/>
+			</ContentView>
+		</Layout>
+	</Layouts>
+</Application>

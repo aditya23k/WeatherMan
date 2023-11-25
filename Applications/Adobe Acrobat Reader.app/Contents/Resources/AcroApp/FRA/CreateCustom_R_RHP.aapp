@@ -1,0 +1,5 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="Créer un outil personnalisé" av2Title="Créer un outil personnalisé" description="Créez un jeu personnalisé de fonctions Acrobat et partagez-le avec d'autres." av2Description="Créer un ens. person. de fonctions Acrobat" id="CreateCustomUIRdrApp" majorVersion="1" minorVersion="0">
+	<Commands>
+			<Command name="CreateUICustomizationRdr"/>
+	</Commands>
+</Application>

@@ -1,0 +1,23 @@
+gMaxWidth=max(
+	zstring_width(zstring: '$$$/Dialogs/JSPrefs/Font'),
+	zstring_width(zstring: '$$$/Dialogs/JSPrefs/FontSize'));
+
+dialog(name: '$$$/Dialogs/JSPrefs', margin_height: 0, margin_width: 0)
+{
+	view(align_children: align_left, dheight: gPrefsPanelHeight, dwidth: gPrefsPanelWidth)
+	{
+		cluster(item_id: 'clu1', name: '$$$/Dialogs/JSPrefs/General', dwidth: gPrefsPanelWidth, align_children: align_left)
+		{
+			check_box(item_id: 'enab', name: '$$$/Dialogs/JSPrefs/Enable');
+		}
+		cluster(name: '$$$/Dialogs/JSPrefs/Security', dwidth: gPrefsPanelWidth, align_children: align_left)
+		{
+			check_box(item_id: 'enbm', name: '$$$/Dialogs/JSPrefs/MenuItems');
+			check_box(item_id: 'enbg', name: '$$$/Dialogs/JSPrefs/Security/EnableGlobalSec');
+		}
+		cluster(name: '$$$/Dialogs/JSPrefs/Debugger', dwidth: gPrefsPanelWidth, align_children: align_left)
+		{
+			check_box(item_id: 'open', name: '$$$/Dialogs/JSPrefs/Open', next_tab: 'rad1');
+		}
+	}
+}

@@ -1,0 +1,42 @@
+
+dialog ( name:'$$$/Dialogs/Wizard/Title', height: 500, vertical: align_fill)
+{	
+			static_text (identifier: 'HTAS', wrap: true, width: 450, 
+							name:'$$$/Dialogs/Wizard/AUTOSAVE');
+		
+			row()
+			{
+				gap(width:16);
+				column()
+				{
+					checkbox (identifier: 'asav', name: '$$$/Dialogs/Wizard/AutoSave');
+
+				}
+			}
+	
+		gap();
+			
+			static_text (identifier: 'HTDO', wrap: true, width: 450, name:'$$$/Dialogs/Wizard/REOPEN');
+		
+			row()
+			{
+				gap(width:16);
+				column()
+				{
+					checkbox (identifier: 'ropn', name: '$$$/Dialogs/Wizard/Reopen');
+				}
+			}
+
+
+		gap(vertical: align_fill);
+		row(horizontal: align_right)
+		{
+			gap(horizontal: align_fill);
+				button(identifier: 'cncl', name:'$$$/Dialogs/Wizard/Cancel');
+				gap(width:16);
+				button(identifier: 'prev', name:'$$$/Dialogs/Wizard/Back');
+				button(identifier: 'ok  ', name:'$$$/Dialogs/Wizard/Next');
+
+		}
+}
+

@@ -1,0 +1,66 @@
+gPopupWidth=max(
+    zstring_width(zstring: '$$$IDS_BARCODE_VALUE_STANDARD'),
+    zstring_width(zstring: '$$$IDS_BARCODE_VALUE_TABDELIMITED'));
+
+gButtonWidth=max(
+	zstring_width(zstring: '$$$/Dialogs/FieldProps/Edit'),
+	zstring_width(zstring: '$$$/Dialogs/FieldProps/Pick'));
+
+gEditItemWidth = max_char_width() * 8;
+gGapWidth = max_char_width() * 1;
+gFieldItemHeight = gStaticTextHeight * 3;
+gFieldItemWidth = max_char_width() * 19;
+gJavaItemHeight = gStaticTextHeight * 6;
+gJavaItemWidth = max_char_width() * 19;
+gDescWidth = max_char_width() * 24;
+gDescHeight = gStaticTextHeight * 5;
+
+gEdit = '$$$/Dialogs/FieldProps/Edit';
+gPick = '$$$/Dialogs/FieldProps/Pick';
+
+gScript = '$$$/Dialogs/FieldProps/Calculate/Script';
+
+dialog(name: '$$$/Dialogs/FieldProps', target_id: 'rad2', first_tab: 'rad2')
+{
+	view(align_children: align_left, alignment: align_fill)
+	{
+		group()
+		{
+			view(align_children: align_row)
+			{
+				radio(item_id: 'rad2', group_id: 'rgrp', name: '$$$/Dialogs/FieldProps/Barcode/Value/StdScript1', next_tab: 'pop1');
+				popup(item_id: 'pop1', width: gPopupWidth, next_tab: 'flds');
+				static_text(item_id: 'yes2', name: '$$$/Dialogs/FieldProps/Barcode/Value/StdScript2');
+			}
+			view(align_children: align_top)
+			{
+				gap(width: gGap);
+				edit_text(item_id: 'flds', readonly:true, width: gFieldItemWidth, height: gFieldItemHeight, next_tab: 'pick');
+				button(item_id: 'pick', width: gButtonWidth, name: gPick, next_tab: 'rad3');
+			}
+			view(align_children: align_row)
+			{
+				gap(width: gGap);
+				check_box(item_id: 'bfld', name: '$$$/Dialogs/FieldProps/Barcode/Value/IncludeFieldNames');
+			}				
+
+			radio(item_id: 'rad3', group_id: 'rgrp', name: gScript, next_tab: 'java');
+			view(align_children: align_top)
+			{
+				gap(width: gGap);
+				edit_text(item_id: 'java', readonly:true, multiline: true, width: gJavaItemWidth, height: gJavaItemHeight, next_tab: 'edit');
+				button(item_id: 'edit', width: gButtonWidth, name: gEdit, next_tab: 'rad2');
+			}
+		}
+        cluster(align_children: align_left, alignment: align_fill)
+        {
+            static_text(name: '$$$/Dialogs/FieldProps/Barcode/Value/CaptionLabel');
+            edit_text(item_id: 'capt', alignment: align_fill);
+            view(align_children: align_top, alignment: align_fill)
+            {   
+                picture(item_id: 'bulb', width: 32, height: 32);
+                static_text(item_id: 'desc', mutliline:true, alignment: align_fill, width: gDescWidth, height: gDescHeight);
+            }
+        }
+	}
+}

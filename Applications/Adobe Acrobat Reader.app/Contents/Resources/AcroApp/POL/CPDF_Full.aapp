@@ -1,0 +1,14 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="Utwórz plik PDF" av2Title="Utwórz plik PDF" description="Utwórz plik PDF z dowolnego formatu pliku" richTooltip="Twórz pliki PDF z obrazów, plików pakietu Microsoft, zeskanowanych plików, stron internetowych lub pustej strony." av2Description="Twórz pliki PDF z obrazów, plików pakietu Microsoft Office i nie tylko" id="CPDFAppFull" majorVersion="1" minorVersion="0">
+	<Commands>
+	</Commands>
+	<Layouts>
+		<Layout name="Default">
+			<TopBarRight align="Right">
+				<Component type="PushButton" buttonType="secondary" name="ExitApp"/>
+			</TopBarRight>
+			<ContentView>
+				<Component name="CreatePDFView" type="Custom"/>
+			</ContentView>
+		</Layout>
+	</Layouts>
+</Application>

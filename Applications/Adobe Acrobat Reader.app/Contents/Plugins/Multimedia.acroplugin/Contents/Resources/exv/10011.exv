@@ -1,0 +1,76 @@
+gPaneWidth		= 600;
+gMaxStaticWidth		= max( zstring_width( zstring: '$$$/Dialogs/Multimedia/RenditionMedia/Name' ), 
+						   zstring_width( zstring: '$$$/Dialogs/Multimedia/RenditionMedia/Location' ), 
+						   zstring_width( zstring: '$$$/Dialogs/Multimedia/RenditionMedia/Mimetype' ),  
+						   zstring_width( zstring: '$$$/Dialogs/Multimedia/RenditionMedia/AltText' ), 
+						   zstring_width( zstring: '$$$/Dialogs/Multimedia/RenditionMedia/TempFile' ) );
+gMaxEditWidth		= 370;
+gChooseButtonWidth	= zstring_width(zstring: '$$$/Dialogs/Multimedia/RenditionMedia/Choose' ) + 45;
+gLineHeight		= 30;
+gEditHeight		= 20;
+
+dialog( target_id: 'locn', first_tab: 'st01' )
+{
+	view( align_children: align_left )
+	{
+		cluster( name: '$$$/Dialogs/Multimedia/RenditionMedia/RenditionSettings', align_children: align_left, alignment: align_fill, dwidth: gPaneWidth )
+		{
+			view( align_children: align_row )
+			{
+				view( align_children: align_right, width: gMaxStaticWidth )
+				{
+					static_text( item_id: 'st01', name: '$$$/Dialogs/Multimedia/RenditionMedia/Name', next_tab: 'name' );
+				}
+
+				edit_text( item_id: 'name', width: gMaxEditWidth, height: gEditHeight, alignment: align_left, next_tab: 'rnnt' );
+			}
+			view( align_children: align_row )
+			{
+				gap(width: gMaxStaticWidth);
+				check_box( item_id: 'rnnt', name: '$$$/Dialogs/Multimedia/RenditionMedia/AddRenditionToNameTree', next_tab: 'st03' );
+			}
+		}
+
+		cluster( name: '$$$/Dialogs/Multimedia/RenditionMedia/MediaSettings', align_children: align_left, alignment: align_fill, dwidth: gPaneWidth )
+		{
+			view( align_children: align_row )
+			{
+				view( align_children: align_right, width: gMaxStaticWidth )
+				{
+					static_text( item_id: 'st03', name: '$$$/Dialogs/Multimedia/RenditionMedia/Location', next_tab: 'locn' );
+				}
+				edit_text( item_id: 'locn', next_tab: 'chos', width: gMaxEditWidth - gChooseButtonWidth, height: gEditHeight );
+				button( item_id: 'chos', name: '$$$/Dialogs/Multimedia/RenditionMedia/Choose', alignment: align_fill, next_tab: 'mlbl');
+			}
+			view( align_children: align_row )
+			{
+				view( align_children: align_right, width: gMaxStaticWidth )
+				{
+					static_text( item_id: 'mlbl', name: '$$$/Dialogs/Multimedia/RenditionMedia/Mimetype', height: gPopupHeight, next_tab: 'mime' );
+				}
+				popup( item_id: 'mime', width: gMaxEditWidth, alignment: align_left, next_tab: 'embd', height: gLineHeight );
+			}
+			view( align_children: align_row )
+			{
+				gap(width: gMaxStaticWidth, height: gLineHeight);
+				check_box( item_id: 'embd', name: '$$$/Dialogs/Multimedia/AddContent/Embed', alignment: align_fill, next_tab: 'st04' );
+			}
+			view( align_children: align_row )
+			{
+				view( align_children: align_right, width: gMaxStaticWidth )
+				{
+					static_text( item_id: 'st04', name: '$$$/Dialogs/Multimedia/RenditionMedia/AltText', next_tab: 'altt' );
+				}
+				edit_text( item_id: 'altt', width: gMaxEditWidth , alignment: align_left, next_tab: 'st05', height: gEditHeight );
+			}
+			view( align_children: align_row )
+			{
+				view( align_children: align_right, width: gMaxStaticWidth )
+				{
+					static_text( item_id: 'st05', name: '$$$/Dialogs/Multimedia/RenditionMedia/TempFile', height: gPopupHeight, next_tab: 'tmpf' );	
+				}
+				popup( item_id: 'tmpf', width: gMaxEditWidth, alignment: align_left, height: gLineHeight );
+			}
+		}
+	}
+}

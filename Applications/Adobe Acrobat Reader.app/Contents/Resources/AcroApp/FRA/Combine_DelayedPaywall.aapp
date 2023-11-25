@@ -1,0 +1,30 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="Combiner des fichiers" av2Title="Combiner des fichiers" id="CombineDelayedRdrApp" description="Combiner plusieurs fichiers dans un seul document PDF" richTooltip="Fusionnez plusieurs fichiers dans un même document PDF pour faciliter le stockage et le partage." av2Description="Fusionner plusieurs fichiers dans un seul document PDF" showLabels="true" requiresDoc="false" majorVersion="1" minorVersion="0">
+	<Layouts>
+		<Layout name="Default">
+		    <TopBar align="Center">
+				<Component name="MultiFileViewInsertPagesDP"/>
+				<Component name="DeleteCombineNodes"/>
+				<Component type="Separator"/>
+				<Component name="MultiFileThumbnailViewSelector"/>
+				<Component name="MultiFileListViewSelector"/>
+				<Component type="Separator"/>
+				<Component name="MultiFileViewOption"/>
+			</TopBar>
+			<ContentView>
+				<Component name="CombineLandingViewRdr" type="Custom" columns="1" hAlign="center" vAlign="center">
+					<Component type="Table" columns="1" hAlign="center" vAlign="center">
+						<Component type="Bitmap" name="CombineInitialGraphicBitmapIcon" width="130" height="130" />
+						<Component type="Label" label="Ajoutez des fichiers en cliquant sur le bouton ci-dessous" fontSize="18" multiline="true" hAlign="center" width="580" />
+						<Component type="Label" label="En sélectionnant le bouton correspondant ci-dessous, vous pouvez également ajouter les fichiers actuellement ouverts." fontSize="18" multiline="true" hAlign="center" width="500" />
+						<Component type="Table" columns="1" hAlign="center" vAlign="center" topOffset="15">
+							<Component type="PushButton" buttonType="buttonCTA" name="CombineAddFilesExecuteDP" label="Ajouter des fichiers" vAlign="center" fontSize="15" bold="true"/>
+						</Component>
+						<Component type="Table" columns="1" hAlign="center" vAlign="center" topOffset="10" rowSpacing="20">
+							<Component type="PushButton" buttonType="buttonPrimaryQuiet" name="CombineAddOpenFilesExecuteDP" label="Ajouter des fichiers ouverts" vAlign="center" fontSize="15" bold="true"/>
+						</Component>
+					</Component>
+				</Component>
+			</ContentView>
+		</Layout>
+	</Layouts>
+</Application>

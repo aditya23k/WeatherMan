@@ -1,0 +1,108 @@
+nButtons = 6;
+buttonSize = 22;
+buttonSizeSmall = 16;
+buttonSpace = 11;
+palleteFont = 2;
+
+allButtonsWidth = nButtons * (buttonSize + buttonSpace) - buttonSpace;
+topListsHeight = gEditTextHeight * 4;
+bottomListsHeight = gEditTextHeight * 8;
+
+dialog(name: '$$$/Dialogs/JSDebugger/Title')
+{
+view(align_children: align_left)
+{
+view(align_children: align_top)
+{
+view(align_children: align_left)
+{
+view(align_children: align_row)
+{
+button(item_id: 'bRes', picture: true, height: buttonSize, width: buttonSize, acc_title : '$$$/Dialogs/JSDebugger/IDS_RESUME_BUTTON');
+button(item_id: 'bGrL', picture: true, height: buttonSize, width: buttonSize, acc_title : '$$$/Dialogs/JSDebugger/IDS_STOP_BUTTON_STRING');
+button(item_id: 'bQut', picture: true, height: buttonSize, width: buttonSize, acc_title : '$$$/Dialogs/JSDebugger/IDS_QUIT_BUTTON');
+button(item_id: 'bSOv', picture: true, height: buttonSize, width: buttonSize, acc_title : '$$$/Dialogs/JSDebugger/IDS_STEPOVER_BUTTON');
+button(item_id: 'bSIn', picture: true, height: buttonSize, width: buttonSize, acc_title : '$$$/Dialogs/JSDebugger/IDS_STEPINTO_BUTTON');
+button(item_id: 'bSOu', picture: true, height: buttonSize, width: buttonSize, acc_title : '$$$/Dialogs/JSDebugger/IDS_STEPOUT_BUTTON');
+}
+cluster(item_id: 'cScr', name: '$$$/Dialogs/JSDebugger/Scripts', align_children: align_top)
+{
+hier_list_box(item_id: 'hlSc', dwidth: max_char_width() * 16, dheight: topListsHeight, hier_icons:true);
+}
+}
+view(align_children: align_left)
+{
+view(align_children: align_row)
+{
+static_text(item_id: 'stCS', name: '$$$/Dialogs/JSDebugger/Stack');
+popup(item_id: 'puCS', dwidth: max_char_width() * 6, dheight: gEditTextHeight);
+}
+cluster(item_id: 'cIns', name: '$$$/Dialogs/JSDebugger/Options', align_children: align_left)
+{
+view(align_children: align_left)
+{
+popup(item_id: 'puIn', dwidth: max_char_width() * 8, dheight: gEditTextHeight, font_id: palleteFont);
+}
+view(align_children: align_offscreen)
+{
+view(align_children: align_left)
+{
+mclv(item_id: 'mcGv', dwidth: max_char_width() * 16, dheight: topListsHeight);
+}
+view(align_children: align_left)
+{
+mclv(item_id: 'mcLv', dwidth: max_char_width() * 16, dheight: topListsHeight);
+}
+view(align_children: align_left)
+{
+mclv(item_id: 'mcWa', dwidth: max_char_width() * 16, dheight: topListsHeight);
+}
+view(align_children: align_left)
+{
+hier_list_box(item_id: 'hlBp', dwidth: max_char_width() * 16, dheight: topListsHeight, hier_icons:true);
+}
+}
+view(alignment:align_right, align_children: align_row)
+{
+button(item_id: 'bED1', picture: true, height: buttonSizeSmall, width: 4+buttonSizeSmall ,acc_title : '$$$/Dialogs/JSDebugger/IDS_EDITVARIABLE_BUTTON_STRING');
+button(item_id: 'bADD', picture: true, height: buttonSizeSmall, width: 4+buttonSizeSmall ,acc_title : '$$$/Dialogs/JSDebugger/IDS_ADDWATCH_BUTTON_STRING');
+button(item_id: 'bDL1', picture: true, height: buttonSizeSmall, width: 4+buttonSizeSmall ,acc_title : '$$$/Dialogs/JSDebugger/IDS_DELETEWATCH_BUTTON_STRING');
+}
+}
+}
+}
+view(align_children: align_left)
+{
+cluster(item_id: 'cVie', name: '$$$/Dialogs/JSDebugger/View', align_children: align_left)
+{
+view(align_children: align_left)
+{
+popup(item_id: 'puVi', dwidth: max_char_width() * 15, dheight: gEditTextHeight, font_id: palleteFont);
+}
+view(align_children: align_offscreen)
+{
+view(align_children: align_left)
+{
+list_box(item_id: 'lbSc', dheight: bottomListsHeight, dwidth: max_char_width() * 30, font_id: 13,style:2);
+}
+view(alignment:align_right, align_children:align_row)
+{
+button(item_id: 'bGL1', picture: true, height: buttonSizeSmall, width: 4+buttonSizeSmall,acc_title : '$$$/Dialogs/JSDebugger/IDS_GOTO_TITLE');
+button(item_id: 'bED2', picture: true, height: buttonSizeSmall, width: 4+buttonSizeSmall,acc_title : '$$$/Dialogs/JSDebugger/IDS_EDITSCRIPT_BUTTON_STRING');
+}
+view(align_children: align_left)
+{
+edit_text(item_id: 'etCo', dheight: bottomListsHeight, dwidth: max_char_width() * 30, multiline: true, font_id: 13);
+}
+view(alignment:align_right, align_children:align_row)
+{
+button(item_id: 'bGL2', picture: true, height: buttonSizeSmall, width: 4+buttonSizeSmall,acc_title : '$$$/Dialogs/JSDebugger/IDS_GOTO_TITLE');
+button(item_id: 'bDL2', picture: true, height: buttonSizeSmall, width: 4+buttonSizeSmall,acc_title : '$$$/Dialogs/JSDebugger/IDS_CLEAR_STR');
+}
+}
+}
+static_text(item_id: 'stLL');
+}
+}
+}
+

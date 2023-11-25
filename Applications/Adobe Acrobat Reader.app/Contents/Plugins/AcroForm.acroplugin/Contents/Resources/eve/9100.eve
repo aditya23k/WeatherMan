@@ -1,0 +1,44 @@
+dialog(name: '$$$/Dialogs/LiveCycleWarning',
+	back_color: @dialog_background,
+	margin_width:0, margin_height:0)
+{
+	panel(identifier:'pafr',
+		margin_width:20, margin_height:20,
+		horizontal: align_fill)
+	{
+		column(spacing: "0")
+		{
+			row(spacing: "0",
+				vertical: align_center,
+				horizontal: align_left)
+			{
+				picture(identifier: 'wnic', height: 32, width: 32);
+				gap(width: 10);
+				static_text(identifier: 'msg1',
+							width: 420, wrap: true,
+							name: '$$$/Dialogs/LiveCycleWarning/WarningMessage1');
+			}
+
+			gap(dheight: 10);
+
+			row(spacing: "0",
+				vertical: align_center,
+				horizontal: align_left)
+			{
+				gap(width: 42);
+				hyperlink(identifier: 'lnk1', 
+						  name: '$$$/Dialogs/LiveCycleWarning/GoURL');
+			}
+
+			gap(dheight: 5);
+
+			row(spacing: "0",
+				width: 420,
+				vertical: align_center,
+				horizontal: align_right)
+			{
+				ok();
+			}
+		}
+	}
+}

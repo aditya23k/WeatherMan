@@ -1,0 +1,20 @@
+dialog(name: '$$$/Dialogs/DistributeProgress=Distribute Form')
+{
+    column(horizontal: align_left, margin_width: 30)
+    {
+        gap(height:10);
+        static_text(name: '$$$/Dialogs/DistributeProgress/Wait=Please wait...', 
+                    font_id: @dialog_font_bold);
+        gap(height:10);
+        
+        static_text(identifier: 'desc', name: '', width: 350);
+        gap(height:10);
+        
+        progress_bar(identifier: 'pbar', dheight: 20, dwidth: 350);
+        gap(height:100);
+        
+        row(horizontal: align_right) {
+            button(identifier: 'cncl', name: '$$$/ControlsStrings/Cancel');
+        }
+    }
+}

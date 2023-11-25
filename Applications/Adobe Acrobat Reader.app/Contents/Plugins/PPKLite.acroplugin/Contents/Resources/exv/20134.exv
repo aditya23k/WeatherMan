@@ -1,0 +1,9 @@
+dialog()
+{
+	view(width: gPanelWidth - 20, align_children: align_left)
+	{
+	    static_text(item_id: 'note', alignment: align_fill);
+	    gap(height: 15);
+	    mclv(item_id: 'list', alignment: align_fill, height: gEditTextHeight * 6);
+	}
+}

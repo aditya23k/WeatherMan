@@ -1,0 +1,76 @@
+gMaxEditWidth		= 300;
+gMyPopupWidth		= gMaxEditWidth - gPopupEditPad - gPopupFudge;
+gMaxStaticWidth		= max( zstring_width( zstring: '$$$/Dialogs/Multimedia/AddContent/Location'),
+						   zstring_width( zstring: '$$$/Dialogs/Multimedia/AddContent/Mimetype' ) );
+
+gFileWidth			= gCheckBoxWidth + gCheckRadioSpace + zstring_width( zstring: '$$$/Dialogs/Multimedia/PosterOptions/File' );
+gMaxPosterPathWidth = gMaxStaticWidth + gMaxEditWidth - gFileWidth;
+
+dialog( name: '$$$/Dialogs/Multimedia/AddContent', target_id: 'locn', first_tab: 'use6' )
+{
+	group()
+	{
+		cluster( item_id: 'cls1', name: '$$$/Dialogs/Multimedia/AddContent/Content' )
+		{
+			view()
+			{
+				static_text( item_id: 'st01', name: '$$$/Dialogs/Multimedia/AddContent/SelectType', next_tab: 'use6' );
+				view( align_children: align_row )
+				{
+					view( alignment: align_left )
+					{
+						gap();
+					}
+
+					view( alignment: align_right )
+					{
+						radio( item_id: 'use6', group_id: 'rgrp', name: '$$$/Dialogs/Multimedia/AddContent/Acro6', next_tab: 'use5' );
+						radio( item_id: 'use5', group_id: 'rgrp', name: '$$$/Dialogs/Multimedia/AddContent/Acro5', next_tab: 'LocT' );
+					}
+				}
+			}
+
+			gap();
+
+			view()
+			{
+				view( align_children: align_left, alignment: align_fill)
+				{
+					view( align_children: align_row)
+					{
+						static_text( item_id: 'LocT', name: '$$$/Dialogs/Multimedia/AddContent/Location', height: gEditTextHeight, width: gMaxStaticWidth, alignment: align_right, next_tab: 'locn');
+						edit_text( item_id: 'locn', width: gMaxEditWidth, alignment: align_fill, next_tab: 'mopn' );
+						button( item_id: 'mopn', name: '$$$/Dialogs/Multimedia/AddContent/ChooseMedia', next_tab: 'MimT' );
+					}
+
+					view( align_children: align_row)
+					{
+						static_text( item_id: 'MimT', name: '$$$/Dialogs/Multimedia/AddContent/Mimetype', height: gPopupHeight, width: gMaxStaticWidth, alignment: align_right, next_tab: 'mmtp' );
+						popup( item_id: 'mmtp', next_tab: 'snap', width: gMyPopupWidth );
+					}
+				}
+
+				check_box( item_id: 'snap', alignment: align_left, name: '$$$/Dialogs/Multimedia/AddContent/SnapProps', next_tab: 'memb' );
+				check_box( item_id: 'memb', alignment: align_left, name: '$$$/Dialogs/Multimedia/AddContent/Embed', next_tab: 'pno ' );
+			}
+		}
+
+		cluster( item_id: 'cls2', name: '$$$/Dialogs/Multimedia/AddContent/Poster' )
+		{
+			radio( item_id: 'pno ', group_id: 'rgr1', name: '$$$/Dialogs/Multimedia/AddContent/NoPoster', next_tab: 'pemb');
+			radio( item_id: 'pemb', group_id: 'rgr1', name: '$$$/Dialogs/Multimedia/AddContent/RetrieveEmbed', next_tab: 'pfil');
+			radio( item_id: 'pfil', group_id: 'rgr1', name: '$$$/Dialogs/Multimedia/AddContent/File', next_tab: 'file');
+
+			view( align_children: align_row, alignment: align_fill )
+			{
+				static_text( item_id: 'file', name: '$$$/Dialogs/Multimedia/PosterOptions/File', width: gFileWidth, alignment: align_right, next_tab: 'pnam' );
+				static_text( item_id: 'pnam', width: gMaxPosterPathWidth, alignment: align_left, next_tab: 'popn' );
+				button( item_id: 'popn', name: '$$$/Dialogs/Multimedia/AddContent/ChoosePoster', alignment: align_right);
+			}
+		}
+
+		gap();
+
+		ok_cancel();
+	}
+}

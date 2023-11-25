@@ -1,0 +1,14 @@
+gTitle = '$$$IDS_TOOLBAR_SUBMIT_MAIL';
+
+gTextBoxWidth = max_char_width() * 24;
+gTextBoxHeight = gStaticTextHeight * 6;
+
+dialog(name: gTitle)
+{
+	view(align_children: align_left)
+	{
+		static_text(item_id: 'stxt', width: gTextBoxWidth);
+		edit_text(item_id: 'etxt', width: gTextBoxWidth, height: gTextBoxHeight, multiline: true, readonly: true);
+		ok_cancel();
+	}
+}

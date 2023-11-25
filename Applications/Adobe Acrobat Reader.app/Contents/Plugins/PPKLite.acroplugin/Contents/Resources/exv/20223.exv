@@ -1,0 +1,37 @@
+gMaxTopStaticWidth = max( 
+	zstring_width(zstring: '$$$/Dialogs/DataRequest/Message/To'),
+	zstring_width(zstring: '$$$/Dialogs/DataRequest/Message/Subject') );
+gMinControlWidth = max(
+		gMaxTopStaticWidth + 10 + ( max_char_width() * 20 ),
+		max_char_width() * 29,
+		zstring_width(zstring: '$$$/Dialogs/DataRequest/Request/CheckBox') + 20 );
+
+dialog(name: '$$$/Dialogs/DataRequest', target_id: 'name' )
+{
+    group()
+	{
+		view(align_children: align_top, alignment: align_fill)
+		{
+			picture(item_id: 'icon', width: 20, height: 20);
+			static_text(item_id: 'note', alignment: align_fill);
+		}
+
+ 		cluster( name: '$$$/Dialogs/DataRequest/Message', align_children: align_left, alignment: align_fill)
+		{
+			view(align_children: align_row, alignment: align_fill)
+			{
+				static_text(name: '$$$/Dialogs/DataRequest/Message/To', width: gMaxTopStaticWidth, alignment: align_right);
+				edit_text(item_id: 'to  ', alignment: align_fill);
+			}
+			view(align_children: align_row, alignment: align_fill)
+			{
+				static_text(name: '$$$/Dialogs/DataRequest/Message/Subject', width: gMaxTopStaticWidth, alignment: align_right);
+				edit_text(item_id: 'subj', alignment: align_fill);
+			}
+			edit_text(item_id: 'body', alignment: align_fill, 
+			height: gStaticTextHeight * 12, multiline: true, width: gMinControlWidth );
+		}
+
+		ok_cancel( ok_name: '$$$/Dialogs/DataRequest/OkayButton' );
+	}
+}

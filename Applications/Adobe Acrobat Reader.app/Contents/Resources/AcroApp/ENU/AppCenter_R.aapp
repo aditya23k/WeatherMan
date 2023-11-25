@@ -1,0 +1,12 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="Tools" av2Title="All tools" id="ToolsCenter" majorVersion="1" minorVersion="0">
+	<Layouts>
+		<Layout name="Default" rhpModes="collapsed">
+			<TopBarRight align="Right">
+				<Component type="PushButton" buttonType="secondary" av2ShowUpsellButton="true" name="ExitApp"/>
+			</TopBarRight>
+			<ContentView>
+				<Component name="AppCenterView" type="Custom"/>
+			</ContentView>
+		</Layout>
+	</Layouts>
+</Application>

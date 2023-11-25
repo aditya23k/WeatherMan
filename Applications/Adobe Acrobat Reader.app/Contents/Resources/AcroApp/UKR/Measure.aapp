@@ -1,0 +1,16 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="Вимірювання" av2Title="Вимірювання об’єктів" description="Вимірюйте відстань, області та периметр об’єктів" av2Description="Визначайте відстань, площу й периметр об’єктів" id="MeasureApp" showLabels="true" requiresDoc="true" majorVersion="1" minorVersion="0">
+	<Commands>
+			<Command name="Measure"/>
+			<Command name="UserProperties"/>
+			<Command name="GeoLocation"/>
+	</Commands>
+	<Layouts>
+		<Layout name="Default" OpenInDocumentTab="true">
+			<TopBar align="Center">
+				<Component name="Measure"/>
+				<Component name="UserProperties"/>
+				<Component name="GeoLocation"/>
+			</TopBar>
+		</Layout>
+	</Layouts>
+</Application>

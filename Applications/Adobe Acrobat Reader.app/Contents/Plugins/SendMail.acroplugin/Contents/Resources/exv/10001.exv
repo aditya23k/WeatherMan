@@ -1,0 +1,17 @@
+gMaxPasswordWidth = 300;
+
+dialog( name: '$$$/Dialogs/SendMail/Password', target_id: 'pass', first_tab: 'pass' )
+{
+	view( align_children: align_left, alignment: align_fill )
+	{
+		view( align_children: align_row )
+		{
+			static_text( item_id: 'PasP', name: '$$$/Dialogs/SendMail/Password/Password' );
+			edit_text( item_id: 'pass', password: true, width: gMaxPasswordWidth, alignment: align_fill, next_tab: 'ok  ' );
+		}
+
+		gap();
+
+		ok_cancel();
+	}
+}

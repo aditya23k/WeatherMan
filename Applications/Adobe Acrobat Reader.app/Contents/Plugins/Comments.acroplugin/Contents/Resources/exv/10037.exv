@@ -1,0 +1,50 @@
+mNotificationBezelWidth = zstring_width(zstring:'$$$/Prefs/Tracker/NotificationBezel') + 
+		         max(zstring_width(zstring: '$$$IDS_PRODUCT_VARIANT_ACROBAT'),
+			zstring_width(zstring: '$$$IDS_PRODUCT_VARIANT_READER'))
+		        + gCheckBoxWidth + gRadioCheckBoxWidthPad + gGap;
+
+dialog(name: '$$$/Prefs/Tracker', margin_height: 0, margin_width: 0)
+{
+	view(align_children: align_left)
+	{
+		cluster(item_id: 'srdc', name: '$$$/Prefs/Tracker/SharedReviewDataCollGroup', dwidth: gPrefsPanelWidth)
+		{
+			static_text(name: '$$$/Prefs/Tracker/SyncFreq');
+			view(align_children: align_row)
+			{
+				gap(width: 10);
+				static_text(item_id: 'blbl', width: max_char_width()*20, wrap_name: true, next_tab: 'bfrq');
+				slider(	item_id: 'bfrq', width: max_char_width()*10);
+			}
+			gap(height: gStaticTextHeight/2);
+			static_text(name: '$$$/Prefs/Tracker/SyncSuspend');
+			view(align_children: align_row)
+			{
+				gap(width: 10);
+				static_text(item_id: 'wfsl', width: max_char_width()*20, wrap_name: true, next_tab: 'wfsw');
+				slider( item_id: 'wfsw', width: max_char_width()*10);
+			}
+			gap(height: gStaticTextHeight/2);
+			static_text(name: '$$$/Prefs/Tracker/RemoveServer');
+			view(align_children: align_row)
+			{
+				popup(item_id: 'srvr', width: max_char_width()*20);
+				button(item_id: 'rmvs', name: '$$$/Prefs/Tracker/RemoveServerProfile');
+			}
+		}
+		cluster(item_id: 'notg', name: '$$$/Prefs/Tracker/NotificationGroup', dwidth: gPrefsPanelWidth)
+		{
+			check_box(item_id: 'ncfm', name: '$$$/Prefs/Tracker/Notification');
+			check_box(item_id: 'ncbm', name: '$$$/Prefs/Tracker/NotificationBezel', width:mNotificationBezelWidth);
+		}
+		cluster(item_id: 'rssg', name: '$$$/Prefs/Tracker/RSSGroup', dwidth: gPrefsPanelWidth)
+		{
+			check_box(item_id: 'erss', name: '$$$/Prefs/Tracker/EnableRSS');
+		}
+		cluster(item_id: 'crdg', name: '$$$/Prefs/Tracker/StoredCredentials', dwidth: gPrefsPanelWidth)
+		{
+			 button(item_id: 'rest', name: '$$$/Prefs/Tracker/ClearAllStoredCredentials');
+		}
+		link_text(item_id: 'clnk', wrap: true, name: '$$$/Prefs/Tracker/CollabPrefsLink');
+	}
+}	

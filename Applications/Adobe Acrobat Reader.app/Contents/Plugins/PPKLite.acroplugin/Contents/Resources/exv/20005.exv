@@ -1,0 +1,77 @@
+gPromptWidth = max(
+	zstring_width(zstring: '$$$/Dialogs/eEnvelope/Identity/Login'),
+	zstring_width(zstring: '$$$/Dialogs/DirUI/QName'),
+	zstring_width(zstring: '$$$/Dialogs/eEnvelope/Identity/Title'),
+	zstring_width(zstring: '$$$/Dialogs/eEnvelope/Identity/OrgName'),
+	zstring_width(zstring: '$$$/Dialogs/eEnvelope/Identity/OrgUnit'),
+	zstring_width(zstring: '$$$/Dialogs/eEnvelope/Identity/Email')) + gGap;
+	
+theEditWidth = max_char_width() * 20;
+	
+dialog(margin_height: 0, margin_width: 0)
+{
+	view(alignment: align_fill, align_children: align_left)
+	{
+		gap(height: gGap);
+		static_text(item_id: 'note', font_id: 5, alignment: align_fill);
+		cluster(item_id: 'clst', name: '$$$/Dialogs/eEnvelope/Identity/Cluster', alignment: align_fill)
+		{
+			view(alignment: align_fill, align_children: align_row)
+			{
+				view(align_children: align_right, width: gPromptWidth)
+				{
+					static_text(name: '$$$/Dialogs/eEnvelope/Identity/Login');
+				}
+				static_text(item_id: 'logn', width: theEditWidth);
+			}
+			
+			view(alignment: align_fill, align_children: align_row)
+			{
+				view(align_children: align_right, width: gPromptWidth)
+				{
+					static_text(name: '$$$/Dialogs/eEnvelope/Identity/Name');
+				}
+				edit_text(item_id: 'name', width: theEditWidth);
+			}
+			
+			view(alignment: align_fill, align_children: align_row)
+			{
+				view(align_children: align_right, width: gPromptWidth)
+				{
+					static_text(name: '$$$/Dialogs/eEnvelope/Identity/Title');
+				}
+				edit_text(item_id: 'titl', width: theEditWidth);
+			}
+			
+			view(alignment: align_fill, align_children: align_row)
+			{
+				view(align_children: align_right, width: gPromptWidth)
+				{
+					static_text(name: '$$$/Dialogs/eEnvelope/Identity/OrgName');
+				}
+				edit_text(item_id: 'orgN', width: theEditWidth);
+			}
+			
+			view(alignment: align_fill, align_children: align_row)
+			{
+				view(align_children: align_right, width: gPromptWidth)
+				{
+					static_text(name: '$$$/Dialogs/eEnvelope/Identity/OrgUnit');
+				}
+				edit_text(item_id: 'orgU', width: theEditWidth);
+			}
+			
+			view(alignment: align_fill, align_children: align_row)
+			{
+				view(align_children: align_right, width: gPromptWidth)
+				{
+					static_text(name: '$$$/Dialogs/eEnvelope/Identity/Email');
+				}
+				edit_text(item_id: 'mail', width: theEditWidth);
+			}
+		}
+		
+		check_box(item_id: 'show', name: '$$$/Dialogs/eEnvelope/Identity/DoNotShow');
+		gap(dheight: gStaticTextHeight*2);
+	}
+}

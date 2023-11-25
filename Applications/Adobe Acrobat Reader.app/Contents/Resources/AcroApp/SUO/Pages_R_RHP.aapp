@@ -1,0 +1,27 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="Järjestä sivut" av2Title="Järjestä sivut" id="PagesRdrApp" description="Poista, lisää, pura tai kierrä sivuja" richTooltip="Luo täydellinen PDF-tiedosto. Järjestele, kierrä, poista, lisää tai pura sivuja." av2Description="Poista, kierrä, pura, lisää tai järjestele sivuja" majorVersion="1" minorVersion="0" inAppUpsellEnabled="true">
+	<Commands>
+			<Command name="DeleteSelectedPagesRdr"/>
+			<Command name="RotatePagesCCWRdr"/>
+			<Command name="RotatePagesCWRdr"/>
+			<Command name="ExtractSelectedPagesRdr"/>
+			<Command name="InsertPagesCmdForPagesAppRdr"/>
+			<Command name="ReplacePagesRdr"/>
+			<Command name="SplitDocumentCmdForPagesAppRdr"/>
+			<Command name="MorePageManipulationOptionsRdr"/>
+	  		<Command name="BatesNumberingRdr" />
+     		<Command name="CropPagesRdr" />
+      		<Command name="SetTransitionsRdr" />
+      		<Command name="PageTemplatesRdr" />
+      		<Command name="NumberPagesRdr" />
+      		<Command name="PrintRdr" />
+      		<Command name="PagePropertiesRdr" />
+
+	</Commands>
+	<Layouts>
+		<Layout name="Default">
+			<ContentView>
+				<Component name="PagesAppRHPView" fontSize="12"/>
+			</ContentView>
+		</Layout>
+	</Layouts>
+</Application>

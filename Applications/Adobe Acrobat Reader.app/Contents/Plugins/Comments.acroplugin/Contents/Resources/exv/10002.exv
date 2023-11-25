@@ -1,0 +1,17 @@
+dialog(name: '$$$/Dialogs/RecordSound')
+{
+	view(align_children: align_left)
+	{
+		cluster ()
+		{
+			view(align_children: align_row)
+			{
+				button(item_id: 'recd', name: '$$$/Dialogs/RecordSound/RecordButton');
+				button(item_id: 'stop', name: '$$$/Dialogs/RecordSound/StopButton');
+				button(item_id: 'play', name: '$$$/Dialogs/RecordSound/PlayButton');
+			}
+		}
+
+		ok_cancel_other(other_name: '$$$/Dialogs/RecordSound/BrowseButton');
+	}
+}

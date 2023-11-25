@@ -1,0 +1,13 @@
+dialog(name: '$$$/Prefs/ARM', margin_height: 0, margin_width: 0)
+{
+	view(align_children: align_left, dheight: gPrefsPanelHeight, dwidth: gPrefsPanelWidth)
+	{
+		cluster(name: '$$$/Prefs/ARM/CheckModeCluster', dwidth: gPrefsPanelWidth, align_children: align_left)
+		{
+			static_text(item_id: 'secm', name: '$$$/Prefs/ARM/SecurityMessage', alignment:align_fill);
+			check_box(item_id: 'facb', name: '$$$/Prefs/ARM/FullAutoRadio');
+
+			check_box(item_id: 'iopt', name: '$$$/Prefs/ARM/InstallOptResources');
+		}
+	}
+}

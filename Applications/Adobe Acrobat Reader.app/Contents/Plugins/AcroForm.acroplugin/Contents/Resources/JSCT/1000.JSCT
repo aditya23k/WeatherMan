@@ -1,0 +1,64 @@
+//@@SUBMITURL "%SUBMIT_URL%"
+
+/**************************************************************
+AdobePatentID="B643"
+**************************************************************/
+var AdobePatentID = "AdobePatentID=\"B643\"";
+
+// initiate some constants
+var METADATA_ANNOT_NAME     = "adhocFormState";
+var PROP_RESPONDENT_NAME    = "respondentName";
+var PROP_RESPONDENT_EMAIL   = "respondentEmail";
+
+var currentDoc;
+if (typeof(xfa) == "object")
+    currentDoc = event.target;
+else
+    currentDoc = this;
+
+// Only on Viewer/Reader older than 9.0, we'll do the following tasks.
+var bAnonymous = %ALLOW_ANONYMOUS%;
+var bContinue = true;
+if (app.viewerVersion < 9.0) {
+
+    // show the email/name dialog if not anonymous
+    if (!bAnonymous && !currentDoc.dynamicXFAForm) {
+        var result = currentDoc.askUserIdentity(currentDoc);
+        if (result == null) 
+            bContinue = false;
+        else {    
+            var annot = currentDoc.getAnnot(0, METADATA_ANNOT_NAME);
+            if (annot != null) {
+                var arrProps = new Array();
+                arrProps = annot.contents.split(";");
+                currentDoc.setProperty(arrProps, PROP_RESPONDENT_NAME, result.name);
+                currentDoc.setProperty(arrProps, PROP_RESPONDENT_EMAIL, result.email);
+                annot.contents = arrProps.join(";");
+            }
+        }
+    }
+    
+    // show the select client dialog
+    if (bContinue) {
+        var result = currentDoc.askEmailClient(currentDoc);
+        if (result == null)
+            bContinue = false;
+        else if (!result.send)  {
+            app.execMenuItem("SaveAs");
+            bContinue = false;
+        }
+    }
+}
+
+// submit the form
+if (bContinue) {
+    var submitURL;
+    if (app.viewerVersion < 9.0)
+        submitURL = "%SUBMIT_URL_LESS_A9%";
+    else
+        submitURL = "%SUBMIT_URL%";
+    currentDoc.submitForm({
+        cURL: submitURL,
+        cSubmitAs: "PDF"
+    });
+}

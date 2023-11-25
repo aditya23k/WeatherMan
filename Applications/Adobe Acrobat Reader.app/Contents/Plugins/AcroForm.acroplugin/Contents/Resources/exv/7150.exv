@@ -1,0 +1,32 @@
+dialog(name: '$$$/Dialogs/SelAppear')
+{
+	view(align_children: align_fill)
+	{
+		view(align_children: align_row, margin_height:0)
+		{
+			view(align_children: align_left, margin_height:0) 
+			{
+				static_text(item_id: 'txt2', name: '$$$/Dialogs/SelAppear/File', spacing:0);
+				static_text(item_id: 'dum1', name: '', spacing:0);
+			}
+			view(align_children: align_left, margin_height:0)
+			{
+				edit_text(item_id: 'edit', width: max_char_width() * 15, height: gEditTextHeight, readonly: true, spacing:0);
+				static_text(item_id: 'dum2', name: '', spacing:0);				
+			} 
+
+			view(align_children: align_right, margin_height:0)
+			{
+				button(item_id: 'brow', name: '$$$/Dialogs/SelAppear/Browse', spacing:0);
+				link_text(item_id: 'hypr', name: '$$$/Dialogs/SelAppear/Clear', alignment:align_right, spacing:0);
+			}						
+		}
+		
+		cluster(item_id: 'clu1', name: '$$$/Dialogs/SelAppear/Sample')
+		{
+			mclv(item_id: 'list', width: max_char_width()*25, height: gStaticTextHeight*18, fixed_sort_order: true);
+			static_text(item_id: 'txt1', width: max_char_width() * 19, alignment: align_right);
+		}
+		ok_cancel();
+	}
+}

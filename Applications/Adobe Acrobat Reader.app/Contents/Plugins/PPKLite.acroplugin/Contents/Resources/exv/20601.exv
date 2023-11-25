@@ -1,0 +1,98 @@
+gPopupWidth = max(
+	zstring_width( zstring: '$$$/Dialogs/EDCSelectPolicy/AllPolicies' ),
+	zstring_width( zstring: '$$$/Dialogs/EDCSelectPolicy/UserPolicies' ),
+	zstring_width( zstring: '$$$/Dialogs/EDCSelectPolicy/CorporatePolicies' ) ) + gGap;
+	
+gListHeight = gEditTextHeight * 6;
+
+gListWidth = max_char_width() * 48;
+
+gLabelWidth = max (
+	zstring_width( zstring: '$$$/Dialogs/EDCSelectPolicy/PolicyName' ),
+	zstring_width( zstring: '$$$/Dialogs/EDCSelectPolicy/Comment' ),
+	zstring_width( zstring: '$$$/Dialogs/EDCSelectPolicy/EncryptType' ),
+	zstring_width( zstring: '$$$/Dialogs/EDCSelectPolicy/Type' ),
+	zstring_width( zstring: '$$$/Dialogs/EDCSelectPolicy/ModDate' )	);
+	
+gLongInfoWidth = gListWidth - (gLabelWidth + gGap*8);
+
+gRightLabelWidth = max (
+	zstring_width( zstring: '$$$/Dialogs/EDCSelectPolicy/Audit' ),
+	zstring_width( zstring: '$$$/Dialogs/EDCSelectPolicy/ExpDate' ) );
+	
+gInfoWidth = (gLongInfoWidth - gRightLabelWidth)/2 - gGap*4;
+
+theButtonWidth = max(
+	zstring_width( zstring: '$$$IDS_SECPOLICY_NEW_BUTTON'),
+	zstring_width( zstring: '$$$IDS_SECPOLICY_EDIT_BUTTON'),
+	zstring_width( zstring: '$$$IDS_SECPOLICY_VIEW_BUTTON'),
+	zstring_width( zstring: '$$$IDS_SECPOLICY_COPY_BUTTON'),
+	zstring_width( zstring: '$$$IDS_SECPOLICY_DELETE_BUTTON'),
+	zstring_width( zstring: '$$$IDS_SECPOLICY_FAVORITE_BUTTON'),
+	zstring_width( zstring: '$$$IDS_SECPOLICY_REFRESH_BUTTON')) + 29;
+
+dialog( name: '$$$/Dialogs/EDCSelectPolicy/Title'  )
+{
+	view(alignment: align_fill)
+	{
+		view(align_children: align_row, alignment: align_fill)
+		{
+			button(item_id: 'New_', picture: true, width: theButtonWidth, height: 26);
+			button(item_id: 'Copy', picture: true, width: theButtonWidth, height: 26);
+			gap(alignment: align_fill);
+			static_text(name: '$$$/Dialogs/EDCSelectPolicy/FilterPrompt', alignment: align_right);
+			popup(item_id: 'Filt', width: gPopupWidth);
+		}
+		
+		mclv(item_id: 'Pols', height: gListHeight, width: gListWidth);
+		
+		cluster(name:'$$$/Dialogs/EDCSelectPolicy/PolicyDetails', alignment: align_fill, align_children: align_fill)
+		{
+			view(align_children: align_row)
+			{
+				view(alignment: align_right)
+				{
+					static_text(name: '$$$/Dialogs/EDCSelectPolicy/PolicyName', alignment: align_right, width: gLabelWidth);
+					static_text(name: '$$$/Dialogs/EDCSelectPolicy/Comment', alignment: align_right, width: gLabelWidth);
+					static_text(name: '$$$/Dialogs/EDCSelectPolicy/EncryptType', alignment: align_right, width: gLabelWidth);
+				}
+				
+				view( alignment: align_left)
+				{
+					static_text(item_id: 'pnam', alignment: align_left, width: gLongInfoWidth );
+					static_text(item_id: 'pcmt', alignment: align_left, width: gLongInfoWidth );
+					static_text(item_id: 'pect', alignment: align_left, width: gLongInfoWidth );
+				}
+			}
+			view(align_children: align_row)
+			{
+				view(alignment: align_right)
+				{
+					static_text(name: '$$$/Dialogs/EDCSelectPolicy/Type', alignment: align_right, width: gLabelWidth);
+					static_text(name: '$$$/Dialogs/EDCSelectPolicy/ModDate', alignment: align_right, width: gLabelWidth);
+				}
+			
+				view( alignment: align_left)
+				{
+					static_text(item_id: 'ptyp', alignment: align_left, width: gInfoWidth );
+					static_text(item_id: 'pmdt', alignment: align_left, width: gInfoWidth );
+				}
+				gap( width: gGap * 2 );
+				view(alignment: align_right)
+				{
+					static_text(item_id: 'ladt', name: '$$$/Dialogs/EDCSelectPolicy/Audit', alignment: align_right,  width: gRightLabelWidth );
+					static_text(item_id: 'lxdt', name: '$$$/Dialogs/EDCSelectPolicy/ExpDate', alignment: align_right,  width: gRightLabelWidth );
+				}
+			
+				view( alignment: align_left)
+				{
+					static_text(item_id: 'padt', alignment: align_left, width: gInfoWidth );
+					static_text(item_id: 'pxdt', alignment: align_left, width: gInfoWidth );
+				}
+				
+			}
+	
+		}
+		ok_cancel();
+	}
+}

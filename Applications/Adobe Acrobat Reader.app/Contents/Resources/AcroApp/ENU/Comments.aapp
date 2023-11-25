@@ -1,0 +1,419 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="Comment" av2Title="Add comments" description="Add comments with highlights, sticky notes, and markup tools" av2Description="Add sticky notes, highlights, and other annotations" richTooltip = "Mark up a PDF with text boxes, sticky notes, highlights, and other annotations." id="CommentApp" requiresDoc="true" majorVersion="1" minorVersion="0" manualLayout="true">
+	<Commands>
+			<Command name="Text"/>
+			<Command name="Highlight"/>
+			<Command name="FreeTextTypewriter"/>
+			<Command name="Stamp"/>
+			<Command name="FileAttachment"/>
+			<Command name="Sound"/>
+			<Command name="Caret"/>
+			<Command name="Replace"/>
+			<Command name="StrikeOut"/>
+			<Command name="Underline"/>
+			<Command name="FreeText"/>
+			<Command name="FreeTextCallout"/>
+			<Command name="Line"/>
+			<Command name="LineArrow"/>
+			<Command name="Circle"/>
+			<Command name="Square"/>
+			<Command name="PolygonCloud"/>
+			<Command name="Polygon"/>
+			<Command name="PolyLine"/>
+			<Command name="Ink"/>
+			<Command name="EraseInk" showInAV2UI="false"/>
+			<Command name="TextPdfnext"/>
+			<Command name="HighlightPdfnext"/>
+			<Command name="UnderlinePdfnext"/>
+			<Command name="StrikeOutPdfnext"/>
+			<Command name="ReplacePdfnext"/>
+			<Command name="SortCommentsMenu"/>
+			<Command name="FilterCommentsMenu"/>
+			<Command name="CommentListMenu"/>
+			<Command name="CommentAppMenuExpandDrawingTools"/>
+			<Command name="CommentAppMenuCollapseDrawingTools"/>
+			<Command name="CommentAppMenuActiveDrawingTool"/>
+			<Command name="CommentAppMenuAttachmentTool"/>
+			<Command name="CommentAppKeepToolSticky" showInAV2UI="false"/>
+			<Command name="ColorPickerCmd" showInAV2UI="false"/>
+			<Command name="LineThicknessCmd" showInAV2UI="false"/>
+			<Command name="TextPropertyMenuCmd" showInAV2UI="false"/>
+	</Commands>
+	<Layouts>
+		<Layout name="DynamicViewLayout">
+			<TopBar align="Center">
+				<Component name="TextPdfnext"/>
+				<Component name="HighlightPdfnext"/>
+				<Component name="UnderlinePdfnext"/>
+				<Component name="StrikeOutPdfnext"/>
+				<Component name="ReplacePdfnext"/>
+				<Component type="Separator"/>
+				<Component name="CommentAppKeepToolSticky"/>
+				<Component type="Separator"/>
+				<Component name="ColorPickerCmd"  type="Custom"/>
+			</TopBar>
+      <TouchBars>
+        <Component type="TouchBar" name = "Default">
+          <Component name="TextPdfnext" type = "TBButton"/>
+          <Component name="HighlightPdfnext" type = "TBButton"/>
+          <Component name="UnderlinePdfnext" type = "TBButton"/>
+          <Component name="StrikeOutPdfnext" type = "TBButton"/>
+          <Component name="CommentAppKeepToolSticky" type = "TBButton"/>
+          <Component type="TBSpaceFlexi"/>
+          <Component name="ColorPickerCmd" type = "TBColorPicker"/>
+        </Component>
+        <Component type="TouchBar" name = "CommentAnnotSelectionTouchBar">
+          <Component name="CommentAppPreviousTouchMac" type = "TBButton"/>
+          <Component name="CommentAppNextTouchMac" type = "TBButton"/>
+          <Component name="CommentAppReplyTouchMac" type = "TBButton"/>
+          <Component name="CommentAppKeepToolSticky" type = "TBButton"/>
+          <Component name="CommentAppDeleteTouchMac" type = "TBButton"/>
+          <Component type="TBSpaceFlexi"/>
+          <Component name="ColorPickerCmd" type = "TBColorPicker"/>
+        </Component>
+      </TouchBars>
+		</Layout>
+
+    <Layout name="EurekaLayout" rhpModes="expanded,collapsed">
+      <TopBar align="Center">
+        <Component name="Text"/>
+        <Component name="Highlight"/>
+        <Component name="Underline"/>
+        <Component name="StrikeOut"/>
+        <Component name="Ink"/>
+        <Component type="Separator"/>
+        <Component name="CommentAppKeepToolSticky"/>
+        <Component type="Separator"/>
+        <Component name="ColorPickerCmd"  type="Custom"/>
+        <Component name="LineThicknessCmd"  type="Custom"/>
+      </TopBar>
+
+      <TouchBars>
+        <Component type="TouchBar" name = "Default">
+          <Component name="Text" type = "TBButton"/>
+          <Component name="Highlight" type = "TBButton"/>
+          <Component name="Underline" type = "TBButton"/>
+          <Component name="StrikeOut" type = "TBButton"/>
+          <Component name="CommentAppKeepToolSticky" type = "TBButton"/>
+          <Component type="TBSpaceFlexi"/>
+          <Component name="LineThicknessCmd" type="TBPopover" hasIcon="true" hasLabel="false" isButtonType="true">
+            <Component name="LineThicknessCmd" type = "TBSlider" isContinuous = "true" />
+          </Component>
+          <Component name="ColorPickerCmd" type = "TBColorPicker"/>
+        </Component>
+        <Component type="TouchBar" name = "CommentAnnotSelectionTouchBar">
+          <Component name="CommentAppPreviousTouchMac" type = "TBButton"/>
+          <Component name="CommentAppNextTouchMac" type = "TBButton"/>
+          <Component name="CommentAppReplyTouchMac" type = "TBButton"/>
+          <Component name="CommentAppKeepToolSticky" type = "TBButton"/>
+          <Component name="CommentAppDeleteTouchMac" type = "TBButton"/>
+          <Component type="TBSpaceFlexi"/>
+          <Component name="LineThicknessCmd" type="TBPopover" hasIcon="true" hasLabel="false" isButtonType="true">
+            <Component name="LineThicknessCmd" type = "TBSlider" isContinuous = "true" />
+          </Component>
+          <Component name="ColorPickerCmd" type = "TBColorPicker"/>
+        </Component>
+      </TouchBars>
+      
+    </Layout>
+      
+    <Layout name="DrawingMarkupExpanded">
+			<TopBar align="Center">
+				<Component name="Text"/>
+				<Component name="Highlight"/>
+				<Component name="Underline"/>
+				<Component name="StrikeOut"/>
+				<Component name="Replace"/>
+				<Component name="Caret"/>				
+				<Component name="FreeTextTypewriter"/>
+				<Component name="FreeText"/>
+				<Component name="Ink"/>
+				<Component name="EraseInk"/>			
+				<Component name="Stamp"/>
+				<Component name="CommentAppMenuAttachmentTool"/>
+				<Component name="Line"/>
+				<Component name="LineArrow"/>
+				<Component name="Square"/>
+				<Component name="Circle"/>
+				<Component name="FreeTextCallout"/>
+				<Component name="Polygon"/>
+				<Component name="PolygonCloud"/>
+				<Component name="PolyLine"/>
+				<Component name="CommentAppMenuCollapseDrawingTools"/>
+				<Component type="Separator"/>
+				<Component name="CommentAppKeepToolSticky"/>
+				<Component type="Separator"/>
+				<Component name="ColorPickerCmd"  type="Custom"/>
+				<Component name="LineThicknessCmd"  type="Custom"/>
+				<Component name="TextPropertyMenuCmd"  type="Custom"/>
+			</TopBar>
+
+      <TouchBars>
+        <Component type="TouchBar" name = "Default">
+          <Component name="Text" type = "TBButton"/>
+          <Component name="Highlight" type = "TBButton"/>
+          <Component name="Underline" type = "TBButton"/>
+          <Component name="StrikeOut" type = "TBButton"/>
+          <Component name="CommentAppKeepToolSticky" type = "TBButton"/>
+          <Component type="TBSpaceFlexi"/>
+          <Component name="LineThicknessCmd" type="TBPopover" hasIcon="true" hasLabel="false" isButtonType="true">
+            <Component name="LineThicknessCmd" type = "TBSlider" isContinuous = "true" />
+          </Component>
+          <Component name="ColorPickerCmd" type = "TBColorPicker"/>
+        </Component>
+        <Component type="TouchBar" name = "CommentAnnotSelectionTouchBar">
+          <Component name="CommentAppPreviousTouchMac" type = "TBButton"/>
+          <Component name="CommentAppNextTouchMac" type = "TBButton"/>
+          <Component name="CommentAppReplyTouchMac" type = "TBButton"/>
+          <Component name="CommentAppKeepToolSticky" type = "TBButton"/>
+          <Component name="CommentAppDeleteTouchMac" type = "TBButton"/>
+          <Component type="TBSpaceFlexi"/>
+          <Component name="LineThicknessCmd" type="TBPopover" hasIcon="true" hasLabel="false" isButtonType="true">
+            <Component name="LineThicknessCmd" type = "TBSlider" isContinuous = "true" />
+          </Component>
+          <Component name="ColorPickerCmd" type = "TBColorPicker"/>
+        </Component>
+      </TouchBars>
+      
+		</Layout>
+
+		<Layout name="Default">
+			<TopBar align="Center">
+				<Component name="Text"/>
+				<Component name="Highlight"/>
+				<Component name="Underline"/>
+				<Component name="StrikeOut"/>
+				<Component name="Replace"/>
+				<Component name="Caret"/>
+				<Component name="FreeTextTypewriter"/>
+				<Component name="FreeText"/>
+				<Component name="Ink"/>
+				<Component name="EraseInk"/>			
+				<Component name="Stamp"/>
+				<Component name="CommentAppMenuAttachmentTool"/>
+				<Component name="CommentAppMenuActiveDrawingTool"/>
+				<Component type="Separator"/>
+				<Component name="CommentAppKeepToolSticky"/>
+				<Component type="Separator"/>
+				<Component name="ColorPickerCmd"  type="Custom"/>
+				<Component name="LineThicknessCmd"  type="Custom"/>
+				<Component name="TextPropertyMenuCmd"  type="Custom"/>
+			</TopBar>
+
+      <TouchBars>
+        <Component type="TouchBar" name = "Default">
+          <Component name="Text" type = "TBButton"/>
+          <Component name="Highlight" type = "TBButton"/>
+          <Component name="Underline" type = "TBButton"/>
+          <Component name="StrikeOut" type = "TBButton"/>
+          <Component name="CommentAppKeepToolSticky" type = "TBButton"/>
+          <Component type="TBSpaceFlexi"/>
+          <Component name="LineThicknessCmd" type="TBPopover" hasIcon="true" hasLabel="false" isButtonType="true">
+            <Component name="LineThicknessCmd" type = "TBSlider" isContinuous = "true" />
+          </Component>
+          <Component name="ColorPickerCmd" type = "TBColorPicker"/>
+        </Component>
+        <Component type="TouchBar" name = "CommentAnnotSelectionTouchBar">
+          <Component name="CommentAppPreviousTouchMac" type = "TBButton"/>
+          <Component name="CommentAppNextTouchMac" type = "TBButton"/>
+          <Component name="CommentAppReplyTouchMac" type = "TBButton"/>
+          <Component name="CommentAppKeepToolSticky" type = "TBButton"/>
+          <Component name="CommentAppDeleteTouchMac" type = "TBButton"/>
+          <Component type="TBSpaceFlexi"/>
+          <Component name="LineThicknessCmd" type="TBPopover" hasIcon="true" hasLabel="false" isButtonType="true">
+            <Component name="LineThicknessCmd" type = "TBSlider" isContinuous = "true" />
+          </Component>
+          <Component name="ColorPickerCmd" type = "TBColorPicker"/>
+        </Component>
+      </TouchBars>
+      <RHP>
+				<Component name="CommentList" type="Custom"/>
+			</RHP>
+		</Layout>
+		<Layout name="DefaultWithCB">
+			<TopBar align="Center">
+				<Component name="Text"/>
+				<Component name="Highlight"/>
+				<Component name="Underline"/>
+				<Component name="StrikeOut"/>
+				<Component name="Replace"/>
+				<Component name="Caret"/>
+				<Component name="FreeTextTypewriter"/>
+				<Component name="FreeText"/>
+				<Component name="Ink"/>
+				<Component name="EraseInk"/>			
+				<Component name="Stamp"/>
+				<Component name="CommentAppMenuAttachmentTool"/>
+				<Component name="CommentAppMenuActiveDrawingTool"/>
+				<Component type="Separator"/>
+				<Component name="CommentAppKeepToolSticky"/>
+				<Component type="Separator"/>
+				<Component name="ColorPickerCmd"  type="Custom"/>
+				<Component name="LineThicknessCmd"  type="Custom"/>
+				<Component name="TextPropertyMenuCmd"  type="Custom"/>
+			</TopBar>
+      <TouchBars>
+        <Component type="TouchBar" name = "Default">
+          <Component name="Text" type = "TBButton"/>
+          <Component name="Highlight" type = "TBButton"/>
+          <Component name="Underline" type = "TBButton"/>
+          <Component name="StrikeOut" type = "TBButton"/>
+          <Component name="CommentAppKeepToolSticky" type = "TBButton"/>
+          <Component type="TBSpaceFlexi"/>
+          <Component name="LineThicknessCmd" type="TBPopover" hasIcon="true" hasLabel="false" isButtonType="true">
+            <Component name="LineThicknessCmd" type = "TBSlider" isContinuous = "true" />
+          </Component>
+          <Component name="ColorPickerCmd" type = "TBColorPicker"/>
+        </Component>
+        <Component type="TouchBar" name = "CommentAnnotSelectionTouchBar">
+          <Component name="CommentAppPreviousTouchMac" type = "TBButton"/>
+          <Component name="CommentAppNextTouchMac" type = "TBButton"/>
+          <Component name="CommentAppReplyTouchMac" type = "TBButton"/>
+          <Component name="CommentAppKeepToolSticky" type = "TBButton"/>
+          <Component name="CommentAppDeleteTouchMac" type = "TBButton"/>
+          <Component type="TBSpaceFlexi"/>
+          <Component name="LineThicknessCmd" type="TBPopover" hasIcon="true" hasLabel="false" isButtonType="true">
+            <Component name="LineThicknessCmd" type = "TBSlider" isContinuous = "true" />
+          </Component>
+          <Component name="ColorPickerCmd" type = "TBColorPicker"/>
+        </Component>
+      </TouchBars>
+			<RHP>
+				<Component name="ContextBoardRHPView" type="Custom"/>
+			</RHP>
+		</Layout>
+		<Layout name="EurekaLayoutWithCB" rhpModes="expanded,collapsed">
+			<TopBar align="Center">
+				<Component name="Text"/>
+				<Component name="Highlight"/>
+				<Component name="Underline"/>
+				<Component name="StrikeOut"/>
+        <Component name="Ink"/>
+        <Component type="Separator"/>
+        <Component name="CommentAppKeepToolSticky"/>
+        <Component type="Separator"/>
+        <Component name="ColorPickerCmd"  type="Custom"/>
+        <Component name="LineThicknessCmd"  type="Custom"/>
+			</TopBar>
+      <TouchBars>
+        <Component type="TouchBar" name = "Default">
+          <Component name="Text" type = "TBButton"/>
+          <Component name="Highlight" type = "TBButton"/>
+          <Component name="Underline" type = "TBButton"/>
+          <Component name="StrikeOut" type = "TBButton"/>
+          <Component name="CommentAppKeepToolSticky" type = "TBButton"/>
+          <Component type="TBSpaceFlexi"/>
+          <Component name="LineThicknessCmd" type="TBPopover" hasIcon="true" hasLabel="false" isButtonType="true">
+            <Component name="LineThicknessCmd" type = "TBSlider" isContinuous = "true" />
+          </Component>
+          <Component name="ColorPickerCmd" type = "TBColorPicker"/>
+        </Component>
+        <Component type="TouchBar" name = "CommentAnnotSelectionTouchBar">
+          <Component name="CommentAppPreviousTouchMac" type = "TBButton"/>
+          <Component name="CommentAppNextTouchMac" type = "TBButton"/>
+          <Component name="CommentAppReplyTouchMac" type = "TBButton"/>
+          <Component name="CommentAppKeepToolSticky" type = "TBButton"/>
+          <Component name="CommentAppDeleteTouchMac" type = "TBButton"/>
+          <Component type="TBSpaceFlexi"/>
+          <Component name="LineThicknessCmd" type="TBPopover" hasIcon="true" hasLabel="false" isButtonType="true">
+            <Component name="LineThicknessCmd" type = "TBSlider" isContinuous = "true" />
+          </Component>
+          <Component name="ColorPickerCmd" type = "TBColorPicker"/>
+        </Component>
+      </TouchBars>
+			<RHP>
+				<Component name="ContextBoardRHPView" type="Custom"/>
+			</RHP>
+		</Layout>
+    <Layout name="EurekaLayoutWithCBFromShare" rhpModes="expanded,collapsed">
+      <TopBar align="Center">
+        <Component name="Text"/>
+        <Component name="Highlight"/>
+        <Component name="Underline"/>
+        <Component name="StrikeOut"/>
+        <Component name="Ink"/>
+        <Component type="Separator"/>
+        <Component name="CommentAppKeepToolSticky"/>
+        <Component type="Separator"/>
+        <Component name="ColorPickerCmd"  type="Custom"/>
+        <Component name="LineThicknessCmd"  type="Custom"/>
+      </TopBar>
+      <TouchBars>
+        <Component type="TouchBar" name = "Default">
+          <Component name="Text" type = "TBButton"/>
+          <Component name="Highlight" type = "TBButton"/>
+          <Component name="Underline" type = "TBButton"/>
+          <Component name="StrikeOut" type = "TBButton"/>
+          <Component name="CommentAppKeepToolSticky" type = "TBButton"/>
+          <Component type="TBSpaceFlexi"/>
+          <Component name="LineThicknessCmd" type="TBPopover" hasIcon="true" hasLabel="false" isButtonType="true">
+            <Component name="LineThicknessCmd" type = "TBSlider" isContinuous = "true" />
+          </Component>
+          <Component name="ColorPickerCmd" type = "TBColorPicker"/>
+        </Component>
+        <Component type="TouchBar" name = "CommentAnnotSelectionTouchBar">
+          <Component name="CommentAppPreviousTouchMac" type = "TBButton"/>
+          <Component name="CommentAppNextTouchMac" type = "TBButton"/>
+          <Component name="CommentAppReplyTouchMac" type = "TBButton"/>
+          <Component name="CommentAppKeepToolSticky" type = "TBButton"/>
+          <Component name="CommentAppDeleteTouchMac" type = "TBButton"/>
+          <Component type="TBSpaceFlexi"/>
+          <Component name="LineThicknessCmd" type="TBPopover" hasIcon="true" hasLabel="false" isButtonType="true">
+            <Component name="LineThicknessCmd" type = "TBSlider" isContinuous = "true" />
+          </Component>
+          <Component name="ColorPickerCmd" type = "TBColorPicker"/>
+        </Component>
+      </TouchBars>
+      <RHP>
+        <Component name="ContextBoardRHPView" type="Custom"/>
+      </RHP>
+    </Layout>
+    <Layout name="EurekaLayoutFromShare" rhpModes="expanded,collapsed">
+      <TopBar align="Center">
+        <Component name="Text"/>
+        <Component name="Highlight"/>
+        <Component name="Underline"/>
+        <Component name="StrikeOut"/>
+        <Component name="Ink"/>
+        <Component type="Separator"/>
+        <Component name="CommentAppKeepToolSticky"/>
+        <Component type="Separator"/>
+        <Component name="ColorPickerCmd"  type="Custom"/>
+        <Component name="LineThicknessCmd"  type="Custom"/>
+      </TopBar>
+      <TouchBars>
+        <Component type="TouchBar" name = "Default">
+          <Component name="Text" type = "TBButton"/>
+          <Component name="Highlight" type = "TBButton"/>
+          <Component name="Underline" type = "TBButton"/>
+          <Component name="StrikeOut" type = "TBButton"/>
+          <Component name="CommentAppKeepToolSticky" type = "TBButton"/>
+          <Component type="TBSpaceFlexi"/>
+          <Component name="LineThicknessCmd" type="TBPopover" hasIcon="true" hasLabel="false" isButtonType="true">
+            <Component name="LineThicknessCmd" type = "TBSlider" isContinuous = "true" />
+          </Component>
+          <Component name="ColorPickerCmd" type = "TBColorPicker"/>
+        </Component>
+        <Component type="TouchBar" name = "CommentAnnotSelectionTouchBar">
+          <Component name="CommentAppPreviousTouchMac" type = "TBButton"/>
+          <Component name="CommentAppNextTouchMac" type = "TBButton"/>
+          <Component name="CommentAppReplyTouchMac" type = "TBButton"/>
+          <Component name="CommentAppKeepToolSticky" type = "TBButton"/>
+          <Component name="CommentAppDeleteTouchMac" type = "TBButton"/>
+          <Component type="TBSpaceFlexi"/>
+          <Component name="LineThicknessCmd" type="TBPopover" hasIcon="true" hasLabel="false" isButtonType="true">
+            <Component name="LineThicknessCmd" type = "TBSlider" isContinuous = "true" />
+          </Component>
+          <Component name="ColorPickerCmd" type = "TBColorPicker"/>
+        </Component>
+      </TouchBars>
+      <RHP>
+        <Component name="ContextBoardRHPView" type="Custom"/>
+      </RHP>
+    </Layout>
+    <Layout name="LandingPage">
+      <RHP>
+        <!-- Intentionally kept empty, since we do not want an RHP in landing page -->
+      </RHP>
+    </Layout>
+	</Layouts>
+</Application>

@@ -1,0 +1,16 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="Biffer" av2Title="Biffer un PDF" description="Supprimez de manière permanente le texte et les images sensibles ou les données masquées." av2Description="Supprimer définitivement le contenu sensible et les données masquées" richTooltip="Supprimez définitivement le contenu et les informations masquées pour protéger les données sensibles." id="RedactPDFRdrApp" majorVersion="1" minorVersion="0" inAppUpsellEnabled="true" >
+	<Commands>
+	       <Command name="MarkForRedactionDropDownRdr"/>
+			<Command name="AnnotsApplyRedactionsRdr"/>
+			<Command name="AnnotsRedactToolPropsRdr"/>
+			<Command name="RemoveHiddenInfoRdr"/>
+			<Command name="SanitizeDocumentRdr"/>
+	</Commands>
+	<Layouts>
+		<Layout name="Default">
+			<ContentView>
+				<Component name="RedactAppRHPView" fontSize="12"/>
+			</ContentView>
+		</Layout>
+	</Layouts>
+</Application>

@@ -1,0 +1,33 @@
+gListWidth = 550;
+gListHeight = gEditTextHeight * 6;
+
+dialog( name: '$$$/Dialogs/ChooseCredential/Title' )
+{
+	view( align_children: align_left )
+	{
+		static_text( item_id: 'reas', alignment: align_fill );
+
+		cluster( alignment: align_fill, name: '$$$/Dialogs/ChooseCredential/CredentialsCluster' )
+		{
+			mclv( item_id: 'cred', dwidth: gListWidth, dheight: gListHeight );
+
+			view( align_children: align_top, alignment: align_fill )
+			{
+				picture( item_id: 'icon', width: 16, height: 16 );
+	    		static_text( item_id: 'warn', alignment: align_fill );
+				button( item_id: 'add ', name: '$$$/Dialogs/ChooseCredential/AddButton' );
+				button( item_id: 'refr', name: '$$$IDS_SECPOLICY_REFRESH_BUTTON');
+			}
+		}
+
+		cluster( alignment: align_fill, name: '$$$/Dialogs/ChooseCredential/PersistenceCluster' )
+		{
+			radio( item_id: 'rad0', group_id: 'pers', name: '$$$/Dialogs/ChooseCredential/PersistNever' );
+			radio( item_id: 'rad1', group_id: 'pers', name: '$$$/Dialogs/ChooseCredential/PersistSession' );
+			radio( item_id: 'rad2', group_id: 'pers', name: '$$$/Dialogs/ChooseCredential/PersistAlways' );
+		}
+
+		ok_cancel_help();
+	}
+}
+

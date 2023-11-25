@@ -1,0 +1,63 @@
+dialog(name: '$$$/Dialogs/EDCAuthAdobeAuthor', target_id: 'name', margin_width:0, margin_height:0 )
+{
+	row( horizontal: align_fill )
+	{
+		panel(identifier:'tihd', back_color:@wizard_title_background, gradient_direction:@top_to_bottom
+			, gradient_type:@normal_to_dark, horizontal: align_fill, height: 100)
+		{
+			picture(identifier: 'icon', width: 45, height: 45, vertical: align_center);
+			column( )
+			{
+				gap( height: 15 );
+				static_text(identifier: 'strt', font_id: @title_font_bold, name: '$$$/Dialogs/EDCAuthAdobeWelcome/OnlineServices',
+				horizontal: align_fill, vertical: align_center);
+				static_text(identifier: 'strt', font_id: @heading_font_bold, name: '$$$/Dialogs/EDCAuthAdobeWelcome/DocumentCenter',
+				horizontal: align_fill, vertical: align_center);
+			}
+		}
+	}
+	panel( margin_width: 15, margin_height: 15)
+	{
+		row( width: 400 )
+		{
+			column( guide_mask: [@guide_baseline, @guide_label] )
+			{
+				picture(identifier: 'pict', width: 140, height: 139);
+				static_text(identifier: 'clu6', name: '$$$/Dialogs/EDCAuthAdobeWelcome/AboutConcerto', width: 140, wrap: true );
+				gap( height: 5 );
+				hyperlink(identifier: 'lrnm', alignment: align_left, name: '$$$/Dialogs/EDCAuthAdobe/LearnMoreLink');
+				hyperlink(identifier: 'mang', alignment: align_left, name: '$$$/Dialogs/EDCAuthAdobe/ManageAccountLink');
+			}
+			column( horizontal: align_fill )
+			{
+				group( guide_mask: [@guide_baseline, @guide_label], horizontal: align_fill )
+				{
+					static_text(identifier: 'clu4', font_id: @heading_font_bold, name: '$$$/Dialogs/EDCAuthAdobeAuthor/LogInTitle');
+					static_text(identifier: 'clu5', name: '$$$/Dialogs/EDCAuthAdobeWelcome/SecurelyLogin', wrap: true, width: 300);
+					row( )
+					{
+						column( )
+						{
+							static_text( name: '$$$/Dialogs/MeetingCommon/AdobeID', horizontal: align_right );
+							static_text( name: '$$$/Dialogs/MeetingCommon/Password', horizontal: align_right );
+						}
+						column( )
+						{
+							edit_text(identifier: 'user', width: 250);
+							edit_text(identifier: 'pswd', password:true, width: 250);
+							
+							hyperlink(identifier: 'frgt', alignment: align_left, name: '$$$/Dialogs/MeetingCommon/ForgotPassword');
+							checkbox(identifier: 'mrem', name: '$$$/Dialogs/EDCAuthAdobe/RememberMe');
+							static_text(identifier: 'clu1', name: '$$$/Dialogs/EDCAuthAdobe/YourInfo', width: 250, wrap: true );
+						}
+					}
+				}
+			}
+		}
+		row( horizontal: align_right )
+		{
+			gap( height: 4 );
+			ok_cancel(ok_name: '$$$/Dialogs/MeetingCommon/LoginButton', cancel_name: '$$$/Dialogs/MeetingCommon/Close');
+		}
+	}
+}

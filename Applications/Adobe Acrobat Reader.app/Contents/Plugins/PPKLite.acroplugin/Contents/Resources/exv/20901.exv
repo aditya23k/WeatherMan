@@ -1,0 +1,42 @@
+gIndentWidth = 1 * max_char_width();
+gPopupWidth = 22 * max_char_width();
+gLabelWidth = 10 * max_char_width();
+gFieldHeight = gEditTextHeight;
+
+dialog(name: '$$$/Dialogs/MeetingPrefs', target_id: 'Hdlr',  margin_height: 0, margin_width: 0)
+{
+	view(align_children: align_left, align_children: align_top, alignment: align_fill)
+	{
+		cluster(name: '$$$/Dialogs/MeetingPrefs/AccountSettings', align_children: align_center, 
+				width: gPrefsPanelWidth, height: gPrefsPanelHeight)
+		{
+			view( align_children: align_row, alignment: align_cneter) 
+			{
+				gap(width: gIndentWidth);
+				view( align_children: align_right, alignment: align_top) 
+				{
+					gap(height: 3);
+					static_text( name: '$$$/Dialogs/MeetingCommon/MeetingURL', height: gFieldHeight);
+					static_text( name: '$$$/Dialogs/MeetingCommon/Login', height: gFieldHeight);
+					static_text( name: '$$$/Dialogs/MeetingCommon/Password', height: gFieldHeight);
+				}
+				view( align_children: align_left, alignment: align_top)
+				{
+					edit_text(item_id: 'murl', width: gPopupWidth, height: gFieldHeight);
+					edit_text(item_id: 'muid', width: gPopupWidth, height: gFieldHeight);
+					edit_text(item_id: 'mpas', password:true, width: gPopupWidth, height: gFieldHeight);
+				}
+			}
+			view( align_children: align_left, alignment: align_center)
+			{
+				check_box(item_id: 'mrem', name: '$$$/Dialogs/MeetingCommon/RememberPassword');
+				view( align_children: align_row )
+				{
+					button(item_id: 'chan', name: '$$$/Dialogs/MeetingPrefs/ChangePassword');
+					button(item_id: 'mana', name: '$$$/Dialogs/MeetingPrefs/ManageAccount');
+				}
+				static_text( name: '$$$/Dialogs/MeetingPrefs/Info', width: gPopupWidth, height:30);
+			}
+		}
+	}
+}

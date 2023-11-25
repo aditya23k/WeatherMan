@@ -1,0 +1,98 @@
+gInfoWidth = max_char_width() * 13;
+
+gLeftLabelWidth = max (
+	zstring_width( zstring: '$$$/Dialogs/EDCDisplaySecurityData/PolicyName' ),
+	zstring_width( zstring: '$$$/Dialogs/EDCDisplaySecurityData/Comment' ),
+	zstring_width( zstring: '$$$/Dialogs/EDCDisplaySecurityData/ExpDate' ),
+	zstring_width( zstring: '$$$/Dialogs/EDCDisplaySecurityData/Change' ),
+	zstring_width( zstring: '$$$/Dialogs/EDCDisplaySecurityData/Copy' ) );
+	
+gRightLabelWidth = max (
+	zstring_width( zstring: '$$$/Dialogs/EDCDisplaySecurityData/Type' ),
+	zstring_width( zstring: '$$$/Dialogs/EDCDisplaySecurityData/Lease' ),
+	zstring_width( zstring: '$$$/Dialogs/EDCDisplaySecurityData/Print' ),
+	zstring_width( zstring: '$$$/Dialogs/EDCDisplaySecurityData/Switch' ) );
+	
+gWarnTextWidth = (gInfoWidth*2) +  (max_char_width()*2) + gRightLabelWidth + (gGap*2) ;
+	
+dialog( name: '$$$/Dialogs/EDCDisplaySecurityData/Title'  )
+{
+	view(alignment: align_fill)
+	{
+		cluster(name:'$$$/Dialogs/EDCDisplaySecurityData/PolicyDetails', alignment: align_fill)
+		{
+			view( align_children: align_offscreen )
+			{
+				view( item_id: 'pinf', align_children: align_row )
+				{
+					view(alignment: align_right)
+					{
+						static_text(name: '$$$/Dialogs/EDCDisplaySecurityData/PolicyName', alignment: align_right, width: gLeftLabelWidth );
+						static_text(name: '$$$/Dialogs/EDCDisplaySecurityData/Comment', alignment: align_right, width: gLeftLabelWidth );
+						static_text(name: '$$$/Dialogs/EDCDisplaySecurityData/ExpDate', alignment: align_right, width: gLeftLabelWidth );
+					}
+					
+					view( alignment: align_left)
+					{
+						static_text(item_id: 'pnam', alignment: align_left, width: gInfoWidth );
+						static_text(item_id: 'pcmt', alignment: align_left, width: gInfoWidth );
+						static_text(item_id: 'xpdt', alignment: align_left, width: gInfoWidth );
+					}
+					
+					gap( width: max_char_width()*2);
+					
+					view(alignment: align_right)
+					{
+						static_text(name: '$$$/Dialogs/EDCDisplaySecurityData/Type', alignment: align_right, width: gRightLabelWidth );
+						static_text(name: '$$$/Dialogs/EDCDisplaySecurityData/Lease', alignment: align_right, width: gRightLabelWidth );
+						static_text();
+					}
+						
+					view( alignment: align_left)
+					{
+						static_text(item_id: 'ptyp', alignment: align_left, width: gInfoWidth );
+						static_text(item_id: 'plse', alignment: align_left, width: gInfoWidth );
+						static_text();
+					}
+				}
+				
+				view( item_id: 'awrn', align_children: align_row)
+				{
+					picture(item_id: 'aIcn', width: 16, height: 16);
+					static_text(item_id: 'aTxt', height: gStaticTextHeight*3, width: gWarnTextWidth );
+				}
+			}
+		}
+	
+		cluster(name:'$$$/Dialogs/EDCDisplaySecurityData/PermDetails', alignment: align_fill, align_children: align_row)
+		{
+			view(alignment: align_right)
+			{
+				static_text(name: '$$$/Dialogs/EDCDisplaySecurityData/Change', alignment: align_right, width: gLeftLabelWidth );
+				static_text(name: '$$$/Dialogs/EDCDisplaySecurityData/Copy', alignment: align_right, width: gLeftLabelWidth );
+			}
+			
+			view( alignment: align_left)
+			{
+				static_text(item_id: 'cgpm', alignment: align_left, width: gInfoWidth );
+				static_text(item_id: 'cppm', alignment: align_left, width: gInfoWidth );
+			}
+			
+			gap( width: max_char_width()*2);
+			
+			view(alignment: align_right)
+			{
+				static_text(name: '$$$/Dialogs/EDCDisplaySecurityData/Print', alignment: align_right, width: gRightLabelWidth );
+				static_text(name: '$$$/Dialogs/EDCDisplaySecurityData/Switch', alignment: align_right, width: gRightLabelWidth );
+			}
+				
+			view( alignment: align_left)
+			{
+				static_text(item_id: 'ptpm', alignment: align_left, width: gInfoWidth );
+				static_text(item_id: 'sppm', alignment: align_left, width: gInfoWidth );
+			}
+		}
+
+		ok(ok_name: '$$$/Dialogs/CloseButton');
+	}
+}

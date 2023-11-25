@@ -1,0 +1,46 @@
+dialog( name: '$$$/Dialogs/AccCheckOptions' )
+{
+	column( horizontal: align_fill, vertical: align_fill )
+	{
+	 	group( name: '$$$/Dialogs/AccCheckOptions/OutputOptions', horizontal: align_fill )
+		{
+			checkbox( identifier: 'crlg', name: '$$$/Dialogs/AccCheckOptions/CreateLog' );
+			row( horizontal: align_fill )
+			{
+				static_text( identifier: 'loca', width: 400, truncate: @center );
+				
+				column( horizontal: align_fill, child_horizontal: align_right )
+				{
+					button( identifier: 'lglc', name: '$$$/Dialogs/AccCheckOptions/LogLocButton' );	
+				}		
+			}
+			checkbox( identifier: 'atta', name: '$$$/Dialogs/AccCheckOptions/Attach' );
+			
+		}
+
+		group( name: '$$$/Dialogs/AccCheckOptions/Pages/Options', horizontal: align_fill )
+		{
+			row( horizontal: align_fill )
+			{
+				radio_button( identifier: 'allp', group_id: 'rgrp', name: '$$$/Dialogs/AccCheckOptions/Pages/All' );
+				gap( width: 10 );
+				radio_button( identifier: 'slct', group_id: 'rgrp', name: '$$$/Dialogs/AccCheckOptions/Pages/Selected' );
+				edit_text( identifier: 'FrPg', width: 40 );
+				static_text( identifier: 'to  ', name: '$$$/Dialogs/AccCheckOptions/Pages/To' );
+				edit_text( identifier: 'ToPg', width: 40 );
+			}
+		}
+		
+		group( name: '$$$/Dialogs/AccCheckOptions/Options', horizontal: align_fill, identifier: 'opts' )
+		{
+			column( horizontal: align_fill, vertical: align_fill )
+			{
+				popup( identifier: 'popl', name: '$$$/Dialogs/AccCheckOptions/Options/Category', horizontal: align_fill );
+				gap();
+				overlay_panel( identifier: 'panl', horizontal: align_fill, vertical: align_fill, margin_width: 0, margin_height: 0 );
+			}
+		}
+		checkbox( identifier: 'opti', name: '$$$/Dialogs/AccCheckOptions/ShowOptions' );
+		ok_cancel_help( ok_name: '$$$/Dialogs/AccCheckOptions/StartButton' );
+	}
+}

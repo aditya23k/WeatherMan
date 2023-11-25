@@ -1,0 +1,12 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="Yhdistä tiedostot" av2Title="Yhdistele tiedostoja" id="CombinePDFRdrApp" description="Yhdistä useita tiedostoja yhdeksi PDF-tiedostoksi" av2Description="Yhdistä useita tiedostoja yhdeksi PDF-tiedostoksi" richTooltip="Yhdistä useita tiedostoja yhdeksi PDF-tiedostoksi säilytyksen ja jakamisen helpottamiseksi." majorVersion="1" minorVersion="0" inAppUpsellEnabled="true">
+	<Commands>
+			<Command name="NewDocCombineFilesRdr"/>
+	</Commands>
+	<Layouts>
+		<Layout name="Default">
+			<ContentView>
+				<Component name="CombinePDFRHPView" fontSize="12"/>
+			</ContentView>
+		</Layout>
+	</Layouts>
+</Application>

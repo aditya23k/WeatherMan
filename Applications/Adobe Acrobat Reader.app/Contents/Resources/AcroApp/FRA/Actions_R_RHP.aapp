@@ -1,0 +1,16 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="Assistant d'action" av2Title="Utiliser des actions guidées" description="Utilisez les actions guidées pour normaliser les tâches PDF courantes." av2Description="Suivre des actions pour normaliser les tâches PDF courantes" id="ActionsRdrApp" showLabels="true" majorVersion="1" minorVersion="0">
+	<Commands>
+			<Command name="CreateWorkflowRdr"/>
+			<Command name="ManageWorkflowsRdr"/>
+			<Command name="FindMoreWorkflowsRdr"/>
+			<Command name="CreateNewCustomToolRdr"/>
+			<Command name="ManageCustomToolsRdr"/>
+	</Commands>
+	<Layouts>
+		<Layout name="Default">
+			<ContentView>
+				<Component name="ActionAppRhpView" fontSize="12"/>
+			</ContentView>
+		</Layout>
+	</Layouts>
+</Application>

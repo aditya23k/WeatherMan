@@ -1,0 +1,35 @@
+dialog(margin_height: 0, margin_width: 0, target_id: 'save')
+{
+    view(alignment: align_fill, align_children: align_left)
+    {
+		gap(height: gGap);
+		static_text(name: '$$$/Dialogs/FDFExportOptions/Note', alignment: align_fill);
+		view(alignment: align_fill, align_children: align_top)
+		{
+			gap(width: gGap);
+			static_text(item_id: 'type', font_id: 5, alignment: align_fill);
+		}
+		view(alignment: align_fill, align_children: align_top)
+		{
+			gap(width: gGap);
+			static_text(item_id: 'vers', alignment: align_fill);
+		}
+		
+		gap(height: gGap);
+		cluster(item_id: 'dest', name: '$$$/Dialogs/FDFExportWiz/Destination', alignment: align_fill)
+		{
+			radio(item_id: 'mail', group_id: 'grp1', name: '$$$/Dialogs/FDFExportWiz/Email');
+			radio(item_id: 'save', group_id: 'grp1', name: '$$$/Dialogs/FDFExportWiz/Save');
+			view(alignment: align_fill, align_children: align_row)
+			{
+				gap(width: gGap);
+				view(alignment: align_fill)
+				{
+					radio(item_id: 'fFDF', group_id: 'grp2', name: '$$$IDS_FileType_FDFCertExchange');
+					radio(item_id: 'fCMS', group_id: 'grp2', name: '$$$IDS_FileType_PKCS7');
+					radio(item_id: 'fCER', group_id: 'grp2', name: '$$$IDS_FileType_Certificate');
+				}
+			}
+		}
+    }
+}

@@ -1,0 +1,49 @@
+dialog()
+{
+	row()
+	{
+		column() 
+		{
+			group( name: '$$$/Dialogs/SendMail/FirstLaunch/SendUsingFrameText', width:300, height:276)
+			{
+				row ()
+				{
+					radio_button(identifier: 'addi', group_id: 'webm');
+				}
+				row ()
+				{
+					radio_button(name: '$$$/Dialogs/SendMail/UseWebmail', identifier: 'addw', group_id: 'webm');
+				}		
+				row ()
+				{
+					gap(width: 15);
+					popup(identifier: 'powc', width: 150);
+				}		
+				row ()
+				{
+					gap(width: 15);
+					static_text(name: '$$$/Dialogs/SendMail/FirstLaunch/DraftWarning', identifier: 'drft', width: 220, wrap: true);
+				}
+				
+				row(vertical:align_bottom)
+				{
+					checkbox(identifier: 'remm', name: '$$$/Dialogs/SendMail/Firstlaunch/Remember');
+				}
+			}
+			
+			row(horizontal: align_fill)
+			{
+				ok_cancel(ok_name: '$$$/Dialogs/SendMail/Continue', horizontal:align_right);
+			}
+			
+		}
+		
+		column(vertical:align_center)
+		{
+			
+			picture( width:0, height:0, identifier: 'ipmi');
+				
+		}
+		
+	}
+}

@@ -1,0 +1,38 @@
+gTextPass = '$$$/Dialogs/AccCheckUserInput/Pass';
+gTextFail = '$$$/Dialogs/AccCheckUserInput/Fail';
+gTextSkip = '$$$/Dialogs/AccCheckUserInput/Skip';
+gTextSkipAll = '$$$/Dialogs/AccCheckUserInput/SkipAll';
+gTextExplain = '$$$/Dialogs/AccCheckUserInput/Explain';
+gTextClose = '$$$/Dialogs/AccCheckUserInput/Close';
+
+gMaxLabelWidth = max(
+	zstring_width( zstring: gTextPass ),
+	zstring_width( zstring: gTextFail ),
+	zstring_width( zstring: gTextSkip ),
+	zstring_width( zstring: gTextSkipAll ),
+	zstring_width( zstring: gTextExplain ),
+	zstring_width( zstring: gTextClose ) );
+
+gFieldWidth = max_char_width() * 40;
+gFieldHeight = gStaticTextHeight * 5;
+
+dialog( target_id: 'skip', first_tab: 'pass' )
+{
+	group()
+	{
+		view( align_children: align_left )
+		{
+			static_text( item_id: 'mssg', width: gFieldWidth, height: gFieldHeight );
+			gap();
+		}
+		view( alignment: align_center, align_children: align_row )
+		{
+			button(item_id: 'pass', name: gTextPass, width: gMaxLabelWidth, next_tab: 'fail');
+			button(item_id: 'fail', name: gTextFail, width: gMaxLabelWidth, next_tab: 'skip');
+			button(item_id: 'skip', name: gTextSkip, width: gMaxLabelWidth, next_tab: 'skal');
+			button(item_id: 'skal', name: gTextSkipAll, width: gMaxLabelWidth, next_tab: 'expl');
+			button(item_id: 'expl', name: gTextExplain, width: gMaxLabelWidth, next_tab: 'clos');
+			button(item_id: 'clos', name: gTextClose, width: gMaxLabelWidth);
+		}
+	}
+}

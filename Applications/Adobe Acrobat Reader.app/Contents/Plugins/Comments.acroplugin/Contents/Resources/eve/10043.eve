@@ -1,0 +1,109 @@
+dialog(name: '$$$/Prefs/Collaboration/SharedReviewEditServer')
+{
+
+	static_text(identifier: 'keyn', wrap: true, width: 300);
+
+	edit_text(identifier: 'edt1', width: 300);
+	
+	edit_text(identifier: 'edt2', width: 300, height: 50, multiline: true, scrollable: true);
+	
+	panel(identifier: 'pnl1', horizontal: align_fill, placement: place_row)
+	{
+		column(horizontal: align_fill)
+		{
+			static_text(identifier: 'mnam');
+			popup(identifier: 'mnth', width: 80);
+		}
+
+		column(horizontal: align_fill)
+		{
+			static_text(identifier: 'dnam');
+			edit_text(identifier: 'day1', width: 30, numeric: true);
+		}
+		
+		column(horizontal: align_fill)
+		{
+			static_text(identifier: 'ynam');
+			edit_text(identifier: 'year', width: 40, numeric: true);
+		}
+		
+		column(horizontal: align_fill)
+		{
+			static_text(identifier: 'hnam');
+			edit_text(identifier: 'hour', width: 30, numeric: true);
+		}
+		
+		column(horizontal: align_fill)
+		{
+			static_text(identifier: 'minn');
+			edit_text(identifier: 'mins', width: 30, numeric: true);
+		}
+	}
+	
+	edit_text(identifier: 'numb', width: 300, numeric: true);
+	
+	popup(identifier: 'pop1', width: 300);
+	
+	edit_text(identifier: 'edt3', PopupEdit: true, width: 300);
+	
+	mclv(identifier: 'mcmc', dwidth: 300, dheight: 350);
+	
+	static_text(identifier: 'addc');
+	
+	edit_text(identifier: 'edt4', width: 300);
+
+	checkbox(identifier: 'chk1', width: 300);
+
+	panel(identifier: 'pnl2', horizontal: align_fill)
+	{
+		static_text(identifier: 'url1');
+		edit_text(identifier: 'hypl', width: 300);
+		static_text(identifier: 'info');
+		edit_text(identifier: 'desc', width: 300);
+	}
+	panel(identifier: 'pnl3', horizontal: align_fill)
+	{
+		row(horizontal: align_fill)
+		{
+			edit_text(identifier: 'inpl', horizontal: align_fill);
+			button(identifier: 'sear',horizontal: align_right, picture: true, resource_id: "AX_SearchComments_Sm_N.png", width:25);
+		}
+		row(horizontal: align_fill)
+		{
+			static_text(identifier: 'err1');
+		}
+		row(horizontal: align_fill)
+		{
+		}
+		row(horizontal: align_fill)
+		{
+			mclv(identifier: 'res1',dheight: 200, horizontal: align_fill, vertical: align_fill);
+		}
+		row(horizontal: align_fill)
+		{
+		}
+		row(horizontal: align_fill)
+		{
+		}
+		row(horizontal: align_fill)
+		{
+			button(identifier: 'add1',horizontal: align_left);
+			edit_text(identifier: 'res2', horizontal: align_fill, readonly:true);
+			button(identifier: 'del1',horizontal: align_right);
+		}
+	}
+
+	static_text(identifier: 'lker');
+	popup(identifier: 'pop2', width: 300);
+
+	mclv(identifier: 'mlkp', dwidth: 300, dheight: 350);
+
+	hier_list_box(identifier: 'mmtd', width: 400, height: 400, hier_icons: true);
+	row(horizontal: align_fill)
+	{
+		button(identifier: 'add2',horizontal: align_left);
+		edit_text(identifier: 'res3', horizontal: align_fill, readonly:true);
+		button(identifier: 'del2',horizontal: align_right);
+	}
+	ok_cancel();
+}

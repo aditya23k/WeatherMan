@@ -1,0 +1,17 @@
+gDialogWidth = max( max_char_width() * 35, zstring_width(zstring: '$$$/Dialogs/DigSigUserCertDocWarnings/WarningsHeader') );
+
+dialog(name: '$$$/Dialogs/DigSigShowComparedWarnings')
+{
+	view(align_children: align_left)
+	{
+		static_text( item_id:'dhdr', width: gDialogWidth);
+
+		mclv(item_id: 'list', width: gDialogWidth, height: 7 * gStaticTextHeight, fixed_sort_order: true);
+		static_text( name: '$$$/Dialogs/DigSigUserCertDocWarnings/WarningDetails', width: gDialogWidth);	
+		static_text( item_id: 'wdtl', multiline: true, height: 4*gStaticTextHeight, width: gDialogWidth);
+		
+		static_text( item_id: 'ahdr', name: '$$$/Dialogs/DigSigUserCertDocWarnings/AuthorAttestation', width: gDialogWidth);
+		static_text( item_id: 'atxt', width:gDialogWidth, multiline:true, height: 3*gStaticTextHeight);
+		ok_cancel_help(ok_name: '$$$IDS_DIGSIG_CONTINUEANYWAY');
+	}
+}

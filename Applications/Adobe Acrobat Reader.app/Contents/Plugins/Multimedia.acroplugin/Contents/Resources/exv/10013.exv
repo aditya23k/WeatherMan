@@ -1,0 +1,69 @@
+gPaneWidth		= 600;
+
+gMaxStaticWidth = max( zstring_width( zstring: '$$$/Dialogs/Multimedia/RenditionSystem/BitRate' ), 
+					   zstring_width( zstring: '$$$/Dialogs/Multimedia/RenditionSystem/ScreenDepth' ), 
+					   zstring_width( zstring: '$$$/Dialogs/Multimedia/RenditionSystem/ScreenWidth' ), 
+					   zstring_width( zstring: '$$$/Dialogs/Multimedia/RenditionSystem/ShowAudioDesc' ), 
+					   zstring_width( zstring: '$$$/Dialogs/Multimedia/RenditionSystem/ShowCaption' ), 
+					   zstring_width( zstring: '$$$/Dialogs/Multimedia/RenditionSystem/PlayDubbedAudio' ), 
+					   zstring_width( zstring: '$$$/Dialogs/Multimedia/RenditionSystem/ShowSubtitles' ) );
+
+gJavaWidth		= zstring_width( zstring: '$$$IDS_ACCEPTABLE_LANGUAGES_LABEL' );
+
+gListWidth		= ( gJavaWidth - gButtonWidth - gButtonSpace ) / 2;
+gListHeight		= 90;
+gMaxEditWidth		= 266;
+
+dialog( target_id: 'brat', first_tab: 'info' )
+{
+	view( align_children: align_left )
+	{
+		cluster( name: '$$$/Dialogs/Multimedia/RenditionSystem/ClientSys', align_children: align_left, alignment: align_fill, dwidth: gPaneWidth )
+		{
+			static_text( item_id: 'info', alignment: align_fill, next_tab: 'st01' );
+
+			view( align_children: align_row )
+			{
+				view( align_children: align_right, width: gMaxStaticWidth )
+				{
+					static_text( item_id: 'st01', name: '$$$/Dialogs/Multimedia/RenditionSystem/BitRate', height: gPopupHeight, next_tab: 'brat' );
+					static_text( item_id: 'st02', name: '$$$/Dialogs/Multimedia/RenditionSystem/ScreenDepth', height: gEditTextHeight, next_tab: 'scrd' );
+					static_text( item_id: 'st03', name: '$$$/Dialogs/Multimedia/RenditionSystem/ScreenResolution', height: gPopupHeight, next_tab: 'sres' );
+					static_text( item_id: 'st04', name: '$$$/Dialogs/Multimedia/RenditionSystem/ShowAudioDesc', height: gPopupHeight, next_tab: 'adsc' );
+					static_text( item_id: 'st05', name: '$$$/Dialogs/Multimedia/RenditionSystem/ShowCaption', height: gPopupHeight, next_tab: 'capt');
+					static_text( item_id: 'st06', name: '$$$/Dialogs/Multimedia/RenditionSystem/PlayDubbedAudio', height: gPopupHeight, next_tab: 'dbad');
+					static_text( item_id: 'st07', name: '$$$/Dialogs/Multimedia/RenditionSystem/ShowSubtitles', height: gPopupHeight, next_tab: 'sbtt');
+				}
+
+				view( align_children: align_left )
+				{
+					popup( item_id: 'brat', width: gMaxEditWidth, alignment: align_fill, next_tab: 'st02' );
+					popup( item_id: 'scrd', alignment: align_fill, next_tab: 'st03' );
+					popup( item_id: 'sres', alignment: align_fill, next_tab: 'st04' );
+					popup( item_id: 'adsc', alignment: align_fill, next_tab: 'st05' );
+					popup( item_id: 'capt', alignment: align_fill, next_tab: 'st06' );
+					popup( item_id: 'dbad', alignment: align_fill, next_tab: 'st07' );
+					popup( item_id: 'sbtt', alignment: align_fill, next_tab: 'st08' );
+				}
+			}
+		}
+
+		cluster( name: '$$$/Dialogs/Multimedia/RenditionSystem/LanguageSettings', align_children: align_left, alignment: align_fill, dwidth: gPaneWidth )
+		{
+			static_text( item_id: 'st08', name: '$$$IDS_ACCEPTABLE_LANGUAGES_LABEL', next_tab: 'ilan' );
+
+			view( align_children: align_row, alignment: align_fill )
+			{
+				list_box( item_id: 'ilan', width: gListWidth, height: gListHeight, alignment: align_right, next_tab: 'add ' );
+
+				view( align_children: align_left, alignment: align_center )
+				{
+					button( item_id: 'add ', name: '$$$/Dialogs/Multimedia/RenditionSystem/Add', next_tab: 'del ' );
+					button( item_id: 'del ', name: '$$$/Dialogs/Multimedia/RenditionSystem/Delete', next_tab: 'olan' );
+				}
+
+				list_box( item_id: 'olan', width: gListWidth, height: gListHeight, alignment: align_left );
+			}
+		}
+	}
+}

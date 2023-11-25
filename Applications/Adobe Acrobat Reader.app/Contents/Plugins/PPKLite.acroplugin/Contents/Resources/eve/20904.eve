@@ -1,0 +1,24 @@
+dialog(name: '$$$/Dialogs/MeetingSimpleLogin', target_id: 'name', width: 250 )
+{
+	static_text( name: '$$$/Dialogs/MeetingSimpleLogin/Info', width: 250, wrap: true );
+	row( horizontal:align_fill )
+	{
+		column( )
+		{
+			static_text( name: '$$$/Dialogs/MeetingCommon/Login', horizontal: align_right );
+			static_text( name: '$$$/Dialogs/MeetingCommon/Password', horizontal: align_right );
+		}
+		column( horizontal: align_fill )
+		{
+			edit_text(identifier: 'muid', horizontal: align_fill );
+			edit_text(identifier: 'mpas', password:true, horizontal: align_fill );
+			
+			hyperlink(identifier: 'frgt', alignment: align_left, name: '$$$/Dialogs/MeetingCommon/ForgotPassword');
+		}
+	}
+	row( horizontal: align_right )
+	{
+		gap( height: 4 );
+		ok_cancel(ok_name: '$$$/Dialogs/MeetingCommon/LoginButton', cancel_name: '$$$/Dialogs/MeetingCommon/Close');
+	}
+}

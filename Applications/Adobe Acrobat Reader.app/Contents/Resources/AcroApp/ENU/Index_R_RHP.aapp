@@ -1,0 +1,13 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="Index" av2Title="Add search index" description="Index PDF files to speed search across document collections" av2Description="Create an index to speed search within and across files" id="IndexRdrApp" showLabels="true" majorVersion="1" minorVersion="0">
+	<Commands>
+			<Command name="ADBE:CatalogRdr"/>
+			<Command name="ADBE:EmbedIndexRdr"/>
+	</Commands>
+	<Layouts>
+		<Layout name="Default">
+			<ContentView>
+				<Component name="IndexAppRhpView" fontSize="12"/>
+			</ContentView>
+		</Layout>
+	</Layouts>
+</Application>

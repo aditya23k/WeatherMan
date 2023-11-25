@@ -1,0 +1,55 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="Convert PDF" av2Title="Convert to PDF" description="Convert a PDF to Word, Powerpoint, Excel or create PDFs from these native formats" av2Description="Turn almost any file into a PDF" id="ConvertPDFAppFull" majorVersion="1" minorVersion="0">
+	<Commands>
+	</Commands>
+	<Layouts>
+		<Layout name="Default">
+			<ContentView>
+				<Component name="ConvertPDFView" type="Custom">
+					<Component type="Table" columns="1" hAlign="center" rowSpacing="48">
+							<Component type="Table" columns="3" hAlign="center" vAlign="near" columnSpacing="80">
+								<Component type="Table" columns="1" vAlign="near" bottomOffset="20" useborder="false" rowSpacing="18">
+									<Component type="Table" columns="1" hAlign="center" rowSpacing="10">
+										<Component type="Label" label="Convert PDF to other formats" fontSize="31"/>
+										<Component type="Label" hAlign="center" width="235" adjustHeightWithText="Convert Word, Excel and PowerPoint into high-quality PDFs." multiline="true" label="Convert PDFs into Word, Excel and other formats." fontSize="16"/>
+									</Component>
+									<Component type="Table" useborder="false"  hAlign="center" vAlign="near" topOffset = "20">
+										<Component type="Bitmap" name="ConvertIntentExportIcon" width="160" height="143" colorize="false"/>
+									</Component>
+									<Component type="Table" leftOffset="20" rightOffset="20" hAlign="center">
+										<Component type="PushButton" name="Convert:Intent:Export" bold="true" label="Select files" fontSize="16" />
+										<Component type="Label" width="240" adjustHeightWithText="Choose from .docx, .xlsx, .ppt, .txt etc." hAlign="center" multiline="true" label="" fontSize="14" style="helpText"/>
+									</Component>
+								</Component>
+								<Component type="VerticalSeparator" height="420"/>
+								<Component type="Table" columns="1" vAlign="near" bottomOffset="20" useborder="false" rowSpacing="18">
+									<Component type="Table" hAlign="center" rowSpacing="10">
+										<Component type="Label" label="Convert other formats to PDF" fontSize="31"/>
+										<Component type="Label" width="240" adjustHeightWithText="Convert PDFs into Word, Excel and other formats." hAlign="center" multiline="true" label="Convert Word, Excel and PowerPoint into high-quality PDFs." fontSize="16" />
+									</Component>
+									<Component type="Table" useborder="false" hAlign="center" vAlign="near" topOffset = "20">
+										<Component type="Bitmap" name="ConvertIntentCreateIcon" width="160" height="143" colorize="false" />
+									</Component>
+									<Component type="Table" leftOffset="20" rightOffset="20" rowSpacing="10" hAlign="center">
+										<Component type="PushButton" name="Convert:Intent:Create" bold="true" label="Select files" fontSize="16" />
+										<Component type="Label" width="240" hAlign="center" multiline="true" label="Choose from .docx, .xlsx, .ppt, .txt etc." fontSize="14"/>
+									</Component>
+								</Component>
+							</Component>
+						</Component>
+					</Component>
+			</ContentView>
+		</Layout>
+		<Layout name="CreatePDFLayout">
+			<ContentView>
+				<Component name="CreatePDFView" type="Custom">
+				</Component>
+			</ContentView>
+		</Layout>
+		<Layout name="ExportPDFLayout">
+			<ContentView>
+				<Component name="ExportPDFView" type="Custom">
+				</Component>
+			</ContentView>
+		</Layout>
+	</Layouts>
+</Application>

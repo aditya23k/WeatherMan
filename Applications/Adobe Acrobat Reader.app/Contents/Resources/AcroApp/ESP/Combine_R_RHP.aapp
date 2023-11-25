@@ -1,0 +1,12 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="Combinar archivos" av2Title="Combinar archivos" id="CombinePDFRdrApp" description="Combine varios archivos en un solo PDF." av2Description="Combinar varios archivos en un único PDF" richTooltip="Combine varios archivos en un único PDF para guardarlos y compartirlos fácilmente." majorVersion="1" minorVersion="0" inAppUpsellEnabled="true">
+	<Commands>
+			<Command name="NewDocCombineFilesRdr"/>
+	</Commands>
+	<Layouts>
+		<Layout name="Default">
+			<ContentView>
+				<Component name="CombinePDFRHPView" fontSize="12"/>
+			</ContentView>
+		</Layout>
+	</Layouts>
+</Application>

@@ -1,0 +1,25 @@
+dialog(name:'$$$/Dialogs/DistFormPanel_ChooseSecureID')
+{
+	column(horizontal: align_fill,
+	       vertical: align_fill)
+	{
+		row()
+		{
+			static_text(name:'$$$/Dialogs/DistFormPanel_ChooseSecureID/EncryptInfo',
+				        width: 450,
+					    wrap: true);
+		}
+		row()
+		{
+			list_box(identifier: 'list',
+					 fixed_sort_order: false,			  
+					 width: 450,
+					 height: 100);
+		}
+
+		row(horizontal: align_right)
+		{
+				ok_cancel();
+		}		
+	}
+}

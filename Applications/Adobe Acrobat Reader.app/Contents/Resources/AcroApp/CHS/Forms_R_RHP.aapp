@@ -1,0 +1,20 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="准备表单" av2Title="准备表单" description="快速将 Microsoft Word、Excel 或已扫描的表单转换为 PDF 表单" av2Description="将 Microsoft Word、Excel 或已扫描的表单转换为 PDF 表单" richTooltip="将已扫描的表单、Microsoft Word 文件或 Excel 文档转换为可填写的 PDF 表单。" id="FormsRdrApp" majorVersion="1" showLabels="true" minorVersion="0">
+  <Commands>
+    <Command name="AcroForm:Forms_CreateNewFormRdr"/>
+	<Command name="AcroForm:Forms_EditFormInAcrobatRdr"/>
+	<Command name="AcroForm:Forms_HighlightRdr"/>
+	<Command name="AcroForm:Forms_ClearFormRdr"/>
+    <Command name="AcroForm:Advanced_CreateSpreadsheetRdr"/>
+    <Command name="AcroForm:Forms_ImportDataRdr"/>
+    <Command name="AcroForm:FormData_ExportDataRdr"/>
+    <Command name="AcroForm:Forms_DistributeFormRdr"/>
+	<Command name="AcroForm:Forms_TrackReturnedFormsRdr"/>
+  </Commands>
+  <Layouts>
+    <Layout name="Default">
+      <ContentView>
+		<Component name="FormsAppRHPView" fontSize="12"/>
+      </ContentView>
+    </Layout>
+  </Layouts>
+</Application>

@@ -1,0 +1,13 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="Індексація" av2Title="Додати пошуковий індекс" description="Індексуйте PDF-файли для прискорення пошуку серед документів" av2Description="Створіть індекс, щоб прискорити пошук по файлу та між різними файлами" id="IndexRdrApp" showLabels="true" majorVersion="1" minorVersion="0">
+	<Commands>
+			<Command name="ADBE:CatalogRdr"/>
+			<Command name="ADBE:EmbedIndexRdr"/>
+	</Commands>
+	<Layouts>
+		<Layout name="Default">
+			<ContentView>
+				<Component name="IndexAppRhpView" fontSize="12"/>
+			</ContentView>
+		</Layout>
+	</Layouts>
+</Application>

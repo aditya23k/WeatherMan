@@ -1,0 +1,87 @@
+gAlignmentWidth=max(
+	zstring_width(zstring: '$$$IDS_ALIGN_LEFT'),
+	zstring_width(zstring: '$$$IDS_ALIGN_CENTER'),
+	zstring_width(zstring: '$$$IDS_ALIGN_RIGHT'));
+
+gLeftColumnWidth=max(
+	zstring_width(zstring: '$$$/Dialogs/FieldProps/Text/Default'),
+	zstring_width(zstring: '$$$/Dialogs/FieldProps/Text/Alignment'));
+
+gDefaultWidth = max_char_width() * 15;
+gDefaultHeight = gEditTextHeight * 4;
+gNumberWidth = max_char_width() * 3;
+
+gDefault = '$$$/Dialogs/FieldProps/Text/Default';
+gAlignment = '$$$/Dialogs/FieldProps/Text/Alignment';
+
+gMultiline = '$$$/Dialogs/FieldProps/Text/Multiline';
+gScroll = '$$$/Dialogs/FieldProps/Text/Scroll';
+gLimit = '$$$/Dialogs/FieldProps/Text/Limit';
+gCharacters = '$$$/Dialogs/FieldProps/Text/Characters';
+gPassword = '$$$/Dialogs/FieldProps/Text/Password';
+gFileSelection = '$$$/Dialogs/FieldProps/Text/FileSelection';
+gSpellCheck = '$$$/Dialogs/FieldProps/Text/SpellCheck';
+gComb = '$$$/Dialogs/FieldProps/Text/Comb';
+gRichText = '$$$/Dialogs/FieldProps/Text/RichText';
+
+dialog(name: '$$$/Dialogs/FieldProps', target_id: 'dflt')
+{
+	view(align_children: align_top, alignment: align_fill)
+	{
+		view(align_children: align_left, alignment: align_fill)
+		{
+			view(align_children: align_row, alignment: align_fill)
+			{
+				view(align_children: align_right, width: gLeftColumnWidth)
+				{
+					static_text(item_id: 'salg', name: gAlignment);
+				}
+				popup(item_id: 'algn', width: gAlignmentWidth);
+				
+	
+			}
+
+			view(align_children: align_top, alignment: align_fill)
+			{
+				view(align_children: align_right, width: gLeftColumnWidth)
+				{
+					static_text(item_id: 'sdfl', name: gDefault);
+				}
+				edit_text(item_id: 'dflt', multiline: true, width: gDefaultWidth, height: gDefaultHeight);
+			}
+			gap(width: gGap);
+
+			view(align_children: align_row, alignment: align_fill)
+			{
+				view(align_children: align_right, width: gLeftColumnWidth)
+				{
+					static_text();
+				}
+				group() 
+				{
+					check_box(item_id: 'file', name: gFileSelection);
+					check_box(item_id: 'pass', name: gPassword);
+					view(align_children: align_left)
+					{
+						check_box(item_id: 'spel', name: gSpellCheck);
+						check_box(item_id: 'mult', name: gMultiline);
+						check_box(item_id: 'scrl', name: gScroll);
+						check_box(item_id: 'rich', name: gRichText);
+						view(align_children: align_row)
+						{
+							check_box(item_id: 'limi', name: gLimit);
+							edit_text(item_id: 'mlen', width: gNumberWidth);
+							static_text(item_id: 'slim', name: gCharacters);
+						}
+						view(align_children: align_row)
+						{
+							check_box(item_id: 'comb', name: gComb);
+							edit_text(item_id: 'clen', width: gNumberWidth);
+							static_text(item_id: 'scom', name: gCharacters);
+						}
+					}
+				}
+			}
+		}
+	}
+}

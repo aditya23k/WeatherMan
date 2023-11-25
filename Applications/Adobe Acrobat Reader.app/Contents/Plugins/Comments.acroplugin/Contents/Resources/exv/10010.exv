@@ -1,0 +1,33 @@
+W_COLUMN = 160;
+
+W_INTER_ITEM_GAP = 10;
+
+H_TIP_ICON = 32;
+W_TIP_ICON = 32;
+
+dialog()
+{
+	view(align_children: align_left)
+	{
+		view(align_children: align_left, width: 2 * W_COLUMN)
+		{
+			view(align_children: align_row)
+			{
+				hier_list_box(item_id: 'audt', width: 30 * max_char_width(), height: 5 * gEditTextHeight);
+			}
+		}
+
+		view(align_children: align_left, width: 2 * W_COLUMN)
+		{
+			cluster(align_children: align_fill, width: 30 * max_char_width())
+			{
+				view(align_children: align_row)
+				{
+					picture(item_id: 'hlpi', height: H_TIP_ICON, width: W_TIP_ICON);
+					gap(width: W_INTER_ITEM_GAP);
+					static_text(item_id: 'hlpt', height: 2 * gStaticTextHeight, alignment: align_fill);
+				}
+			}
+		}
+	}
+}

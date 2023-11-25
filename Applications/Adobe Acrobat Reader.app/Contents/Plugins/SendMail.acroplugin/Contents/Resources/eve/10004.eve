@@ -1,0 +1,9 @@
+dialog()
+{
+	column(horizontal: align_fill)
+	{
+		tab_group(identifier: 'Tabs', horizontal: align_fill, vertical: align_fill);
+    }
+	static_text(name: '$$$/Dialogs/SendMail/ValidationString', identifier: 'err2');
+	ok_cancel();
+}

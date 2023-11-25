@@ -1,0 +1,16 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="证书" av2Title="使用证书" description="以数字方式签名或验证文档，并验证其真实性" av2Description="以数字方式签名或验证文档，并验证其真实性" id="CertificatesApp" showLabels="true" requiresDoc="true" majorVersion="1" minorVersion="0">
+	<Commands>
+				<Command name="DIGSIG:SignWithBoxDragOrClick"/>
+				<Command name="DIGSIG:TimestampDocument"/>
+				<Command name="DIGSIG:ValidateAll"/>
+	</Commands>
+	<Layouts>
+		<Layout name="Default" OpenInDocumentTab="true">
+			<TopBar align="Center">
+				<Component name="DIGSIG:SignWithBoxDragOrClick"/>
+				<Component name="DIGSIG:TimestampDocument"/>
+				<Component name="DIGSIG:ValidateAll"/>
+			</TopBar>
+		</Layout>
+	</Layouts>
+</Application>

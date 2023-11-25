@@ -1,0 +1,21 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="印刷制作" av2Title="使用印制" description="预览、印前检查、更正并准备用于高端印刷制作的 PDF 文件" av2Description="预览、印前检查并准备用于高端印制的 PDF" id="PrintProductionRdrApp" majorVersion="1" minorVersion="0">
+	<Commands>
+			<Command name="BigPreviewRdr"/>
+			<Command name="TouchUpObjectToolRdr"/>
+			<Command name="ColorConversionMenuItemRdr"/>
+			<Command name="FlattenerMenuItemRdr"/>
+			<Command name="SaveAsPDFXRdr"/>
+			<Command name="CropPagesPPRdr"/>
+			<Command name="AddMarksMenuItemRdr"/>
+			<Command name="HairlinesMenuItemRdr"/>
+			<Command name="InkManagerMenuItemRdr"/>
+			<Command name="TrapPresetsMenuItemRdr"/>
+	</Commands>
+	<Layouts>
+		<Layout name="Default">
+			<ContentView>
+				<Component name="PrintProductionAppRHPView" fontSize="12"/>
+			</ContentView>
+		</Layout>
+	</Layouts>
+</Application>

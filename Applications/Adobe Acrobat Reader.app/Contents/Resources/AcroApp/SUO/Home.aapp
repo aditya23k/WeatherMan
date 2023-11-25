@@ -1,0 +1,32 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="Aloitus" av2Title="Siirry Aloitus-näkymään" id="AVHome" majorVersion="1" minorVersion="0">
+	<Layouts>
+		<Layout name="Default" rhpModes="expanded,collapsed">
+			<TopBarLeft showInAV2UI = "true">
+				<Component type="Bitmap" name="AV2HomeTopbarTrefoilIcon" width="24" height="24" colorize="false"/>
+				<Component type="Label" name="HomeWelcomeMessageContent" hideOnStateChange="AV2_HomeSearchMode" focusable="true"/>
+			</TopBarLeft>
+			<TopBar align="Center" showInAV2UI = "true">
+				<Component name="HomeTopbarSearch" type="Custom"/>
+			</TopBar>
+			<TopBarRight align="Right" showInAV2UI = "true">
+				<Component name="AV2HomeSearchButton" label="Hae" AV2ShowLabel="true" hideOnStateChange="AV2_HomeSearchMode"/>
+				<Component name="AV2ExitSearchBtn" type="Custom" showOnStateChange="AV2_HomeSearchMode"/>
+				<Component name="AV2SubscribeBtn" type="Custom"/>
+			</TopBarRight>
+			<ContentView>
+				<Component name="HomeView" type="Custom"/>
+			</ContentView>
+            <TouchBar name="Home:TouchBar">
+                <Component name="HomePopover" type="TBPopover" hasIcon="false" hasLabel="true">
+                    <Component name="HomeScrubber" type="TBScrubber"/>
+                </Component>
+                <Component type="TBSpaceFlexi"/>
+                <Component name="Find" type="TBButton" hasIcon = "true" hasLabel = "false"/>
+                <Component type="TBSpaceFlexi"/>
+            </TouchBar>
+			<RHP>
+				<Component name="HomeRHPView" type="Custom"/>
+			</RHP>
+		</Layout>
+	</Layouts>
+</Application>

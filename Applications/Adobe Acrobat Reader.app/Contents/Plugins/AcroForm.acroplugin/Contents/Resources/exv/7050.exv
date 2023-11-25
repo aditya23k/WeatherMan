@@ -1,0 +1,74 @@
+gColumnOneWidth = max(
+	zstring_width(zstring: '$$$/Dialogs/FieldProps/Options/CheckStyle'),
+	zstring_width(zstring: '$$$/Dialogs/FieldProps/Options/ExportValue'));
+
+gStyleWidth=max(
+	zstring_width(zstring: '$$$IDS_CHKBOX_CHECK'),
+	zstring_width(zstring: '$$$IDS_CHKBOX_CIRCLE'),
+	zstring_width(zstring: '$$$IDS_CHKBOX_CROSS'),
+	zstring_width(zstring: '$$$IDS_CHKBOX_DIAMOND'),
+	zstring_width(zstring: '$$$IDS_CHKBOX_SQUARE'),
+	zstring_width(zstring: '$$$IDS_CHKBOX_STAR'));
+
+gEditItemWidth = max_char_width() * 7;
+gHintItemWidth = max_char_width() * 13;
+gHintItemHeight = gStaticTextHeight * 7;
+gClusterWidth = gHintItemWidth + 32; 
+
+gCheckStyle = '$$$/Dialogs/FieldProps/Options/CheckStyle';
+gExportValue = '$$$/Dialogs/FieldProps/Options/ExportValue';
+gCheckDefault = '$$$/Dialogs/FieldProps/Options/CheckDefault';
+
+dialog(name: '$$$/Dialogs/FieldProps', target_id: 'expt')
+{
+	view(align_children: align_top, alignment: align_fill)
+	{
+		view(align_children: align_left)
+		{
+			view(align_children: align_row)
+			{
+				view(align_children: align_right, width: gColumnOneWidth)
+				{
+					static_text(item_id: 'ssty', name: gCheckStyle);
+				}
+				view(align_children: align_left)
+				{
+					popup(item_id: 'styl', width: gStyleWidth);
+				}
+			}
+			view(align_children: align_row, alignment: align_fill)
+			{
+				view(align_children: align_right, width: gColumnOneWidth)
+				{
+					static_text(item_id: 'sexp', name: gExportValue);
+				}
+				view(align_children: align_left)
+				{
+					edit_text(item_id: 'expt', width: gEditItemWidth);
+				}
+			}
+			view(align_children: align_row, alignment: align_fill)
+			{
+				view(align_children: align_right, width: gColumnOneWidth)
+				{
+					static_text();
+				}
+				view(align_children: align_left)
+				{
+					check_box(item_id: 'chec', name: gCheckDefault);
+				}
+			}
+			gap(width: gGap, height: gStaticTextHeight);
+
+			cluster(align_children:align_left, width: gClusterWidth, alignment: align_fill)
+			{
+				gap(height: gEditTextHeight / 2);
+				view(align_children:align_top)
+				{	
+					picture(item_id: 'bulb', width: 32, height: 32);
+					static_text(item_id: 'hint', mutliline:true, width: gHintItemWidth+32, height: gHintItemHeight);
+				}
+			}
+		}
+	}
+}

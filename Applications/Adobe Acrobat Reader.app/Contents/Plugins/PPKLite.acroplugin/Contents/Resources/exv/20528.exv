@@ -1,0 +1,65 @@
+theLHSWidth = max(
+	zstring_width( zstring: '$$$/Dialogs/EDC_PolicyEdit/Name' ),
+	zstring_width( zstring: '$$$/Dialogs/EDC_PolicyEdit/Comments' ) );
+
+theRHSWidth = max(
+	zstring_width( zstring: '$$$/Dialogs/EDC_PolicyEdit/Max50Chars' ),
+	zstring_width( zstring: '$$$/Dialogs/EDC_PolicyEdit/Max250Chars' ) );
+
+theEditTextWidth = 20 * max_char_width();
+
+dialog(margin_height: 0, margin_width: 0)
+{
+    view(alignment: align_fill, align_children: align_left)
+    {
+		gap(height: gGap);
+		
+		static_text(item_id: 'note', font_id: 5, alignment: align_fill);
+		
+		gap(height: gGap);
+
+        radio( item_id: 'save', group_id: 'grp1', name: '$$$/Dialogs/PKI_General/SavePolicy');
+        radio( item_id: 'temp', group_id: 'grp1', name: '$$$/Dialogs/PKI_General/Discard');
+		
+		gap(height: gGap);
+
+		view(alignment: align_fill, align_children: align_row)	
+		{
+            view(width: theLHSWidth, align_children: align_right)
+            {
+				static_text(name: '$$$/Dialogs/EDC_PolicyEdit/Name');
+            }
+            
+            edit_text(item_id: 'name', width: theEditTextWidth);
+            
+            view(width: theRHSWidth, align_children: align_left)
+            {
+				static_text(name: '$$$/Dialogs/EDC_PolicyEdit/Max50Chars');
+            }
+		}
+		
+		view(alignment: align_fill, align_children: align_top)	
+		{
+            view(width: theLHSWidth, align_children: align_right)
+            {
+				static_text(name: '$$$/Dialogs/EDC_PolicyEdit/Comments');
+            }
+            
+			edit_text(item_id: 'cmnt', width: theEditTextWidth, height: gStaticTextHeight * 6, multiline: true);
+            
+            view(width: theRHSWidth, align_children: align_left)
+            {
+				static_text(name: '$$$/Dialogs/EDC_PolicyEdit/Max250Chars');
+            }
+		}
+		
+		gap(height: gGap);
+	
+		view(alignment: align_fill, align_children: align_top)	
+		{
+			gap(width: theLHSWidth);
+			check_box(item_id: 'pwds', name: '$$$/Dialogs/STD_PolicyEdit/SavePasswords');
+        }
+        gap();
+    }
+}

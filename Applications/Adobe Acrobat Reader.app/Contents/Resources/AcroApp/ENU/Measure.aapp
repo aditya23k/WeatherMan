@@ -1,0 +1,16 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="Measure" av2Title="Measure objects" description="Measure distance, area, and perimeter of objects" av2Description="Measure the distance, area, and perimeter of objects" id="MeasureApp" showLabels="true" requiresDoc="true" majorVersion="1" minorVersion="0">
+	<Commands>
+			<Command name="Measure"/>
+			<Command name="UserProperties"/>
+			<Command name="GeoLocation"/>
+	</Commands>
+	<Layouts>
+		<Layout name="Default" OpenInDocumentTab="true">
+			<TopBar align="Center">
+				<Component name="Measure"/>
+				<Component name="UserProperties"/>
+				<Component name="GeoLocation"/>
+			</TopBar>
+		</Layout>
+	</Layouts>
+</Application>

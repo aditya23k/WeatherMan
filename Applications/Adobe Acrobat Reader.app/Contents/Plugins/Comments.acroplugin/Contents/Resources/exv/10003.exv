@@ -1,0 +1,22 @@
+dialog(name: '$$$/Dialogs/Discuss')
+{
+	view(align_children: align_left)
+	{
+		
+		view(align_children: align_row)
+		{
+			static_text(name: '$$$/Dialogs/Discuss/URL');
+			edit_text(	item_id: 'iurl', 
+						width: max_digit_width() * 65, 
+						PopupEdit:true
+						);
+		}
+
+		static_text(item_id: 'scrt', 
+					alignment: align_fill, 
+					height: gEditTextHeight * 5, 
+					multiline: true);
+
+		ok_cancel();
+	}
+}

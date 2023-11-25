@@ -1,0 +1,17 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="Solicitar firmas electrónicas" av2Title="Solicitar firmas electrónicas" description="Envíe un documento a otras personas para que lo firmen en línea de forma fácil y segura" richTooltip="Envíe un documento a quien quiera para que lo firme electrónicamente con rapidez. Los destinatarios pueden firmar en el explorador de forma gratuita." av2Description="Envíe un documento a otra persona para que agregue su firma electrónica en línea de forma rápida" id="CollectSignaturesApp" majorVersion="1" minorVersion="0">
+	<Layouts>
+		<Layout name="Default" rhpModes="collapsed" topToolbarState="disable">
+			<TopBar align="Center">
+				<Component name="FSS:State:Progress"/>
+			</TopBar>
+			<TopBarRight align="Right">
+				<Component type="PushButton" buttonType="secondary" name="ExitApp"/>
+			</TopBarRight>
+			<ContentView>
+				<Component name="CollectSignaturesView" type="Custom"/>
+			</ContentView>
+		</Layout>
+		<Layout name="Native" OpenInDocumentTab="true">
+		</Layout>
+	</Layouts>
+</Application>

@@ -1,0 +1,2 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="Send for Comments" av2Title="Send for comments" description="Invite people to add comments on a shared file and track responses" richTooltip="Share a file with others to collect feedback in a single file. Reply to comments and @mention others." av2Description="Invite people to add comments to a shared file and track responses" id="ReviewPDFRdrApp" showLabels="true" majorVersion="1" minorVersion="0" inAppUpsellEnabled="true">
+</Application>

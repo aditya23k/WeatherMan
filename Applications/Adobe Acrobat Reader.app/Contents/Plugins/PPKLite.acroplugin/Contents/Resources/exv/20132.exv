@@ -1,0 +1,39 @@
+gMeterWidth = gPanelWidth - 190;
+
+dialog()
+{
+	view(width: gPanelWidth - 20, align_children: align_left)
+	{
+	    static_text(item_id: 'note', alignment: align_fill);
+	    
+	    gap(height: 5);
+	    
+	    static_text(name: '$$$IDS_CDW_FileAndPwd_FileName');
+	    
+	    view(alignment: align_fill, align_children: align_top)
+	    {
+	        edit_text(item_id: 'path', alignment: align_fill);
+	        button(item_id: 'brws', name: '$$$IDS_CDW_FileAndPwd_Browse');
+	    }
+	    
+	    gap(height: 5);
+	    
+		view(align_children: align_left)
+		{
+			static_text(name: '$$$IDS_CDW_FileAndPwd_Pwd');
+			view(align_children: align_left)
+			{
+				edit_text(item_id: 'pwd_', width: max_char_width() * 20, password: true);
+			}
+
+			view(align_children: align_row)
+			{
+				picture(item_id: 'pwMt', width: 150, height: 24);
+				static_text(item_id: 'pwTx', width: gMeterWidth, font_id: 5);
+			}
+		}
+		
+		static_text(item_id: 'cpst', name: '$$$IDS_CDW_FileAndPwd_ConfirmPwd');
+		edit_text(item_id: 'cpet', width: max_char_width() * 20, password: true);
+	}
+}

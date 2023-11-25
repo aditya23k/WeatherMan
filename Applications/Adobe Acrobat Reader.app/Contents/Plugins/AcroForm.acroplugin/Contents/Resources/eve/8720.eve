@@ -1,0 +1,16 @@
+dialog(name: '$$$/Dialogs/QuickBooksCompanyFilePane')
+{
+    column(horizontal: align_left)
+    {
+		static_text(name: '$$$/Dialogs/QuickBooksCompanyFilePane/Step', wrap: true, width: 400);
+		
+		edit_text(identifier: 'fna2', width: 400);
+		static_text(name: '$$$/Dialogs/QuickBooksCompanyFilePane/StepIn');
+		edit_text(identifier: 'fna3', width: 400);
+		
+		checkbox(identifier: 'popu', name: '$$$/Dialogs/QuickBooksCompanyFilePane/populate', wrap: true, width: 400);
+	
+		static_text(name: '$$$/Dialogs/QuickBooksCompanyFilePane/stat2', wrap: true, width: 400);
+								
+    }
+}

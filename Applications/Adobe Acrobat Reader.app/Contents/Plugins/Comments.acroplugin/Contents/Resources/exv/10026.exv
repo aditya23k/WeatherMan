@@ -1,0 +1,26 @@
+gMyStaticTextWidth = ( gButtonWidth + gButtonSpace ) * 3;
+gFirstMsgWidth = 27 * max_char_width();
+gMyIconWidth = 32;
+gMyIconHeight = 32;
+
+dialog( name: '$$$IDS_ACTION_APPROVAL', target_id: 'acpt' )
+{
+	view( align_children: align_left )
+	{
+		static_text( name: '$$$IDS_STATE_APPROVAL_STAMPED', wrap_name: true, alignment: align_fill, width: gMyStaticTextWidth );
+
+		view( align_children: align_row, alignment: align_fill )
+		{
+			picture( item_id: 'icon', height: gMyIconHeight, width: gMyIconWidth, alignment: align_top );
+			static_text( name: '$$$IDS_APPROVAL_TOOL_TIP', wrap_name: true, width: gFirstMsgWidth, alignment: align_fill );
+		}
+
+		view( align_children: align_row )
+		{
+			button( item_id: 'send', name: '$$$IDS_APPROVAL_TOOL_SEND', next_tab: 'finl' );
+			button( item_id: 'finl', name: '$$$IDS_APPROVAL_TOOL_FINAL', next_tab: 'hold' );
+			button( item_id: 'hold', name: '$$$IDS_APPROVAL_TOOL_CONTINUE', next_tab: 'cncl' );
+			button( item_id: 'cncl', name: '$$$IDS_APPROVAL_TOOL_CANCEL', next_tab: 'send' );
+		}
+	}
+}

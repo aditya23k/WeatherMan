@@ -1,0 +1,131 @@
+gEditWidth = max(
+	max_char_width() * 6,
+	zstring_width(zstring: '$$$IDS_BARCODE_SYMB_PDF417'),
+	zstring_width(zstring: '$$$IDS_BARCODE_SYMB_QRCODE'),   
+	zstring_width(zstring: '$$$IDS_BARCODE_SYMB_DATAMATRIX')
+	);
+	
+gLabelWidth = max(
+    zstring_width(zstring: '$$$/Dialogs/FieldProps/Barcode/Custom/PDF417/XCellSize'),
+    zstring_width(zstring: '$$$/Dialogs/FieldProps/Barcode/Custom/PDF417/YCellRatio'),
+    zstring_width(zstring: '$$$/Dialogs/FieldProps/Barcode/Custom/PDF417/ECC')
+    );
+
+gUnitWidth = zstring_width(zstring: '$$$/Dialogs/FieldProps/Barcode/Custom/PDF417/XCellLabel');
+
+dialog(name: '$$$/Dialogs/FieldProps/Barcode/EditParams/Title')
+{
+	view(align_children: align_left)
+	{
+		view(align_children: align_row)
+		{
+			static_text(name: '$$$/Dialogs/FieldProps/Barcode/EditParams/ParamSetName', width: zstring_width(zstring: '$$$/Dialogs/FieldProps/Barcode/EditParams/ParamSetName'));
+			edit_text(item_id: 'name', width: max_char_width() * 16, alignment: align_fill);
+		}
+		static_text(name: '$$$/Dialogs/FieldProps/Barcode/EditParams/ParamSetDescription');
+		edit_text(item_id: 'desc', alignment: align_fill, height: gEditTextHeight * 5, multiline: true);
+        gap();
+
+        view(align_children: align_row)
+        {
+			view(align_children: align_row)
+			{
+				view(align_children: align_right, width: gLabelWidth)
+				{
+		            static_text(name: '$$$/Dialogs/FieldProps/Barcode/Symbology');
+				}
+				view(align_children: align_fill)
+				{
+		            popup(item_id: 'symb', width: gEditWidth);
+				}
+			}
+        }
+
+        gap();
+        
+        view(align_children: align_offscreen)
+		{
+			group(item_id: 'pdf4')
+			{       
+				view(align_children: align_row)
+				{
+					view(align_children: align_right, width: gLabelWidth)
+					{
+						static_text(name: '$$$/Dialogs/FieldProps/Barcode/Custom/PDF417/XCellSize');
+					}
+					view(align_children: align_fill)
+					{
+						popup(item_id: 'pclx', align: align_left, width: gEditWidth);
+					}
+				}
+				view(align_children: align_row)
+				{
+					view(align_children: align_right, width: gLabelWidth)
+					{
+						static_text(name: '$$$/Dialogs/FieldProps/Barcode/Custom/PDF417/YCellRatio');
+					}
+					view(align_children: align_fill)
+					{
+						edit_text(item_id: 'pcly', SpinEdit: true, align: align_left, width: gEditWidth);
+					}
+					gap(width: gUnitWidth);
+				}
+				view(align_children: align_row)
+				{
+					view(align_children: align_right, width: gLabelWidth)
+					{
+						static_text(name: '$$$/Dialogs/FieldProps/Barcode/Custom/PDF417/ECC');
+					}
+					view(align_children: align_fill)
+					{
+						edit_text(item_id: 'pecc', SpinEdit: true, align: align_left, width: gEditWidth);
+					}
+					gap(width: gUnitWidth);
+				}
+			}
+			group(item_id: 'qrcd')
+			{
+				view(align_children: align_row)
+				{
+					view(align_children: align_right, width: gLabelWidth)
+					{
+						static_text(name: '$$$/Dialogs/FieldProps/Barcode/Custom/QRCode/XCellSize');
+					}
+					view(align_children: align_fill)
+					{
+						popup(item_id: 'qclx', align: align_left, width: gEditWidth);
+					}
+				}
+				view(align_children: align_row)
+				{
+					view(align_children: align_right, width: gLabelWidth)
+					{
+						static_text(name: '$$$/Dialogs/FieldProps/Barcode/Custom/QRCode/ECC');
+					}
+					view(align_children: align_fill)
+					{
+						popup(item_id: 'qecc', align: align_left, width: gEditWidth);
+					}
+					gap(width: gUnitWidth);
+				}
+			}
+			group(item_id: 'dtmx')
+			{
+				view(align_children: align_row)
+				{
+					view(align_children: align_right, width: gLabelWidth)
+					{
+						static_text(name: '$$$/Dialogs/FieldProps/Barcode/Custom/DataMatrix/XCellSize');
+					}
+					view(align_children: align_fill)
+					{
+						popup(item_id: 'dclx', align: align_left, width: gEditWidth);
+					}
+				}
+			}
+		}
+
+        gap();
+		ok_cancel(ok_name: '$$$/ControlsStrings/OK', cancel_name: '$$$/ControlsStrings/Cancel');
+	}
+}

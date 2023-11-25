@@ -1,0 +1,17 @@
+dialog(name: '$$$/Dialogs/EncryptSecSettings')
+{
+	column(horizontal: align_left)
+	{
+		static_text(name: '$$$/Dialogs/EncryptSecSettings/TitleText' );
+
+		radio_button(identifier: 'opt1', group_id: 'grp1', 
+				     name: '$$$/Dialogs/EncryptSecSettings/optPasswordEncrypt');
+		
+		radio_button(identifier: 'opt2', group_id: 'grp1', 
+					 name: '$$$/Dialogs/EncryptSecSettings/optCertificateEncrypt');
+		
+		radio_button(identifier: 'none', group_id: 'grp1', 
+					 name: '$$$/Dialogs/EncryptSecSettings/optNone');
+	}
+	ok_cancel();
+}

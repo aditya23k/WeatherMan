@@ -1,0 +1,9 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="Autres outils" id="MoreToolRHP" description="Accédez à d’autres outils et fonctions améliorées." richTooltip="Affichez tous les outils Acrobat et ajoutez d’autres raccourcis." majorVersion="1" minorVersion="0">
+<Layouts>
+		<Layout name="Default">
+			<ContentView>
+				<Component name="AppCenterView" />
+			</ContentView>
+		</Layout>
+	</Layouts>
+</Application>

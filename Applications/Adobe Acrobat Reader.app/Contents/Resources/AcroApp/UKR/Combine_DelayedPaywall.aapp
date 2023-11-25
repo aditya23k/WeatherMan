@@ -1,0 +1,30 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="Об’єднати файли" av2Title="Об’єднання файлів" id="CombineDelayedRdrApp" description="Об’єднати кілька файлів в один PDF-документ" richTooltip="Об’єднуйте кілька файлів у єдиний PDF-документ для зручного зберігання й обміну." av2Description="Об’єднання кількох файлів у єдиний PDF-документ" showLabels="true" requiresDoc="false" majorVersion="1" minorVersion="0">
+	<Layouts>
+		<Layout name="Default">
+		    <TopBar align="Center">
+				<Component name="MultiFileViewInsertPagesDP"/>
+				<Component name="DeleteCombineNodes"/>
+				<Component type="Separator"/>
+				<Component name="MultiFileThumbnailViewSelector"/>
+				<Component name="MultiFileListViewSelector"/>
+				<Component type="Separator"/>
+				<Component name="MultiFileViewOption"/>
+			</TopBar>
+			<ContentView>
+				<Component name="CombineLandingViewRdr" type="Custom" columns="1" hAlign="center" vAlign="center">
+					<Component type="Table" columns="1" hAlign="center" vAlign="center">
+						<Component type="Bitmap" name="CombineInitialGraphicBitmapIcon" width="130" height="130" />
+						<Component type="Label" label="Додайте файли, натиснувши кнопку нижче," fontSize="18" multiline="true" hAlign="center" width="580" />
+						<Component type="Label" label="Ви також можете додати файли, що зараз відкриті, нижче." fontSize="18" multiline="true" hAlign="center" width="500" />
+						<Component type="Table" columns="1" hAlign="center" vAlign="center" topOffset="15">
+							<Component type="PushButton" buttonType="buttonCTA" name="CombineAddFilesExecuteDP" label="Додати файли" vAlign="center" fontSize="15" bold="true"/>
+						</Component>
+						<Component type="Table" columns="1" hAlign="center" vAlign="center" topOffset="10" rowSpacing="20">
+							<Component type="PushButton" buttonType="buttonPrimaryQuiet" name="CombineAddOpenFilesExecuteDP" label="Додати відкриті файли" vAlign="center" fontSize="15" bold="true"/>
+						</Component>
+					</Component>
+				</Component>
+			</ContentView>
+		</Layout>
+	</Layouts>
+</Application>

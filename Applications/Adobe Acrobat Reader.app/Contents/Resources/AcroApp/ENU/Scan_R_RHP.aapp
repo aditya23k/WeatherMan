@@ -1,0 +1,25 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="Scan &amp; OCR" av2Title="Scan &amp; OCR" id="ScanPDFRdrApp" description="Turn scans or photos of paper documents into searchable PDFs with selectable text" av2Description="Turn scans or images into searchable, editable PDFs" majorVersion="1" minorVersion="0" inAppUpsellEnabled="true">
+	<Commands>
+		<Command name="P2PInsertMenuRdr"/>
+		<Command name="MagicCleanPerspectiveCorrectionRdr"/>
+		<Command name="OptimizeScannedPdfRdr"/>
+		<Command name="P2PShowOptimizeRdr"/>
+		<Command name="P2PShowOCRRdr"/>
+		<Command name="CapturePagesRdr"/>
+		<Command name="CaptureMultipleFilesRdr"/>
+		<Command name="ShowCaptureSuspectsRdr"/>
+		<Command name="BatesNumberingRdr"/>
+		<!-- Single Page Operations -->
+		<Command name="CropRdr"/>
+		<Command name="RotatePagesCCWRdr"/>
+		<Command name="RotatePagesCWRdr"/>
+		<Command name="DeleteSelectedPagesRdr"/>
+	</Commands>
+	<Layouts>
+		<Layout name="Default">
+			<ContentView>
+				<Component name="ScanPDFAppRHPView" fontSize="12"/>
+			</ContentView>
+		</Layout>
+	</Layouts>
+</Application>

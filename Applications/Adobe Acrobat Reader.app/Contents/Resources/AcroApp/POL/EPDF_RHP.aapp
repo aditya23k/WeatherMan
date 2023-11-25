@@ -1,0 +1,11 @@
+<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="Eksportuj plik PDF" av2Title="Eksportuj plik PDF" description="Skonwertuj plik PDF do formatów Microsoft Word, Excel, PowerPoint i innych" av2Description="Konwertuj pliki PDF na pliki pakietu Microsoft Office, obrazy i nie tylko" richTooltip="Konwertuj pliki PDF na formaty programów Microsoft Word, Excel lub PowerPoint oraz na obrazy." id="EPDFApp" majorVersion="1" minorVersion="0" inline="true">
+	<Commands>
+	</Commands>
+	<Layouts>
+		<Layout name="Default">
+			<ContentView>
+				<Component name="ExportPDFRHPView" fontSize="12"/>
+			</ContentView>
+		</Layout>
+	</Layouts>
+</Application>

@@ -1,0 +1,31 @@
+gAlignWidth = max(
+	zstring_width(zstring: '$$$/Dialogs/EditTrust/Policies'),
+	zstring_width(zstring: '$$$/Dialogs/ImportSingleContact/PolicyUserFriendlyName'));
+
+
+dialog(width:500, height:250)
+{
+	view(align_children: align_left)
+	{
+		static_text( item_id: 'npl1', width : 450 - 2*gMarginWidth, wrap_name: true, name : '$$$IDS_CV_CERT_POLICY_VIEWABLE');
+		static_text( item_id: 'npl2', width : 450 - 2*gMarginWidth, wrap_name: true, name : '$$$IDS_CV_CERT_POLICY_NOT_EDITABLE');
+
+		view(align_children: align_row, alignment: align_fill)
+		{
+			static_text(item_id: 'pts1', name: '$$$/Dialogs/EditTrust/Policies', width: gAlignWidth, alignment: align_right);
+    		edit_text(item_id: 'Plcy', alignment: align_fill);
+		}
+	    
+   		view(align_children: align_row, alignment: align_fill)
+		{
+			static_text(item_id: 'pts2', name: '$$$/Dialogs/ImportSingleContact/PolicyUserFriendlyName', width: gAlignWidth, alignment: align_right);
+    		edit_text(item_id: 'ufnm', alignment: align_fill);
+		}
+		
+		view (margin_width: gMarginWidth)
+		{
+			radio (item_id: 'expl', group_id: 'rneg', name: '$$$IDS_CE_CERT_POLICY_EXPLICIT');
+			radio (item_id: 'nexp', group_id: 'rneg', name: '$$$IDS_CE_CERT_POLICY_NON_EXPLICIT');
+		}
+	}
+}

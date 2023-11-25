@@ -1,0 +1,15 @@
+dialog(name: '$$$/Dialogs/EDCSyncProgress')
+{
+	view(align_children: align_left)
+	{
+		view(align_children: align_row, alignment: align_fill)
+		{
+			static_text(item_id: 'Labl', alignment: align_fill);
+		}
+		view(align_children: align_row, alignment: align_fill)
+		{
+			progress_bar(item_id: 'pbar', width: 300, alignment: align_center);
+			ok(ok_name: '$$$/ControlsStrings/Cancel');
+		}
+	}
+}

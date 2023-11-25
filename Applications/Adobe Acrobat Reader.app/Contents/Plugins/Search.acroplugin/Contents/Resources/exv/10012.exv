@@ -1,0 +1,61 @@
+gEditBoxWidth = 250;
+gLabelWidth = max(
+				zstring_width(zstring: '$$$/Dialogs/SearchFind/Title'),
+				zstring_width(zstring: '$$$/Dialogs/SearchFind/Description'),
+				zstring_width(zstring: '$$$/Dialogs/SearchFind/FileName'),
+				zstring_width(zstring: '$$$/Dialogs/SearchFind/LastBuilt'),
+				zstring_width(zstring: '$$$/Dialogs/SearchFind/Created'),
+				zstring_width(zstring: '$$$/Dialogs/SearchFind/Documents'),
+				zstring_width(zstring: '$$$/Dialogs/SearchFind/Status'));
+
+
+dialog(name: '$$$/Dialogs/SearchFind/IndexInformation')
+{
+	view( align_children: align_left)
+	{
+		view( align_children: align_top)
+		{
+			static_text(name: '$$$/Dialogs/SearchFind/Title', width: gLabelWidth, alignment: align_right);
+			edit_text(item_id: 'titl', width: gEditBoxWidth, readonly: true);
+		}
+
+		view( align_children: align_top)
+		{
+			static_text(name: '$$$/Dialogs/SearchFind/Description', width: gLabelWidth, alignment: align_right);
+			static_text(item_id: 'desc', width: gEditBoxWidth, height: gEditTextHeight*4, multiline: true);
+		}
+
+		view( align_children: align_top)
+		{
+			static_text(name: '$$$/Dialogs/SearchFind/FileName', width: gLabelWidth, alignment: align_right);
+			static_text(item_id: 'file', width: gEditBoxWidth);
+		}
+
+		view( align_children: align_top)
+		{
+			static_text(name: '$$$/Dialogs/SearchFind/LastBuilt', width: gLabelWidth, alignment: align_right);
+			static_text(item_id: 'lblt', width: gEditBoxWidth);
+		}
+
+		view( align_children: align_top)
+		{
+			static_text(name: '$$$/Dialogs/SearchFind/Created', width: gLabelWidth, alignment: align_right);
+			static_text(item_id: 'crea', width: gEditBoxWidth);
+		}
+
+		view( align_children: align_top)
+		{
+			static_text(name: '$$$/Dialogs/SearchFind/Documents1', width: gLabelWidth, alignment: align_right);
+			static_text(item_id: 'docs', width: gEditBoxWidth );
+			static_text(name: '$$$/Dialogs/SearchFind/AttachCount', item_id: 'atch', width: gLabelWidth, alignment: align_right);
+		}
+
+		view( align_children: align_top)
+		{
+			static_text(name: '$$$/Dialogs/SearchFind/Status', width: gLabelWidth, alignment: align_right);
+			static_text(item_id: 'stat', width: gEditBoxWidth);
+		}
+
+		ok(ok_name: '$$$/Dialogs/SearchFind/Close');
+	}
+}

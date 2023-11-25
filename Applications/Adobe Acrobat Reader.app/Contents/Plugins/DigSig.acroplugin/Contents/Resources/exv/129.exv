@@ -1,0 +1,13 @@
+dialog(name: '$$$/Dialogs/DigSigSelHandler', target_id: 'Hdlr')
+{
+	view(align_children: align_left)
+	{
+		view(align_children: align_row)
+		{
+			static_text(name: '$$$/Dialogs/DigSigSelHandler/Handler');	
+			popup(item_id: 'Hdlr', width: max_char_width() * 24);
+		}
+		check_box(item_id: 'sDef', name: '$$$/Dialogs/DigSigSelHandler/SetDefault');
+		ok_cancel();
+	}
+}
