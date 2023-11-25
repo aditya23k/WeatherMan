@@ -1,8 +1,0 @@
-"userNameLabelAuthDialog" = "Имя пользователя";
-"passwordLabelAuthDialog" = "Пароль";
-"okButtonAuthDialog" = "ОК";
-"cancelButtonAuthDialog" = "Отмена";
-"titleAuthDialog" = "Требуется аутентификация";
-"messageForHostInfoAuthDialog" = "%@ требует ввода имени пользователя и пароля.";
-"messageForSecurityInfoAuthDialog" = "Ваши данные для входа будут высланы безопасным способом.";
-"checkBoxTextAuthDialog" = "Запомните этот пароль в цепочке ключей";

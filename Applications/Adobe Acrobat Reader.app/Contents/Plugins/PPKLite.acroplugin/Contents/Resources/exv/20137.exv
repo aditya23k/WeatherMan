@@ -1,9 +1,0 @@
-dialog()
-{
-    view(width: gPanelWidth - 20, align_children: align_left)
-    {
-        static_text(item_id: 'hdr ', alignment: align_fill, name: '$$$IDS_CDW_RCGetURL_Header');
-        gap(height: 15);
-        edit_text(item_id: 'url ', alignment: align_fill);
-     }
-}

@@ -1,8 +1,0 @@
-dialog(name: '$$$/Dialogs/Redaction')
-{
-	view(alignment: align_left, align_children: align_left)
-	{
-		view(item_id: 'PanV', width: 370, height: 380);
-		ok_cancel();
-	}
-}

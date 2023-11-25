@@ -1,8 +1,0 @@
-"userNameLabelAuthDialog" = "Gebruikersnaam";
-"passwordLabelAuthDialog" = "Wachtwoord";
-"okButtonAuthDialog" = "OK";
-"cancelButtonAuthDialog" = "Annuleren";
-"titleAuthDialog" = "Verificatie vereist";
-"messageForHostInfoAuthDialog" = "%@ vereist je gebruikersnaam en wachtwoord.";
-"messageForSecurityInfoAuthDialog" = "Je aanmeldingsgegevens worden veilig verzonden.";
-"checkBoxTextAuthDialog" = "Dit wachtwoord onthouden in mijn sleutelhanger";

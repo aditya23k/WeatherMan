@@ -1,8 +1,0 @@
-"userNameLabelAuthDialog" = "Brugernavn";
-"passwordLabelAuthDialog" = "Adgangskode";
-"okButtonAuthDialog" = "OK";
-"cancelButtonAuthDialog" = "Annuller";
-"titleAuthDialog" = "Godkendelse er påkrævet";
-"messageForHostInfoAuthDialog" = "%@ kræver dit brugernavn og din adgangskode.";
-"messageForSecurityInfoAuthDialog" = "Dine logonoplysninger bliver sendt sikkert.";
-"checkBoxTextAuthDialog" = "Husk denne adgangskode i min nøglering";

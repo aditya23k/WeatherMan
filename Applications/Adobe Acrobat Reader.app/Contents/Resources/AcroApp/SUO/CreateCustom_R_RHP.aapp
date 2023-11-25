@@ -1,5 +1,0 @@
-<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="Luo muokattu työkalu" av2Title="Luo mukautettu työkalu" description="Luo muokattu Acrobat-ominaisuuksien kokoelma ja jaa se muiden kanssa" av2Description="Luo mukautettu joukko Acrobatin toimintoja" id="CreateCustomUIRdrApp" majorVersion="1" minorVersion="0">
-	<Commands>
-			<Command name="CreateUICustomizationRdr"/>
-	</Commands>
-</Application>

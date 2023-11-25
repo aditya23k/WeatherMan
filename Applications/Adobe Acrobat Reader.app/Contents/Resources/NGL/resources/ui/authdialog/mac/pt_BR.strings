@@ -1,8 +1,0 @@
-"userNameLabelAuthDialog" = "Nome de usuário";
-"passwordLabelAuthDialog" = "Senha";
-"okButtonAuthDialog" = "OK";
-"cancelButtonAuthDialog" = "Cancelar";
-"titleAuthDialog" = "Autenticação necessária";
-"messageForHostInfoAuthDialog" = "%@ requer seu nome de usuário e senha.";
-"messageForSecurityInfoAuthDialog" = "Suas informações de logon serão enviadas com segurança.";
-"checkBoxTextAuthDialog" = "Lembrar esta senha em minhas chaves";

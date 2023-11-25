@@ -1,5 +1,0 @@
-if (app.viewerVersion < 9) 
-{
-	var warn = "%VARIATIONS_OPEN_WARNING%";
-	app.alert(warn, 1, 0);
-}

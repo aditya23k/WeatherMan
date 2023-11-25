@@ -1,9 +1,0 @@
-dialog(name: '$$$/Dialogs/QuickBooksOpenWarning')
-{
-    column(horizontal: align_left)
-    {
-		static_text(name: '$$$/Dialogs/QuickBooksOpenWarning/Step', wrap: true, width: 400);
-		static_text(name: '$$$/Dialogs/QuickBooksOpenWarning/StepWarn', wrap: true, width: 400);
-								
-    }
-}

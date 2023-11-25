@@ -1,8 +1,0 @@
-"userNameLabelAuthDialog" = "用户名";
-"passwordLabelAuthDialog" = "密码";
-"okButtonAuthDialog" = "确定";
-"cancelButtonAuthDialog" = "取消";
-"titleAuthDialog" = "需要进行身份验证";
-"messageForHostInfoAuthDialog" = "%@ 需要您的用户名和密码。";
-"messageForSecurityInfoAuthDialog" = "您的登录信息将被安全地发送。";
-"checkBoxTextAuthDialog" = "在我的 Keychain 中记住此密码";

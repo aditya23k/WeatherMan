@@ -1,8 +1,0 @@
-"userNameLabelAuthDialog" = "用戶名稱";
-"passwordLabelAuthDialog" = "密碼";
-"okButtonAuthDialog" = "確定";
-"cancelButtonAuthDialog" = "取消";
-"titleAuthDialog" = "需要驗證";
-"messageForHostInfoAuthDialog" = "%@ 需要您的用戶名稱和密碼。";
-"messageForSecurityInfoAuthDialog" = "將會安全地傳送您的登入資訊。";
-"checkBoxTextAuthDialog" = "在鑰匙圈中記住此密碼";

@@ -1,9 +1,0 @@
-dialog( name: '$$$/Dialogs/ImportLog/Title' )
-{
-	view( align_children: align_left )
-	{
-		static_text( name: '$$$/Dialogs/ImportLog/Note', alignment: align_fill );
-		list_box( item_id: 'List', alignment: align_fill, width: max_char_width() * 25, height: gStaticTextHeight * 7 );
-		ok();
-	}
-}

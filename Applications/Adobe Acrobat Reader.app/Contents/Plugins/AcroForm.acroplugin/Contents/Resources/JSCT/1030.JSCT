@@ -1,9 +1,0 @@
-if (this.ADBE == undefined)
-    this.ADBE = new Object();
-    
-ADBE.LANGUAGE = "ENU";
-ADBE.Viewer_string_Title = "Adobe Acrobat";
-ADBE.Viewer_string_Need_New_Version_Msg  = "This PDF form requires a newer version of Adobe Acrobat. Without a newer version, the form may display, but may not work properly. Some form elements might not be visible at all. Click OK for more information on obtaining the latest version of Adobe Reader.";
-ADBE.Viewer_string_Need_New_Version_Msg_Old = "This PDF requires a newer version of Acrobat. Copy this URL and paste into your browser or see your sys admin.";
-ADBE.Reader_string_Need_New_Version_Msg = "This PDF file requires a newer version of Adobe Reader. Press OK to download the latest version or see your system administrator.";
-ADBE.Reader_string_Need_New_Version_Msg_Old = "This PDF requires a newer version of Reader. Copy this URL and paste into your browser or see your sys admin.";

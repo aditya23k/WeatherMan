@@ -1,6 +1,0 @@
-dialog()
-{
-	view(width: gPanelWidth - 20, align_children: align_left)
-	{
-	}
-}

@@ -1,8 +1,0 @@
-"userNameLabelAuthDialog" = "ユーザー名";
-"passwordLabelAuthDialog" = "パスワード";
-"okButtonAuthDialog" = "OK";
-"cancelButtonAuthDialog" = "キャンセル";
-"titleAuthDialog" = "認証が必要です";
-"messageForHostInfoAuthDialog" = "%@ には、ユーザー名とパスワードが必須です。";
-"messageForSecurityInfoAuthDialog" = "ログイン情報は安全に送信されます。";
-"checkBoxTextAuthDialog" = "このパスワードをキーチェーンに記憶する";

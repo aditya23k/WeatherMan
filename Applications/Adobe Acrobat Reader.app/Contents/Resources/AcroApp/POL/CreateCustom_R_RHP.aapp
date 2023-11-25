@@ -1,5 +1,0 @@
-<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="Utwórz narz. niestand." av2Title="Utwórz narzędzie niestandardowe" description="Utwórz własną kolekcję funkcji programu Acrobat i udostępnij ją innym" av2Description="Utwórz niestandardowy zestaw funkcji programu Acrobat" id="CreateCustomUIRdrApp" majorVersion="1" minorVersion="0">
-	<Commands>
-			<Command name="CreateUICustomizationRdr"/>
-	</Commands>
-</Application>

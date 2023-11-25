@@ -1,8 +1,0 @@
-"userNameLabelAuthDialog" = "Uživatelské jméno";
-"passwordLabelAuthDialog" = "Heslo";
-"okButtonAuthDialog" = "OK";
-"cancelButtonAuthDialog" = "Zrušit";
-"titleAuthDialog" = "Vyžaduje se ověření";
-"messageForHostInfoAuthDialog" = "%@ vyžaduje vaše uživatelské jméno a heslo.";
-"messageForSecurityInfoAuthDialog" = "Vaše přihlašovací údaje budou odeslány zabezpečené.";
-"checkBoxTextAuthDialog" = "Uložit toto heslo do klíčenky";

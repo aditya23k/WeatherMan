@@ -1,2 +1,0 @@
-<Application xmlns="http://ns.adobe.com/acrobat/app/2014" title="傳送供注釋" av2Title="傳送以供註解" description="邀請其他人在共用的檔案上新增注釋並追蹤回應" richTooltip="與他人共用檔案，以在單一檔案中收集意見回饋。回覆註解及使用「@」提及其他人。" av2Description="邀請其他人在共用的檔案上新增註解並追蹤回應" id="ReviewPDFRdrApp" showLabels="true" majorVersion="1" minorVersion="0" inAppUpsellEnabled="true">
-</Application>

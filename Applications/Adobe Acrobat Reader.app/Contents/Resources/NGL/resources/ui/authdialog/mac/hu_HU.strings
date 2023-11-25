@@ -1,8 +1,0 @@
-"userNameLabelAuthDialog" = "Felhasználónév";
-"passwordLabelAuthDialog" = "Jelszó";
-"okButtonAuthDialog" = "OK";
-"cancelButtonAuthDialog" = "Mégse";
-"titleAuthDialog" = "Hitelesítés szükséges";
-"messageForHostInfoAuthDialog" = "%@ a felhasználónév és a jelszó megadása szükséges.";
-"messageForSecurityInfoAuthDialog" = "A bejelentkezési adatokat biztonságosan küldjük el.";
-"checkBoxTextAuthDialog" = "Kulcsszó megjegyzése a kulcstartóban";

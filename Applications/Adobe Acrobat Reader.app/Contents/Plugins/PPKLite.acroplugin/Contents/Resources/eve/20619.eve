@@ -1,9 +1,0 @@
-dialog(name: '$$$/Dialogs/EDCAuthAdobeUpdateSubscription', target_id: 'name', width: 350 )
-{
-	static_text( name: '$$$/Dialogs/EDCAuthAdobeUpdateSubscription/InfoBody', width: 350, wrap: true );
-	row( horizontal: align_right )
-	{
-		gap( height: 20 );
-		ok_cancel(ok_name: '$$$/Dialogs/EDCAuthAdobeLoginFailed/ManageAccountBtn');
-	}
-}

@@ -1,8 +1,0 @@
-"userNameLabelAuthDialog" = "Uporabniško ime";
-"passwordLabelAuthDialog" = "Geslo";
-"okButtonAuthDialog" = "V redu";
-"cancelButtonAuthDialog" = "Prekliči";
-"titleAuthDialog" = "Potrebno je preverjanje pristnosti";
-"messageForHostInfoAuthDialog" = "%@ zahteva vaše uporabniško ime in geslo.";
-"messageForSecurityInfoAuthDialog" = "Vaši podatki za prijavo bodo varno poslani.";
-"checkBoxTextAuthDialog" = "Zapomni si to geslo na mojem obesku za ključe";
