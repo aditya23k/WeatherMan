@@ -35,6 +35,9 @@ export const WeatherMan = () => {
       await axios.get(url).then((response) => {
         setWeatherData(response.data);
         console.log(response.data);
+      }).catch((error) => {
+        console.log(error);
+        setWeatherData({})
       });
       setWeatherLocation('');
     
