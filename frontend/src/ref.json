@@ -1,0 +1,39 @@
+{
+    "coord": {
+        "lon": "77.6033",
+        "lat": "12.9762"
+    },
+    "weather": [
+        {
+            "id": "500",
+            "main": "Rain",
+            "description": "light rain",
+            "icon": "10n"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": "296.95",
+        "temp_min": "295.05",
+        "temp_max": "296.95",
+        "pressure": "1016",
+        "humidity": "83"
+    },
+    "visibility": "6000",
+    "wind": {
+        "speed": "2.57",
+        "deg": "110"
+    },
+    "dt": "1700755333",
+    "sys": {
+        "type": "1",
+        "id": "9205",
+        "message": null,
+        "country": "IN",
+        "sunrise": "1700700710",
+        "sunset": "1700742009"
+    },
+    "id": "1277333",
+    "name": "Bengaluru",
+    "cod": "200"
+}

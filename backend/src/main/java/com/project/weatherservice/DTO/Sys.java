@@ -22,7 +22,4 @@ public class Sys {
         this.sunrise = sunrise;
         this.sunset = sunset;
     }
-
-
-
 }

@@ -1,0 +1,138 @@
+
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+
+}
+
+
+.container{
+  width: 100%;
+  height: 100vh;
+	margin:auto;
+  display: flex;
+	padding: 0 1rem;
+	position:relative;
+  flex-direction: column ;
+  justify-content: space-evenly;
+  align-items: center;
+	background-color: rgba(225, 165, 165, 0.373);
+  background-image: linear-gradient(180deg,navajowhite,rgba(240, 236, 195, 0.702));
+	top:10%;
+	bottom:10%;
+        
+}
+
+.container.top{
+	width :100%;
+	margin: 1 rem auto;
+	display:flex;
+	flex-direction: row;
+}
+
+.top-bar{
+  display:flex;
+  gap: 20px;
+	position: relative;
+	                       
+}
+.top-bar input{
+        display: flex;
+        width: 300px;
+        height: 40px;
+        background: transparent;
+        border:blanchedalmond;
+        outline:auto;
+        outline-style:dotted;
+        outline-color:black;
+        border-radius: 15px;
+        padding-left: 35px;
+        color: rgb(1, 1, 34);
+        font-size: 18px;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.search-icon{
+        display: flex;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        padding-bottom: 5px;
+        background-color: transparent;
+        border:rgba(240, 236, 195, 0.702);
+        cursor: pointer;
+        
+}
+
+.container.middle{
+	width :100%;
+	margin: 1 rem auto;
+	flex-direction: row-reverse;
+	justify-content: space-evenly;
+}
+
+.middle{
+	display:flex;
+	gap: 50px;
+	position: relative;
+	
+}
+
+.middle.weather-location{
+	display:flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.weather_icon{
+  size:20px;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  ;
+}
+
+
+.container.bottom{
+	width :75%;
+	display: inline-flex;
+	justify-content: center;
+	
+}
+
+
+
+.bottom.data-container.Humidity_element, .WindSpeed_element{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.humid_icon{
+        width: 40px;
+        height: 40px;
+        padding-top: 10px;
+        padding-bottom: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+        background-color: transparent;
+        border:none;
+        
+}
+
+.ws_icon{
+        width: 45px;
+        height: 45px;
+        padding-top: 10px;
+        padding-bottom: 1px;
+        padding-left: 10px;
+        padding-right: 10px;
+        background-color: transparent;
+        border:none;
+        
+}
+
