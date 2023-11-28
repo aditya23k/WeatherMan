@@ -7,6 +7,12 @@ of a location of choice of the user.
 -Frontend has been developed on ReactJs
 -Backend on SpringBoot
 
+
+
+https://github.com/aditya23k/WeatherMan/assets/46108348/bd47f731-2867-4ef8-a960-1ac1cedb47f7
+
+
+
 # Instructions: 
 
 1. Clone this repository into IntelliJ to run the backend and onto VSCode to run the frontend
